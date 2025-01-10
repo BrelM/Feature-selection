@@ -170,13 +170,13 @@ For more support:\n\
 -p --params:\t specify the feature selection parameters to use\n\
 -c --classif:\t specify the classifier to use for evaluation of the features (before and after selection) \n\
 \n\
-Algorihms include:\n\
+Feature selection algorihms include:\n\
 {}\n\
 Datasets include:\n\
 {}\n\
 Classifiers include:\n\
 {}\n\
-".format(*ALGOS, *DATASETS, *CLASSIFIERS))
+".format(ALGOS, DATASETS, CLASSIFIERS))
 
 
 
@@ -200,22 +200,27 @@ for o, a in cpts:
 	
 	if o == '-h':
 		usage()
+		sys.exit(0)
 
 	elif o in ('-a', '--algo'):
 		try:
 			algo = int(a)
 			if algo not in ALGOS_INFO.keys():
-				raise(f"algo parameter must be an integer between 0 and {len(ALGOS_INFO.keys())}.")
+				print(f"algo parameter must be an integer between 0 and {len(ALGOS_INFO.keys())}.")
+				sys.exit(2)
 		except ValueError:
 			print('algo parameter must be an integer.')
+			sys.exit(2)
 
 	elif o in ('-d', '--dataset'):
 		try:
 			dataset = int(a)
 			if dataset not in DATASETS_INFO.keys():
-				raise(f"dataset parameter must be an integer between 0 and {len(DATASETS_INFO.keys())}.")
+				print(f"dataset parameter must be an integer between 0 and {len(DATASETS_INFO.keys())}.")
+				sys.exit(2)
 		except ValueError:
 			print('dataset parameter must be an integer.')
+			sys.exit(2)
 	
 	elif o in ('-p' '--params'):
 		params = a
@@ -224,9 +229,11 @@ for o, a in cpts:
 		try:	
 			classifier = int(a)
 			if classifier not in CLASSIFIERS_INFO.keys():
-				raise(f"classif parameter must be an integer between 0 and {len(CLASSIFIERS_INFO.keys())}.")
+				print(f"classif parameter must be an integer between 0 and {len(CLASSIFIERS_INFO.keys())}.")
+				sys.exit(2)
 		except ValueError:
 			print('classif parameter must be an integer.')
+			sys.exit(2)
 
 	else:
 		print(f"Option {o} inconnue.")
