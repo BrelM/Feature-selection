@@ -12,7 +12,9 @@
 
 import pandas as pd
 import numpy as np
+import networkx as nx
 from sklearn.model_selection import train_test_split
+from sklearn.feature_selection import mutual_info_regression
 
 from sklearn.preprocessing import MinMaxScaler, OneHotEncoder
 
@@ -244,4 +246,25 @@ def diff(data:pd.DataFrame, A:int, I1:int, I2:int) -> float:
 
 
 
+def build_graph(data:pd.DataFrame, weights_strategy:str= 'corcoef') -> np.array:# | ['corcoef', 'mi', 'chi2']):
+	'''
+		Build a complete weighted graph rom the data. The nodes represent the features and the weights
+		a similtude between the nodes.
+		## Parameters:
+		- Data	: matrix-like object. The data from which the graph is built.
+		- weights_strategy:	string. The weighting stategy (corcoef, mi, chi2). Defaults to corcoef.
+	
+	'''
 
+	n = data.shape[1]
+	graph_matrix = np.zeros([n, n], 'float64')
+
+	if weights_strategy == 'corcoef':
+		return data.corr('pearson').to_numpy()
+
+	for i in range(n):
+		for j in range(n):
+			graph_matrix[i, j] = mutual_info_regression(data[[data.columns[i]]], data[data.columns[j]])
+
+
+	return nx.from_numpy_array(graph_matrix, parallel_edges=False)
