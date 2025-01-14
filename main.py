@@ -11,24 +11,17 @@
 import os
 import sys
 import getopt
+import networkx as nx
 
 # import numpy as np
 
 import utils
 import algorithms
 import classifiers
+import pagerank
+
 
 DATA_PATH = "../Data"
-
-ALGOS = {
-	0: "Relief",
-	1: "ReliefF",
-	2: "Mutual information",
-	3: "Sequential feature selection",
-	4: "RFE-SVM",
-	5: "RIDGE",
-	6: "LASSO"
-}
 
 DATASETS = {
 	0: "Breast cancer",
@@ -41,6 +34,17 @@ DATASETS = {
 	7: "Ionosphere",
 }
 
+ALGOS = {
+	0: "Relief",
+	1: "ReliefF",
+	2: "Mutual information",
+	3: "Sequential feature selection",
+	4: "RFE-SVM",
+	5: "RIDGE",
+	6: "LASSO",
+	7: "PageRank",
+}
+
 ALGOS_INFO = {
 	0: algorithms.relief,
 	1: algorithms.reliefF,
@@ -49,7 +53,8 @@ ALGOS_INFO = {
 	4: algorithms.svm_rfe	,
 	5: algorithms.svm_rfe_sfs,
 	6: algorithms.ridge_fs,
-	7: algorithms.lasso_fs
+	7: algorithms.lasso_fs,
+	7: pagerank.pagerankloop,
 }
 
 
@@ -239,6 +244,10 @@ for o, a in cpts:
 		print(f"Option {o} inconnue.")
 		sys.exit(2)
 
+if dataset == -1 or algo == -1 or classifier == -1:
+	usage()
+	sys.exit(2)
+
 
 data, y = utils.load_data(DATASETS_INFO[dataset])
 
@@ -255,15 +264,21 @@ if params != None:
 # Some infos about the data
 # print(data.info(), '\n', y.cat.categories)
 
-# Execute the choosen algorithm
-columns = ALGOS_INFO[algo](data, y, params)
+if ALGOS[algo] == "PageRank":
+	graph = utils.build_graph(data, 'mi')
 
+
+# Execute the choosen algorithm
+if ALGOS[algo] == "PageRank":
+	columns = ALGOS_INFO[algo](graph, list(data.columns), max_iter=params)
+else:
+	columns = ALGOS_INFO[algo](data, y, params)
 
 print('\n\n\n')
 print(f"Feature selection algorithm: {ALGOS[algo]}\nMeta parameter(s) value(s): {params}")
 
-print(f"Selected features: {columns}")
-print(f"Classifier for evaluation: {CLASSIFIERS[classifier]}")
+print(f"Selected features: {columns}\n")
+print(f"Classifier for evaluation: {CLASSIFIERS[classifier]}\n")
 
 print(f"Accuracy before feature selection: {CLASSIFIERS_INFO[classifier](data, y):.2f}")
 print(f"Accuracy after feature selection: {CLASSIFIERS_INFO[classifier](data, y, columns):.2f}")
@@ -272,7 +287,3 @@ print(f"Accuracy after feature selection: {CLASSIFIERS_INFO[classifier](data, y,
 
 
 
-
-
-
-# print(f"No. of features before feature selection: {data.shape[1]}\nNo. of features after fs: {x_train.shape[1]}")
