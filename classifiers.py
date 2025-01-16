@@ -12,14 +12,14 @@
 import pandas as pd
 import numpy as np
 
-from sklearn.model_selection import train_test_split, cross_val_score
+from sklearn.metrics import accuracy_score, recall_score
+from sklearn.model_selection import train_test_split, cross_val_score, cross_validate
 from sklearn.linear_model import LogisticRegression
 from sklearn import svm
 from sklearn import tree
 from sklearn.ensemble import RandomForestClassifier, HistGradientBoostingClassifier
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 
-import utils
 
 
 
@@ -37,8 +37,9 @@ def svm_classifier(data:pd.DataFrame, y:pd.Series, columns:pd.Series | list=None
 	   	- A matrix-like object consisting of performance metrics. 
 	'''
 	
+
 	if y.cat.categories.shape[0] > 2:
-		model = svm.SVC(kernel='linear', decision_function_shape='ovr', C=1)
+		model = svm.SVC(kernel='linear', C=1)
 	
 	else:
 		model = svm.SVC(kernel='linear', decision_function_shape='ovo', C=1)
@@ -49,12 +50,15 @@ def svm_classifier(data:pd.DataFrame, y:pd.Series, columns:pd.Series | list=None
 	X_train, X_test, y_train, y_test = train_test_split(data, y, test_size=0.3, random_state=0)
 
 
-	# model.fit(X_train, y_train)
-	# return model.score(X_test, y_test)
+	model.fit(X_train, y_train)
+	y_pred = model.predict(X_test)
 
-	scores = cross_val_score(model, data.to_numpy(), y.to_numpy(), cv=5)
+	return "{:.2}, {:.2}".format(accuracy_score(y_test, y_pred), recall_score(y_test, y_pred, average='macro'))
 
-	return scores.mean()
+	# scores = cross_validate(model, data.to_numpy(), y.to_numpy(), cv=5, scoring=["accuracy"])
+
+	# return "{:.2}".format(np.mean(scores['test_accuracy']))
+	# return "{:.2}, {:.2}".format(np.mean(scores['test_accuracy']), np.mean(scores['test_recall']))
 
 
 
@@ -74,15 +78,15 @@ def logreg_classifier(data:pd.DataFrame, y:pd.Series, columns:pd.Series | list=N
 	if columns != None:
 		data = data[columns]
 
-	X_train, X_test, y_train, y_test = train_test_split(data, y, test_size=0.3, random_state=0)
+	# X_train, X_test, y_train, y_test = train_test_split(data, y, test_size=0.3, random_state=0)
 
 
 	# model.fit(X_train, y_train)
 	# return model.score(X_test, y_test)
 
-	scores = cross_val_score(model, data.to_numpy(), y.to_numpy(), cv=5)
+	scores = cross_validate(model, data.to_numpy(), y.to_numpy(), cv=5, scoring=["accuracy", "recall"])
 
-	return scores.mean()
+	return "{:.2}, {:.2}".format(np.mean(scores['test_accuracy']), np.mean(scores['test_recall']))
 
 
 
@@ -102,15 +106,15 @@ def dectree_classifier(data:pd.DataFrame, y:pd.Series, columns:pd.Series | list=
 	if columns != None:
 		data = data[columns]
 
-	X_train, X_test, y_train, y_test = train_test_split(data, y, test_size=0.3, random_state=0)
+	# X_train, X_test, y_train, y_test = train_test_split(data, y, test_size=0.3, random_state=0)
 
 
 	# model.fit(X_train, y_train)
 	# return model.score(X_test, y_test)
 
-	scores = cross_val_score(model, data.to_numpy(), y.to_numpy(), cv=5)
+	scores = cross_validate(model, data.to_numpy(), y.to_numpy(), cv=5, scoring=["accuracy", "recall"])
 
-	return scores.mean()
+	return "{:.2}, {:.2}".format(np.mean(scores['test_accuracy']), np.mean(scores['test_recall']))
 
 
 
@@ -130,15 +134,15 @@ def randforest_classifier(data:pd.DataFrame, y:pd.Series, columns:pd.Series | li
 	if columns != None:
 		data = data[columns]
 
-	X_train, X_test, y_train, y_test = train_test_split(data, y, test_size=0.3, random_state=0)
+	# X_train, X_test, y_train, y_test = train_test_split(data, y, test_size=0.3, random_state=0)
 
 
 	# model.fit(X_train, y_train)
 	# return model.score(X_test, y_test)
 
-	scores = cross_val_score(model, data.to_numpy(), y.to_numpy(), cv=5)
+	scores = cross_validate(model, data.to_numpy(), y.to_numpy(), cv=5, scoring=["accuracy", "recall"])
 
-	return scores.mean()
+	return "{:.2}, {:.2}".format(np.mean(scores['test_accuracy']), np.mean(scores['test_recall']))
 
 
 
@@ -158,15 +162,15 @@ def higradboost_classifier(data:pd.DataFrame, y:pd.Series, columns:pd.Series | l
 	if columns != None:
 		data = data[columns]
 
-	X_train, X_test, y_train, y_test = train_test_split(data, y, test_size=0.3, random_state=0)
+	# X_train, X_test, y_train, y_test = train_test_split(data, y, test_size=0.3, random_state=0)
 
 
 	# model.fit(X_train, y_train)
 	# return model.score(X_test, y_test)
 
-	scores = cross_val_score(model, data.to_numpy(), y.to_numpy(), cv=5)
+	scores = cross_validate(model, data.to_numpy(), y.to_numpy(), cv=5, scoring=["accuracy", "recall"])
 
-	return scores.mean()
+	return "{:.2}, {:.2}".format(np.mean(scores['test_accuracy']), np.mean(scores['test_recall']))
 
 
 
@@ -186,15 +190,15 @@ def lda_classifier(data:pd.DataFrame, y:pd.Series, columns:pd.Series | list=None
 	if columns != None:
 		data = data[columns]
 
-	X_train, X_test, y_train, y_test = train_test_split(data, y, test_size=0.3, random_state=0)
+	# X_train, X_test, y_train, y_test = train_test_split(data, y, test_size=0.3, random_state=0)
 
 
 	# model.fit(X_train, y_train)
 	# return model.score(X_test, y_test)
 
-	scores = cross_val_score(model, data.to_numpy(), y.to_numpy(), cv=5)
+	scores = cross_validate(model, data.to_numpy(), y.to_numpy(), cv=5, scoring=["accuracy", "recall"])
 
-	return scores.mean()
+	return "{:.2}, {:.2}".format(np.mean(scores['test_accuracy']), np.mean(scores['test_recall']))
 
 
 

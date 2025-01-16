@@ -8,7 +8,7 @@
 
 '''
 
-import os
+import math
 import sys
 import getopt
 import networkx as nx
@@ -40,9 +40,10 @@ ALGOS = {
 	2: "Mutual information",
 	3: "Sequential feature selection",
 	4: "RFE-SVM",
-	5: "RIDGE",
-	6: "LASSO",
-	7: "PageRank",
+	5: "RFE-SVM-SFS",
+	6: "RIDGE",
+	7: "LASSO",
+	8: "PageRank",
 }
 
 ALGOS_INFO = {
@@ -54,7 +55,7 @@ ALGOS_INFO = {
 	5: algorithms.svm_rfe_sfs,
 	6: algorithms.ridge_fs,
 	7: algorithms.lasso_fs,
-	7: pagerank.pagerankloop,
+	8: pagerank.pagerankloop,
 }
 
 
@@ -92,7 +93,8 @@ DATASETS_INFO = {
 			'class_idx': 1,
 			'sep': ',',
 			'id': True,
-			"labels": False
+			"labels": False,
+			"categorical": False,
 		},
 	1: {
 			'name': "Contraceptive method choice",
@@ -101,7 +103,8 @@ DATASETS_INFO = {
 			'class_idx': 9,
 			'sep': ',',
 			'id': False,
-			"labels": False
+			"labels": False,
+			"categorical": False,
 		},
 	2: {
 			'name': "Credit risk data",
@@ -110,7 +113,8 @@ DATASETS_INFO = {
 			'class_idx': 10,
 			'sep': ',',
 			'id': False,
-			"labels": True
+			"labels": True,
+			"categorical": True,
 		},
 	3: {
 			'name': "Glass Identification",
@@ -119,7 +123,8 @@ DATASETS_INFO = {
 			'class_idx': 10,
 			'sep': ',',
 			'id': True,
-			"labels": False
+			"labels": False,
+			"categorical": False,
 		},
 
 	4: {
@@ -129,7 +134,8 @@ DATASETS_INFO = {
 			'class_idx': 0,
 			'sep': ',',
 			'id': False,
-			"labels": True
+			"labels": True,
+			"categorical": False,
 		},
 	5: {
 			'name': "Statlog Australian Credit Approval",
@@ -138,7 +144,8 @@ DATASETS_INFO = {
 			'class_idx': 14,
 			'sep': ' ',
 			'id': False,
-			"labels": False
+			"labels": False,
+			"categorical": False,
 		},
 	6: {
 			'name': "German Credit",
@@ -147,7 +154,8 @@ DATASETS_INFO = {
 			'class_idx': 23,
 			'sep': '   ',
 			'id': False,
-			"labels": False
+			"labels": False,
+			"categorical": True,
 		},
 
 	7: {
@@ -157,7 +165,8 @@ DATASETS_INFO = {
 			'class_idx': 34,
 			'sep': ',',
 			'id': False,
-			"labels": False
+			"labels": False,
+			"categorical": False,
 		},
 
 }
@@ -167,7 +176,7 @@ DATASETS_INFO = {
 
 def usage():
 	print("Execute a feature selection algorithm over a specified dataset.\n\
-Store the resuts in a csv file.\n\
+Store the resuts in a some files.\n\
 For more support:\n\
 -h --help   :\t get help\n\
 -a --algo   :\t specify the algorithm to use\n\
@@ -187,7 +196,7 @@ Classifiers include:\n\
 
 
 try:
-	cpts, args = getopt.getopt(sys.argv[1:], "ha:d:p:c:", ["help", "algo=", "dataset=", "params=", "classif="])
+	cpts, args = getopt.getopt(sys.argv[1:], "ha:d:p:c:s:", ["help", "algo=", "dataset=", "params=", "classif="])
 
 except getopt.GetoptError as err:
 	print(err)
@@ -200,6 +209,7 @@ algo = -1
 dataset = -1
 classifier = -1
 params = None
+strategy = 'corcoef'
 
 for o, a in cpts:
 	
@@ -229,6 +239,8 @@ for o, a in cpts:
 	
 	elif o in ('-p' '--params'):
 		params = a
+	elif o == '-s':
+		strategy = a
 
 	elif o in ('-c' '--classif'):
 		try:	
@@ -251,38 +263,48 @@ if dataset == -1 or algo == -1 or classifier == -1:
 
 data, y = utils.load_data(DATASETS_INFO[dataset])
 
-
-if params == None and algo > 5: # Ridge or Lasso
+if params == None and algo in [6, 7]: # Ridge or Lasso
 	params = 1e-10
 
 if params != None:
-	if '.' in params:
-		params = float(params)
-	else:
-		params = int(params)
+	try:
+		if '.' in params:
+			params = float(params)
+		else:
+			params = int(params)
+	except TypeError as e:
+		pass
+
+
+n_features = math.ceil(params * data.shape[1])
+if n_features == data.shape[1]:
+	n_features -= 1
+
+
 
 # Some infos about the data
 # print(data.info(), '\n', y.cat.categories)
 
 if ALGOS[algo] == "PageRank":
-	graph = utils.build_graph(data, 'mi')
+	graph = utils.build_graph(data, strategy)
 
 
 # Execute the choosen algorithm
 if ALGOS[algo] == "PageRank":
-	columns = ALGOS_INFO[algo](graph, list(data.columns), max_iter=params)
+	columns = ALGOS_INFO[algo](graph, list(data.columns), max_iter=n_features)
+elif algo in [0, 1, 6, 7]:
+	columns = ALGOS_INFO[algo](data, y, params, n_features=n_features)
 else:
-	columns = ALGOS_INFO[algo](data, y, params)
+	columns = ALGOS_INFO[algo](data, y, n_features=n_features)
 
-print('\n\n\n')
+print('\n')
 print(f"Feature selection algorithm: {ALGOS[algo]}\nMeta parameter(s) value(s): {params}")
 
 print(f"Selected features: {columns}\n")
 print(f"Classifier for evaluation: {CLASSIFIERS[classifier]}\n")
 
-print(f"Accuracy before feature selection: {CLASSIFIERS_INFO[classifier](data, y):.2f}")
-print(f"Accuracy after feature selection: {CLASSIFIERS_INFO[classifier](data, y, columns):.2f}")
-
+print(f"Accuracy and recall before feature selection: {CLASSIFIERS_INFO[classifier](data, y)}")
+print(f"Accuracy and recall after feature selection: {CLASSIFIERS_INFO[classifier](data, y, columns)}")
 
 
 

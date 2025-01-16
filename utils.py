@@ -13,9 +13,7 @@
 import pandas as pd
 import numpy as np
 import networkx as nx
-from sklearn.model_selection import train_test_split
 from sklearn.feature_selection import mutual_info_regression
-
 from sklearn.preprocessing import MinMaxScaler, OneHotEncoder
 
 
@@ -50,12 +48,12 @@ def load_data(data_params:dict) -> tuple[pd.DataFrame, pd.Series]:
 	y = data[class_label].astype('category')
 	data.drop(class_label, axis='columns', inplace=True)
 	n = y.cat.categories.shape[0]
-
-
+	
+	
 	# Seperating the categorical features from the numerical ones
 	categorical_columns = data.select_dtypes(include=['object', 'category']).columns
 	numerical_columns = data.select_dtypes(include=['int64', 'float64']).columns
-
+	
 	# Dealing with missing values
 	num_cols = data[numerical_columns]
 	for col in numerical_columns:
@@ -90,7 +88,9 @@ def load_data(data_params:dict) -> tuple[pd.DataFrame, pd.Series]:
 	# Combining with numerical columns
 	final_data = pd.concat([num_cols.reset_index(drop=True), encoded_df.reset_index(drop=True)], axis=1)
 
-	return final_data, y.cat.rename_categories(list(range(n)))
+	y = y.cat.rename_categories(list(range(n)))
+
+	return final_data, y
 
 
 
@@ -256,15 +256,16 @@ def build_graph(data:pd.DataFrame, weights_strategy:str= 'corcoef') -> np.array:
 	
 	'''
 
+	print(f"Building features' graph using {weights_strategy} strategy.")
 	n = data.shape[1]
 	graph_matrix = np.zeros([n, n], 'float64')
 
 	if weights_strategy == 'corcoef':
-		return data.corr('pearson').to_numpy()
+		return nx.from_numpy_array(data.corr('pearson').to_numpy(), parallel_edges=False)
+		
 
 	for i in range(n):
 		for j in range(n):
 			graph_matrix[i, j] = mutual_info_regression(data[[data.columns[i]]], data[data.columns[j]])
-
 
 	return nx.from_numpy_array(graph_matrix, parallel_edges=False)

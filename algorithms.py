@@ -15,7 +15,6 @@ import numpy as np
 from sklearn.feature_selection import SelectKBest, SequentialFeatureSelector
 from sklearn.feature_selection import mutual_info_classif
 from sklearn.linear_model import LogisticRegression, Ridge, Lasso
-from sklearn.preprocessing import MinMaxScaler
 from sklearn import svm
 
 
@@ -35,7 +34,7 @@ def relief(data:pd.DataFrame, y:pd.Series, m:int=10, n_features:int=5) -> list:
 	W = [0] * data.shape[1]
 
 	for i in range(m):
-		print(f'Update {i}...')
+		print(f'Update {i + 1}...')
 		a = random.randrange(data.shape[0])
 
 		H, M = utils.hit_and_miss(data, y, a)
@@ -95,7 +94,7 @@ def reliefF(data:pd.DataFrame, y:pd.Series, m:int=10, k:int=3, n_features:int=5)
 				W[j] += temp_s * (y.value_counts().get(y[c[0]], 0) / y.shape[0]) / (1 - (y.value_counts().get(y[a], 0) / y.shape[0]))
  
 
-		print(f"Features' weights W = \n{W}")
+		# print(f"Features' weights W = \n{W}")
 
 
 	# Returning selected features

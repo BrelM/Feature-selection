@@ -1,7 +1,7 @@
 '''
 	pagerank.py
 
-	Implement of a pagerank algorithms for feature selection purposes.
+	Implement of pagerank algorithm for feature selection purposes.
 
 
 	By Alph@B, AKA Brel MBE
@@ -10,10 +10,11 @@
 
 
 
-import pandas as pd
 import numpy as np
 import scipy.sparse
 import networkx as nx
+
+
 
 
 def pagerankloop(G:nx.Graph, columns:list, alpha:float=0.85, max_iter=None, pen_method="delete") -> np.array:
