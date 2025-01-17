@@ -12,24 +12,26 @@
 
 import pandas as pd
 import numpy as np
-from scipy.stats import f_oneway
+from scipy.stats import f_oneway, chi2_contingency
 import networkx as nx
 from sklearn.feature_selection import mutual_info_regression
 from sklearn.preprocessing import MinMaxScaler, OneHotEncoder
 
 
 
-def load_data(data_params:dict) -> tuple[pd.DataFrame, pd.Series]:
+def load_data(data_params:dict, encode_cat:bool=True) -> tuple[pd.DataFrame, pd.Series]:
 	'''
 		Load data at path using data_params and return inputs as X and targets as Y.
 		## Parameters:
 		- data_params: A dictionnary containing:
-		- path: path to the data file
-		- nb_features: number of features
-		- class_idx: the class column index
-		- sep: the file separator
-		- id: If there is an Id column or not
-		- labels: If there are labels in the file
+			- path: path to the data file
+			- nb_features: number of features
+			- class_idx: the class column index
+			- sep: the file separator
+			- id: If there is an Id column or not
+			- labels: If there are labels in the file
+		- encode_cat: bool.
+					  Rather to encode categorical attributes or not.
 
 	'''
 	
@@ -59,13 +61,13 @@ def load_data(data_params:dict) -> tuple[pd.DataFrame, pd.Series]:
 	num_cols = data[numerical_columns]
 	for col in numerical_columns:
 		mean_value = data[col].mean()
-		num_cols[col] = data[col].fillna(mean_value)
+		num_cols.loc[:, col] = data.loc[:, col].fillna(mean_value)
 
 
 	cat_cols = data[categorical_columns]
 	for col in categorical_columns:
 		mode_value = data[col].mode()[0]
-		cat_cols[col] = data[col].fillna(mode_value)
+		cat_cols.loc[:, col] = data.loc[:, col].fillna(mode_value)
 
 
 	# Scaling numerical values
@@ -77,14 +79,19 @@ def load_data(data_params:dict) -> tuple[pd.DataFrame, pd.Series]:
 	)
 		
 	# One-hot-encoding the categorical features
-	encoder = OneHotEncoder(sparse_output=False, drop='first')
-	encoded_cats = encoder.fit_transform(cat_cols)
+	if encode_cat:
+		encoder = OneHotEncoder(sparse_output=False, drop='first')
+		encoded_cats = encoder.fit_transform(cat_cols)
+	
+		# Converting encoded array to DataFrame
+		encoded_df = pd.DataFrame(
+			data=encoded_cats,
+			columns=encoder.get_feature_names_out(categorical_columns)
+		) 
+	
+	else:
+		encoded_df = cat_cols
 
-	# Converting encoded array to DataFrame
-	encoded_df = pd.DataFrame(
-		data=encoded_cats,
-		columns=encoder.get_feature_names_out(categorical_columns)
-	) 
 
 	# Combining with numerical columns
 	final_data = pd.concat([num_cols.reset_index(drop=True), encoded_df.reset_index(drop=True)], axis=1)
@@ -260,6 +267,8 @@ def build_graph(data:pd.DataFrame, weights_strategy:str= 'corcoef') -> np.array:
 	# print(f"Building features' graph using {weights_strategy} strategy.")
 	n = data.shape[1]
 	graph_matrix = np.zeros([n, n], 'float64')
+	categorical_columns = data.select_dtypes(include=['object', 'category']).columns
+
 
 	if weights_strategy == 'corcoef': # Correlation coefficient
 		return nx.from_numpy_array(data.corr('pearson').to_numpy(), parallel_edges=False)
@@ -274,17 +283,44 @@ def build_graph(data:pd.DataFrame, weights_strategy:str= 'corcoef') -> np.array:
 
 		for i in range(n):
 			for j in range(n):
-				
-				groups = data.groupby(data.columns[i])[data.columns[j]]
 
-				# Extract the numerical data for each group
-				group_values = [group.values for _, group in groups]
+				if data.columns[i] in categorical_columns and data.columns[j] in categorical_columns:
+					
+					# Contingency table
+					contingency_table = pd.crosstab(data[data.columns[i]], data[data.columns[j]])
 
-				# Perform ANOVA
-				f_stat, p_value = f_oneway(*group_values)
+					# Ci-square test
+					chi2_stat, p_value, dof, expected = chi2_contingency(contingency_table)
 
-				graph_matrix[i, j] = f_stat
+					graph_matrix[i, j] = p_value
 
+				else:
+					if data.columns[i] in categorical_columns:
+						groups = data.groupby(data.columns[i])[data.columns[j]]
+
+						# Extract the numerical data for each group
+						group_values = [group.values for _, group in groups]
+
+						# Perform ANOVA
+						print(*group_values)
+						f_stat, p_value = f_oneway(*group_values)
+
+						graph_matrix[i, j] = p_value
+
+					elif data.columns[j] in categorical_columns:
+						groups = data.groupby(data.columns[j])[data.columns[i]]
+
+						# Extract the numerical data for each group
+						group_values = [group.values for _, group in groups]
+
+						# Perform ANOVA
+						f_stat, p_value = f_oneway(*group_values)
+
+						graph_matrix[i, j] = p_value
+
+					else:
+
+						graph_matrix[i, j] = mutual_info_regression(data[[data.columns[i]]], data[data.columns[j]])
 
 
 	return nx.from_numpy_array(graph_matrix, parallel_edges=False)

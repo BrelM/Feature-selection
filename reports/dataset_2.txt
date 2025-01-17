@@ -1,0 +1,15 @@
+
+Meta parameter(s) value(s): 0
+Selected features: ['A0', 'A1', 'A3']
+Accuracy, recall: 0.83, 0.5
+
+
+Meta parameter(s) value(s): 0
+Selected features: ['A0', 'A1', 'A3']
+Accuracy, recall: 0.83, 0.5
+
+
+Meta parameter(s) value(s): 0
+Selected features: ['A2_RENT', 'A2_OWN', 'A2_OTHER']
+Accuracy, recall: 0.83, 0.5
+

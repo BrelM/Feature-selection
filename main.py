@@ -273,6 +273,9 @@ data, y = utils.load_data(DATASETS_INFO[dataset])
 if params == None and algo in [6, 7]: # Ridge or Lasso
 	params = 1e-5
 
+if params == None and algo == 8: # PageRank
+	params = 0.85
+
 if params != None:
 
 	# if '.' in params:
@@ -296,7 +299,9 @@ else:
 if n_features != data.shape[1]: # No feature selection to apply
 	
 	if ALGOS[algo] == "PageRank":
-		graph = utils.build_graph(data, strategy)
+		Data, Y = utils.load_data(DATASETS_INFO[dataset], False)
+		graph = utils.build_graph(Data, strategy)
+		print(graph.edges(data=True))
 
 
 	# Execute the choosen algorithm
