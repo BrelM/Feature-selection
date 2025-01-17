@@ -34,7 +34,7 @@ def relief(data:pd.DataFrame, y:pd.Series, m:int=10, n_features:int=5) -> list:
 	W = [0] * data.shape[1]
 
 	for i in range(m):
-		print(f'Update {i + 1}...')
+		# print(f'Update {i + 1}...')
 		a = random.randrange(data.shape[0])
 
 		H, M = utils.hit_and_miss(data, y, a)
@@ -71,7 +71,7 @@ def reliefF(data:pd.DataFrame, y:pd.Series, m:int=10, k:int=3, n_features:int=5)
 	W = [0] * data.shape[1]
 
 	for i in range(m):
-		print(f'Update {i + 1}...')
+		# print(f'Update {i + 1}...')
 		a = random.randrange(data.shape[0])
 
 		H = utils.k_hits_or_misses(data, y, a, k)
@@ -246,7 +246,7 @@ def svm_rfe(data:pd.DataFrame, y:pd.Series, n_features:int=5) -> list:
 			# Creating and fitting the SVM model over the data
 			model = svm.SVC(kernel='linear', decision_function_shape='ovr')
 
-			print(f'\nNo. of columns: {data.columns.shape[0]}\nAvailable columns: {list(data.columns)}')
+			# print(f'\nNo. of columns: {data.columns.shape[0]}\nAvailable columns: {list(data.columns)}')
 			model.fit(data.to_numpy(), y.to_numpy())
 
 			# Removing the feature with the less contribution
@@ -256,7 +256,7 @@ def svm_rfe(data:pd.DataFrame, y:pd.Series, n_features:int=5) -> list:
 			# print(f"Removing {a}")
 
 			data.drop(a, axis='columns', inplace=True)
-			print(f'Dropped column : {a}')	
+			# print(f'Dropped column : {a}')	
 
 	else:
 		while data.shape[1] > n_features:
@@ -264,7 +264,7 @@ def svm_rfe(data:pd.DataFrame, y:pd.Series, n_features:int=5) -> list:
 			# Creating and fitting the SVM model over the data
 			model = svm.SVC(kernel='linear')
 
-			print(f'\nNo. of columns: {data.columns.shape[0]}\nAvailable columns: {list(data.columns)}')
+			# print(f'\nNo. of columns: {data.columns.shape[0]}\nAvailable columns: {list(data.columns)}')
 			model.fit(data.to_numpy(), y.to_numpy())
 
 			# Removing the feature with the less contribution
@@ -273,7 +273,7 @@ def svm_rfe(data:pd.DataFrame, y:pd.Series, n_features:int=5) -> list:
 			# print(f"Removing {a}")
 
 			data.drop(a, axis='columns', inplace=True)
-			print(f'Dropped column : {a}')
+			# print(f'Dropped column : {a}')
 	
 	return list(data.columns)
 

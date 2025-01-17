@@ -12,6 +12,7 @@
 
 import pandas as pd
 import numpy as np
+from scipy.stats import f_oneway
 import networkx as nx
 from sklearn.feature_selection import mutual_info_regression
 from sklearn.preprocessing import MinMaxScaler, OneHotEncoder
@@ -144,7 +145,7 @@ def hit_and_miss(data:pd.DataFrame, y:pd.Series, a:int) -> tuple[int, int]:
 
 		scores[t] = 1e9
 	
-	print('Done searching nearest Hit and Miss')
+	# print('Done searching nearest Hit and Miss')
 
 	return H, M
 
@@ -227,7 +228,7 @@ def k_hit_and_miss(data:pd.DataFrame, y:pd.Series, a:int, k:int) -> tuple[int, i
 
 		scores[t] = 1e9
 	
-	print('Done searching nearest Hit and Miss')
+	# print('Done searching nearest Hit and Miss')
 
 	return H, M
 
@@ -256,16 +257,34 @@ def build_graph(data:pd.DataFrame, weights_strategy:str= 'corcoef') -> np.array:
 	
 	'''
 
-	print(f"Building features' graph using {weights_strategy} strategy.")
+	# print(f"Building features' graph using {weights_strategy} strategy.")
 	n = data.shape[1]
 	graph_matrix = np.zeros([n, n], 'float64')
 
-	if weights_strategy == 'corcoef':
+	if weights_strategy == 'corcoef': # Correlation coefficient
 		return nx.from_numpy_array(data.corr('pearson').to_numpy(), parallel_edges=False)
 		
+	elif weights_strategy == 'mi': # Mutual information
+		for i in range(n):
+			for j in range(n):
+				graph_matrix[i, j] = mutual_info_regression(data[[data.columns[i]]], data[data.columns[j]])
 
-	for i in range(n):
-		for j in range(n):
-			graph_matrix[i, j] = mutual_info_regression(data[[data.columns[i]]], data[data.columns[j]])
+
+	else: # Anova test (for now)
+
+		for i in range(n):
+			for j in range(n):
+				
+				groups = data.groupby(data.columns[i])[data.columns[j]]
+
+				# Extract the numerical data for each group
+				group_values = [group.values for _, group in groups]
+
+				# Perform ANOVA
+				f_stat, p_value = f_oneway(*group_values)
+
+				graph_matrix[i, j] = f_stat
+
+
 
 	return nx.from_numpy_array(graph_matrix, parallel_edges=False)

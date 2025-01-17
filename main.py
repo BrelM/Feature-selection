@@ -181,8 +181,10 @@ For more support:\n\
 -h --help   :\t get help\n\
 -a --algo   :\t specify the algorithm to use\n\
 -d --dataset:\t specify the dataset to use\n\
+-n --n_features:\t the percentage of features to select \n\
 -p --params:\t specify the feature selection parameters to use\n\
 -c --classif:\t specify the classifier to use for evaluation of the features (before and after selection) \n\
+-s			:\t For PageRank-based feature selection algorithm. The graph weighting strategy to use: corcoef, mi\n\
 \n\
 Feature selection algorihms include:\n\
 {}\n\
@@ -196,7 +198,7 @@ Classifiers include:\n\
 
 
 try:
-	cpts, args = getopt.getopt(sys.argv[1:], "ha:d:p:c:s:", ["help", "algo=", "dataset=", "params=", "classif="])
+	cpts, args = getopt.getopt(sys.argv[1:], "ha:d:p:c:n:s:", ["help", "algo=", "dataset=", "params=", "classif=", "n_features="])
 
 except getopt.GetoptError as err:
 	print(err)
@@ -210,6 +212,7 @@ dataset = -1
 classifier = -1
 params = None
 strategy = 'corcoef'
+n_features = 0.5
 
 for o, a in cpts:
 	
@@ -239,8 +242,12 @@ for o, a in cpts:
 	
 	elif o in ('-p' '--params'):
 		params = a
+	
 	elif o == '-s':
 		strategy = a
+	
+	elif o in ('-n', '--n_features'):
+		n_features = float(a)
 
 	elif o in ('-c' '--classif'):
 		try:	
@@ -264,47 +271,59 @@ if dataset == -1 or algo == -1 or classifier == -1:
 data, y = utils.load_data(DATASETS_INFO[dataset])
 
 if params == None and algo in [6, 7]: # Ridge or Lasso
-	params = 1e-10
+	params = 1e-5
 
 if params != None:
+
+	# if '.' in params:
 	try:
-		if '.' in params:
-			params = float(params)
-		else:
-			params = int(params)
-	except TypeError as e:
-		pass
+		params = int(params)
+	except:# TypeError as e:
+		params = float(params)
 
 
-n_features = math.ceil(params * data.shape[1])
-if n_features == data.shape[1]:
-	n_features -= 1
+
+if math.ceil(n_features * data.shape[1]) == data.shape[1]:
+	n_features = math.ceil(n_features * data.shape[1]) - 1
+else:
+	n_features = math.ceil(n_features * data.shape[1])
 
 
 
 # Some infos about the data
 # print(data.info(), '\n', y.cat.categories)
 
-if ALGOS[algo] == "PageRank":
-	graph = utils.build_graph(data, strategy)
+if n_features != data.shape[1]: # No feature selection to apply
+	
+	if ALGOS[algo] == "PageRank":
+		graph = utils.build_graph(data, strategy)
 
 
-# Execute the choosen algorithm
-if ALGOS[algo] == "PageRank":
-	columns = ALGOS_INFO[algo](graph, list(data.columns), max_iter=n_features)
-elif algo in [0, 1, 6, 7]:
-	columns = ALGOS_INFO[algo](data, y, params, n_features=n_features)
+	# Execute the choosen algorithm
+	if ALGOS[algo] == "PageRank":
+		columns = ALGOS_INFO[algo](graph, list(data.columns), alpha=params, max_iter=n_features)
+	elif algo in [0, 1, 6, 7]:
+		columns = ALGOS_INFO[algo](data, y, params, n_features=n_features)
+	else:
+		columns = ALGOS_INFO[algo](data, y, n_features=n_features)
 else:
-	columns = ALGOS_INFO[algo](data, y, n_features=n_features)
+	columns = list(data.columns)
 
-print('\n')
-print(f"Feature selection algorithm: {ALGOS[algo]}\nMeta parameter(s) value(s): {params}")
 
-print(f"Selected features: {columns}\n")
-print(f"Classifier for evaluation: {CLASSIFIERS[classifier]}\n")
+with open(f"reports/dataset_{dataset}.txt", "a+") as file:
 
-print(f"Accuracy and recall before feature selection: {CLASSIFIERS_INFO[classifier](data, y)}")
-print(f"Accuracy and recall after feature selection: {CLASSIFIERS_INFO[classifier](data, y, columns)}")
+	file.write('\n')
+	# print(f"Feature selection algorithm: {ALGOS[algo]}\n
+	file.write(f"Meta parameter(s) value(s): {params}\n")
+
+	file.write(f"Selected features: {columns}\n")
+	# print(f"Classifier for evaluation: {CLASSIFIERS[classifier]}\n")
+
+	# print(f"Accuracy and recall before feature selection: {CLASSIFIERS_INFO[classifier](data, y)}")
+	# print(f"Accuracy and recall after feature selection: {CLASSIFIERS_INFO[classifier](data, y, columns)}")
+	file.write(f"Accuracy, recall: {CLASSIFIERS_INFO[classifier](data, y, columns)}\n\n")
+
+
 
 
 
