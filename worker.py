@@ -71,7 +71,7 @@ with open(f"reports/dataset_{dataset}.txt", "w+") as file:
 
 
 
-for algo in [0, 1, 2, 3, 5, 6, 7, 8]:
+for algo in [8]:#0, 1, 2, 3, 5, 6, 7, 8]:
 
 	if dataset in [1, 3, 4] and algo == 0: # Multiclass dataset wit relief
 		pass
@@ -116,7 +116,7 @@ for algo in [0, 1, 2, 3, 5, 6, 7, 8]:
 			with open(f"reports/dataset_{dataset}.txt", "a+") as file:
 				file.write(f"###########################################################################\n#################### Feature selection algo : {ALGOS[algo]} ####################\n")
 			
-			for weighing_strat in ['corcoef', 'mi']:
+			for weighing_strat in ['anova']:#, 'corcoef', 'mi']:
 				
 				with open(f"reports/dataset_{dataset}.txt", "a+") as file:
 					file.write(f"\n#################### Graph weighting strategy: {weighing_strat} ####################\n\n")
@@ -128,7 +128,7 @@ for algo in [0, 1, 2, 3, 5, 6, 7, 8]:
 					with open(f"reports/dataset_{dataset}.txt", "a+") as file:
 						file.write(f"Number of features = {int(n_features * 100)}%")
 					
-					for m in [0.1, 0.5, 0.85, 0.9]:
+					for m in [0.05, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 0.95]:
 						os.system(f"python main.py -d {dataset} -a {algo} -c 0 -p {m} -n {n_features} -s {weighing_strat}")
 
 

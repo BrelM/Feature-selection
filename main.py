@@ -269,6 +269,8 @@ if dataset == -1 or algo == -1 or classifier == -1:
 
 
 data, y = utils.load_data(DATASETS_INFO[dataset])
+total_nb_feat = DATASETS_INFO[dataset]['nb_features']
+
 
 if params == None and algo in [6, 7]: # Ridge or Lasso
 	params = 1e-5
@@ -286,33 +288,39 @@ if params != None:
 
 
 
-if math.ceil(n_features * data.shape[1]) == data.shape[1]:
-	n_features = math.ceil(n_features * data.shape[1]) - 1
+if math.ceil(n_features * total_nb_feat) == total_nb_feat:
+	n_features = math.ceil(n_features * total_nb_feat) - 1
 else:
-	n_features = math.ceil(n_features * data.shape[1])
-
+	n_features = math.ceil(n_features * total_nb_feat)
 
 
 # Some infos about the data
 # print(data.info(), '\n', y.cat.categories)
 
-if n_features != data.shape[1]: # No feature selection to apply
-	
-	if ALGOS[algo] == "PageRank":
-		Data, Y = utils.load_data(DATASETS_INFO[dataset], False)
-		graph = utils.build_graph(Data, strategy)
-		print(graph.edges(data=True))
+Data, Y = None, None
 
+if n_features != total_nb_feat - 1: # Feature selection to apply
 
 	# Execute the choosen algorithm
 	if ALGOS[algo] == "PageRank":
-		columns = ALGOS_INFO[algo](graph, list(data.columns), alpha=params, max_iter=n_features)
+		Data, Y = utils.load_data(DATASETS_INFO[dataset], False)
+		graph = utils.build_graph(Data, strategy)
+
+		columns = ALGOS_INFO[algo](graph, list(Data.columns), alpha=params, max_iter=n_features)
+	
 	elif algo in [0, 1, 6, 7]:
 		columns = ALGOS_INFO[algo](data, y, params, n_features=n_features)
+	
 	else:
 		columns = ALGOS_INFO[algo](data, y, n_features=n_features)
-else:
+
+else: # Feature selection to apply
+
 	columns = list(data.columns)
+
+	if ALGOS[algo] == "PageRank":
+		Data, Y = utils.load_data(DATASETS_INFO[dataset], False)
+		columns = list(Data.columns)
 
 
 with open(f"reports/dataset_{dataset}.txt", "a+") as file:
@@ -326,7 +334,13 @@ with open(f"reports/dataset_{dataset}.txt", "a+") as file:
 
 	# print(f"Accuracy and recall before feature selection: {CLASSIFIERS_INFO[classifier](data, y)}")
 	# print(f"Accuracy and recall after feature selection: {CLASSIFIERS_INFO[classifier](data, y, columns)}")
-	file.write(f"Accuracy, recall: {CLASSIFIERS_INFO[classifier](data, y, columns)}\n\n")
+	if ALGOS[algo] == "PageRank":
+
+		encoded_data, columns = utils.encode_columns(Data, columns)
+		file.write(f"Accuracy, recall: {CLASSIFIERS_INFO[classifier](encoded_data, y, columns)}\n\n")
+	
+	else:
+		file.write(f"Accuracy, recall: {CLASSIFIERS_INFO[classifier](data, y, columns)}\n\n")
 
 
 

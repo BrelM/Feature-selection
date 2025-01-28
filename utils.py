@@ -97,9 +97,39 @@ def load_data(data_params:dict, encode_cat:bool=True) -> tuple[pd.DataFrame, pd.
 	final_data = pd.concat([num_cols.reset_index(drop=True), encoded_df.reset_index(drop=True)], axis=1)
 
 	y = y.cat.rename_categories(list(range(n)))
+	y = y.fillna(y.mode()[0])
 
 	return final_data, y
 
+
+
+
+def encode_columns(data:pd.DataFrame, columns:list)-> pd.DataFrame:
+	'''
+	
+	'''
+
+	# Choosing the selected columns then excludind the numerical ones
+	data = data.loc[:, columns]
+	cat_cols = data.select_dtypes(include=['object', 'category']).columns
+	# Selecting the other columns
+	other_cols = data.drop(columns=cat_cols)
+
+	# One-hot-encoding the categorical features
+	encoder = OneHotEncoder(sparse_output=False, drop='first')
+	encoded_cats = encoder.fit_transform(data[cat_cols])
+
+	# Converting encoded array to DataFrame
+	encoded_df = pd.DataFrame(
+		data=encoded_cats,
+		columns=encoder.get_feature_names_out(cat_cols)
+	) 
+	
+
+	# Combining with numerical columns
+	final_data = pd.concat([other_cols.reset_index(drop=True), encoded_df.reset_index(drop=True)], axis=1)
+
+	return final_data, list(final_data.columns)
 
 
 
@@ -302,7 +332,6 @@ def build_graph(data:pd.DataFrame, weights_strategy:str= 'corcoef') -> np.array:
 						group_values = [group.values for _, group in groups]
 
 						# Perform ANOVA
-						print(*group_values)
 						f_stat, p_value = f_oneway(*group_values)
 
 						graph_matrix[i, j] = p_value
@@ -324,3 +353,7 @@ def build_graph(data:pd.DataFrame, weights_strategy:str= 'corcoef') -> np.array:
 
 
 	return nx.from_numpy_array(graph_matrix, parallel_edges=False)
+
+
+
+
