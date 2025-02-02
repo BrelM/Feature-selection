@@ -1,0 +1,1472 @@
+#################### Dataset : Speaker Accent Recognition ####################
+
+####################################################################################
+#################### Feature selection algo : ReliefF ####################
+Number of features = 10%
+Meta parameter(s) value(s): 5
+Selected features: ['A1', 'A2']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 20
+Selected features: ['A1', 'A2']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 50
+Selected features: ['A1', 'A2']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 90
+Selected features: ['A1', 'A2']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 20%
+Meta parameter(s) value(s): 5
+Selected features: ['A1', 'A2', 'A3']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 20
+Selected features: ['A1', 'A2', 'A3']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 50
+Selected features: ['A1', 'A2', 'A3']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 90
+Selected features: ['A1', 'A2', 'A3']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 30%
+Meta parameter(s) value(s): 5
+Selected features: ['A1', 'A2', 'A3', 'A4']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 20
+Selected features: ['A1', 'A2', 'A3', 'A4']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 50
+Selected features: ['A1', 'A2', 'A3', 'A4']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 90
+Selected features: ['A1', 'A2', 'A3', 'A4']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 40%
+Meta parameter(s) value(s): 5
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 20
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 50
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 90
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 50%
+Meta parameter(s) value(s): 5
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 20
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 50
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 90
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 60%
+Meta parameter(s) value(s): 5
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 20
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 50
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 90
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 70%
+Meta parameter(s) value(s): 5
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 20
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 50
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 90
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 80%
+Meta parameter(s) value(s): 5
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9', 'A10']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 20
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9', 'A10']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 50
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9', 'A10']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 90
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9', 'A10']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 90%
+Meta parameter(s) value(s): 5
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9', 'A10', 'A11']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 20
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9', 'A10', 'A11']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 50
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9', 'A10', 'A11']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 90
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9', 'A10', 'A11']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 100%
+Meta parameter(s) value(s): 5
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9', 'A10', 'A11']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 20
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9', 'A10', 'A11']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 50
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9', 'A10', 'A11']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 90
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9', 'A10', 'A11']
+Accuracy, recall: 0.42, 0.17
+
+###########################################################################
+#################### Feature selection algo : Mutual information ####################
+Number of features = 10%
+Meta parameter(s) value(s): None
+Selected features: ['A12', 'A2']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 20%
+Meta parameter(s) value(s): None
+Selected features: ['A12', 'A2', 'A8']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 30%
+Meta parameter(s) value(s): None
+Selected features: ['A12', 'A2', 'A8', 'A3']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 40%
+Meta parameter(s) value(s): None
+Selected features: ['A12', 'A2', 'A8', 'A3', 'A4']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 50%
+Meta parameter(s) value(s): None
+Selected features: ['A12', 'A2', 'A8', 'A3', 'A4', 'A9']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 60%
+Meta parameter(s) value(s): None
+Selected features: ['A12', 'A2', 'A8', 'A3', 'A4', 'A9', 'A11', 'A5']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 70%
+Meta parameter(s) value(s): None
+Selected features: ['A12', 'A2', 'A8', 'A3', 'A4', 'A9', 'A11', 'A5', 'A1']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 80%
+Meta parameter(s) value(s): None
+Selected features: ['A12', 'A2', 'A8', 'A3', 'A4', 'A9', 'A11', 'A5', 'A1', 'A10']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 90%
+Meta parameter(s) value(s): None
+Selected features: ['A12', 'A2', 'A8', 'A3', 'A4', 'A9', 'A11', 'A5', 'A1', 'A10', 'A7']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 100%
+Meta parameter(s) value(s): None
+Selected features: ['A12', 'A2', 'A8', 'A3', 'A4', 'A9', 'A11', 'A5', 'A1', 'A10', 'A7']
+Accuracy, recall: 0.42, 0.17
+
+###########################################################################
+#################### Feature selection algo : Sequential feature selection ####################
+Number of features = 10%
+Meta parameter(s) value(s): None
+Selected features: ['A1', 'A10']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 20%
+Meta parameter(s) value(s): None
+Selected features: ['A1', 'A2', 'A10']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 30%
+Meta parameter(s) value(s): None
+Selected features: ['A1', 'A2', 'A7', 'A10']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 40%
+Meta parameter(s) value(s): None
+Selected features: ['A1', 'A2', 'A4', 'A7', 'A10']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 50%
+Meta parameter(s) value(s): None
+Selected features: ['A1', 'A2', 'A4', 'A7', 'A10', 'A12']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 60%
+Meta parameter(s) value(s): None
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A7', 'A10', 'A11', 'A12']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 70%
+Meta parameter(s) value(s): None
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A7', 'A10', 'A11', 'A12']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 80%
+Meta parameter(s) value(s): None
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A7', 'A8', 'A10', 'A11', 'A12']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 90%
+Meta parameter(s) value(s): None
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A7', 'A8', 'A9', 'A10', 'A11', 'A12']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 100%
+Meta parameter(s) value(s): None
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A7', 'A8', 'A9', 'A10', 'A11', 'A12']
+Accuracy, recall: 0.42, 0.17
+
+###########################################################################
+#################### Feature selection algo : RFE-SVM-SFS ####################
+Number of features = 10%
+Meta parameter(s) value(s): None
+Selected features: ['A1', 'A2']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 20%
+Meta parameter(s) value(s): None
+Selected features: ['A1', 'A2', 'A3']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 30%
+Meta parameter(s) value(s): None
+Selected features: ['A1', 'A2', 'A3', 'A10']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 40%
+Meta parameter(s) value(s): None
+Selected features: ['A1', 'A2', 'A3', 'A6', 'A10']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 50%
+Meta parameter(s) value(s): None
+Selected features: ['A1', 'A2', 'A3', 'A6', 'A10', 'A12']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 60%
+Meta parameter(s) value(s): None
+Selected features: ['A1', 'A2', 'A3', 'A6', 'A7', 'A10', 'A11', 'A12']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 70%
+Meta parameter(s) value(s): None
+Selected features: ['A1', 'A2', 'A3', 'A6', 'A7', 'A8', 'A10', 'A11', 'A12']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 80%
+Meta parameter(s) value(s): None
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A6', 'A7', 'A8', 'A10', 'A11', 'A12']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 90%
+Meta parameter(s) value(s): None
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A6', 'A7', 'A8', 'A9', 'A10', 'A11', 'A12']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 100%
+Meta parameter(s) value(s): None
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A6', 'A7', 'A8', 'A9', 'A10', 'A11', 'A12']
+Accuracy, recall: 0.42, 0.17
+
+###########################################################################
+#################### Feature selection algo : RIDGE ####################
+Number of features = 10%
+Meta parameter(s) value(s): 1e-05
+Selected features: ['A8', 'A3']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.01
+Selected features: ['A8', 'A3']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.1
+Selected features: ['A8', 'A3']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 1
+Selected features: ['A8', 'A3']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 5
+Selected features: ['A8', 'A3']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 20
+Selected features: ['A8', 'A6']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 50
+Selected features: ['A8', 'A6']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 20%
+Meta parameter(s) value(s): 1e-05
+Selected features: ['A8', 'A3', 'A6']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.01
+Selected features: ['A8', 'A3', 'A6']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.1
+Selected features: ['A8', 'A3', 'A6']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 1
+Selected features: ['A8', 'A3', 'A6']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 5
+Selected features: ['A8', 'A3', 'A6']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 20
+Selected features: ['A8', 'A6', 'A11']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 50
+Selected features: ['A8', 'A6', 'A11']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 30%
+Meta parameter(s) value(s): 1e-05
+Selected features: ['A8', 'A3', 'A6', 'A12']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.01
+Selected features: ['A8', 'A3', 'A6', 'A12']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.1
+Selected features: ['A8', 'A3', 'A6', 'A12']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 1
+Selected features: ['A8', 'A3', 'A6', 'A2']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 5
+Selected features: ['A8', 'A3', 'A6', 'A2']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 20
+Selected features: ['A8', 'A6', 'A11', 'A3']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 50
+Selected features: ['A8', 'A6', 'A11', 'A9']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 40%
+Meta parameter(s) value(s): 1e-05
+Selected features: ['A8', 'A3', 'A6', 'A12', 'A2']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.01
+Selected features: ['A8', 'A3', 'A6', 'A12', 'A2']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.1
+Selected features: ['A8', 'A3', 'A6', 'A12', 'A2']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 1
+Selected features: ['A8', 'A3', 'A6', 'A2', 'A12']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 5
+Selected features: ['A8', 'A3', 'A6', 'A2', 'A11']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 20
+Selected features: ['A8', 'A6', 'A11', 'A3', 'A2']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 50
+Selected features: ['A8', 'A6', 'A11', 'A9', 'A4']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 50%
+Meta parameter(s) value(s): 1e-05
+Selected features: ['A8', 'A3', 'A6', 'A12', 'A2', 'A1']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.01
+Selected features: ['A8', 'A3', 'A6', 'A12', 'A2', 'A1']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.1
+Selected features: ['A8', 'A3', 'A6', 'A12', 'A2', 'A1']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 1
+Selected features: ['A8', 'A3', 'A6', 'A2', 'A12', 'A1']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 5
+Selected features: ['A8', 'A3', 'A6', 'A2', 'A11', 'A12']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 20
+Selected features: ['A8', 'A6', 'A11', 'A3', 'A2', 'A4']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 50
+Selected features: ['A8', 'A6', 'A11', 'A9', 'A4', 'A2']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 60%
+Meta parameter(s) value(s): 1e-05
+Selected features: ['A8', 'A3', 'A6', 'A12', 'A2', 'A1', 'A4', 'A11']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.01
+Selected features: ['A8', 'A3', 'A6', 'A12', 'A2', 'A1', 'A4', 'A11']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.1
+Selected features: ['A8', 'A3', 'A6', 'A12', 'A2', 'A1', 'A4', 'A11']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 1
+Selected features: ['A8', 'A3', 'A6', 'A2', 'A12', 'A1', 'A4', 'A11']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 5
+Selected features: ['A8', 'A3', 'A6', 'A2', 'A11', 'A12', 'A4', 'A1']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 20
+Selected features: ['A8', 'A6', 'A11', 'A3', 'A2', 'A4', 'A9', 'A1']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 50
+Selected features: ['A8', 'A6', 'A11', 'A9', 'A4', 'A2', 'A3', 'A1']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 70%
+Meta parameter(s) value(s): 1e-05
+Selected features: ['A8', 'A3', 'A6', 'A12', 'A2', 'A1', 'A4', 'A11', 'A7']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.01
+Selected features: ['A8', 'A3', 'A6', 'A12', 'A2', 'A1', 'A4', 'A11', 'A7']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.1
+Selected features: ['A8', 'A3', 'A6', 'A12', 'A2', 'A1', 'A4', 'A11', 'A7']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 1
+Selected features: ['A8', 'A3', 'A6', 'A2', 'A12', 'A1', 'A4', 'A11', 'A9']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 5
+Selected features: ['A8', 'A3', 'A6', 'A2', 'A11', 'A12', 'A4', 'A1', 'A9']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 20
+Selected features: ['A8', 'A6', 'A11', 'A3', 'A2', 'A4', 'A9', 'A1', 'A12']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 50
+Selected features: ['A8', 'A6', 'A11', 'A9', 'A4', 'A2', 'A3', 'A1', 'A12']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 80%
+Meta parameter(s) value(s): 1e-05
+Selected features: ['A8', 'A3', 'A6', 'A12', 'A2', 'A1', 'A4', 'A11', 'A7', 'A9']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.01
+Selected features: ['A8', 'A3', 'A6', 'A12', 'A2', 'A1', 'A4', 'A11', 'A7', 'A9']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.1
+Selected features: ['A8', 'A3', 'A6', 'A12', 'A2', 'A1', 'A4', 'A11', 'A7', 'A9']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 1
+Selected features: ['A8', 'A3', 'A6', 'A2', 'A12', 'A1', 'A4', 'A11', 'A9', 'A7']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 5
+Selected features: ['A8', 'A3', 'A6', 'A2', 'A11', 'A12', 'A4', 'A1', 'A9', 'A7']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 20
+Selected features: ['A8', 'A6', 'A11', 'A3', 'A2', 'A4', 'A9', 'A1', 'A12', 'A7']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 50
+Selected features: ['A8', 'A6', 'A11', 'A9', 'A4', 'A2', 'A3', 'A1', 'A12', 'A7']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 90%
+Meta parameter(s) value(s): 1e-05
+Selected features: ['A8', 'A3', 'A6', 'A12', 'A2', 'A1', 'A4', 'A11', 'A7', 'A9', 'A5']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.01
+Selected features: ['A8', 'A3', 'A6', 'A12', 'A2', 'A1', 'A4', 'A11', 'A7', 'A9', 'A5']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.1
+Selected features: ['A8', 'A3', 'A6', 'A12', 'A2', 'A1', 'A4', 'A11', 'A7', 'A9', 'A5']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 1
+Selected features: ['A8', 'A3', 'A6', 'A2', 'A12', 'A1', 'A4', 'A11', 'A9', 'A7', 'A5']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 5
+Selected features: ['A8', 'A3', 'A6', 'A2', 'A11', 'A12', 'A4', 'A1', 'A9', 'A7', 'A5']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 20
+Selected features: ['A8', 'A6', 'A11', 'A3', 'A2', 'A4', 'A9', 'A1', 'A12', 'A7', 'A5']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 50
+Selected features: ['A8', 'A6', 'A11', 'A9', 'A4', 'A2', 'A3', 'A1', 'A12', 'A7', 'A5']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 100%
+Meta parameter(s) value(s): 1e-05
+Selected features: ['A8', 'A3', 'A6', 'A12', 'A2', 'A1', 'A4', 'A11', 'A7', 'A9', 'A5']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.01
+Selected features: ['A8', 'A3', 'A6', 'A12', 'A2', 'A1', 'A4', 'A11', 'A7', 'A9', 'A5']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.1
+Selected features: ['A8', 'A3', 'A6', 'A12', 'A2', 'A1', 'A4', 'A11', 'A7', 'A9', 'A5']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 1
+Selected features: ['A8', 'A3', 'A6', 'A2', 'A12', 'A1', 'A4', 'A11', 'A9', 'A7', 'A5']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 5
+Selected features: ['A8', 'A3', 'A6', 'A2', 'A11', 'A12', 'A4', 'A1', 'A9', 'A7', 'A5']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 20
+Selected features: ['A8', 'A6', 'A11', 'A3', 'A2', 'A4', 'A9', 'A1', 'A12', 'A7', 'A5']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 50
+Selected features: ['A8', 'A6', 'A11', 'A9', 'A4', 'A2', 'A3', 'A1', 'A12', 'A7', 'A5']
+Accuracy, recall: 0.42, 0.17
+
+###########################################################################
+#################### Feature selection algo : LASSO ####################
+Number of features = 10%
+Meta parameter(s) value(s): 1e-05
+Selected features: ['A8', 'A3']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.01
+Selected features: ['A8', 'A3']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.1
+Selected features: ['A1', 'A2']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 1
+Selected features: ['A1', 'A2']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 5
+Selected features: ['A1', 'A2']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 20
+Selected features: ['A1', 'A2']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 50
+Selected features: ['A1', 'A2']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 20%
+Meta parameter(s) value(s): 1e-05
+Selected features: ['A8', 'A3', 'A6']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.01
+Selected features: ['A8', 'A3', 'A2']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.1
+Selected features: ['A1', 'A2', 'A3']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 1
+Selected features: ['A1', 'A2', 'A3']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 5
+Selected features: ['A1', 'A2', 'A3']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 20
+Selected features: ['A1', 'A2', 'A3']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 50
+Selected features: ['A1', 'A2', 'A3']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 30%
+Meta parameter(s) value(s): 1e-05
+Selected features: ['A8', 'A3', 'A6', 'A12']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.01
+Selected features: ['A8', 'A3', 'A2', 'A12']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.1
+Selected features: ['A1', 'A2', 'A3', 'A4']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 1
+Selected features: ['A1', 'A2', 'A3', 'A4']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 5
+Selected features: ['A1', 'A2', 'A3', 'A4']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 20
+Selected features: ['A1', 'A2', 'A3', 'A4']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 50
+Selected features: ['A1', 'A2', 'A3', 'A4']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 40%
+Meta parameter(s) value(s): 1e-05
+Selected features: ['A8', 'A3', 'A6', 'A12', 'A2']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.01
+Selected features: ['A8', 'A3', 'A2', 'A12', 'A1']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.1
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 1
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 5
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 20
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 50
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 50%
+Meta parameter(s) value(s): 1e-05
+Selected features: ['A8', 'A3', 'A6', 'A12', 'A2', 'A1']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.01
+Selected features: ['A8', 'A3', 'A2', 'A12', 'A1', 'A4']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.1
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 1
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 5
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 20
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 50
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 60%
+Meta parameter(s) value(s): 1e-05
+Selected features: ['A8', 'A3', 'A6', 'A12', 'A2', 'A1', 'A4', 'A11']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.01
+Selected features: ['A8', 'A3', 'A2', 'A12', 'A1', 'A4', 'A6', 'A9']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.1
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 1
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 5
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 20
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 50
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 70%
+Meta parameter(s) value(s): 1e-05
+Selected features: ['A8', 'A3', 'A6', 'A12', 'A2', 'A1', 'A4', 'A11', 'A7']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.01
+Selected features: ['A8', 'A3', 'A2', 'A12', 'A1', 'A4', 'A6', 'A9', 'A11']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.1
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 1
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 5
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 20
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 50
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 80%
+Meta parameter(s) value(s): 1e-05
+Selected features: ['A8', 'A3', 'A6', 'A12', 'A2', 'A1', 'A4', 'A11', 'A7', 'A9']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.01
+Selected features: ['A8', 'A3', 'A2', 'A12', 'A1', 'A4', 'A6', 'A9', 'A11', 'A7']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.1
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9', 'A11']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 1
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9', 'A10']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 5
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9', 'A10']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 20
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9', 'A10']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 50
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9', 'A10']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 90%
+Meta parameter(s) value(s): 1e-05
+Selected features: ['A8', 'A3', 'A6', 'A12', 'A2', 'A1', 'A4', 'A11', 'A7', 'A9', 'A5']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.01
+Selected features: ['A8', 'A3', 'A2', 'A12', 'A1', 'A4', 'A6', 'A9', 'A11', 'A7', 'A5']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.1
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9', 'A11', 'A12']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 1
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9', 'A10', 'A11']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 5
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9', 'A10', 'A11']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 20
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9', 'A10', 'A11']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 50
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9', 'A10', 'A11']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 100%
+Meta parameter(s) value(s): 1e-05
+Selected features: ['A8', 'A3', 'A6', 'A12', 'A2', 'A1', 'A4', 'A11', 'A7', 'A9', 'A5']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.01
+Selected features: ['A8', 'A3', 'A2', 'A12', 'A1', 'A4', 'A6', 'A9', 'A11', 'A7', 'A5']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.1
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9', 'A11', 'A12']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 1
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9', 'A10', 'A11']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 5
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9', 'A10', 'A11']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 20
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9', 'A10', 'A11']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 50
+Selected features: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9', 'A10', 'A11']
+Accuracy, recall: 0.42, 0.17
+
+###########################################################################
+#################### Feature selection algo : PageRank ####################
+
+#################### Graph weighting strategy: corcoef ####################
+
+Number of features = 10%
+Meta parameter(s) value(s): 0.1
+Selected features: ['A10', 'A2']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.5
+Selected features: ['A10', 'A12']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.85
+Selected features: ['A10', 'A12']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.9
+Selected features: ['A10', 'A12']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 20%
+Meta parameter(s) value(s): 0.1
+Selected features: ['A10', 'A2', 'A8']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.5
+Selected features: ['A10', 'A12', 'A2']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.85
+Selected features: ['A10', 'A12', 'A2']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.9
+Selected features: ['A10', 'A12', 'A2']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 30%
+Meta parameter(s) value(s): 0.1
+Selected features: ['A10', 'A2', 'A8', 'A12']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.5
+Selected features: ['A10', 'A12', 'A2', 'A8']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.85
+Selected features: ['A10', 'A12', 'A2', 'A8']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.9
+Selected features: ['A10', 'A12', 'A2', 'A8']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 40%
+Meta parameter(s) value(s): 0.1
+Selected features: ['A10', 'A2', 'A8', 'A12', 'A3']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.5
+Selected features: ['A10', 'A12', 'A2', 'A8', 'A3']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.85
+Selected features: ['A10', 'A12', 'A2', 'A8', 'A3']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.9
+Selected features: ['A10', 'A12', 'A2', 'A8', 'A3']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 50%
+Meta parameter(s) value(s): 0.1
+Selected features: ['A10', 'A2', 'A8', 'A12', 'A3', 'A9']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.5
+Selected features: ['A10', 'A12', 'A2', 'A8', 'A3', 'A7']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.85
+Selected features: ['A10', 'A12', 'A2', 'A8', 'A3', 'A7']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.9
+Selected features: ['A10', 'A12', 'A2', 'A8', 'A3', 'A7']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 60%
+Meta parameter(s) value(s): 0.1
+Selected features: ['A10', 'A2', 'A8', 'A12', 'A3', 'A9', 'A7', 'A6']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.5
+Selected features: ['A10', 'A12', 'A2', 'A8', 'A3', 'A7', 'A4', 'A6']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.85
+Selected features: ['A10', 'A12', 'A2', 'A8', 'A3', 'A7', 'A4', 'A6']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.9
+Selected features: ['A10', 'A12', 'A2', 'A8', 'A3', 'A7', 'A4', 'A6']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 70%
+Meta parameter(s) value(s): 0.1
+Selected features: ['A10', 'A2', 'A8', 'A12', 'A3', 'A9', 'A7', 'A6', 'A4']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.5
+Selected features: ['A10', 'A12', 'A2', 'A8', 'A3', 'A7', 'A4', 'A6', 'A9']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.85
+Selected features: ['A10', 'A12', 'A2', 'A8', 'A3', 'A7', 'A4', 'A6', 'A9']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.9
+Selected features: ['A10', 'A12', 'A2', 'A8', 'A3', 'A7', 'A4', 'A6', 'A9']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 80%
+Meta parameter(s) value(s): 0.1
+Selected features: ['A10', 'A2', 'A8', 'A12', 'A3', 'A9', 'A7', 'A6', 'A4', 'A5']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.5
+Selected features: ['A10', 'A12', 'A2', 'A8', 'A3', 'A7', 'A4', 'A6', 'A9', 'A5']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.85
+Selected features: ['A10', 'A12', 'A2', 'A8', 'A3', 'A7', 'A4', 'A6', 'A9', 'A5']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.9
+Selected features: ['A10', 'A12', 'A2', 'A8', 'A3', 'A7', 'A4', 'A6', 'A9', 'A5']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 90%
+Meta parameter(s) value(s): 0.1
+Selected features: ['A10', 'A2', 'A8', 'A12', 'A3', 'A9', 'A7', 'A6', 'A4', 'A5', 'A11']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.5
+Selected features: ['A10', 'A12', 'A2', 'A8', 'A3', 'A7', 'A4', 'A6', 'A9', 'A5', 'A11']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.85
+Selected features: ['A10', 'A12', 'A2', 'A8', 'A3', 'A7', 'A4', 'A6', 'A9', 'A5', 'A11']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.9
+Selected features: ['A10', 'A12', 'A2', 'A8', 'A3', 'A7', 'A4', 'A6', 'A9', 'A5', 'A11']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 100%
+Meta parameter(s) value(s): 0.1
+Selected features: ['A10', 'A2', 'A8', 'A12', 'A3', 'A9', 'A7', 'A6', 'A4', 'A5', 'A11']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.5
+Selected features: ['A10', 'A12', 'A2', 'A8', 'A3', 'A7', 'A4', 'A6', 'A9', 'A5', 'A11']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.85
+Selected features: ['A10', 'A12', 'A2', 'A8', 'A3', 'A7', 'A4', 'A6', 'A9', 'A5', 'A11']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.9
+Selected features: ['A10', 'A12', 'A2', 'A8', 'A3', 'A7', 'A4', 'A6', 'A9', 'A5', 'A11']
+Accuracy, recall: 0.42, 0.17
+
+
+#################### Graph weighting strategy: mi ####################
+
+Number of features = 10%
+Meta parameter(s) value(s): 0.1
+Selected features: ['A10', 'A6']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.5
+Selected features: ['A10', 'A6']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.85
+Selected features: ['A10', 'A6']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.9
+Selected features: ['A10', 'A6']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 20%
+Meta parameter(s) value(s): 0.1
+Selected features: ['A10', 'A6', 'A9']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.5
+Selected features: ['A10', 'A6', 'A9']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.85
+Selected features: ['A10', 'A6', 'A9']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.9
+Selected features: ['A10', 'A6', 'A9']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 30%
+Meta parameter(s) value(s): 0.1
+Selected features: ['A10', 'A6', 'A9', 'A11']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.5
+Selected features: ['A10', 'A6', 'A9', 'A11']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.85
+Selected features: ['A10', 'A6', 'A9', 'A11']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.9
+Selected features: ['A10', 'A6', 'A9', 'A11']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 40%
+Meta parameter(s) value(s): 0.1
+Selected features: ['A10', 'A6', 'A9', 'A11', 'A5']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.5
+Selected features: ['A10', 'A6', 'A9', 'A11', 'A5']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.85
+Selected features: ['A10', 'A6', 'A9', 'A11', 'A5']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.9
+Selected features: ['A10', 'A6', 'A9', 'A11', 'A5']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 50%
+Meta parameter(s) value(s): 0.1
+Selected features: ['A10', 'A6', 'A9', 'A11', 'A5', 'A4']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.5
+Selected features: ['A10', 'A6', 'A9', 'A11', 'A5', 'A4']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.85
+Selected features: ['A10', 'A6', 'A9', 'A11', 'A5', 'A4']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.9
+Selected features: ['A10', 'A6', 'A9', 'A11', 'A5', 'A4']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 60%
+Meta parameter(s) value(s): 0.1
+Selected features: ['A10', 'A6', 'A9', 'A11', 'A5', 'A4', 'A3', 'A1']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.5
+Selected features: ['A10', 'A6', 'A9', 'A11', 'A5', 'A4', 'A3', 'A1']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.85
+Selected features: ['A10', 'A6', 'A9', 'A11', 'A5', 'A4', 'A3', 'A1']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.9
+Selected features: ['A10', 'A6', 'A9', 'A11', 'A5', 'A4', 'A3', 'A1']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 70%
+Meta parameter(s) value(s): 0.1
+Selected features: ['A10', 'A6', 'A9', 'A11', 'A5', 'A4', 'A3', 'A1', 'A12']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.5
+Selected features: ['A10', 'A6', 'A9', 'A11', 'A5', 'A4', 'A3', 'A1', 'A12']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.85
+Selected features: ['A10', 'A6', 'A9', 'A11', 'A5', 'A4', 'A3', 'A1', 'A12']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.9
+Selected features: ['A10', 'A6', 'A9', 'A11', 'A5', 'A4', 'A3', 'A1', 'A12']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 80%
+Meta parameter(s) value(s): 0.1
+Selected features: ['A10', 'A6', 'A9', 'A11', 'A5', 'A4', 'A3', 'A1', 'A12', 'A7']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.5
+Selected features: ['A10', 'A6', 'A9', 'A11', 'A5', 'A4', 'A3', 'A1', 'A12', 'A7']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.85
+Selected features: ['A10', 'A6', 'A9', 'A11', 'A5', 'A4', 'A3', 'A1', 'A12', 'A7']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.9
+Selected features: ['A10', 'A6', 'A9', 'A11', 'A5', 'A4', 'A3', 'A1', 'A12', 'A7']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 90%
+Meta parameter(s) value(s): 0.1
+Selected features: ['A10', 'A6', 'A9', 'A11', 'A5', 'A4', 'A3', 'A1', 'A12', 'A7', 'A8']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.5
+Selected features: ['A10', 'A6', 'A9', 'A11', 'A5', 'A4', 'A3', 'A1', 'A12', 'A7', 'A8']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.85
+Selected features: ['A10', 'A6', 'A9', 'A11', 'A5', 'A4', 'A3', 'A1', 'A12', 'A7', 'A8']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.9
+Selected features: ['A10', 'A6', 'A9', 'A11', 'A5', 'A4', 'A3', 'A1', 'A12', 'A7', 'A8']
+Accuracy, recall: 0.42, 0.17
+
+Number of features = 100%
+Meta parameter(s) value(s): 0.1
+Selected features: ['A10', 'A6', 'A9', 'A11', 'A5', 'A4', 'A3', 'A1', 'A12', 'A7', 'A8']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.5
+Selected features: ['A10', 'A6', 'A9', 'A11', 'A5', 'A4', 'A3', 'A1', 'A12', 'A7', 'A8']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.85
+Selected features: ['A10', 'A6', 'A9', 'A11', 'A5', 'A4', 'A3', 'A1', 'A12', 'A7', 'A8']
+Accuracy, recall: 0.42, 0.17
+
+
+Meta parameter(s) value(s): 0.9
+Selected features: ['A10', 'A6', 'A9', 'A11', 'A5', 'A4', 'A3', 'A1', 'A12', 'A7', 'A8']
+Accuracy, recall: 0.42, 0.17
+

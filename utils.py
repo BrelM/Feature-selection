@@ -296,10 +296,10 @@ def build_graph(data:pd.DataFrame, weights_strategy:str= 'corcoef') -> np.array:
 
 	# print(f"Building features' graph using {weights_strategy} strategy.")
 	n = data.shape[1]
-	graph_matrix = np.zeros([n, n], 'float64')
+	graph_matrix = np.zeros((n, n), 'float64')
 	categorical_columns = data.select_dtypes(include=['object', 'category']).columns
 
-
+	'''
 	if weights_strategy == 'corcoef': # Correlation coefficient
 		return nx.from_numpy_array(data.corr('pearson').to_numpy(), parallel_edges=False)
 		
@@ -310,45 +310,48 @@ def build_graph(data:pd.DataFrame, weights_strategy:str= 'corcoef') -> np.array:
 
 
 	else: # Anova test (for now)
+	'''
+	for i in range(n):
+		for j in range(n):
 
-		for i in range(n):
-			for j in range(n):
+			if data.columns[i] in categorical_columns and data.columns[j] in categorical_columns:
+				
+				# Contingency table
+				contingency_table = pd.crosstab(data[data.columns[i]], data[data.columns[j]])
 
-				if data.columns[i] in categorical_columns and data.columns[j] in categorical_columns:
-					
-					# Contingency table
-					contingency_table = pd.crosstab(data[data.columns[i]], data[data.columns[j]])
+				# Ci-square test
+				chi2_stat, p_value, dof, expected = chi2_contingency(contingency_table)
 
-					# Ci-square test
-					chi2_stat, p_value, dof, expected = chi2_contingency(contingency_table)
+				graph_matrix[i, j] = p_value
+
+			else:
+				if data.columns[i] in categorical_columns:
+					groups = data.groupby(data.columns[i])[data.columns[j]]
+
+					# Extract the numerical data for each group
+					group_values = [group.values for _, group in groups]
+
+					# Perform ANOVA
+					f_stat, p_value = f_oneway(*group_values)
+
+					graph_matrix[i, j] = p_value
+
+				elif data.columns[j] in categorical_columns:
+					groups = data.groupby(data.columns[j])[data.columns[i]]
+
+					# Extract the numerical data for each group
+					group_values = [group.values for _, group in groups]
+
+					# Perform ANOVA
+					f_stat, p_value = f_oneway(*group_values)
 
 					graph_matrix[i, j] = p_value
 
 				else:
-					if data.columns[i] in categorical_columns:
-						groups = data.groupby(data.columns[i])[data.columns[j]]
 
-						# Extract the numerical data for each group
-						group_values = [group.values for _, group in groups]
-
-						# Perform ANOVA
-						f_stat, p_value = f_oneway(*group_values)
-
-						graph_matrix[i, j] = p_value
-
-					elif data.columns[j] in categorical_columns:
-						groups = data.groupby(data.columns[j])[data.columns[i]]
-
-						# Extract the numerical data for each group
-						group_values = [group.values for _, group in groups]
-
-						# Perform ANOVA
-						f_stat, p_value = f_oneway(*group_values)
-
-						graph_matrix[i, j] = p_value
-
-					else:
-
+					if weights_strategy == 'corcoef': # Correlation coefficient
+						graph_matrix[i, j] = data[[data.columns[i], data.columns[j]]].corr('pearson').to_numpy()[0, 1]
+					else: # mutual information
 						graph_matrix[i, j] = mutual_info_regression(data[[data.columns[i]]], data[data.columns[j]])
 
 
