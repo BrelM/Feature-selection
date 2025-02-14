@@ -65,7 +65,7 @@ with open(f"reports/dataset_{dataset}.txt", "w+") as file:
 
 
 
-for algo in [5, 6, 7, 8, 9]:#[0, 1, 2, 3, 5, 6, 7, 8, 9]:
+for algo in [0, 1, 2, 3]:#[0, 1, 2, 3, 5, 6, 7, 8, 9]:
 
 	if dataset in [1, 3, 4] and algo == 0: # Multiclass dataset with relief
 		pass
