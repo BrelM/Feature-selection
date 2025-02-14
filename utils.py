@@ -350,7 +350,8 @@ def build_graph(data:pd.DataFrame, weights_strategy:str= 'corcoef') -> np.array:
 				else:
 
 					if weights_strategy == 'corcoef': # Correlation coefficient
-						graph_matrix[i, j] = data[[data.columns[i], data.columns[j]]].corr('pearson').to_numpy()[0, 1]
+						graph_matrix[i, j] = np.abs(data[[data.columns[i], data.columns[j]]].corr('pearson').to_numpy()[0, 1])
+						
 					else: # mutual information
 						graph_matrix[i, j] = mutual_info_regression(data[[data.columns[i]]], data[data.columns[j]])
 
