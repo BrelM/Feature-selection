@@ -402,25 +402,25 @@ with open(f"reports/dataset_{dataset}.txt", "a+") as file:
 				file.write(message + '\n')
 				if process_cols == []: # Case isolated derivatives where selected and ruled out (strict selection)
 					file.write(f"Selected features: None (Isolated derivatives {temp})\n")
-					file.write(f"Accuracy, recall: 0, 0\n")
+					file.write(f"Accuracy, f1-score: 0, 0\n")
 
 				else:
 					file.write(f"Selected features: {disp_cols}\n")
 					if algo in [8, 9]:
 
 						encoded_data, columns = utils.encode_columns(Data, process_cols)
-						file.write(f"Accuracy, recall: {CLASSIFIERS_INFO[classifier](encoded_data, y)}\n")
+						file.write(f"Accuracy, f1-score: {CLASSIFIERS_INFO[classifier](encoded_data, y)}\n")
 					
 					else:
-						file.write(f"Accuracy, recall: {CLASSIFIERS_INFO[classifier](data, y, process_cols)}\n")
+						file.write(f"Accuracy, f1-score: {CLASSIFIERS_INFO[classifier](data, y, process_cols)}\n")
 		else:
 			file.write(f"Selected features: {columns}\n")
 			if algo in [8, 9]:
 
-				file.write(f"Accuracy, recall: {CLASSIFIERS_INFO[classifier](data, y)}\n")
+				file.write(f"Accuracy, f1-score: {CLASSIFIERS_INFO[classifier](data, y)}\n")
 			
 			else:
-				file.write(f"Accuracy, recall: {CLASSIFIERS_INFO[classifier](data, y)}\n")
+				file.write(f"Accuracy, f1-score: {CLASSIFIERS_INFO[classifier](data, y)}\n")
 
 	else:
 
@@ -428,10 +428,10 @@ with open(f"reports/dataset_{dataset}.txt", "a+") as file:
 		if algo in [8, 9]:
 
 			encoded_data, columns = utils.encode_columns(Data, columns)
-			file.write(f"Accuracy, recall: {CLASSIFIERS_INFO[classifier](encoded_data, y)}\n\n")
+			file.write(f"Accuracy, f1-score: {CLASSIFIERS_INFO[classifier](encoded_data, y)}\n\n")
 		
 		else:
-			file.write(f"Accuracy, recall: {CLASSIFIERS_INFO[classifier](data, y, columns)}\n\n")
+			file.write(f"Accuracy, f1-score: {CLASSIFIERS_INFO[classifier](data, y, columns)}\n\n")
 
 
 
