@@ -1,0 +1,142 @@
+#################### Dataset : Credit risk data ####################
+
+####################################################################################
+#################### Feature selection algo : Relief ####################
+
+Number of features = 10%
+
+Meta parameter(s) value(s): 5
+
+Soft selection of feature derivatives
+Selected features: ['A1', 'A9']
+Accuracy, f1-score: 0.83, 0.45
+
+
+Meta parameter(s) value(s): 20
+
+Soft selection of feature derivatives
+Selected features: ['A1', 'A0']
+Accuracy, f1-score: 0.83, 0.45
+
+
+Meta parameter(s) value(s): 50
+
+Soft selection of feature derivatives
+Selected features: ['A1', 'A7']
+Accuracy, f1-score: 0.83, 0.45
+
+
+Meta parameter(s) value(s): 90
+
+Soft selection of feature derivatives
+Selected features: ['A1', 'A7']
+Accuracy, f1-score: 0.83, 0.45
+
+Number of features = 20%
+
+Meta parameter(s) value(s): 5
+
+Soft selection of feature derivatives
+Selected features: ['A1', 'A6', 'A7']
+Accuracy, f1-score: 0.83, 0.45
+
+
+Meta parameter(s) value(s): 20
+
+Soft selection of feature derivatives
+Selected features: ['A1', 'A7', 'A9']
+Accuracy, f1-score: 0.83, 0.45
+
+
+Meta parameter(s) value(s): 50
+
+Soft selection of feature derivatives
+Selected features: ['A1', 'A9', 'A0']
+Accuracy, f1-score: 0.83, 0.45
+
+
+Meta parameter(s) value(s): 90
+
+Soft selection of feature derivatives
+Selected features: ['A1', 'A7', 'A3']
+Accuracy, f1-score: 0.83, 0.45
+
+Number of features = 30%
+
+Meta parameter(s) value(s): 5
+
+Soft selection of feature derivatives
+Selected features: ['A1', 'A9', 'A3', 'A6']
+Accuracy, f1-score: 0.83, 0.45
+
+
+Meta parameter(s) value(s): 20
+
+Soft selection of feature derivatives
+Selected features: ['A1', 'A7', 'A3', 'A6']
+Accuracy, f1-score: 0.83, 0.45
+
+
+Meta parameter(s) value(s): 50
+
+Soft selection of feature derivatives
+Selected features: ['A1', 'A3', 'A7', 'A9']
+Accuracy, f1-score: 0.83, 0.45
+
+
+Meta parameter(s) value(s): 90
+
+Soft selection of feature derivatives
+Selected features: ['A1', 'A7', 'A9', 'A0']
+Accuracy, f1-score: 0.83, 0.45
+
+Number of features = 40%
+
+Meta parameter(s) value(s): 5
+
+Soft selection of feature derivatives
+Selected features: ['A1', 'A9', 'A7', 'A0', 'A3']
+Accuracy, f1-score: 0.83, 0.45
+
+
+Meta parameter(s) value(s): 20
+
+Soft selection of feature derivatives
+Selected features: ['A1', 'A9', 'A0', 'A3', 'A7']
+Accuracy, f1-score: 0.83, 0.45
+
+
+Meta parameter(s) value(s): 50
+
+Soft selection of feature derivatives
+Selected features: ['A1', 'A7', 'A0', 'A3', 'A9']
+Accuracy, f1-score: 0.83, 0.45
+
+
+Meta parameter(s) value(s): 90
+
+Soft selection of feature derivatives
+Selected features: ['A1', 'A7', 'A3', 'A6', 'A0']
+Accuracy, f1-score: 0.83, 0.45
+
+Number of features = 50%
+
+Meta parameter(s) value(s): 5
+
+Soft selection of feature derivatives
+Selected features: ['A1', 'A3', 'A0', 'A7', 'A6', 'A9']
+Accuracy, f1-score: 0.83, 0.45
+
+
+Meta parameter(s) value(s): 20
+
+Soft selection of feature derivatives
+Selected features: ['A1', 'A7', 'A9', 'A3', 'A6', 'A0']
+Accuracy, f1-score: 0.83, 0.45
+
+
+Meta parameter(s) value(s): 50
+
+Soft selection of feature derivatives
+Selected features: ['A1', 'A7', 'A3', 'A6', 'A9', 'A0']
+Accuracy, f1-score: 0.83, 0.45

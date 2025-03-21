@@ -8,187 +8,187 @@ Number of features = 10%
 Meta parameter(s) value(s): 5
 
 Selected features: ['A1', 'A2']
-Accuracy, f1-score: 0.61, 0.54
+Accuracy, f1-score: 0.62, 0.57
 
 
 
 Meta parameter(s) value(s): 20
 
-Selected features: ['A1', 'A2']
-Accuracy, f1-score: 0.61, 0.54
+Selected features: ['A1', 'A12']
+Accuracy, f1-score: 0.62, 0.56
 
 
 
 Meta parameter(s) value(s): 50
 
-Selected features: ['A2', 'A1']
-Accuracy, f1-score: 0.61, 0.54
+Selected features: ['A1', 'A2']
+Accuracy, f1-score: 0.62, 0.57
 
 
 
 Meta parameter(s) value(s): 90
 
-Selected features: ['A1', 'A2']
-Accuracy, f1-score: 0.61, 0.54
+Selected features: ['A2', 'A1']
+Accuracy, f1-score: 0.62, 0.57
 
 
 Number of features = 20%
 
 Meta parameter(s) value(s): 5
 
-Selected features: ['A1', 'A2', 'A6']
-Accuracy, f1-score: 0.63, 0.55
+Selected features: ['A1', 'A2', 'A12']
+Accuracy, f1-score: 0.63, 0.58
 
 
 
 Meta parameter(s) value(s): 20
 
-Selected features: ['A1', 'A2', 'A12']
-Accuracy, f1-score: 0.63, 0.56
+Selected features: ['A1', 'A2', 'A13']
+Accuracy, f1-score: 0.64, 0.59
 
 
 
 Meta parameter(s) value(s): 50
 
-Selected features: ['A1', 'A2', 'A6']
-Accuracy, f1-score: 0.63, 0.55
+Selected features: ['A1', 'A2', 'A12']
+Accuracy, f1-score: 0.63, 0.58
 
 
 
 Meta parameter(s) value(s): 90
 
-Selected features: ['A2', 'A1', 'A6']
-Accuracy, f1-score: 0.63, 0.55
+Selected features: ['A1', 'A12', 'A2']
+Accuracy, f1-score: 0.63, 0.58
 
 
 Number of features = 30%
 
 Meta parameter(s) value(s): 5
 
-Selected features: ['A1', 'A2', 'A6', 'A12', 'A4']
-Accuracy, f1-score: 0.68, 0.66
+Selected features: ['A1', 'A2', 'A12', 'A4', 'A6']
+Accuracy, f1-score: 0.66, 0.65
 
 
 
 Meta parameter(s) value(s): 20
 
-Selected features: ['A1', 'A2', 'A6', 'A12', 'A4']
-Accuracy, f1-score: 0.68, 0.66
+Selected features: ['A1', 'A2', 'A12', 'A6', 'A13']
+Accuracy, f1-score: 0.66, 0.59
 
 
 
 Meta parameter(s) value(s): 50
 
-Selected features: ['A1', 'A2', 'A12', 'A6', 'A13']
-Accuracy, f1-score: 0.65, 0.57
+Selected features: ['A1', 'A6', 'A2', 'A12', 'A13']
+Accuracy, f1-score: 0.66, 0.59
 
 
 
 Meta parameter(s) value(s): 90
 
-Selected features: ['A1', 'A2', 'A12', 'A6', 'A13']
-Accuracy, f1-score: 0.65, 0.57
+Selected features: ['A2', 'A1', 'A12', 'A6', 'A13']
+Accuracy, f1-score: 0.66, 0.59
 
 
 Number of features = 40%
 
 Meta parameter(s) value(s): 5
 
-Selected features: ['A1', 'A2', 'A13', 'A12', 'A6', 'A4']
-Accuracy, f1-score: 0.67, 0.66
+Selected features: ['A1', 'A2', 'A6', 'A13', 'A12', 'A4']
+Accuracy, f1-score: 0.68, 0.66
 
 
 
 Meta parameter(s) value(s): 20
 
-Selected features: ['A1', 'A12', 'A6', 'A2', 'A13', 'A4']
-Accuracy, f1-score: 0.67, 0.66
+Selected features: ['A1', 'A2', 'A6', 'A12', 'A13', 'A4']
+Accuracy, f1-score: 0.68, 0.66
 
 
 
 Meta parameter(s) value(s): 50
 
-Selected features: ['A1', 'A2', 'A12', 'A6', 'A4', 'A13']
-Accuracy, f1-score: 0.67, 0.66
+Selected features: ['A1', 'A12', 'A2', 'A6', 'A13', 'A4']
+Accuracy, f1-score: 0.68, 0.66
 
 
 
 Meta parameter(s) value(s): 90
 
 Selected features: ['A1', 'A2', 'A12', 'A6', 'A13', 'A4']
-Accuracy, f1-score: 0.67, 0.66
+Accuracy, f1-score: 0.68, 0.66
 
 
 Number of features = 50%
 
 Meta parameter(s) value(s): 5
 
-Selected features: ['A1', 'A6', 'A12', 'A2', 'A4', 'A5', 'A13', 'A9']
-Accuracy, f1-score: 0.75, 0.73
+Selected features: ['A1', 'A2', 'A6', 'A12', 'A5', 'A4', 'A13', 'A9']
+Accuracy, f1-score: 0.78, 0.77
 
 
 
 Meta parameter(s) value(s): 20
 
-Selected features: ['A1', 'A2', 'A6', 'A12', 'A13', 'A4', 'A5', 'A3']
-Accuracy, f1-score: 0.69, 0.67
+Selected features: ['A2', 'A1', 'A6', 'A12', 'A13', 'A4', 'A9', 'A5']
+Accuracy, f1-score: 0.78, 0.77
 
 
 
 Meta parameter(s) value(s): 50
 
-Selected features: ['A2', 'A1', 'A12', 'A6', 'A13', 'A4', 'A9', 'A5']
-Accuracy, f1-score: 0.75, 0.73
+Selected features: ['A1', 'A2', 'A6', 'A12', 'A13', 'A4', 'A9', 'A5']
+Accuracy, f1-score: 0.78, 0.77
 
 
 
 Meta parameter(s) value(s): 90
 
-Selected features: ['A1', 'A2', 'A6', 'A12', 'A13', 'A4', 'A9', 'A5']
-Accuracy, f1-score: 0.75, 0.73
+Selected features: ['A1', 'A2', 'A12', 'A6', 'A13', 'A4', 'A9', 'A5']
+Accuracy, f1-score: 0.78, 0.77
 
 
 Number of features = 60%
 
 Meta parameter(s) value(s): 5
 
-Selected features: ['A1', 'A2', 'A6', 'A12', 'A13', 'A4', 'A9', 'A5', 'A7']
-Accuracy, f1-score: 0.86, 0.86
+Selected features: ['A1', 'A2', 'A6', 'A12', 'A13', 'A4', 'A9', 'A0', 'A3']
+Accuracy, f1-score: 0.75, 0.74
 
 
 
 Meta parameter(s) value(s): 20
 
-Selected features: ['A1', 'A6', 'A2', 'A12', 'A4', 'A13', 'A5', 'A9', 'A3']
-Accuracy, f1-score: 0.77, 0.75
+Selected features: ['A1', 'A12', 'A2', 'A6', 'A4', 'A13', 'A9', 'A5', 'A11']
+Accuracy, f1-score: 0.77, 0.76
 
 
 
 Meta parameter(s) value(s): 50
 
-Selected features: ['A1', 'A2', 'A6', 'A12', 'A13', 'A4', 'A9', 'A5', 'A3']
-Accuracy, f1-score: 0.77, 0.75
+Selected features: ['A1', 'A2', 'A12', 'A6', 'A13', 'A4', 'A9', 'A5', 'A3']
+Accuracy, f1-score: 0.76, 0.75
 
 
 
 Meta parameter(s) value(s): 90
 
-Selected features: ['A1', 'A2', 'A6', 'A12', 'A13', 'A4', 'A9', 'A5', 'A3']
-Accuracy, f1-score: 0.77, 0.75
+Selected features: ['A1', 'A2', 'A12', 'A6', 'A13', 'A4', 'A9', 'A5', 'A3']
+Accuracy, f1-score: 0.76, 0.75
 
 
 Number of features = 70%
 
 Meta parameter(s) value(s): 5
 
-Selected features: ['A1', 'A2', 'A6', 'A12', 'A13', 'A4', 'A3', 'A5', 'A9', 'A0', 'A7']
+Selected features: ['A1', 'A2', 'A12', 'A6', 'A13', 'A4', 'A3', 'A9', 'A5', 'A0', 'A7']
 Accuracy, f1-score: 0.86, 0.86
 
 
 
 Meta parameter(s) value(s): 20
 
-Selected features: ['A2', 'A1', 'A12', 'A6', 'A13', 'A4', 'A9', 'A5', 'A11', 'A3', 'A7']
+Selected features: ['A1', 'A2', 'A6', 'A12', 'A4', 'A13', 'A9', 'A5', 'A3', 'A7', 'A11']
 Accuracy, f1-score: 0.86, 0.86
 
 
@@ -202,7 +202,7 @@ Accuracy, f1-score: 0.86, 0.86
 
 Meta parameter(s) value(s): 90
 
-Selected features: ['A1', 'A2', 'A6', 'A12', 'A13', 'A4', 'A9', 'A5', 'A3', 'A11', 'A7']
+Selected features: ['A1', 'A2', 'A6', 'A12', 'A13', 'A4', 'A5', 'A9', 'A3', 'A11', 'A7']
 Accuracy, f1-score: 0.86, 0.86
 
 
@@ -210,28 +210,28 @@ Number of features = 80%
 
 Meta parameter(s) value(s): 5
 
-Selected features: ['A1', 'A6', 'A12', 'A2', 'A13', 'A4', 'A5', 'A9', 'A11', 'A0', 'A3', 'A7']
+Selected features: ['A2', 'A6', 'A1', 'A12', 'A13', 'A4', 'A5', 'A9', 'A11', 'A0', 'A3', 'A7']
 Accuracy, f1-score: 0.86, 0.86
 
 
 
 Meta parameter(s) value(s): 20
 
-Selected features: ['A2', 'A12', 'A1', 'A6', 'A13', 'A4', 'A9', 'A5', 'A3', 'A11', 'A0', 'A7']
+Selected features: ['A1', 'A2', 'A6', 'A12', 'A13', 'A4', 'A9', 'A5', 'A3', 'A11', 'A0', 'A7']
 Accuracy, f1-score: 0.86, 0.86
 
 
 
 Meta parameter(s) value(s): 50
 
-Selected features: ['A1', 'A2', 'A6', 'A12', 'A13', 'A4', 'A9', 'A5', 'A3', 'A7', 'A11', 'A0']
+Selected features: ['A1', 'A2', 'A6', 'A12', 'A13', 'A4', 'A9', 'A5', 'A3', 'A11', 'A0', 'A7']
 Accuracy, f1-score: 0.86, 0.86
 
 
 
 Meta parameter(s) value(s): 90
 
-Selected features: ['A1', 'A2', 'A6', 'A12', 'A13', 'A4', 'A9', 'A5', 'A3', 'A11', 'A7', 'A0']
+Selected features: ['A1', 'A2', 'A12', 'A6', 'A13', 'A4', 'A5', 'A9', 'A3', 'A11', 'A7', 'A0']
 Accuracy, f1-score: 0.86, 0.86
 
 
@@ -299,64 +299,64 @@ Number of features = 10%
 
 Meta parameter(s) value(s): None
 
-Selected features: ['A0', 'A11']
-Accuracy, f1-score: 0.57, 0.36
+Selected features: ['A10', 'A11']
+Accuracy, f1-score: 0.48, 0.47
 
 
 Number of features = 20%
 
 Meta parameter(s) value(s): None
 
-Selected features: ['A0', 'A1', 'A11']
-Accuracy, f1-score: 0.62, 0.53
+Selected features: ['A1', 'A10', 'A3']
+Accuracy, f1-score: 0.62, 0.59
 
 
 Number of features = 30%
 
 Meta parameter(s) value(s): None
 
-Selected features: ['A0', 'A10', 'A11', 'A5', 'A3']
-Accuracy, f1-score: 0.63, 0.6
+Selected features: ['A10', 'A0', 'A11', 'A3', 'A1']
+Accuracy, f1-score: 0.56, 0.54
 
 
 Number of features = 40%
 
 Meta parameter(s) value(s): None
 
-Selected features: ['A11', 'A3', 'A5', 'A1', 'A12', 'A10']
-Accuracy, f1-score: 0.67, 0.65
+Selected features: ['A0', 'A11', 'A1', 'A3', 'A2', 'A5']
+Accuracy, f1-score: 0.69, 0.67
 
 
 Number of features = 50%
 
 Meta parameter(s) value(s): None
 
-Selected features: ['A0', 'A10', 'A11', 'A1', 'A3', 'A2', 'A12', 'A5']
-Accuracy, f1-score: 0.68, 0.66
+Selected features: ['A0', 'A10', 'A1', 'A11', 'A2', 'A3', 'A5', 'A12']
+Accuracy, f1-score: 0.7, 0.68
 
 
 Number of features = 60%
 
 Meta parameter(s) value(s): None
 
-Selected features: ['A11', 'A10', 'A1', 'A3', 'A0', 'A2', 'A12', 'A5', 'A4']
-Accuracy, f1-score: 0.68, 0.67
+Selected features: ['A10', 'A5', 'A12', 'A1', 'A11', 'A3', 'A0', 'A2', 'A4']
+Accuracy, f1-score: 0.69, 0.68
 
 
 Number of features = 70%
 
 Meta parameter(s) value(s): None
 
-Selected features: ['A0', 'A10', 'A1', 'A3', 'A11', 'A2', 'A12', 'A5', 'A4', 'A6', 'A8']
-Accuracy, f1-score: 0.7, 0.69
+Selected features: ['A0', 'A10', 'A11', 'A1', 'A2', 'A3', 'A12', 'A5', 'A4', 'A6', 'A8']
+Accuracy, f1-score: 0.75, 0.74
 
 
 Number of features = 80%
 
 Meta parameter(s) value(s): None
 
-Selected features: ['A0', 'A10', 'A3', 'A11', 'A1', 'A2', 'A5', 'A12', 'A4', 'A6', 'A8', 'A13']
-Accuracy, f1-score: 0.71, 0.7
+Selected features: ['A0', 'A3', 'A10', 'A2', 'A1', 'A11', 'A5', 'A12', 'A6', 'A4', 'A8', 'A13']
+Accuracy, f1-score: 0.74, 0.73
 
 
 Number of features = 90%
@@ -546,49 +546,49 @@ Number of features = 10%
 Meta parameter(s) value(s): 1e-05
 
 Selected features: ['A12', 'A2']
-Accuracy, f1-score: 0.61, 0.54
+Accuracy, f1-score: 0.61, 0.57
 
 
 
 Meta parameter(s) value(s): 0.01
 
 Selected features: ['A12', 'A2']
-Accuracy, f1-score: 0.61, 0.54
+Accuracy, f1-score: 0.61, 0.57
 
 
 
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A12', 'A2']
-Accuracy, f1-score: 0.61, 0.54
+Accuracy, f1-score: 0.61, 0.57
 
 
 
 Meta parameter(s) value(s): 1
 
 Selected features: ['A12', 'A2']
-Accuracy, f1-score: 0.61, 0.54
+Accuracy, f1-score: 0.61, 0.57
 
 
 
 Meta parameter(s) value(s): 5
 
 Selected features: ['A12', 'A10']
-Accuracy, f1-score: 0.57, 0.36
+Accuracy, f1-score: 0.53, 0.46
 
 
 
 Meta parameter(s) value(s): 20
 
 Selected features: ['A12', 'A10']
-Accuracy, f1-score: 0.57, 0.36
+Accuracy, f1-score: 0.53, 0.46
 
 
 
 Meta parameter(s) value(s): 50
 
 Selected features: ['A12', 'A10']
-Accuracy, f1-score: 0.57, 0.36
+Accuracy, f1-score: 0.53, 0.46
 
 
 Number of features = 20%
@@ -596,49 +596,49 @@ Number of features = 20%
 Meta parameter(s) value(s): 1e-05
 
 Selected features: ['A12', 'A2', 'A10']
-Accuracy, f1-score: 0.61, 0.54
+Accuracy, f1-score: 0.64, 0.6
 
 
 
 Meta parameter(s) value(s): 0.01
 
 Selected features: ['A12', 'A2', 'A10']
-Accuracy, f1-score: 0.61, 0.54
+Accuracy, f1-score: 0.64, 0.6
 
 
 
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A12', 'A2', 'A10']
-Accuracy, f1-score: 0.61, 0.54
+Accuracy, f1-score: 0.64, 0.6
 
 
 
 Meta parameter(s) value(s): 1
 
 Selected features: ['A12', 'A2', 'A10']
-Accuracy, f1-score: 0.61, 0.54
+Accuracy, f1-score: 0.64, 0.6
 
 
 
 Meta parameter(s) value(s): 5
 
 Selected features: ['A12', 'A10', 'A2']
-Accuracy, f1-score: 0.61, 0.54
+Accuracy, f1-score: 0.64, 0.6
 
 
 
 Meta parameter(s) value(s): 20
 
 Selected features: ['A12', 'A10', 'A0']
-Accuracy, f1-score: 0.57, 0.36
+Accuracy, f1-score: 0.52, 0.46
 
 
 
 Meta parameter(s) value(s): 50
 
 Selected features: ['A12', 'A10', 'A0']
-Accuracy, f1-score: 0.57, 0.36
+Accuracy, f1-score: 0.52, 0.46
 
 
 Number of features = 30%
@@ -646,49 +646,49 @@ Number of features = 30%
 Meta parameter(s) value(s): 1e-05
 
 Selected features: ['A12', 'A2', 'A10', 'A0', 'A1']
-Accuracy, f1-score: 0.6, 0.54
+Accuracy, f1-score: 0.64, 0.6
 
 
 
 Meta parameter(s) value(s): 0.01
 
 Selected features: ['A12', 'A2', 'A10', 'A0', 'A1']
-Accuracy, f1-score: 0.6, 0.54
+Accuracy, f1-score: 0.64, 0.6
 
 
 
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A12', 'A2', 'A10', 'A0', 'A1']
-Accuracy, f1-score: 0.6, 0.54
+Accuracy, f1-score: 0.64, 0.6
 
 
 
 Meta parameter(s) value(s): 1
 
 Selected features: ['A12', 'A2', 'A10', 'A0', 'A1']
-Accuracy, f1-score: 0.6, 0.54
+Accuracy, f1-score: 0.64, 0.6
 
 
 
 Meta parameter(s) value(s): 5
 
 Selected features: ['A12', 'A10', 'A2', 'A0', 'A1']
-Accuracy, f1-score: 0.6, 0.54
+Accuracy, f1-score: 0.64, 0.6
 
 
 
 Meta parameter(s) value(s): 20
 
 Selected features: ['A12', 'A10', 'A0', 'A2', 'A1']
-Accuracy, f1-score: 0.6, 0.54
+Accuracy, f1-score: 0.64, 0.6
 
 
 
 Meta parameter(s) value(s): 50
 
 Selected features: ['A12', 'A10', 'A0', 'A2', 'A13']
-Accuracy, f1-score: 0.62, 0.57
+Accuracy, f1-score: 0.66, 0.63
 
 
 Number of features = 40%
@@ -696,49 +696,49 @@ Number of features = 40%
 Meta parameter(s) value(s): 1e-05
 
 Selected features: ['A12', 'A2', 'A10', 'A0', 'A1', 'A5']
-Accuracy, f1-score: 0.65, 0.62
+Accuracy, f1-score: 0.64, 0.62
 
 
 
 Meta parameter(s) value(s): 0.01
 
 Selected features: ['A12', 'A2', 'A10', 'A0', 'A1', 'A5']
-Accuracy, f1-score: 0.65, 0.62
+Accuracy, f1-score: 0.64, 0.62
 
 
 
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A12', 'A2', 'A10', 'A0', 'A1', 'A5']
-Accuracy, f1-score: 0.65, 0.62
+Accuracy, f1-score: 0.64, 0.62
 
 
 
 Meta parameter(s) value(s): 1
 
 Selected features: ['A12', 'A2', 'A10', 'A0', 'A1', 'A5']
-Accuracy, f1-score: 0.65, 0.62
+Accuracy, f1-score: 0.64, 0.62
 
 
 
 Meta parameter(s) value(s): 5
 
 Selected features: ['A12', 'A10', 'A2', 'A0', 'A1', 'A5']
-Accuracy, f1-score: 0.65, 0.62
+Accuracy, f1-score: 0.64, 0.62
 
 
 
 Meta parameter(s) value(s): 20
 
 Selected features: ['A12', 'A10', 'A0', 'A2', 'A1', 'A5']
-Accuracy, f1-score: 0.65, 0.62
+Accuracy, f1-score: 0.64, 0.62
 
 
 
 Meta parameter(s) value(s): 50
 
 Selected features: ['A12', 'A10', 'A0', 'A2', 'A13', 'A1']
-Accuracy, f1-score: 0.61, 0.53
+Accuracy, f1-score: 0.66, 0.62
 
 
 Number of features = 50%
@@ -746,49 +746,49 @@ Number of features = 50%
 Meta parameter(s) value(s): 1e-05
 
 Selected features: ['A12', 'A2', 'A10', 'A0', 'A1', 'A5', 'A8', 'A11']
-Accuracy, f1-score: 0.7, 0.69
+Accuracy, f1-score: 0.71, 0.7
 
 
 
 Meta parameter(s) value(s): 0.01
 
 Selected features: ['A12', 'A2', 'A10', 'A0', 'A1', 'A5', 'A8', 'A11']
-Accuracy, f1-score: 0.7, 0.69
+Accuracy, f1-score: 0.71, 0.7
 
 
 
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A12', 'A2', 'A10', 'A0', 'A1', 'A5', 'A8', 'A11']
-Accuracy, f1-score: 0.7, 0.69
+Accuracy, f1-score: 0.71, 0.7
 
 
 
 Meta parameter(s) value(s): 1
 
 Selected features: ['A12', 'A2', 'A10', 'A0', 'A1', 'A5', 'A8', 'A11']
-Accuracy, f1-score: 0.7, 0.69
+Accuracy, f1-score: 0.71, 0.7
 
 
 
 Meta parameter(s) value(s): 5
 
 Selected features: ['A12', 'A10', 'A2', 'A0', 'A1', 'A5', 'A11', 'A8']
-Accuracy, f1-score: 0.7, 0.69
+Accuracy, f1-score: 0.71, 0.7
 
 
 
 Meta parameter(s) value(s): 20
 
 Selected features: ['A12', 'A10', 'A0', 'A2', 'A1', 'A5', 'A11', 'A9']
-Accuracy, f1-score: 0.69, 0.65
+Accuracy, f1-score: 0.69, 0.66
 
 
 
 Meta parameter(s) value(s): 50
 
 Selected features: ['A12', 'A10', 'A0', 'A2', 'A13', 'A1', 'A11', 'A9']
-Accuracy, f1-score: 0.68, 0.6
+Accuracy, f1-score: 0.72, 0.68
 
 
 Number of features = 60%
@@ -796,49 +796,49 @@ Number of features = 60%
 Meta parameter(s) value(s): 1e-05
 
 Selected features: ['A12', 'A2', 'A10', 'A0', 'A1', 'A5', 'A8', 'A11', 'A3']
-Accuracy, f1-score: 0.7, 0.69
+Accuracy, f1-score: 0.71, 0.7
 
 
 
 Meta parameter(s) value(s): 0.01
 
 Selected features: ['A12', 'A2', 'A10', 'A0', 'A1', 'A5', 'A8', 'A11', 'A3']
-Accuracy, f1-score: 0.7, 0.69
+Accuracy, f1-score: 0.71, 0.7
 
 
 
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A12', 'A2', 'A10', 'A0', 'A1', 'A5', 'A8', 'A11', 'A3']
-Accuracy, f1-score: 0.7, 0.69
+Accuracy, f1-score: 0.71, 0.7
 
 
 
 Meta parameter(s) value(s): 1
 
 Selected features: ['A12', 'A2', 'A10', 'A0', 'A1', 'A5', 'A8', 'A11', 'A3']
-Accuracy, f1-score: 0.7, 0.69
+Accuracy, f1-score: 0.71, 0.7
 
 
 
 Meta parameter(s) value(s): 5
 
 Selected features: ['A12', 'A10', 'A2', 'A0', 'A1', 'A5', 'A11', 'A8', 'A6']
-Accuracy, f1-score: 0.7, 0.69
+Accuracy, f1-score: 0.73, 0.73
 
 
 
 Meta parameter(s) value(s): 20
 
 Selected features: ['A12', 'A10', 'A0', 'A2', 'A1', 'A5', 'A11', 'A9', 'A13']
-Accuracy, f1-score: 0.69, 0.65
+Accuracy, f1-score: 0.71, 0.68
 
 
 
 Meta parameter(s) value(s): 50
 
 Selected features: ['A12', 'A10', 'A0', 'A2', 'A13', 'A1', 'A11', 'A9', 'A6']
-Accuracy, f1-score: 0.7, 0.64
+Accuracy, f1-score: 0.71, 0.67
 
 
 Number of features = 70%
@@ -846,35 +846,35 @@ Number of features = 70%
 Meta parameter(s) value(s): 1e-05
 
 Selected features: ['A12', 'A2', 'A10', 'A0', 'A1', 'A5', 'A8', 'A11', 'A3', 'A6', 'A4']
-Accuracy, f1-score: 0.7, 0.69
+Accuracy, f1-score: 0.75, 0.74
 
 
 
 Meta parameter(s) value(s): 0.01
 
 Selected features: ['A12', 'A2', 'A10', 'A0', 'A1', 'A5', 'A8', 'A11', 'A3', 'A6', 'A4']
-Accuracy, f1-score: 0.7, 0.69
+Accuracy, f1-score: 0.75, 0.74
 
 
 
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A12', 'A2', 'A10', 'A0', 'A1', 'A5', 'A8', 'A11', 'A3', 'A6', 'A4']
-Accuracy, f1-score: 0.7, 0.69
+Accuracy, f1-score: 0.75, 0.74
 
 
 
 Meta parameter(s) value(s): 1
 
 Selected features: ['A12', 'A2', 'A10', 'A0', 'A1', 'A5', 'A8', 'A11', 'A3', 'A6', 'A4']
-Accuracy, f1-score: 0.7, 0.69
+Accuracy, f1-score: 0.75, 0.74
 
 
 
 Meta parameter(s) value(s): 5
 
 Selected features: ['A12', 'A10', 'A2', 'A0', 'A1', 'A5', 'A11', 'A8', 'A6', 'A3', 'A9']
-Accuracy, f1-score: 0.7, 0.69
+Accuracy, f1-score: 0.73, 0.72
 
 
 
@@ -896,49 +896,49 @@ Number of features = 80%
 Meta parameter(s) value(s): 1e-05
 
 Selected features: ['A12', 'A2', 'A10', 'A0', 'A1', 'A5', 'A8', 'A11', 'A3', 'A6', 'A4', 'A9']
-Accuracy, f1-score: 0.71, 0.71
+Accuracy, f1-score: 0.72, 0.72
 
 
 
 Meta parameter(s) value(s): 0.01
 
 Selected features: ['A12', 'A2', 'A10', 'A0', 'A1', 'A5', 'A8', 'A11', 'A3', 'A6', 'A4', 'A9']
-Accuracy, f1-score: 0.71, 0.71
+Accuracy, f1-score: 0.72, 0.72
 
 
 
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A12', 'A2', 'A10', 'A0', 'A1', 'A5', 'A8', 'A11', 'A3', 'A6', 'A4', 'A9']
-Accuracy, f1-score: 0.71, 0.71
+Accuracy, f1-score: 0.72, 0.72
 
 
 
 Meta parameter(s) value(s): 1
 
 Selected features: ['A12', 'A2', 'A10', 'A0', 'A1', 'A5', 'A8', 'A11', 'A3', 'A6', 'A4', 'A9']
-Accuracy, f1-score: 0.71, 0.71
+Accuracy, f1-score: 0.72, 0.72
 
 
 
 Meta parameter(s) value(s): 5
 
 Selected features: ['A12', 'A10', 'A2', 'A0', 'A1', 'A5', 'A11', 'A8', 'A6', 'A3', 'A9', 'A4']
-Accuracy, f1-score: 0.71, 0.71
+Accuracy, f1-score: 0.72, 0.72
 
 
 
 Meta parameter(s) value(s): 20
 
 Selected features: ['A12', 'A10', 'A0', 'A2', 'A1', 'A5', 'A11', 'A9', 'A13', 'A6', 'A3', 'A8']
-Accuracy, f1-score: 0.7, 0.69
+Accuracy, f1-score: 0.74, 0.73
 
 
 
 Meta parameter(s) value(s): 50
 
 Selected features: ['A12', 'A10', 'A0', 'A2', 'A13', 'A1', 'A11', 'A9', 'A6', 'A5', 'A3', 'A4']
-Accuracy, f1-score: 0.75, 0.74
+Accuracy, f1-score: 0.74, 0.73
 
 
 Number of features = 90%
@@ -1048,49 +1048,49 @@ Number of features = 10%
 Meta parameter(s) value(s): 1e-05
 
 Selected features: ['A12', 'A2']
-Accuracy, f1-score: 0.61, 0.54
+Accuracy, f1-score: 0.61, 0.57
 
 
 
 Meta parameter(s) value(s): 0.01
 
 Selected features: ['A0', 'A1']
-Accuracy, f1-score: 0.58, 0.41
+Accuracy, f1-score: 0.64, 0.58
 
 
 
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A0', 'A1']
-Accuracy, f1-score: 0.58, 0.41
+Accuracy, f1-score: 0.64, 0.58
 
 
 
 Meta parameter(s) value(s): 1
 
 Selected features: ['A0', 'A1']
-Accuracy, f1-score: 0.58, 0.41
+Accuracy, f1-score: 0.64, 0.58
 
 
 
 Meta parameter(s) value(s): 5
 
 Selected features: ['A0', 'A1']
-Accuracy, f1-score: 0.58, 0.41
+Accuracy, f1-score: 0.64, 0.58
 
 
 
 Meta parameter(s) value(s): 20
 
 Selected features: ['A0', 'A1']
-Accuracy, f1-score: 0.58, 0.41
+Accuracy, f1-score: 0.64, 0.58
 
 
 
 Meta parameter(s) value(s): 50
 
 Selected features: ['A0', 'A1']
-Accuracy, f1-score: 0.58, 0.41
+Accuracy, f1-score: 0.64, 0.58
 
 
 Number of features = 20%
@@ -1098,49 +1098,49 @@ Number of features = 20%
 Meta parameter(s) value(s): 1e-05
 
 Selected features: ['A12', 'A2', 'A10']
-Accuracy, f1-score: 0.61, 0.54
+Accuracy, f1-score: 0.64, 0.6
 
 
 
 Meta parameter(s) value(s): 0.01
 
 Selected features: ['A0', 'A1', 'A2']
-Accuracy, f1-score: 0.6, 0.52
+Accuracy, f1-score: 0.6, 0.55
 
 
 
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A0', 'A1', 'A2']
-Accuracy, f1-score: 0.6, 0.52
+Accuracy, f1-score: 0.6, 0.55
 
 
 
 Meta parameter(s) value(s): 1
 
 Selected features: ['A0', 'A1', 'A2']
-Accuracy, f1-score: 0.6, 0.52
+Accuracy, f1-score: 0.6, 0.55
 
 
 
 Meta parameter(s) value(s): 5
 
 Selected features: ['A0', 'A1', 'A2']
-Accuracy, f1-score: 0.6, 0.52
+Accuracy, f1-score: 0.6, 0.55
 
 
 
 Meta parameter(s) value(s): 20
 
 Selected features: ['A0', 'A1', 'A2']
-Accuracy, f1-score: 0.6, 0.52
+Accuracy, f1-score: 0.6, 0.55
 
 
 
 Meta parameter(s) value(s): 50
 
 Selected features: ['A0', 'A1', 'A2']
-Accuracy, f1-score: 0.6, 0.52
+Accuracy, f1-score: 0.6, 0.55
 
 
 Number of features = 30%
@@ -1148,14 +1148,14 @@ Number of features = 30%
 Meta parameter(s) value(s): 1e-05
 
 Selected features: ['A12', 'A2', 'A10', 'A0', 'A1']
-Accuracy, f1-score: 0.6, 0.54
+Accuracy, f1-score: 0.64, 0.6
 
 
 
 Meta parameter(s) value(s): 0.01
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A5']
-Accuracy, f1-score: 0.67, 0.64
+Accuracy, f1-score: 0.69, 0.66
 
 
 
@@ -1198,49 +1198,49 @@ Number of features = 40%
 Meta parameter(s) value(s): 1e-05
 
 Selected features: ['A12', 'A2', 'A10', 'A0', 'A1', 'A5']
-Accuracy, f1-score: 0.65, 0.62
+Accuracy, f1-score: 0.64, 0.62
 
 
 
 Meta parameter(s) value(s): 0.01
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A5', 'A6']
-Accuracy, f1-score: 0.67, 0.64
+Accuracy, f1-score: 0.7, 0.67
 
 
 
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5']
-Accuracy, f1-score: 0.71, 0.7
+Accuracy, f1-score: 0.71, 0.71
 
 
 
 Meta parameter(s) value(s): 1
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5']
-Accuracy, f1-score: 0.71, 0.7
+Accuracy, f1-score: 0.71, 0.71
 
 
 
 Meta parameter(s) value(s): 5
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5']
-Accuracy, f1-score: 0.71, 0.7
+Accuracy, f1-score: 0.71, 0.71
 
 
 
 Meta parameter(s) value(s): 20
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5']
-Accuracy, f1-score: 0.71, 0.7
+Accuracy, f1-score: 0.71, 0.71
 
 
 
 Meta parameter(s) value(s): 50
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5']
-Accuracy, f1-score: 0.71, 0.7
+Accuracy, f1-score: 0.71, 0.71
 
 
 Number of features = 50%
@@ -1248,21 +1248,21 @@ Number of features = 50%
 Meta parameter(s) value(s): 1e-05
 
 Selected features: ['A12', 'A2', 'A10', 'A0', 'A1', 'A5', 'A8', 'A11']
-Accuracy, f1-score: 0.7, 0.69
+Accuracy, f1-score: 0.71, 0.7
 
 
 
 Meta parameter(s) value(s): 0.01
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A5', 'A6', 'A9', 'A10']
-Accuracy, f1-score: 0.74, 0.7
+Accuracy, f1-score: 0.7, 0.67
 
 
 
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A8']
-Accuracy, f1-score: 0.7, 0.69
+Accuracy, f1-score: 0.76, 0.76
 
 
 
@@ -1298,21 +1298,21 @@ Number of features = 60%
 Meta parameter(s) value(s): 1e-05
 
 Selected features: ['A12', 'A2', 'A10', 'A0', 'A1', 'A5', 'A8', 'A11', 'A3']
-Accuracy, f1-score: 0.7, 0.69
+Accuracy, f1-score: 0.71, 0.7
 
 
 
 Meta parameter(s) value(s): 0.01
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A5', 'A6', 'A9', 'A10', 'A11']
-Accuracy, f1-score: 0.74, 0.7
+Accuracy, f1-score: 0.71, 0.69
 
 
 
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A8', 'A9']
-Accuracy, f1-score: 0.7, 0.69
+Accuracy, f1-score: 0.76, 0.75
 
 
 
@@ -1348,7 +1348,7 @@ Number of features = 70%
 Meta parameter(s) value(s): 1e-05
 
 Selected features: ['A12', 'A2', 'A10', 'A0', 'A1', 'A5', 'A8', 'A11', 'A3', 'A6', 'A4']
-Accuracy, f1-score: 0.7, 0.69
+Accuracy, f1-score: 0.75, 0.74
 
 
 
@@ -1362,7 +1362,7 @@ Accuracy, f1-score: 0.74, 0.71
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A8', 'A9', 'A10', 'A11']
-Accuracy, f1-score: 0.7, 0.69
+Accuracy, f1-score: 0.74, 0.74
 
 
 
@@ -1398,21 +1398,21 @@ Number of features = 80%
 Meta parameter(s) value(s): 1e-05
 
 Selected features: ['A12', 'A2', 'A10', 'A0', 'A1', 'A5', 'A8', 'A11', 'A3', 'A6', 'A4', 'A9']
-Accuracy, f1-score: 0.71, 0.71
+Accuracy, f1-score: 0.72, 0.72
 
 
 
 Meta parameter(s) value(s): 0.01
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A5', 'A6', 'A9', 'A10', 'A11', 'A12', 'A13', 'A8']
-Accuracy, f1-score: 0.7, 0.69
+Accuracy, f1-score: 0.74, 0.73
 
 
 
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A8', 'A9', 'A10', 'A11', 'A12']
-Accuracy, f1-score: 0.71, 0.71
+Accuracy, f1-score: 0.72, 0.72
 
 
 
@@ -1865,21 +1865,21 @@ Number of features = 50%
 Meta parameter(s) value(s): 0.05
 
 Selected features: ['A7', 'A6', 'A8', 'A12', 'A0', 'A13', 'A4', 'A10']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.85, 0.84
 
 
 
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A7', 'A6', 'A8', 'A12', 'A0', 'A13', 'A4', 'A10']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.85, 0.84
 
 
 
 Meta parameter(s) value(s): 0.2
 
 Selected features: ['A7', 'A6', 'A8', 'A12', 'A0', 'A13', 'A4', 'A10']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.85, 0.84
 
 
 
@@ -1943,21 +1943,21 @@ Number of features = 60%
 Meta parameter(s) value(s): 0.05
 
 Selected features: ['A7', 'A6', 'A8', 'A12', 'A0', 'A13', 'A4', 'A10', 'A2']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.85, 0.85
 
 
 
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A7', 'A6', 'A8', 'A12', 'A0', 'A13', 'A4', 'A10', 'A2']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.85, 0.85
 
 
 
 Meta parameter(s) value(s): 0.2
 
 Selected features: ['A7', 'A6', 'A8', 'A12', 'A0', 'A13', 'A4', 'A10', 'A2']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.85, 0.85
 
 
 
@@ -2006,14 +2006,14 @@ Accuracy, f1-score: 0.86, 0.86
 Meta parameter(s) value(s): 0.9
 
 Selected features: ['A7', 'A6', 'A9', 'A8', 'A2', 'A4', 'A5', 'A1', 'A12']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.85, 0.85
 
 
 
 Meta parameter(s) value(s): 0.95
 
 Selected features: ['A7', 'A6', 'A9', 'A8', 'A2', 'A4', 'A5', 'A1', 'A12']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.85, 0.85
 
 
 Number of features = 70%
@@ -2021,49 +2021,49 @@ Number of features = 70%
 Meta parameter(s) value(s): 0.05
 
 Selected features: ['A7', 'A6', 'A8', 'A12', 'A0', 'A13', 'A4', 'A10', 'A2', 'A3', 'A11']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.87, 0.87
 
 
 
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A7', 'A6', 'A8', 'A12', 'A0', 'A13', 'A4', 'A10', 'A2', 'A3', 'A11']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.87, 0.87
 
 
 
 Meta parameter(s) value(s): 0.2
 
 Selected features: ['A7', 'A6', 'A8', 'A12', 'A0', 'A13', 'A4', 'A10', 'A2', 'A3', 'A11']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.87, 0.87
 
 
 
 Meta parameter(s) value(s): 0.3
 
 Selected features: ['A7', 'A6', 'A8', 'A2', 'A0', 'A4', 'A13', 'A10', 'A9', 'A11', 'A3']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.87, 0.87
 
 
 
 Meta parameter(s) value(s): 0.4
 
 Selected features: ['A7', 'A6', 'A8', 'A2', 'A5', 'A0', 'A13', 'A10', 'A9', 'A11', 'A3']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.87, 0.87
 
 
 
 Meta parameter(s) value(s): 0.5
 
 Selected features: ['A7', 'A6', 'A8', 'A2', 'A5', 'A0', 'A9', 'A13', 'A10', 'A11', 'A3']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.87, 0.87
 
 
 
 Meta parameter(s) value(s): 0.6
 
 Selected features: ['A7', 'A6', 'A8', 'A9', 'A2', 'A5', 'A0', 'A13', 'A10', 'A11', 'A3']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.87, 0.87
 
 
 
@@ -2077,14 +2077,14 @@ Accuracy, f1-score: 0.86, 0.86
 Meta parameter(s) value(s): 0.8
 
 Selected features: ['A7', 'A6', 'A8', 'A9', 'A2', 'A5', 'A12', 'A0', 'A13', 'A4', 'A10']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.86, 0.85
 
 
 
 Meta parameter(s) value(s): 0.9
 
 Selected features: ['A7', 'A6', 'A9', 'A8', 'A2', 'A4', 'A5', 'A1', 'A12', 'A11', 'A0']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.87, 0.87
 
 
 
@@ -2127,28 +2127,28 @@ Accuracy, f1-score: 0.86, 0.86
 Meta parameter(s) value(s): 0.4
 
 Selected features: ['A7', 'A6', 'A8', 'A2', 'A5', 'A0', 'A13', 'A10', 'A9', 'A11', 'A3', 'A12']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.87, 0.87
 
 
 
 Meta parameter(s) value(s): 0.5
 
 Selected features: ['A7', 'A6', 'A8', 'A2', 'A5', 'A0', 'A9', 'A13', 'A10', 'A11', 'A3', 'A12']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.87, 0.87
 
 
 
 Meta parameter(s) value(s): 0.6
 
 Selected features: ['A7', 'A6', 'A8', 'A9', 'A2', 'A5', 'A0', 'A13', 'A10', 'A11', 'A3', 'A12']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.87, 0.87
 
 
 
 Meta parameter(s) value(s): 0.7
 
 Selected features: ['A7', 'A6', 'A8', 'A9', 'A2', 'A5', 'A0', 'A13', 'A10', 'A4', 'A11', 'A3']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.87, 0.87
 
 
 
@@ -2335,624 +2335,624 @@ Number of features = 10%
 
 Meta parameter(s) value(s): 0.05
 
-Selected features: ['A6', 'A13']
-Accuracy, f1-score: 0.64, 0.54
+Selected features: ['A9', 'A2']
+Accuracy, f1-score: 0.7, 0.64
 
 
 
 Meta parameter(s) value(s): 0.1
 
-Selected features: ['A4', 'A13']
-Accuracy, f1-score: 0.64, 0.63
+Selected features: ['A9', 'A4']
+Accuracy, f1-score: 0.73, 0.72
 
 
 
 Meta parameter(s) value(s): 0.2
 
-Selected features: ['A13', 'A6']
-Accuracy, f1-score: 0.64, 0.54
+Selected features: ['A9', 'A2']
+Accuracy, f1-score: 0.7, 0.64
 
 
 
 Meta parameter(s) value(s): 0.3
 
-Selected features: ['A9', 'A2']
-Accuracy, f1-score: 0.64, 0.54
+Selected features: ['A6', 'A13']
+Accuracy, f1-score: 0.69, 0.63
 
 
 
 Meta parameter(s) value(s): 0.4
 
-Selected features: ['A13', 'A6']
-Accuracy, f1-score: 0.64, 0.54
+Selected features: ['A4', 'A9']
+Accuracy, f1-score: 0.73, 0.72
 
 
 
 Meta parameter(s) value(s): 0.5
 
-Selected features: ['A9', 'A4']
-Accuracy, f1-score: 0.71, 0.7
+Selected features: ['A9', 'A6']
+Accuracy, f1-score: 0.7, 0.64
 
 
 
 Meta parameter(s) value(s): 0.6
 
-Selected features: ['A4', 'A13']
-Accuracy, f1-score: 0.64, 0.63
+Selected features: ['A6', 'A13']
+Accuracy, f1-score: 0.69, 0.63
 
 
 
 Meta parameter(s) value(s): 0.7
 
-Selected features: ['A6', 'A13']
-Accuracy, f1-score: 0.64, 0.54
+Selected features: ['A6', 'A9']
+Accuracy, f1-score: 0.7, 0.64
 
 
 
 Meta parameter(s) value(s): 0.8
 
-Selected features: ['A6', 'A2']
-Accuracy, f1-score: 0.63, 0.55
+Selected features: ['A6', 'A13']
+Accuracy, f1-score: 0.69, 0.63
 
 
 
 Meta parameter(s) value(s): 0.9
 
-Selected features: ['A2', 'A6']
-Accuracy, f1-score: 0.63, 0.55
+Selected features: ['A6', 'A1']
+Accuracy, f1-score: 0.65, 0.58
 
 
 
 Meta parameter(s) value(s): 0.95
 
 Selected features: ['A1', 'A6']
-Accuracy, f1-score: 0.64, 0.54
+Accuracy, f1-score: 0.65, 0.58
 
 
 Number of features = 20%
 
 Meta parameter(s) value(s): 0.05
 
-Selected features: ['A9', 'A13', 'A4']
-Accuracy, f1-score: 0.71, 0.7
+Selected features: ['A9', 'A13', 'A2']
+Accuracy, f1-score: 0.71, 0.66
 
 
 
 Meta parameter(s) value(s): 0.1
 
-Selected features: ['A4', 'A13', 'A9']
-Accuracy, f1-score: 0.71, 0.7
+Selected features: ['A9', 'A6', 'A13']
+Accuracy, f1-score: 0.7, 0.65
 
 
 
 Meta parameter(s) value(s): 0.2
 
-Selected features: ['A9', 'A6', 'A13']
-Accuracy, f1-score: 0.69, 0.62
+Selected features: ['A6', 'A13', 'A4']
+Accuracy, f1-score: 0.66, 0.65
 
 
 
 Meta parameter(s) value(s): 0.3
 
-Selected features: ['A9', 'A4', 'A13']
-Accuracy, f1-score: 0.71, 0.7
+Selected features: ['A6', 'A9', 'A13']
+Accuracy, f1-score: 0.7, 0.65
 
 
 
 Meta parameter(s) value(s): 0.4
 
-Selected features: ['A9', 'A13', 'A6']
-Accuracy, f1-score: 0.69, 0.62
+Selected features: ['A13', 'A4', 'A9']
+Accuracy, f1-score: 0.74, 0.73
 
 
 
 Meta parameter(s) value(s): 0.5
 
-Selected features: ['A4', 'A9', 'A6']
-Accuracy, f1-score: 0.74, 0.72
+Selected features: ['A13', 'A6', 'A2']
+Accuracy, f1-score: 0.68, 0.63
 
 
 
 Meta parameter(s) value(s): 0.6
 
-Selected features: ['A6', 'A9', 'A1']
-Accuracy, f1-score: 0.68, 0.61
+Selected features: ['A6', 'A4', 'A2']
+Accuracy, f1-score: 0.67, 0.66
 
 
 
 Meta parameter(s) value(s): 0.7
 
-Selected features: ['A6', 'A13', 'A9']
-Accuracy, f1-score: 0.69, 0.62
+Selected features: ['A6', 'A13', 'A2']
+Accuracy, f1-score: 0.68, 0.63
 
 
 
 Meta parameter(s) value(s): 0.8
 
-Selected features: ['A6', 'A13', 'A2']
-Accuracy, f1-score: 0.64, 0.56
+Selected features: ['A2', 'A6', 'A13']
+Accuracy, f1-score: 0.68, 0.63
 
 
 
 Meta parameter(s) value(s): 0.9
 
 Selected features: ['A2', 'A6', 'A1']
-Accuracy, f1-score: 0.63, 0.55
+Accuracy, f1-score: 0.67, 0.62
 
 
 
 Meta parameter(s) value(s): 0.95
 
-Selected features: ['A1', 'A6', 'A2']
-Accuracy, f1-score: 0.63, 0.55
+Selected features: ['A2', 'A1', 'A6']
+Accuracy, f1-score: 0.67, 0.62
 
 
 Number of features = 30%
 
 Meta parameter(s) value(s): 0.05
 
-Selected features: ['A9', 'A4', 'A2', 'A13', 'A6']
-Accuracy, f1-score: 0.72, 0.71
+Selected features: ['A6', 'A9', 'A13', 'A2', 'A4']
+Accuracy, f1-score: 0.76, 0.75
 
 
 
 Meta parameter(s) value(s): 0.1
 
-Selected features: ['A9', 'A4', 'A6', 'A2', 'A13']
-Accuracy, f1-score: 0.72, 0.71
+Selected features: ['A9', 'A2', 'A4', 'A13', 'A6']
+Accuracy, f1-score: 0.76, 0.75
 
 
 
 Meta parameter(s) value(s): 0.2
 
-Selected features: ['A13', 'A6', 'A9', 'A4', 'A2']
-Accuracy, f1-score: 0.72, 0.71
+Selected features: ['A6', 'A13', 'A4', 'A2', 'A9']
+Accuracy, f1-score: 0.76, 0.75
 
 
 
 Meta parameter(s) value(s): 0.3
 
-Selected features: ['A9', 'A6', 'A13', 'A12', 'A4']
-Accuracy, f1-score: 0.73, 0.72
+Selected features: ['A4', 'A2', 'A13', 'A9', 'A6']
+Accuracy, f1-score: 0.76, 0.75
 
 
 
 Meta parameter(s) value(s): 0.4
 
-Selected features: ['A6', 'A9', 'A2', 'A4', 'A12']
-Accuracy, f1-score: 0.72, 0.7
+Selected features: ['A9', 'A6', 'A2', 'A4', 'A13']
+Accuracy, f1-score: 0.76, 0.75
 
 
 
 Meta parameter(s) value(s): 0.5
 
-Selected features: ['A6', 'A9', 'A4', 'A2', 'A13']
-Accuracy, f1-score: 0.72, 0.71
+Selected features: ['A6', 'A13', 'A2', 'A9', 'A4']
+Accuracy, f1-score: 0.76, 0.75
 
 
 
 Meta parameter(s) value(s): 0.6
 
-Selected features: ['A6', 'A13', 'A2', 'A4', 'A9']
-Accuracy, f1-score: 0.72, 0.71
+Selected features: ['A9', 'A6', 'A13', 'A2', 'A12']
+Accuracy, f1-score: 0.73, 0.69
 
 
 
 Meta parameter(s) value(s): 0.7
 
-Selected features: ['A6', 'A2', 'A13', 'A4', 'A1']
-Accuracy, f1-score: 0.68, 0.66
+Selected features: ['A13', 'A6', 'A2', 'A4', 'A9']
+Accuracy, f1-score: 0.76, 0.75
 
 
 
 Meta parameter(s) value(s): 0.8
 
-Selected features: ['A6', 'A2', 'A13', 'A1', 'A9']
-Accuracy, f1-score: 0.69, 0.62
+Selected features: ['A6', 'A13', 'A1', 'A2', 'A4']
+Accuracy, f1-score: 0.67, 0.66
 
 
 
 Meta parameter(s) value(s): 0.9
 
-Selected features: ['A6', 'A1', 'A2', 'A13', 'A9']
-Accuracy, f1-score: 0.69, 0.62
+Selected features: ['A2', 'A6', 'A1', 'A13', 'A12']
+Accuracy, f1-score: 0.66, 0.59
 
 
 
 Meta parameter(s) value(s): 0.95
 
-Selected features: ['A1', 'A2', 'A6', 'A13', 'A12']
-Accuracy, f1-score: 0.65, 0.57
+Selected features: ['A1', 'A6', 'A2', 'A13', 'A9']
+Accuracy, f1-score: 0.7, 0.64
 
 
 Number of features = 40%
 
 Meta parameter(s) value(s): 0.05
 
-Selected features: ['A4', 'A13', 'A9', 'A2', 'A6', 'A12']
-Accuracy, f1-score: 0.72, 0.71
+Selected features: ['A13', 'A4', 'A9', 'A2', 'A6', 'A1']
+Accuracy, f1-score: 0.75, 0.74
 
 
 
 Meta parameter(s) value(s): 0.1
 
-Selected features: ['A9', 'A2', 'A13', 'A4', 'A12', 'A6']
-Accuracy, f1-score: 0.72, 0.71
+Selected features: ['A9', 'A4', 'A2', 'A13', 'A6', 'A12']
+Accuracy, f1-score: 0.74, 0.73
 
 
 
 Meta parameter(s) value(s): 0.2
 
-Selected features: ['A6', 'A13', 'A9', 'A2', 'A4', 'A1']
-Accuracy, f1-score: 0.75, 0.73
+Selected features: ['A9', 'A6', 'A2', 'A13', 'A4', 'A12']
+Accuracy, f1-score: 0.74, 0.73
 
 
 
 Meta parameter(s) value(s): 0.3
 
-Selected features: ['A13', 'A2', 'A6', 'A9', 'A4', 'A12']
-Accuracy, f1-score: 0.72, 0.71
+Selected features: ['A6', 'A2', 'A9', 'A13', 'A4', 'A1']
+Accuracy, f1-score: 0.75, 0.74
 
 
 
 Meta parameter(s) value(s): 0.4
 
-Selected features: ['A6', 'A9', 'A2', 'A4', 'A13', 'A12']
-Accuracy, f1-score: 0.72, 0.71
+Selected features: ['A2', 'A13', 'A6', 'A9', 'A4', 'A12']
+Accuracy, f1-score: 0.74, 0.73
 
 
 
 Meta parameter(s) value(s): 0.5
 
-Selected features: ['A6', 'A9', 'A13', 'A2', 'A4', 'A12']
-Accuracy, f1-score: 0.72, 0.71
+Selected features: ['A2', 'A13', 'A6', 'A9', 'A4', 'A1']
+Accuracy, f1-score: 0.75, 0.74
 
 
 
 Meta parameter(s) value(s): 0.6
 
-Selected features: ['A13', 'A2', 'A6', 'A9', 'A4', 'A1']
-Accuracy, f1-score: 0.75, 0.73
+Selected features: ['A9', 'A6', 'A2', 'A4', 'A13', 'A12']
+Accuracy, f1-score: 0.74, 0.73
 
 
 
 Meta parameter(s) value(s): 0.7
 
-Selected features: ['A2', 'A13', 'A6', 'A9', 'A1', 'A4']
-Accuracy, f1-score: 0.75, 0.73
+Selected features: ['A6', 'A2', 'A13', 'A4', 'A9', 'A1']
+Accuracy, f1-score: 0.75, 0.74
 
 
 
 Meta parameter(s) value(s): 0.8
 
-Selected features: ['A6', 'A13', 'A1', 'A2', 'A4', 'A9']
-Accuracy, f1-score: 0.75, 0.73
+Selected features: ['A6', 'A2', 'A13', 'A1', 'A9', 'A12']
+Accuracy, f1-score: 0.74, 0.71
 
 
 
 Meta parameter(s) value(s): 0.9
 
-Selected features: ['A2', 'A6', 'A13', 'A1', 'A9', 'A4']
-Accuracy, f1-score: 0.75, 0.73
+Selected features: ['A2', 'A6', 'A1', 'A13', 'A12', 'A9']
+Accuracy, f1-score: 0.74, 0.71
 
 
 
 Meta parameter(s) value(s): 0.95
 
-Selected features: ['A1', 'A6', 'A2', 'A13', 'A4', 'A12']
-Accuracy, f1-score: 0.67, 0.66
+Selected features: ['A1', 'A2', 'A6', 'A13', 'A12', 'A4']
+Accuracy, f1-score: 0.68, 0.66
 
 
 Number of features = 50%
 
 Meta parameter(s) value(s): 0.05
 
-Selected features: ['A9', 'A4', 'A2', 'A13', 'A6', 'A1', 'A12', 'A10']
+Selected features: ['A6', 'A9', 'A4', 'A13', 'A2', 'A12', 'A1', 'A3']
 Accuracy, f1-score: 0.75, 0.74
 
 
 
 Meta parameter(s) value(s): 0.1
 
-Selected features: ['A4', 'A9', 'A2', 'A1', 'A13', 'A6', 'A12', 'A0']
-Accuracy, f1-score: 0.74, 0.72
+Selected features: ['A9', 'A4', 'A13', 'A2', 'A6', 'A1', 'A12', 'A0']
+Accuracy, f1-score: 0.75, 0.74
 
 
 
 Meta parameter(s) value(s): 0.2
 
-Selected features: ['A6', 'A13', 'A9', 'A2', 'A4', 'A12', 'A1', 'A10']
+Selected features: ['A9', 'A6', 'A4', 'A2', 'A13', 'A12', 'A1', 'A10']
 Accuracy, f1-score: 0.75, 0.74
 
 
 
 Meta parameter(s) value(s): 0.3
 
-Selected features: ['A9', 'A4', 'A13', 'A1', 'A6', 'A12', 'A2', 'A3']
-Accuracy, f1-score: 0.76, 0.75
+Selected features: ['A9', 'A6', 'A2', 'A4', 'A13', 'A12', 'A1', 'A0']
+Accuracy, f1-score: 0.75, 0.74
 
 
 
 Meta parameter(s) value(s): 0.4
 
-Selected features: ['A6', 'A13', 'A9', 'A4', 'A2', 'A12', 'A1', 'A3']
-Accuracy, f1-score: 0.76, 0.75
+Selected features: ['A9', 'A2', 'A13', 'A4', 'A6', 'A12', 'A1', 'A0']
+Accuracy, f1-score: 0.75, 0.74
 
 
 
 Meta parameter(s) value(s): 0.5
 
-Selected features: ['A6', 'A13', 'A2', 'A4', 'A9', 'A12', 'A1', 'A10']
+Selected features: ['A6', 'A2', 'A9', 'A4', 'A13', 'A1', 'A12', 'A0']
 Accuracy, f1-score: 0.75, 0.74
 
 
 
 Meta parameter(s) value(s): 0.6
 
-Selected features: ['A6', 'A13', 'A2', 'A12', 'A4', 'A9', 'A1', 'A0']
-Accuracy, f1-score: 0.74, 0.72
+Selected features: ['A13', 'A2', 'A6', 'A9', 'A4', 'A12', 'A1', 'A3']
+Accuracy, f1-score: 0.75, 0.74
 
 
 
 Meta parameter(s) value(s): 0.7
 
-Selected features: ['A2', 'A6', 'A13', 'A12', 'A9', 'A4', 'A1', 'A0']
-Accuracy, f1-score: 0.74, 0.72
+Selected features: ['A6', 'A13', 'A4', 'A1', 'A9', 'A12', 'A2', 'A10']
+Accuracy, f1-score: 0.75, 0.74
 
 
 
 Meta parameter(s) value(s): 0.8
 
-Selected features: ['A6', 'A2', 'A13', 'A4', 'A1', 'A9', 'A12', 'A10']
+Selected features: ['A6', 'A1', 'A13', 'A2', 'A9', 'A4', 'A12', 'A10']
 Accuracy, f1-score: 0.75, 0.74
 
 
 
 Meta parameter(s) value(s): 0.9
 
-Selected features: ['A1', 'A6', 'A13', 'A2', 'A12', 'A9', 'A4', 'A5']
-Accuracy, f1-score: 0.75, 0.73
+Selected features: ['A2', 'A6', 'A1', 'A13', 'A4', 'A12', 'A9', 'A5']
+Accuracy, f1-score: 0.78, 0.77
 
 
 
 Meta parameter(s) value(s): 0.95
 
-Selected features: ['A1', 'A2', 'A6', 'A13', 'A12', 'A4', 'A9', 'A5']
-Accuracy, f1-score: 0.75, 0.73
+Selected features: ['A2', 'A1', 'A6', 'A13', 'A4', 'A12', 'A9', 'A5']
+Accuracy, f1-score: 0.78, 0.77
 
 
 Number of features = 60%
 
 Meta parameter(s) value(s): 0.05
 
-Selected features: ['A13', 'A4', 'A2', 'A6', 'A9', 'A12', 'A1', 'A10', 'A0']
-Accuracy, f1-score: 0.76, 0.75
+Selected features: ['A9', 'A4', 'A13', 'A2', 'A6', 'A12', 'A1', 'A0', 'A3']
+Accuracy, f1-score: 0.75, 0.74
 
 
 
 Meta parameter(s) value(s): 0.1
 
-Selected features: ['A13', 'A2', 'A4', 'A9', 'A1', 'A6', 'A12', 'A10', 'A3']
-Accuracy, f1-score: 0.74, 0.73
+Selected features: ['A13', 'A2', 'A9', 'A4', 'A6', 'A12', 'A1', 'A0', 'A10']
+Accuracy, f1-score: 0.75, 0.74
 
 
 
 Meta parameter(s) value(s): 0.2
 
-Selected features: ['A9', 'A4', 'A13', 'A2', 'A6', 'A12', 'A1', 'A10', 'A0']
-Accuracy, f1-score: 0.76, 0.75
+Selected features: ['A4', 'A9', 'A13', 'A2', 'A6', 'A1', 'A12', 'A3', 'A0']
+Accuracy, f1-score: 0.75, 0.74
 
 
 
 Meta parameter(s) value(s): 0.3
 
-Selected features: ['A9', 'A6', 'A4', 'A13', 'A2', 'A1', 'A12', 'A10', 'A3']
-Accuracy, f1-score: 0.74, 0.73
+Selected features: ['A6', 'A9', 'A13', 'A4', 'A2', 'A1', 'A12', 'A0', 'A10']
+Accuracy, f1-score: 0.75, 0.74
 
 
 
 Meta parameter(s) value(s): 0.4
 
-Selected features: ['A6', 'A9', 'A4', 'A13', 'A2', 'A1', 'A12', 'A0', 'A3']
-Accuracy, f1-score: 0.76, 0.75
+Selected features: ['A4', 'A6', 'A13', 'A2', 'A9', 'A1', 'A12', 'A0', 'A10']
+Accuracy, f1-score: 0.75, 0.74
 
 
 
 Meta parameter(s) value(s): 0.5
 
-Selected features: ['A13', 'A4', 'A2', 'A9', 'A6', 'A1', 'A12', 'A0', 'A10']
-Accuracy, f1-score: 0.76, 0.75
+Selected features: ['A6', 'A2', 'A9', 'A4', 'A12', 'A13', 'A1', 'A0', 'A10']
+Accuracy, f1-score: 0.75, 0.74
 
 
 
 Meta parameter(s) value(s): 0.6
 
-Selected features: ['A9', 'A6', 'A2', 'A13', 'A4', 'A1', 'A12', 'A10', 'A5']
-Accuracy, f1-score: 0.75, 0.73
+Selected features: ['A6', 'A2', 'A13', 'A9', 'A4', 'A1', 'A12', 'A5', 'A3']
+Accuracy, f1-score: 0.76, 0.75
 
 
 
 Meta parameter(s) value(s): 0.7
 
-Selected features: ['A6', 'A2', 'A9', 'A4', 'A1', 'A13', 'A12', 'A10', 'A5']
-Accuracy, f1-score: 0.75, 0.73
+Selected features: ['A6', 'A13', 'A2', 'A4', 'A9', 'A1', 'A12', 'A10', 'A0']
+Accuracy, f1-score: 0.75, 0.74
 
 
 
 Meta parameter(s) value(s): 0.8
 
-Selected features: ['A6', 'A2', 'A13', 'A1', 'A4', 'A9', 'A12', 'A0', 'A5']
-Accuracy, f1-score: 0.75, 0.74
+Selected features: ['A6', 'A2', 'A13', 'A12', 'A1', 'A4', 'A9', 'A5', 'A0']
+Accuracy, f1-score: 0.76, 0.75
 
 
 
 Meta parameter(s) value(s): 0.9
 
-Selected features: ['A2', 'A1', 'A6', 'A13', 'A4', 'A9', 'A12', 'A5', 'A8']
-Accuracy, f1-score: 0.7, 0.69
+Selected features: ['A2', 'A6', 'A1', 'A13', 'A12', 'A4', 'A9', 'A5', 'A0']
+Accuracy, f1-score: 0.76, 0.75
 
 
 
 Meta parameter(s) value(s): 0.95
 
 Selected features: ['A1', 'A6', 'A2', 'A13', 'A12', 'A4', 'A9', 'A5', 'A8']
-Accuracy, f1-score: 0.7, 0.69
+Accuracy, f1-score: 0.75, 0.75
 
 
 Number of features = 70%
 
 Meta parameter(s) value(s): 0.05
 
-Selected features: ['A6', 'A9', 'A13', 'A2', 'A4', 'A12', 'A1', 'A0', 'A10', 'A7', 'A3']
-Accuracy, f1-score: 0.86, 0.86
+Selected features: ['A9', 'A6', 'A13', 'A12', 'A4', 'A1', 'A2', 'A10', 'A0', 'A3', 'A5']
+Accuracy, f1-score: 0.73, 0.72
 
 
 
 Meta parameter(s) value(s): 0.1
 
-Selected features: ['A9', 'A4', 'A6', 'A13', 'A2', 'A12', 'A1', 'A10', 'A0', 'A7', 'A3']
+Selected features: ['A9', 'A6', 'A2', 'A13', 'A4', 'A1', 'A12', 'A0', 'A10', 'A3', 'A7']
 Accuracy, f1-score: 0.86, 0.86
 
 
 
 Meta parameter(s) value(s): 0.2
 
-Selected features: ['A6', 'A9', 'A4', 'A13', 'A12', 'A1', 'A2', 'A10', 'A3', 'A0', 'A7']
+Selected features: ['A9', 'A4', 'A13', 'A6', 'A1', 'A2', 'A12', 'A10', 'A3', 'A0', 'A7']
 Accuracy, f1-score: 0.86, 0.86
 
 
 
 Meta parameter(s) value(s): 0.3
 
-Selected features: ['A6', 'A9', 'A4', 'A13', 'A2', 'A1', 'A12', 'A0', 'A10', 'A8', 'A5']
-Accuracy, f1-score: 0.71, 0.7
+Selected features: ['A4', 'A2', 'A13', 'A9', 'A6', 'A12', 'A1', 'A10', 'A3', 'A0', 'A7']
+Accuracy, f1-score: 0.86, 0.86
 
 
 
 Meta parameter(s) value(s): 0.4
 
-Selected features: ['A9', 'A6', 'A13', 'A2', 'A4', 'A1', 'A12', 'A3', 'A0', 'A10', 'A5']
-Accuracy, f1-score: 0.77, 0.75
+Selected features: ['A6', 'A2', 'A13', 'A9', 'A4', 'A12', 'A1', 'A0', 'A10', 'A3', 'A5']
+Accuracy, f1-score: 0.73, 0.72
 
 
 
 Meta parameter(s) value(s): 0.5
 
-Selected features: ['A6', 'A13', 'A9', 'A4', 'A1', 'A12', 'A2', 'A0', 'A10', 'A3', 'A5']
-Accuracy, f1-score: 0.77, 0.75
+Selected features: ['A4', 'A13', 'A2', 'A6', 'A9', 'A12', 'A1', 'A10', 'A0', 'A3', 'A5']
+Accuracy, f1-score: 0.73, 0.72
 
 
 
 Meta parameter(s) value(s): 0.6
 
-Selected features: ['A13', 'A6', 'A9', 'A12', 'A4', 'A1', 'A2', 'A0', 'A5', 'A10', 'A3']
-Accuracy, f1-score: 0.77, 0.75
+Selected features: ['A6', 'A9', 'A2', 'A13', 'A4', 'A12', 'A1', 'A10', 'A3', 'A5', 'A8']
+Accuracy, f1-score: 0.75, 0.74
 
 
 
 Meta parameter(s) value(s): 0.7
 
-Selected features: ['A13', 'A2', 'A6', 'A9', 'A4', 'A1', 'A12', 'A10', 'A0', 'A5', 'A8']
-Accuracy, f1-score: 0.71, 0.7
+Selected features: ['A6', 'A13', 'A2', 'A9', 'A4', 'A1', 'A12', 'A10', 'A0', 'A5', 'A7']
+Accuracy, f1-score: 0.86, 0.86
 
 
 
 Meta parameter(s) value(s): 0.8
 
-Selected features: ['A2', 'A13', 'A6', 'A12', 'A1', 'A4', 'A9', 'A10', 'A5', 'A8', 'A0']
-Accuracy, f1-score: 0.71, 0.7
+Selected features: ['A1', 'A6', 'A13', 'A2', 'A4', 'A12', 'A9', 'A5', 'A10', 'A3', 'A0']
+Accuracy, f1-score: 0.73, 0.72
 
 
 
 Meta parameter(s) value(s): 0.9
 
-Selected features: ['A1', 'A6', 'A13', 'A2', 'A12', 'A4', 'A9', 'A5', 'A8', 'A10', 'A3']
-Accuracy, f1-score: 0.71, 0.7
+Selected features: ['A2', 'A6', 'A1', 'A13', 'A4', 'A12', 'A9', 'A5', 'A8', 'A10', 'A3']
+Accuracy, f1-score: 0.75, 0.74
 
 
 
 Meta parameter(s) value(s): 0.95
 
-Selected features: ['A1', 'A2', 'A6', 'A13', 'A4', 'A12', 'A9', 'A5', 'A8', 'A10', 'A7']
-Accuracy, f1-score: 0.86, 0.86
+Selected features: ['A1', 'A2', 'A6', 'A13', 'A12', 'A4', 'A9', 'A5', 'A8', 'A7', 'A0']
+Accuracy, f1-score: 0.85, 0.85
 
 
 Number of features = 80%
 
 Meta parameter(s) value(s): 0.05
 
-Selected features: ['A9', 'A13', 'A4', 'A2', 'A6', 'A1', 'A12', 'A0', 'A10', 'A3', 'A7', 'A5']
+Selected features: ['A4', 'A2', 'A9', 'A6', 'A13', 'A12', 'A1', 'A0', 'A10', 'A3', 'A7', 'A5']
 Accuracy, f1-score: 0.86, 0.86
 
 
 
 Meta parameter(s) value(s): 0.1
 
-Selected features: ['A9', 'A4', 'A13', 'A2', 'A6', 'A12', 'A1', 'A10', 'A0', 'A3', 'A7', 'A5']
+Selected features: ['A9', 'A4', 'A13', 'A6', 'A2', 'A1', 'A12', 'A10', 'A3', 'A0', 'A7', 'A5']
 Accuracy, f1-score: 0.86, 0.86
 
 
 
 Meta parameter(s) value(s): 0.2
 
-Selected features: ['A9', 'A6', 'A13', 'A4', 'A1', 'A12', 'A2', 'A10', 'A0', 'A3', 'A5', 'A7']
+Selected features: ['A9', 'A4', 'A6', 'A12', 'A13', 'A1', 'A2', 'A0', 'A10', 'A3', 'A5', 'A7']
 Accuracy, f1-score: 0.86, 0.86
 
 
 
 Meta parameter(s) value(s): 0.3
 
-Selected features: ['A9', 'A6', 'A4', 'A13', 'A2', 'A1', 'A12', 'A10', 'A0', 'A3', 'A5', 'A7']
+Selected features: ['A13', 'A4', 'A2', 'A9', 'A6', 'A1', 'A12', 'A10', 'A3', 'A0', 'A5', 'A7']
 Accuracy, f1-score: 0.86, 0.86
 
 
 
 Meta parameter(s) value(s): 0.4
 
-Selected features: ['A13', 'A6', 'A9', 'A4', 'A2', 'A12', 'A1', 'A10', 'A3', 'A0', 'A5', 'A7']
+Selected features: ['A9', 'A13', 'A2', 'A6', 'A4', 'A1', 'A12', 'A10', 'A0', 'A7', 'A3', 'A5']
 Accuracy, f1-score: 0.86, 0.86
 
 
 
 Meta parameter(s) value(s): 0.5
 
-Selected features: ['A2', 'A13', 'A6', 'A9', 'A1', 'A4', 'A12', 'A10', 'A0', 'A3', 'A7', 'A5']
+Selected features: ['A13', 'A2', 'A6', 'A9', 'A4', 'A1', 'A12', 'A10', 'A0', 'A3', 'A7', 'A5']
 Accuracy, f1-score: 0.86, 0.86
 
 
 
 Meta parameter(s) value(s): 0.6
 
-Selected features: ['A13', 'A2', 'A6', 'A9', 'A4', 'A1', 'A12', 'A0', 'A3', 'A10', 'A8', 'A5']
-Accuracy, f1-score: 0.71, 0.7
+Selected features: ['A6', 'A4', 'A2', 'A13', 'A9', 'A1', 'A12', 'A0', 'A3', 'A10', 'A5', 'A7']
+Accuracy, f1-score: 0.86, 0.86
 
 
 
 Meta parameter(s) value(s): 0.7
 
-Selected features: ['A6', 'A13', 'A1', 'A4', 'A9', 'A2', 'A12', 'A0', 'A10', 'A5', 'A3', 'A8']
-Accuracy, f1-score: 0.71, 0.7
+Selected features: ['A2', 'A9', 'A6', 'A13', 'A4', 'A12', 'A1', 'A5', 'A0', 'A3', 'A10', 'A8']
+Accuracy, f1-score: 0.75, 0.75
 
 
 
 Meta parameter(s) value(s): 0.8
 
-Selected features: ['A6', 'A1', 'A13', 'A4', 'A12', 'A9', 'A2', 'A5', 'A3', 'A10', 'A0', 'A8']
-Accuracy, f1-score: 0.71, 0.7
+Selected features: ['A2', 'A13', 'A6', 'A1', 'A4', 'A9', 'A12', 'A5', 'A10', 'A3', 'A8', 'A0']
+Accuracy, f1-score: 0.75, 0.75
 
 
 
 Meta parameter(s) value(s): 0.9
 
-Selected features: ['A2', 'A6', 'A13', 'A1', 'A12', 'A4', 'A9', 'A5', 'A8', 'A10', 'A0', 'A3']
-Accuracy, f1-score: 0.71, 0.7
+Selected features: ['A6', 'A1', 'A2', 'A13', 'A4', 'A12', 'A9', 'A5', 'A8', 'A10', 'A3', 'A0']
+Accuracy, f1-score: 0.75, 0.75
 
 
 
 Meta parameter(s) value(s): 0.95
 
-Selected features: ['A1', 'A6', 'A2', 'A13', 'A12', 'A4', 'A9', 'A5', 'A8', 'A10', 'A3', 'A0']
-Accuracy, f1-score: 0.71, 0.7
+Selected features: ['A1', 'A2', 'A6', 'A13', 'A4', 'A12', 'A9', 'A5', 'A8', 'A10', 'A7', 'A3']
+Accuracy, f1-score: 0.85, 0.85
 
 
 Number of features = 90%
@@ -3433,77 +3433,77 @@ Number of features = 50%
 Meta parameter(s) value(s): 0.05
 
 Selected features: ['A7', 'A6', 'A8', 'A2', 'A4', 'A9', 'A12', 'A13']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.85, 0.84
 
 
 
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A7', 'A6', 'A8', 'A2', 'A4', 'A9', 'A12', 'A13']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.85, 0.84
 
 
 
 Meta parameter(s) value(s): 0.2
 
 Selected features: ['A7', 'A6', 'A8', 'A2', 'A4', 'A9', 'A12', 'A13']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.85, 0.84
 
 
 
 Meta parameter(s) value(s): 0.3
 
 Selected features: ['A7', 'A6', 'A8', 'A2', 'A4', 'A9', 'A12', 'A13']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.85, 0.84
 
 
 
 Meta parameter(s) value(s): 0.4
 
 Selected features: ['A7', 'A6', 'A8', 'A2', 'A4', 'A9', 'A12', 'A13']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.85, 0.84
 
 
 
 Meta parameter(s) value(s): 0.5
 
 Selected features: ['A7', 'A6', 'A8', 'A2', 'A4', 'A9', 'A12', 'A13']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.85, 0.84
 
 
 
 Meta parameter(s) value(s): 0.6
 
 Selected features: ['A7', 'A6', 'A8', 'A2', 'A4', 'A9', 'A12', 'A13']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.85, 0.84
 
 
 
 Meta parameter(s) value(s): 0.7
 
 Selected features: ['A7', 'A6', 'A8', 'A2', 'A4', 'A9', 'A12', 'A13']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.85, 0.84
 
 
 
 Meta parameter(s) value(s): 0.8
 
 Selected features: ['A7', 'A6', 'A8', 'A2', 'A4', 'A9', 'A12', 'A13']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.85, 0.84
 
 
 
 Meta parameter(s) value(s): 0.9
 
 Selected features: ['A7', 'A6', 'A8', 'A2', 'A4', 'A9', 'A12', 'A13']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.85, 0.84
 
 
 
 Meta parameter(s) value(s): 0.95
 
 Selected features: ['A7', 'A6', 'A8', 'A2', 'A4', 'A9', 'A12', 'A13']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.85, 0.84
 
 
 Number of features = 60%
@@ -3511,77 +3511,77 @@ Number of features = 60%
 Meta parameter(s) value(s): 0.05
 
 Selected features: ['A7', 'A6', 'A8', 'A2', 'A4', 'A9', 'A12', 'A13', 'A0']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.85, 0.84
 
 
 
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A7', 'A6', 'A8', 'A2', 'A4', 'A9', 'A12', 'A13', 'A0']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.85, 0.84
 
 
 
 Meta parameter(s) value(s): 0.2
 
 Selected features: ['A7', 'A6', 'A8', 'A2', 'A4', 'A9', 'A12', 'A13', 'A0']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.85, 0.84
 
 
 
 Meta parameter(s) value(s): 0.3
 
 Selected features: ['A7', 'A6', 'A8', 'A2', 'A4', 'A9', 'A12', 'A13', 'A0']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.85, 0.84
 
 
 
 Meta parameter(s) value(s): 0.4
 
 Selected features: ['A7', 'A6', 'A8', 'A2', 'A4', 'A9', 'A12', 'A13', 'A0']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.85, 0.84
 
 
 
 Meta parameter(s) value(s): 0.5
 
 Selected features: ['A7', 'A6', 'A8', 'A2', 'A4', 'A9', 'A12', 'A13', 'A0']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.85, 0.84
 
 
 
 Meta parameter(s) value(s): 0.6
 
 Selected features: ['A7', 'A6', 'A8', 'A2', 'A4', 'A9', 'A12', 'A13', 'A0']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.85, 0.84
 
 
 
 Meta parameter(s) value(s): 0.7
 
 Selected features: ['A7', 'A6', 'A8', 'A2', 'A4', 'A9', 'A12', 'A13', 'A0']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.85, 0.84
 
 
 
 Meta parameter(s) value(s): 0.8
 
 Selected features: ['A7', 'A6', 'A8', 'A2', 'A4', 'A9', 'A12', 'A13', 'A0']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.85, 0.84
 
 
 
 Meta parameter(s) value(s): 0.9
 
 Selected features: ['A7', 'A6', 'A8', 'A2', 'A4', 'A9', 'A12', 'A13', 'A0']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.85, 0.84
 
 
 
 Meta parameter(s) value(s): 0.95
 
 Selected features: ['A7', 'A6', 'A8', 'A2', 'A4', 'A9', 'A12', 'A13', 'A0']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.85, 0.84
 
 
 Number of features = 70%
@@ -3589,77 +3589,77 @@ Number of features = 70%
 Meta parameter(s) value(s): 0.05
 
 Selected features: ['A7', 'A6', 'A8', 'A2', 'A4', 'A9', 'A12', 'A13', 'A0', 'A5', 'A1']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.85, 0.85
 
 
 
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A7', 'A6', 'A8', 'A2', 'A4', 'A9', 'A12', 'A13', 'A0', 'A5', 'A1']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.85, 0.85
 
 
 
 Meta parameter(s) value(s): 0.2
 
 Selected features: ['A7', 'A6', 'A8', 'A2', 'A4', 'A9', 'A12', 'A13', 'A0', 'A5', 'A1']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.85, 0.85
 
 
 
 Meta parameter(s) value(s): 0.3
 
 Selected features: ['A7', 'A6', 'A8', 'A2', 'A4', 'A9', 'A12', 'A13', 'A0', 'A5', 'A1']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.85, 0.85
 
 
 
 Meta parameter(s) value(s): 0.4
 
 Selected features: ['A7', 'A6', 'A8', 'A2', 'A4', 'A9', 'A12', 'A13', 'A0', 'A5', 'A1']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.85, 0.85
 
 
 
 Meta parameter(s) value(s): 0.5
 
 Selected features: ['A7', 'A6', 'A8', 'A2', 'A4', 'A9', 'A12', 'A13', 'A0', 'A5', 'A1']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.85, 0.85
 
 
 
 Meta parameter(s) value(s): 0.6
 
 Selected features: ['A7', 'A6', 'A8', 'A2', 'A4', 'A9', 'A12', 'A13', 'A0', 'A5', 'A1']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.85, 0.85
 
 
 
 Meta parameter(s) value(s): 0.7
 
 Selected features: ['A7', 'A6', 'A8', 'A2', 'A4', 'A9', 'A12', 'A13', 'A0', 'A5', 'A1']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.85, 0.85
 
 
 
 Meta parameter(s) value(s): 0.8
 
 Selected features: ['A7', 'A6', 'A8', 'A2', 'A4', 'A9', 'A12', 'A13', 'A0', 'A5', 'A1']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.85, 0.85
 
 
 
 Meta parameter(s) value(s): 0.9
 
 Selected features: ['A7', 'A6', 'A8', 'A2', 'A4', 'A9', 'A12', 'A13', 'A0', 'A5', 'A1']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.85, 0.85
 
 
 
 Meta parameter(s) value(s): 0.95
 
 Selected features: ['A7', 'A6', 'A8', 'A2', 'A4', 'A9', 'A12', 'A13', 'A0', 'A5', 'A1']
-Accuracy, f1-score: 0.86, 0.86
+Accuracy, f1-score: 0.85, 0.85
 
 
 Number of features = 80%
@@ -3903,624 +3903,624 @@ Number of features = 10%
 
 Meta parameter(s) value(s): 0.05
 
-Selected features: ['A6', 'A9']
-Accuracy, f1-score: 0.68, 0.61
+Selected features: ['A9', 'A13']
+Accuracy, f1-score: 0.69, 0.63
 
 
 
 Meta parameter(s) value(s): 0.1
-
-Selected features: ['A13', 'A2']
-Accuracy, f1-score: 0.61, 0.54
-
-
-
-Meta parameter(s) value(s): 0.2
-
-Selected features: ['A6', 'A9']
-Accuracy, f1-score: 0.68, 0.61
-
-
-
-Meta parameter(s) value(s): 0.3
-
-Selected features: ['A6', 'A9']
-Accuracy, f1-score: 0.68, 0.61
-
-
-
-Meta parameter(s) value(s): 0.4
 
 Selected features: ['A9', 'A4']
-Accuracy, f1-score: 0.71, 0.7
-
-
-
-Meta parameter(s) value(s): 0.5
-
-Selected features: ['A2', 'A6']
-Accuracy, f1-score: 0.63, 0.55
-
-
-
-Meta parameter(s) value(s): 0.6
-
-Selected features: ['A6', 'A9']
-Accuracy, f1-score: 0.68, 0.61
-
-
-
-Meta parameter(s) value(s): 0.7
-
-Selected features: ['A6', 'A13']
-Accuracy, f1-score: 0.64, 0.54
-
-
-
-Meta parameter(s) value(s): 0.8
-
-Selected features: ['A6', 'A1']
-Accuracy, f1-score: 0.64, 0.54
-
-
-
-Meta parameter(s) value(s): 0.9
-
-Selected features: ['A2', 'A6']
-Accuracy, f1-score: 0.63, 0.55
-
-
-
-Meta parameter(s) value(s): 0.95
-
-Selected features: ['A1', 'A2']
-Accuracy, f1-score: 0.61, 0.54
-
-
-Number of features = 20%
-
-Meta parameter(s) value(s): 0.05
-
-Selected features: ['A9', 'A13', 'A4']
-Accuracy, f1-score: 0.71, 0.7
-
-
-
-Meta parameter(s) value(s): 0.1
-
-Selected features: ['A13', 'A6', 'A9']
-Accuracy, f1-score: 0.69, 0.62
+Accuracy, f1-score: 0.73, 0.72
 
 
 
 Meta parameter(s) value(s): 0.2
 
-Selected features: ['A4', 'A2', 'A9']
-Accuracy, f1-score: 0.72, 0.71
+Selected features: ['A6', 'A4']
+Accuracy, f1-score: 0.67, 0.66
 
 
 
 Meta parameter(s) value(s): 0.3
 
-Selected features: ['A13', 'A9', 'A4']
-Accuracy, f1-score: 0.71, 0.7
+Selected features: ['A6', 'A4']
+Accuracy, f1-score: 0.67, 0.66
 
 
 
 Meta parameter(s) value(s): 0.4
 
-Selected features: ['A9', 'A6', 'A4']
-Accuracy, f1-score: 0.74, 0.72
+Selected features: ['A13', 'A9']
+Accuracy, f1-score: 0.69, 0.63
 
 
 
 Meta parameter(s) value(s): 0.5
 
-Selected features: ['A6', 'A2', 'A9']
+Selected features: ['A9', 'A6']
 Accuracy, f1-score: 0.7, 0.64
 
 
 
 Meta parameter(s) value(s): 0.6
 
-Selected features: ['A6', 'A2', 'A13']
-Accuracy, f1-score: 0.64, 0.56
+Selected features: ['A6', 'A9']
+Accuracy, f1-score: 0.7, 0.64
 
 
 
 Meta parameter(s) value(s): 0.7
 
-Selected features: ['A6', 'A13', 'A4']
-Accuracy, f1-score: 0.68, 0.67
+Selected features: ['A2', 'A13']
+Accuracy, f1-score: 0.63, 0.58
 
 
 
 Meta parameter(s) value(s): 0.8
 
-Selected features: ['A6', 'A2', 'A13']
-Accuracy, f1-score: 0.64, 0.56
+Selected features: ['A6', 'A4']
+Accuracy, f1-score: 0.67, 0.66
 
 
 
 Meta parameter(s) value(s): 0.9
 
-Selected features: ['A6', 'A1', 'A13']
-Accuracy, f1-score: 0.64, 0.54
+Selected features: ['A2', 'A6']
+Accuracy, f1-score: 0.67, 0.61
 
 
 
 Meta parameter(s) value(s): 0.95
 
-Selected features: ['A1', 'A2', 'A6']
-Accuracy, f1-score: 0.63, 0.55
+Selected features: ['A1', 'A6']
+Accuracy, f1-score: 0.65, 0.58
+
+
+Number of features = 20%
+
+Meta parameter(s) value(s): 0.05
+
+Selected features: ['A6', 'A9', 'A13']
+Accuracy, f1-score: 0.7, 0.65
+
+
+
+Meta parameter(s) value(s): 0.1
+
+Selected features: ['A9', 'A4', 'A6']
+Accuracy, f1-score: 0.73, 0.72
+
+
+
+Meta parameter(s) value(s): 0.2
+
+Selected features: ['A9', 'A6', 'A13']
+Accuracy, f1-score: 0.7, 0.65
+
+
+
+Meta parameter(s) value(s): 0.3
+
+Selected features: ['A9', 'A13', 'A6']
+Accuracy, f1-score: 0.7, 0.65
+
+
+
+Meta parameter(s) value(s): 0.4
+
+Selected features: ['A6', 'A4', 'A13']
+Accuracy, f1-score: 0.66, 0.65
+
+
+
+Meta parameter(s) value(s): 0.5
+
+Selected features: ['A6', 'A9', 'A13']
+Accuracy, f1-score: 0.7, 0.65
+
+
+
+Meta parameter(s) value(s): 0.6
+
+Selected features: ['A6', 'A13', 'A9']
+Accuracy, f1-score: 0.7, 0.65
+
+
+
+Meta parameter(s) value(s): 0.7
+
+Selected features: ['A13', 'A6', 'A9']
+Accuracy, f1-score: 0.7, 0.65
+
+
+
+Meta parameter(s) value(s): 0.8
+
+Selected features: ['A6', 'A13', 'A2']
+Accuracy, f1-score: 0.68, 0.63
+
+
+
+Meta parameter(s) value(s): 0.9
+
+Selected features: ['A1', 'A6', 'A13']
+Accuracy, f1-score: 0.69, 0.63
+
+
+
+Meta parameter(s) value(s): 0.95
+
+Selected features: ['A1', 'A6', 'A2']
+Accuracy, f1-score: 0.67, 0.62
 
 
 Number of features = 30%
 
 Meta parameter(s) value(s): 0.05
 
-Selected features: ['A9', 'A6', 'A13', 'A4', 'A2']
-Accuracy, f1-score: 0.72, 0.71
+Selected features: ['A4', 'A13', 'A9', 'A2', 'A6']
+Accuracy, f1-score: 0.76, 0.75
 
 
 
 Meta parameter(s) value(s): 0.1
 
-Selected features: ['A9', 'A13', 'A4', 'A2', 'A6']
-Accuracy, f1-score: 0.72, 0.71
+Selected features: ['A13', 'A6', 'A9', 'A4', 'A2']
+Accuracy, f1-score: 0.76, 0.75
 
 
 
 Meta parameter(s) value(s): 0.2
 
-Selected features: ['A9', 'A13', 'A6', 'A2', 'A4']
-Accuracy, f1-score: 0.72, 0.71
+Selected features: ['A13', 'A9', 'A6', 'A4', 'A2']
+Accuracy, f1-score: 0.76, 0.75
 
 
 
 Meta parameter(s) value(s): 0.3
 
-Selected features: ['A4', 'A6', 'A9', 'A13', 'A2']
-Accuracy, f1-score: 0.72, 0.71
+Selected features: ['A9', 'A13', 'A6', 'A4', 'A2']
+Accuracy, f1-score: 0.76, 0.75
 
 
 
 Meta parameter(s) value(s): 0.4
 
-Selected features: ['A9', 'A13', 'A6', 'A4', 'A12']
-Accuracy, f1-score: 0.73, 0.72
+Selected features: ['A9', 'A13', 'A6', 'A2', 'A4']
+Accuracy, f1-score: 0.76, 0.75
 
 
 
 Meta parameter(s) value(s): 0.5
 
 Selected features: ['A13', 'A9', 'A6', 'A4', 'A2']
-Accuracy, f1-score: 0.72, 0.71
+Accuracy, f1-score: 0.76, 0.75
 
 
 
 Meta parameter(s) value(s): 0.6
 
-Selected features: ['A6', 'A9', 'A13', 'A4', 'A2']
-Accuracy, f1-score: 0.72, 0.71
+Selected features: ['A6', 'A2', 'A9', 'A13', 'A4']
+Accuracy, f1-score: 0.76, 0.75
 
 
 
 Meta parameter(s) value(s): 0.7
 
-Selected features: ['A6', 'A13', 'A1', 'A4', 'A9']
-Accuracy, f1-score: 0.75, 0.73
+Selected features: ['A13', 'A2', 'A9', 'A6', 'A4']
+Accuracy, f1-score: 0.76, 0.75
 
 
 
 Meta parameter(s) value(s): 0.8
 
-Selected features: ['A2', 'A6', 'A9', 'A13', 'A4']
-Accuracy, f1-score: 0.72, 0.71
+Selected features: ['A6', 'A13', 'A9', 'A4', 'A2']
+Accuracy, f1-score: 0.76, 0.75
 
 
 
 Meta parameter(s) value(s): 0.9
 
-Selected features: ['A2', 'A6', 'A1', 'A12', 'A13']
-Accuracy, f1-score: 0.65, 0.57
+Selected features: ['A1', 'A2', 'A6', 'A13', 'A12']
+Accuracy, f1-score: 0.66, 0.59
 
 
 
 Meta parameter(s) value(s): 0.95
 
-Selected features: ['A1', 'A2', 'A6', 'A13', 'A4']
-Accuracy, f1-score: 0.68, 0.66
+Selected features: ['A2', 'A1', 'A6', 'A13', 'A4']
+Accuracy, f1-score: 0.67, 0.66
 
 
 Number of features = 40%
 
 Meta parameter(s) value(s): 0.05
 
-Selected features: ['A13', 'A4', 'A6', 'A9', 'A2', 'A1']
-Accuracy, f1-score: 0.75, 0.73
+Selected features: ['A9', 'A4', 'A6', 'A13', 'A2', 'A12']
+Accuracy, f1-score: 0.74, 0.73
 
 
 
 Meta parameter(s) value(s): 0.1
 
-Selected features: ['A9', 'A13', 'A6', 'A2', 'A4', 'A12']
-Accuracy, f1-score: 0.72, 0.71
+Selected features: ['A6', 'A9', 'A4', 'A13', 'A2', 'A12']
+Accuracy, f1-score: 0.74, 0.73
 
 
 
 Meta parameter(s) value(s): 0.2
 
-Selected features: ['A9', 'A13', 'A6', 'A2', 'A4', 'A12']
-Accuracy, f1-score: 0.72, 0.71
+Selected features: ['A4', 'A9', 'A13', 'A6', 'A2', 'A1']
+Accuracy, f1-score: 0.75, 0.74
 
 
 
 Meta parameter(s) value(s): 0.3
 
-Selected features: ['A4', 'A9', 'A6', 'A13', 'A2', 'A1']
-Accuracy, f1-score: 0.75, 0.73
+Selected features: ['A13', 'A6', 'A9', 'A4', 'A2', 'A1']
+Accuracy, f1-score: 0.75, 0.74
 
 
 
 Meta parameter(s) value(s): 0.4
 
-Selected features: ['A13', 'A4', 'A6', 'A9', 'A2', 'A12']
-Accuracy, f1-score: 0.72, 0.71
+Selected features: ['A2', 'A6', 'A13', 'A9', 'A4', 'A1']
+Accuracy, f1-score: 0.75, 0.74
 
 
 
 Meta parameter(s) value(s): 0.5
 
-Selected features: ['A4', 'A2', 'A6', 'A13', 'A9', 'A1']
-Accuracy, f1-score: 0.75, 0.73
+Selected features: ['A6', 'A4', 'A2', 'A13', 'A9', 'A1']
+Accuracy, f1-score: 0.75, 0.74
 
 
 
 Meta parameter(s) value(s): 0.6
 
-Selected features: ['A6', 'A9', 'A13', 'A4', 'A2', 'A1']
-Accuracy, f1-score: 0.75, 0.73
+Selected features: ['A13', 'A2', 'A6', 'A9', 'A4', 'A1']
+Accuracy, f1-score: 0.75, 0.74
 
 
 
 Meta parameter(s) value(s): 0.7
 
-Selected features: ['A6', 'A2', 'A13', 'A9', 'A12', 'A4']
-Accuracy, f1-score: 0.72, 0.71
+Selected features: ['A6', 'A2', 'A13', 'A9', 'A4', 'A1']
+Accuracy, f1-score: 0.75, 0.74
 
 
 
 Meta parameter(s) value(s): 0.8
 
-Selected features: ['A6', 'A2', 'A13', 'A9', 'A4', 'A1']
-Accuracy, f1-score: 0.75, 0.73
+Selected features: ['A6', 'A4', 'A13', 'A9', 'A1', 'A2']
+Accuracy, f1-score: 0.75, 0.74
 
 
 
 Meta parameter(s) value(s): 0.9
 
-Selected features: ['A2', 'A6', 'A1', 'A12', 'A13', 'A4']
-Accuracy, f1-score: 0.67, 0.66
+Selected features: ['A2', 'A6', 'A1', 'A4', 'A13', 'A9']
+Accuracy, f1-score: 0.75, 0.74
 
 
 
 Meta parameter(s) value(s): 0.95
 
-Selected features: ['A2', 'A1', 'A6', 'A13', 'A12', 'A4']
-Accuracy, f1-score: 0.67, 0.66
+Selected features: ['A2', 'A6', 'A13', 'A1', 'A9', 'A4']
+Accuracy, f1-score: 0.75, 0.74
 
 
 Number of features = 50%
 
 Meta parameter(s) value(s): 0.05
 
-Selected features: ['A9', 'A6', 'A4', 'A13', 'A2', 'A12', 'A1', 'A5']
-Accuracy, f1-score: 0.75, 0.73
+Selected features: ['A6', 'A13', 'A9', 'A12', 'A4', 'A2', 'A1', 'A5']
+Accuracy, f1-score: 0.78, 0.77
 
 
 
 Meta parameter(s) value(s): 0.1
 
-Selected features: ['A4', 'A9', 'A13', 'A6', 'A12', 'A1', 'A2', 'A5']
-Accuracy, f1-score: 0.75, 0.73
+Selected features: ['A2', 'A9', 'A6', 'A13', 'A4', 'A12', 'A1', 'A5']
+Accuracy, f1-score: 0.78, 0.77
 
 
 
 Meta parameter(s) value(s): 0.2
 
-Selected features: ['A6', 'A4', 'A13', 'A9', 'A2', 'A12', 'A1', 'A5']
-Accuracy, f1-score: 0.75, 0.73
+Selected features: ['A9', 'A4', 'A6', 'A13', 'A2', 'A12', 'A1', 'A7']
+Accuracy, f1-score: 0.86, 0.86
 
 
 
 Meta parameter(s) value(s): 0.3
 
-Selected features: ['A6', 'A4', 'A2', 'A9', 'A13', 'A12', 'A1', 'A8']
-Accuracy, f1-score: 0.7, 0.69
+Selected features: ['A2', 'A13', 'A9', 'A6', 'A4', 'A1', 'A12', 'A8']
+Accuracy, f1-score: 0.76, 0.76
 
 
 
 Meta parameter(s) value(s): 0.4
 
-Selected features: ['A13', 'A6', 'A9', 'A2', 'A4', 'A12', 'A1', 'A8']
-Accuracy, f1-score: 0.7, 0.69
+Selected features: ['A9', 'A6', 'A13', 'A2', 'A4', 'A12', 'A1', 'A5']
+Accuracy, f1-score: 0.78, 0.77
 
 
 
 Meta parameter(s) value(s): 0.5
 
-Selected features: ['A6', 'A9', 'A4', 'A13', 'A2', 'A12', 'A1', 'A5']
-Accuracy, f1-score: 0.75, 0.73
+Selected features: ['A9', 'A4', 'A2', 'A13', 'A6', 'A1', 'A12', 'A5']
+Accuracy, f1-score: 0.78, 0.77
 
 
 
 Meta parameter(s) value(s): 0.6
 
-Selected features: ['A6', 'A9', 'A4', 'A13', 'A2', 'A1', 'A12', 'A5']
-Accuracy, f1-score: 0.75, 0.73
+Selected features: ['A6', 'A4', 'A13', 'A9', 'A2', 'A1', 'A12', 'A5']
+Accuracy, f1-score: 0.78, 0.77
 
 
 
 Meta parameter(s) value(s): 0.7
 
-Selected features: ['A6', 'A4', 'A13', 'A2', 'A9', 'A12', 'A1', 'A5']
-Accuracy, f1-score: 0.75, 0.73
+Selected features: ['A6', 'A13', 'A4', 'A9', 'A12', 'A2', 'A1', 'A5']
+Accuracy, f1-score: 0.78, 0.77
 
 
 
 Meta parameter(s) value(s): 0.8
 
-Selected features: ['A2', 'A6', 'A13', 'A9', 'A4', 'A1', 'A12', 'A5']
-Accuracy, f1-score: 0.75, 0.73
+Selected features: ['A6', 'A2', 'A13', 'A9', 'A4', 'A1', 'A12', 'A5']
+Accuracy, f1-score: 0.78, 0.77
 
 
 
 Meta parameter(s) value(s): 0.9
 
-Selected features: ['A2', 'A6', 'A1', 'A13', 'A4', 'A9', 'A12', 'A5']
-Accuracy, f1-score: 0.75, 0.73
+Selected features: ['A2', 'A1', 'A6', 'A4', 'A13', 'A12', 'A9', 'A5']
+Accuracy, f1-score: 0.78, 0.77
 
 
 
 Meta parameter(s) value(s): 0.95
 
-Selected features: ['A1', 'A2', 'A6', 'A13', 'A12', 'A4', 'A9', 'A5']
-Accuracy, f1-score: 0.75, 0.73
+Selected features: ['A1', 'A2', 'A6', 'A13', 'A4', 'A9', 'A12', 'A5']
+Accuracy, f1-score: 0.78, 0.77
 
 
 Number of features = 60%
 
 Meta parameter(s) value(s): 0.05
 
-Selected features: ['A9', 'A13', 'A6', 'A4', 'A2', 'A12', 'A1', 'A5', 'A8']
-Accuracy, f1-score: 0.7, 0.69
+Selected features: ['A9', 'A13', 'A6', 'A4', 'A2', 'A1', 'A12', 'A5', 'A8']
+Accuracy, f1-score: 0.75, 0.75
 
 
 
 Meta parameter(s) value(s): 0.1
 
-Selected features: ['A9', 'A6', 'A13', 'A2', 'A4', 'A12', 'A1', 'A5', 'A8']
-Accuracy, f1-score: 0.7, 0.69
+Selected features: ['A9', 'A4', 'A6', 'A13', 'A2', 'A1', 'A12', 'A8', 'A5']
+Accuracy, f1-score: 0.75, 0.75
 
 
 
 Meta parameter(s) value(s): 0.2
 
-Selected features: ['A6', 'A9', 'A13', 'A2', 'A4', 'A12', 'A1', 'A5', 'A8']
-Accuracy, f1-score: 0.7, 0.69
+Selected features: ['A13', 'A9', 'A6', 'A4', 'A2', 'A12', 'A1', 'A8', 'A5']
+Accuracy, f1-score: 0.75, 0.75
 
 
 
 Meta parameter(s) value(s): 0.3
 
-Selected features: ['A4', 'A9', 'A13', 'A2', 'A6', 'A12', 'A1', 'A5', 'A8']
-Accuracy, f1-score: 0.7, 0.69
+Selected features: ['A9', 'A13', 'A2', 'A6', 'A4', 'A1', 'A12', 'A5', 'A8']
+Accuracy, f1-score: 0.75, 0.75
 
 
 
 Meta parameter(s) value(s): 0.4
 
-Selected features: ['A9', 'A13', 'A6', 'A4', 'A2', 'A12', 'A5', 'A1', 'A8']
-Accuracy, f1-score: 0.7, 0.69
+Selected features: ['A6', 'A4', 'A9', 'A13', 'A2', 'A1', 'A12', 'A5', 'A7']
+Accuracy, f1-score: 0.86, 0.86
 
 
 
 Meta parameter(s) value(s): 0.5
 
-Selected features: ['A6', 'A9', 'A4', 'A13', 'A1', 'A12', 'A2', 'A8', 'A5']
-Accuracy, f1-score: 0.7, 0.69
+Selected features: ['A4', 'A6', 'A9', 'A13', 'A2', 'A12', 'A1', 'A5', 'A7']
+Accuracy, f1-score: 0.86, 0.86
 
 
 
 Meta parameter(s) value(s): 0.6
 
-Selected features: ['A6', 'A13', 'A4', 'A2', 'A9', 'A1', 'A12', 'A8', 'A5']
-Accuracy, f1-score: 0.7, 0.69
+Selected features: ['A13', 'A6', 'A4', 'A9', 'A1', 'A2', 'A12', 'A7', 'A8']
+Accuracy, f1-score: 0.85, 0.84
 
 
 
 Meta parameter(s) value(s): 0.7
 
-Selected features: ['A6', 'A13', 'A2', 'A9', 'A4', 'A1', 'A12', 'A5', 'A8']
-Accuracy, f1-score: 0.7, 0.69
+Selected features: ['A6', 'A4', 'A13', 'A2', 'A9', 'A1', 'A12', 'A5', 'A7']
+Accuracy, f1-score: 0.86, 0.86
 
 
 
 Meta parameter(s) value(s): 0.8
 
-Selected features: ['A6', 'A13', 'A4', 'A9', 'A1', 'A2', 'A12', 'A5', 'A8']
-Accuracy, f1-score: 0.7, 0.69
+Selected features: ['A6', 'A13', 'A2', 'A4', 'A9', 'A1', 'A5', 'A12', 'A8']
+Accuracy, f1-score: 0.75, 0.75
 
 
 
 Meta parameter(s) value(s): 0.9
 
-Selected features: ['A1', 'A6', 'A13', 'A2', 'A4', 'A9', 'A12', 'A5', 'A8']
-Accuracy, f1-score: 0.7, 0.69
+Selected features: ['A6', 'A2', 'A1', 'A13', 'A4', 'A9', 'A12', 'A5', 'A8']
+Accuracy, f1-score: 0.75, 0.75
 
 
 
 Meta parameter(s) value(s): 0.95
 
-Selected features: ['A2', 'A6', 'A1', 'A13', 'A12', 'A4', 'A9', 'A5', 'A8']
-Accuracy, f1-score: 0.7, 0.69
+Selected features: ['A1', 'A2', 'A6', 'A13', 'A4', 'A12', 'A9', 'A5', 'A7']
+Accuracy, f1-score: 0.86, 0.86
 
 
 Number of features = 70%
 
 Meta parameter(s) value(s): 0.05
 
-Selected features: ['A9', 'A13', 'A4', 'A6', 'A2', 'A1', 'A12', 'A5', 'A8', 'A3', 'A7']
-Accuracy, f1-score: 0.86, 0.86
+Selected features: ['A9', 'A4', 'A13', 'A2', 'A6', 'A1', 'A12', 'A5', 'A7', 'A8', 'A0']
+Accuracy, f1-score: 0.85, 0.85
 
 
 
 Meta parameter(s) value(s): 0.1
 
-Selected features: ['A9', 'A13', 'A2', 'A6', 'A4', 'A12', 'A1', 'A5', 'A7', 'A8', 'A0']
-Accuracy, f1-score: 0.86, 0.86
+Selected features: ['A9', 'A13', 'A4', 'A6', 'A2', 'A1', 'A12', 'A8', 'A5', 'A7', 'A3']
+Accuracy, f1-score: 0.85, 0.85
 
 
 
 Meta parameter(s) value(s): 0.2
 
-Selected features: ['A9', 'A6', 'A4', 'A13', 'A2', 'A12', 'A1', 'A8', 'A5', 'A0', 'A7']
-Accuracy, f1-score: 0.86, 0.86
+Selected features: ['A4', 'A9', 'A13', 'A6', 'A2', 'A12', 'A1', 'A7', 'A5', 'A8', 'A10']
+Accuracy, f1-score: 0.85, 0.85
 
 
 
 Meta parameter(s) value(s): 0.3
 
-Selected features: ['A9', 'A6', 'A13', 'A4', 'A2', 'A12', 'A1', 'A5', 'A8', 'A0', 'A10']
-Accuracy, f1-score: 0.71, 0.7
+Selected features: ['A6', 'A13', 'A9', 'A2', 'A4', 'A12', 'A1', 'A8', 'A5', 'A0', 'A7']
+Accuracy, f1-score: 0.85, 0.85
 
 
 
 Meta parameter(s) value(s): 0.4
 
-Selected features: ['A9', 'A6', 'A13', 'A4', 'A12', 'A2', 'A1', 'A5', 'A8', 'A0', 'A7']
-Accuracy, f1-score: 0.86, 0.86
+Selected features: ['A9', 'A6', 'A13', 'A2', 'A4', 'A12', 'A1', 'A8', 'A5', 'A7', 'A0']
+Accuracy, f1-score: 0.85, 0.85
 
 
 
 Meta parameter(s) value(s): 0.5
 
-Selected features: ['A6', 'A9', 'A13', 'A4', 'A2', 'A12', 'A1', 'A8', 'A5', 'A0', 'A7']
-Accuracy, f1-score: 0.86, 0.86
+Selected features: ['A9', 'A6', 'A13', 'A4', 'A2', 'A12', 'A1', 'A5', 'A8', 'A10', 'A0']
+Accuracy, f1-score: 0.75, 0.74
 
 
 
 Meta parameter(s) value(s): 0.6
 
-Selected features: ['A6', 'A4', 'A9', 'A13', 'A2', 'A12', 'A1', 'A5', 'A8', 'A0', 'A7']
-Accuracy, f1-score: 0.86, 0.86
+Selected features: ['A6', 'A4', 'A9', 'A13', 'A2', 'A1', 'A12', 'A8', 'A5', 'A7', 'A0']
+Accuracy, f1-score: 0.85, 0.85
 
 
 
 Meta parameter(s) value(s): 0.7
 
-Selected features: ['A6', 'A4', 'A13', 'A9', 'A2', 'A1', 'A12', 'A5', 'A8', 'A10', 'A0']
-Accuracy, f1-score: 0.71, 0.7
+Selected features: ['A6', 'A2', 'A13', 'A4', 'A9', 'A1', 'A12', 'A5', 'A8', 'A3', 'A7']
+Accuracy, f1-score: 0.85, 0.85
 
 
 
 Meta parameter(s) value(s): 0.8
 
-Selected features: ['A2', 'A13', 'A6', 'A9', 'A4', 'A1', 'A12', 'A5', 'A8', 'A10', 'A0']
-Accuracy, f1-score: 0.71, 0.7
+Selected features: ['A2', 'A6', 'A13', 'A4', 'A9', 'A1', 'A12', 'A5', 'A7', 'A8', 'A0']
+Accuracy, f1-score: 0.85, 0.85
 
 
 
 Meta parameter(s) value(s): 0.9
 
-Selected features: ['A6', 'A1', 'A2', 'A13', 'A12', 'A4', 'A9', 'A5', 'A8', 'A10', 'A7']
-Accuracy, f1-score: 0.86, 0.86
+Selected features: ['A1', 'A2', 'A6', 'A13', 'A4', 'A9', 'A12', 'A5', 'A8', 'A7', 'A0']
+Accuracy, f1-score: 0.85, 0.85
 
 
 
 Meta parameter(s) value(s): 0.95
 
-Selected features: ['A1', 'A2', 'A6', 'A13', 'A4', 'A12', 'A9', 'A5', 'A8', 'A10', 'A0']
-Accuracy, f1-score: 0.71, 0.7
+Selected features: ['A1', 'A6', 'A2', 'A13', 'A12', 'A4', 'A9', 'A5', 'A8', 'A10', 'A3']
+Accuracy, f1-score: 0.75, 0.74
 
 
 Number of features = 80%
 
 Meta parameter(s) value(s): 0.05
 
-Selected features: ['A9', 'A6', 'A4', 'A13', 'A2', 'A1', 'A12', 'A8', 'A5', 'A7', 'A0', 'A10']
-Accuracy, f1-score: 0.86, 0.86
+Selected features: ['A9', 'A13', 'A2', 'A6', 'A4', 'A12', 'A1', 'A5', 'A8', 'A0', 'A3', 'A7']
+Accuracy, f1-score: 0.85, 0.85
 
 
 
 Meta parameter(s) value(s): 0.1
 
-Selected features: ['A13', 'A9', 'A4', 'A6', 'A12', 'A2', 'A1', 'A5', 'A7', 'A10', 'A8', 'A3']
-Accuracy, f1-score: 0.86, 0.86
+Selected features: ['A9', 'A13', 'A6', 'A4', 'A12', 'A2', 'A1', 'A5', 'A7', 'A3', 'A8', 'A10']
+Accuracy, f1-score: 0.85, 0.85
 
 
 
 Meta parameter(s) value(s): 0.2
 
-Selected features: ['A4', 'A9', 'A13', 'A6', 'A2', 'A1', 'A12', 'A7', 'A0', 'A3', 'A8', 'A5']
+Selected features: ['A9', 'A4', 'A2', 'A13', 'A6', 'A12', 'A1', 'A5', 'A8', 'A7', 'A10', 'A11']
 Accuracy, f1-score: 0.86, 0.86
 
 
 
 Meta parameter(s) value(s): 0.3
 
-Selected features: ['A13', 'A4', 'A9', 'A6', 'A2', 'A1', 'A12', 'A8', 'A5', 'A10', 'A7', 'A3']
-Accuracy, f1-score: 0.86, 0.86
+Selected features: ['A9', 'A13', 'A4', 'A6', 'A2', 'A12', 'A1', 'A5', 'A8', 'A10', 'A7', 'A3']
+Accuracy, f1-score: 0.85, 0.85
 
 
 
 Meta parameter(s) value(s): 0.4
 
-Selected features: ['A4', 'A13', 'A6', 'A9', 'A12', 'A2', 'A1', 'A5', 'A8', 'A10', 'A7', 'A3']
-Accuracy, f1-score: 0.86, 0.86
+Selected features: ['A6', 'A9', 'A13', 'A4', 'A2', 'A12', 'A1', 'A8', 'A5', 'A10', 'A0', 'A7']
+Accuracy, f1-score: 0.85, 0.85
 
 
 
 Meta parameter(s) value(s): 0.5
 
-Selected features: ['A4', 'A6', 'A13', 'A2', 'A9', 'A12', 'A1', 'A5', 'A8', 'A7', 'A0', 'A10']
-Accuracy, f1-score: 0.86, 0.86
+Selected features: ['A6', 'A13', 'A9', 'A4', 'A2', 'A12', 'A1', 'A5', 'A8', 'A0', 'A3', 'A10']
+Accuracy, f1-score: 0.75, 0.75
 
 
 
 Meta parameter(s) value(s): 0.6
 
-Selected features: ['A2', 'A6', 'A9', 'A13', 'A4', 'A1', 'A12', 'A5', 'A8', 'A0', 'A7', 'A3']
-Accuracy, f1-score: 0.86, 0.86
+Selected features: ['A2', 'A13', 'A9', 'A6', 'A4', 'A12', 'A1', 'A5', 'A8', 'A0', 'A7', 'A3']
+Accuracy, f1-score: 0.85, 0.85
 
 
 
 Meta parameter(s) value(s): 0.7
 
-Selected features: ['A6', 'A4', 'A2', 'A9', 'A13', 'A12', 'A1', 'A5', 'A8', 'A7', 'A3', 'A10']
-Accuracy, f1-score: 0.86, 0.86
+Selected features: ['A6', 'A13', 'A9', 'A4', 'A2', 'A12', 'A1', 'A5', 'A8', 'A7', 'A3', 'A10']
+Accuracy, f1-score: 0.85, 0.85
 
 
 
 Meta parameter(s) value(s): 0.8
 
-Selected features: ['A6', 'A13', 'A2', 'A4', 'A9', 'A12', 'A1', 'A5', 'A7', 'A10', 'A8', 'A3']
-Accuracy, f1-score: 0.86, 0.86
+Selected features: ['A6', 'A2', 'A1', 'A4', 'A9', 'A13', 'A12', 'A5', 'A8', 'A10', 'A7', 'A3']
+Accuracy, f1-score: 0.85, 0.85
 
 
 
 Meta parameter(s) value(s): 0.9
 
-Selected features: ['A2', 'A6', 'A1', 'A13', 'A4', 'A9', 'A12', 'A5', 'A8', 'A3', 'A0', 'A7']
-Accuracy, f1-score: 0.86, 0.86
+Selected features: ['A2', 'A6', 'A1', 'A13', 'A9', 'A4', 'A12', 'A5', 'A8', 'A7', 'A0', 'A10']
+Accuracy, f1-score: 0.85, 0.85
 
 
 
 Meta parameter(s) value(s): 0.95
 
-Selected features: ['A1', 'A6', 'A2', 'A13', 'A12', 'A4', 'A9', 'A5', 'A8', 'A7', 'A10', 'A11']
-Accuracy, f1-score: 0.86, 0.86
+Selected features: ['A1', 'A6', 'A2', 'A13', 'A4', 'A12', 'A9', 'A5', 'A8', 'A10', 'A7', 'A0']
+Accuracy, f1-score: 0.85, 0.85
 
 
 Number of features = 90%

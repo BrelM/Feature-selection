@@ -27,17 +27,17 @@ def extract_data(file_path, nb_dataset):
             current_percentage = lines[a].split('=')[1].replace('%', '').strip().casefold()
             a += 1 # Go to next line (there's a percentage on the current line)
 
-            if current_algo in ['mutual information', 'sequential feature selection', 'rfe-svm']:
+            if current_algo in ['mutual information', 'sequential feature selection', 'rfe-svm', 'rfe-svm-sfs']:
                 
                 while 'accuracy' not in lines[a].casefold() and '%' not in lines[a].casefold() and "feature selection" not in lines[a].casefold():
                     a += 1
             
                 if 'accuracy' in lines[a].casefold():
                     current_accuracy = lines[a].split(':')[1].split(', ')[0]
-                    current_f1_score = lines[a].split(':')[1].split(', ')[1]
+                    current_f1_score = lines[a].split(':')[1].split(', ')[1][:-1]
 
-                    m1 = ((current_accuracy + ",") * 11)[:-2] + "\n"
-                    m2 = ((current_f1_score + ",") * 11)[:-2] + "\n"
+                    m1 = ((current_accuracy + ",") * 11)[:-1] + "\n"
+                    m2 = ((current_f1_score + ",") * 11)[:-1] + "\n"
 
                     with open(nb_dataset + "/" + nb_dataset + "_" + current_percentage + "_accuracy.csv", "a+") as f1:
                         f1.write(m1)
@@ -56,7 +56,7 @@ def extract_data(file_path, nb_dataset):
                         a += 1
             
                     if 'accuracy' in lines[a].casefold():
-                        metrics = [lines[a].split(':')[1].split(', ')[0], lines[a].split(':')[1].split(', ')[1]]
+                        metrics = [lines[a].split(':')[1].split(', ')[0], lines[a].split(':')[1].split(', ')[1][:-1]]
 
                         temp = float(metrics[0]) + float(metrics[1])
                         if temp > metrics_sum:
@@ -87,7 +87,7 @@ def extract_data(file_path, nb_dataset):
                 accu_list, f1score_list = [], []
 
                 while '%' not in lines[a]:
-                                       
+                    
                     while 'accuracy' not in lines[a].casefold() and '%' not in lines[a].casefold() and "feature selection" not in lines[a].casefold():
                         
                         a += 1
@@ -100,11 +100,15 @@ def extract_data(file_path, nb_dataset):
 
                     if 'accuracy' in lines[a].casefold():
                         accu_list.append(lines[a].split(':')[1].split(', ')[0])
-                        f1score_list.append(lines[a].split(':')[1].split(', ')[1])
+                        f1score_list.append(lines[a].split(':')[1].split(', ')[1][:-1])
 
                     else:
                         break
+                    
                     a += 1
+                    if a >= len(lines):
+                        break 
+
 
                 m1 = ",".join(accu_list) + "\n"
                 m2 = ",".join(f1score_list) + "\n"
@@ -135,7 +139,7 @@ def main():
     txt_files = [f for f in os.listdir('../') if f.endswith('.txt')]
 
     for txt_file in txt_files:
-        if txt_file not in ("dataset_2.txt", "dataset_4.txt", "dataset_6.txt", "dataset_7.txt"):
+        if txt_file not in ("dataset_4.txt", "dataset_7.txt"):
 
             try:
                 os.mkdir("./" + txt_file[8])

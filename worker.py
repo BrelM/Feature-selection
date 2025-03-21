@@ -45,6 +45,7 @@ except getopt.GetoptError as err:
 
 algo = -1
 dataset = -1
+classifier = 4
 
 for o, a in cpts:
 	
@@ -88,7 +89,7 @@ for algo in [0, 1, 2, 3, 5, 6, 7, 8, 9]:
 					file.write(f"\nNumber of features = {int(n_features * 100)}%")
 				
 				for m in [5, 20, 50, 90]:
-					os.system(f"python main.py -d {dataset} -a {algo} -c 0 -p {m} -n {n_features}")
+					os.system(f"python main.py -d {dataset} -a {algo} -c {str(classifier)} -p {m} -n {n_features}")
 		
 		
 		elif algo in [6, 7]: # ridge or lasso
@@ -103,7 +104,7 @@ for algo in [0, 1, 2, 3, 5, 6, 7, 8, 9]:
 					file.write(f"\nNumber of features = {int(n_features * 100)}%")
 				
 				for m in [0.00001, 0.01, 0.1, 1, 5, 20, 50]:
-					os.system(f"python main.py -d {dataset} -a {algo} -c 0 -p {m} -n {n_features}")
+					os.system(f"python main.py -d {dataset} -a {algo} -c {str(classifier)} -p {m} -n {n_features}")
 
 		elif algo in [8, 9]: # PageRank
 
@@ -123,7 +124,7 @@ for algo in [0, 1, 2, 3, 5, 6, 7, 8, 9]:
 						file.write(f"\nNumber of features = {int(n_features * 100)}%")
 					
 					for m in [0.05, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 0.95]:
-						os.system(f"python main.py -d {dataset} -a {algo} -c 0 -p {m} -n {n_features} -s {weighing_strat}")
+						os.system(f"python main.py -d {dataset} -a {algo} -c {str(classifier)} -p {m} -n {n_features} -s {weighing_strat}")
 
 
 		else:
@@ -136,7 +137,7 @@ for algo in [0, 1, 2, 3, 5, 6, 7, 8, 9]:
 				print(f"Number of features = {int(n_features * 100)}%")
 				with open(f"reports/dataset_{dataset}.txt", "a+") as file:
 					file.write(f"\nNumber of features = {int(n_features * 100)}%")
-				os.system(f"python main.py -d {dataset} -a {algo} -c 0 -n {n_features}")
+				os.system(f"python main.py -d {dataset} -a {algo} -c {str(classifier)} -n {n_features}")
 
 
 

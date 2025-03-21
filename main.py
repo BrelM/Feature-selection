@@ -328,8 +328,9 @@ if n_features != total_nb_feat - 1: # Feature selection to apply
 	## In case of encoded features...
 	if DATASETS_INFO[dataset]['categorical']:
 
-		## Cleaning isolated features' derivatives
+		## Cleaning isolated features' derivatives : Strict selection strategy
 		display_cols_, temp = [], list(columns)
+		'''
 		for c in temp:
 			cooked = False
 			idx = c.find('_')
@@ -348,9 +349,9 @@ if n_features != total_nb_feat - 1: # Feature selection to apply
 			else:
 				display_cols_.append(c) 
 
-					
+		'''
 	
-		## Selecting all of a feature's derivatives if at least one is selected
+		## Selecting all of a feature's derivatives if at least one is selected : Soft selection strategy
 		full_columns, display_cols = [], []
 		for c in temp:
 
@@ -397,7 +398,7 @@ with open(f"reports/dataset_{dataset}.txt", "a+") as file:
 	if DATASETS_INFO[dataset]['categorical']: # Two sets of selected features
 
 		if n_features != total_nb_feat - 1: # Feature selection to apply
-			for message, process_cols, disp_cols in [("Soft selection of feature derivatives", full_columns, display_cols), ("Strict selection of feature derivatives", columns, display_cols_)]:
+			for message, process_cols, disp_cols in [("Soft selection of feature derivatives", full_columns, display_cols)]: #, ("Strict selection of feature derivatives", columns, display_cols_)]:
 
 				file.write(message + '\n')
 				if process_cols == []: # Case isolated derivatives where selected and ruled out (strict selection)
