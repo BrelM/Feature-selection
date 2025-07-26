@@ -1,0 +1,61 @@
+
+// PageRank-based attribute selection pseudo code
+
+
+function pagerankloop
+
+    Inputs:
+        G: graphe,
+        column: attributes vector to sort, 
+        alpha: float, 
+        max_iter: int,
+        pen_method: penalization method
+
+    Outputs:
+        features: by relevance sorted attributes vector
+
+
+    Start
+
+        features = int(max_iter)
+        perso_vector = Null
+
+        for i from 0 to max_iter do
+
+            // Sorting the nodes of the graph
+            pagerank_scores, perso_vector = pagerank(G, alpha, perso_vector)
+
+            // Extraction of the attribut associated to the first classed node (highest PageRank score)
+            features[i] = selection_first_attribute(pagerank_scores, column)
+
+            // Penalization of the personalization vector based on the chosen method
+            node = selection_first_node(pagerank_scores)
+
+            if pen_method == 'delete'
+                // Strategy 1: Remove the selected node from the graph
+			    // along with the connected edges
+                remove_node(G, node)
+                remove_associated_value(perso_vector, node)
+
+            else
+                // Strategy 2: update the weights of the edges connected to the selected node
+                // along with the connected nodes and thus, the personalization vector
+                edges_to_update = selection_of_nodes_and_weights_couples(G, node)
+                
+                s = 0
+                for edge in edges_to_update:
+                    perso_vector[edge['node']] -= edge['weight']
+                    s += perso_vector[edge['node']] # Sum for normalization
+
+                perso_vector[node] = 0
+
+                for edge in edges_to_update:
+                    perso_vector[edge['node']] /= s
+
+            endif
+
+        endfor
+    
+    End
+
+

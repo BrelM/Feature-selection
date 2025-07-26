@@ -43,9 +43,9 @@ except getopt.GetoptError as err:
 
 
 
-algo = -1
-dataset = -1
+# algo = -1
 classifier = 4
+dataset = -1
 
 for o, a in cpts:
 	

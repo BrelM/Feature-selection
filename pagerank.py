@@ -32,7 +32,7 @@ def pagerankloop(G:nx.Graph, columns:list, alpha:float=0.85, max_iter=None, pen_
 		alpha: float.
 			Damping factor, by default 0.85.
 		max_iter: int.
-			Maximum number of iterations.
+			Maximum number of iterations or number of nodes to select.
 		pen_method: str.
 			Penalization method: delete, reduce.
 
@@ -65,6 +65,7 @@ def pagerankloop(G:nx.Graph, columns:list, alpha:float=0.85, max_iter=None, pen_
 		features.append(columns[n])
 
 		# Updating features graph
+		# n is the inde of the node to select
 
 		if pen_method == 'delete':
 			
@@ -74,7 +75,7 @@ def pagerankloop(G:nx.Graph, columns:list, alpha:float=0.85, max_iter=None, pen_
 			perso_vector.pop(n)
 			
 		else:
-			# Strategy 2: Penalize the weights of the edges connected to the selected node
+			# Strategy 2: update the weights of the edges connected to the selected node
 			# along with the connected nodes and thus, the personalization vector
 			edges_to_update = G.edges(columns[n], data=True)
 			

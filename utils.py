@@ -349,13 +349,18 @@ def build_graph(data:pd.DataFrame, weights_strategy:str= 'corcoef') -> np.array:
 
 				else:
 
-					if weights_strategy == 'corcoef': # Correlation coefficient
+					if weights_strategy == 'corcoef': # Correlation coefficient (absolute value is used to represent the dependence without orientation)
 						graph_matrix[i, j] = np.abs(data[[data.columns[i], data.columns[j]]].corr('pearson').to_numpy()[0, 1])
 						
 					else: # mutual information
 						graph_matrix[i, j] = mutual_info_regression(data[[data.columns[i]]], data[data.columns[j]])
 
+						# Normalising the values
+						graph_matrix[i, j] /= (mutual_info_regression(data[[data.columns[i]]], data[data.columns[i]]) * mutual_info_regression(data[[data.columns[j]]], data[data.columns[j]])) ** 0.5
+						
 
+
+	graph_matrix = np.clip(graph_matrix, 0.0, 1.0)
 	return nx.from_numpy_array(graph_matrix, parallel_edges=False)
 
 
