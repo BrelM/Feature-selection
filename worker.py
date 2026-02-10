@@ -1,4 +1,10 @@
+'''
+worker.py
 
+This script manages datasets and their associated metadata.
+
+By Alph@B, AKA Brel MBE
+'''
 
 import sys
 import getopt
@@ -16,6 +22,7 @@ DATASETS = {
 	5: "Statlog Australian Credit Approval",
 	6: "German Credit",
 	7: "Ionosphere",
+	8: "Mini Credit Risk",
 }
 
 ALGOS = {

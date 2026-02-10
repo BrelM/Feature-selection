@@ -65,7 +65,7 @@ def pagerankloop(G:nx.Graph, columns:list, alpha:float=0.85, max_iter=None, pen_
 		features.append(columns[n])
 
 		# Updating features graph
-		# n is the inde of the node to select
+		# n is the index of the node to select
 
 		if pen_method == 'delete':
 			

@@ -2,55 +2,62 @@
 // PageRank-based attribute selection pseudo code
 
 
-function pagerankloop
+Algorithm pagerankloop
 
     Inputs:
-        G: graphe,
-        column: attributes vector to sort, 
+        G(V, E, W): graph
+        C: attributes vector, 
         alpha: float, 
-        max_iter: int,
+        k: int,
         pen_method: penalization method
 
     Outputs:
-        features: by relevance sorted attributes vector
+        S: by relevance sorted attributes vector
 
 
     Start
 
-        features = int(max_iter)
-        perso_vector = Null
+        S = init(k)
+        p = init(0) // Personalization vector
 
-        for i from 0 to max_iter do
+        for i from 0 to k do
 
             // Sorting the nodes of the graph
-            pagerank_scores, perso_vector = pagerank(G, alpha, perso_vector)
+            pagerank_scores, p = pagerank(G, alpha, p)
 
-            // Extraction of the attribut associated to the first classed node (highest PageRank score)
-            features[i] = selection_first_attribute(pagerank_scores, column)
+            // Selection of the feature associated to the first classed node (highest PageRank score)
+            S[i] = select_first_feature(pagerank_scores, C)
 
-            // Penalization of the personalization vector based on the chosen method
-            node = selection_first_node(pagerank_scores)
+            // Updating the personalization vector based on the chosen method
+            node = select_first_node(pagerank_scores, V)
 
-            if pen_method == 'delete'
+            if pen_method == "delete"
                 // Strategy 1: Remove the selected node from the graph
 			    // along with the connected edges
-                remove_node(G, node)
-                remove_associated_value(perso_vector, node)
+                remove_node(V, node)
+                remove_associated_pvalue(p, node)
 
             else
                 // Strategy 2: update the weights of the edges connected to the selected node
                 // along with the connected nodes and thus, the personalization vector
-                edges_to_update = selection_of_nodes_and_weights_couples(G, node)
+                idx = index(node, V)
                 
                 s = 0
-                for edge in edges_to_update:
-                    perso_vector[edge['node']] -= edge['weight']
-                    s += perso_vector[edge['node']] # Sum for normalization
+                for j from 0 to m do
 
-                perso_vector[node] = 0
+                    if j != idx:
+                        p[j] -= W[idx, j]
+                        s += p[j] # Sum for normalization
+                    endif
+                endfor
 
-                for edge in edges_to_update:
-                    perso_vector[edge['node']] /= s
+                p[idx] = 0
+
+                for j from 0 to m do
+                    if j != idx:
+                        p[j] /= s
+                    endif
+                endfor
 
             endif
 

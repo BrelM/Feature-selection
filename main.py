@@ -170,6 +170,17 @@ DATASETS_INFO = {
 			"labels": False,
 			"categorical": False,
 		},
+		
+	8: {
+			'name': "Mini Credit Risk",
+			'path': DATA_PATH + '/' + "mini_credit_risk.csv",
+			'nb_features': 6,
+			'class_idx': 5,
+			'sep': ',',
+			'id': False,
+			"labels": True,
+			"categorical": False,
+		},
 
 }
 

@@ -102,7 +102,16 @@ DATASETS_INFO = {
 			"labels": False,
 			"categorical": False,
 		},
-
+	8: {
+			'name': "Mini Credit Risk",
+			'path': DATA_PATH + '/' + "mini_credit_risk/mini_credit_risk.csv",
+			'nb_features': 6,
+			'class_idx': 5,
+			'sep': ',',
+			'id': False,
+			"labels": True,
+			"categorical": False,
+		},
 }
 
 
@@ -111,7 +120,7 @@ DATASETS_INFO = {
 
 
 dataset = -1
-strategy = 'mi'
+strategy = 'corcoef'
 
 try:
 	cpts, args = getopt.getopt(sys.argv[1:], "d:", ["dataset="])
@@ -151,13 +160,20 @@ G = utils.build_graph(Data, strategy)
 # Drawing the graph
 print("Plotting the graph...")
 pos = nx.circular_layout(G)
-weights = nx.get_edge_attributes(G, 'weight')
 
-# plt.figure(1)
+# Filter out self-loops (edges where both nodes are the same)
+edges_no_self_loops = [(u, v) for u, v in G.edges() if u != v]
+weights = nx.get_edge_attributes(G, 'weight')
+weights_no_self_loops = {k: f"{v:.2f}" for k, v in weights.items() if k[0] != k[1]}
+
 plt.figure(1, figsize=(15, 8))
 
-nx.draw(G, pos, with_labels=True, node_color='lightblue', node_size=500, font_size=15)
-nx.draw_networkx_edge_labels(G, pos, edge_labels=weights, font_size=8)
+# Draw only edges between distinct nodes
+nx.draw(
+    G, pos, with_labels=True, node_color='lightblue', node_size=5000, font_size=50,
+    font_color='black', font_weight='bold', edge_color='gray', width=2, edgelist=edges_no_self_loops
+)
+nx.draw_networkx_edge_labels(G, pos, edge_labels=weights_no_self_loops, font_size=40)
 
 plt.savefig(f"Graph_{DATASETS_INFO[dataset]['name'].replace(' ', '_')}_{strategy}.pdf")
 plt.show()
