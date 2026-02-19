@@ -6,8 +6,6 @@ This script contains functions to extract and format data from text files.
 By Alph@B, AKA Brel MBE
 '''
 
-from docx import Document
-from docx.shared import Pt
 import os
 
 def extract_data(file_path, nb_dataset):

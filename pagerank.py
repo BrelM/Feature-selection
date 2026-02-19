@@ -70,24 +70,57 @@ def pagerankloop(G:nx.Graph, columns:list, alpha:float=0.85, max_iter=None, pen_
 		if pen_method == 'delete':
 			
 			# Strategy 1: Remove the selected node from the graph
-			# along with the connected edges
+			# along with the connected edges, and update the personalization vector accordingly
+			pvalues_to_update = G.edges(columns[n], data=True)
+			
+			s = 0
+			for edge in pvalues_to_update:
+				s += 1 - edge[2]['weight'] # Sum for normalization
+
+			for edge in pvalues_to_update: # Update the personalization vector by redistributing the weight of the removed node to its neighbors
+				perso_vector[edge[1]] += (perso_vector[edge[1]] * (1 - edge[2]['weight'])) / s
+			
+			# Remove the node and its edges from the graph
 			G.remove_node(n)
 			perso_vector.pop(n)
-			
-		else:
+
+		
+		elif pen_method == 'weightdrop':
 			# Strategy 2: update the weights of the edges connected to the selected node
 			# along with the connected nodes and thus, the personalization vector
 			edges_to_update = G.edges(columns[n], data=True)
 			
 			s = 0
 			for edge in edges_to_update:
-				perso_vector[edge[1]] -= edge[2]['weight']
-				s += perso_vector[edge[1]] # Sum for normalization
+				# Reduce the weights of the edges by a factor of (1 - weight) without updating the personalization vector 
+				G[n][edge[1]]['weight'] = 1 - edge[2]['weight']
+				
+				# Old strategy: Update the persolization values by reducing the weight of the edge between the associated node and the one selected.
+				# perso_vector[edge[1]] -= edge[2]['weight']
+				# s += perso_vector[edge[1]] # Sum for normalization
 
 			perso_vector[n] = 0
 
+			# for edge in edges_to_update:
+			# 	perso_vector[edge[1]] /= s
+
+
+		else:
+			# Strategy 3: Reduce the weights of the edges connected to the selected node and update the personalization vector accordingly
+			edges_to_update = G.edges(columns[n], data=True)
+			
+			s = 0
 			for edge in edges_to_update:
-				perso_vector[edge[1]] /= s
+				# Reduce the weights of the edges by a factor of (1 - weight) and update the personalization vector accordingly
+				reduction_factor = 1 - edge[2]['weight']
+				G[n][edge[1]]['weight'] = reduction_factor * edge[2]['weight']
+				s += perso_vector[edge[1]] * reduction_factor # Sum for normalization
+
+			for edge in edges_to_update:
+				perso_vector[edge[1]] += (perso_vector[edge[1]] * (1 - G[n][edge[1]]['weight'])) / s
+			
+			perso_vector[n] = 0
+
 
 	return features
 
