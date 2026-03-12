@@ -4,7 +4,7 @@
 	Lead the parameted execution of all FS techniques.
 
 
-	By Alph@B, AKA Brel MBE
+	By Alph@B, AKA Brel MBE & Arielle Kana
 
 '''
 
@@ -45,6 +45,12 @@ ALGOS = {
 	7: "LASSO",
 	8: "PageRank",
 	9: "PageRank del",
+
+	10: "UGFS",
+	11: "PPRFS",
+	12: "MGFS",
+	13: "SGFS",
+	14: "FSS-CPR"
 }
 
 ALGOS_INFO = {
@@ -58,6 +64,12 @@ ALGOS_INFO = {
 	7: algorithms.lasso_fs,
 	8: pagerank.pagerankloop,
 	9: pagerank.pagerankloop,
+
+	10: algorithms.ugfs,
+	11: algorithms.pprfs,
+	12: algorithms.mgfs,
+	13: algorithms.sgfs,
+	14: algorithms.fss_cpr
 }
 
 
@@ -314,139 +326,189 @@ else:
 
 Data, Y = None, None
 
-if n_features != total_nb_feat - 1: # Feature selection to apply
+if n_features != total_nb_feat - 1:  # Feature selection to apply
 
-	# Execute the choosen algorithm
-	if algo in [8, 9]:
-		Data, Y = utils.load_data(DATASETS_INFO[dataset], False)
-		graph = utils.build_graph(Data, strategy)
+    # Execute the choosen algorithm
 
-		if algo == 8:
-			columns = ALGOS_INFO[algo](graph, list(Data.columns), alpha=params, max_iter=n_features, pen_method="penalize")
-		else:
-			columns = ALGOS_INFO[algo](graph, list(Data.columns), alpha=params, max_iter=n_features, pen_method="delete")
+    # PageRank original
+    if algo in [8, 9]:
+        Data, Y = utils.load_data(DATASETS_INFO[dataset], False)
+        graph = utils.build_graph(Data, strategy)
 
+        if algo == 8:
+            columns = ALGOS_INFO[algo](
+                graph,
+                list(Data.columns),
+                alpha=params,
+                max_iter=n_features,
+                pen_method="penalize",
+            )
+        else:
+            columns = ALGOS_INFO[algo](
+                graph,
+                list(Data.columns),
+                alpha=params,
+                max_iter=n_features,
+                pen_method="delete",
+            )
 
+    # Nouveaux algorithmes graph-based
+    elif algo in [10, 11, 12]:
+        columns = ALGOS_INFO[algo](data, y, n_features=n_features)
 
-	elif algo in [0, 1, 6, 7]:
-		columns = ALGOS_INFO[algo](data, y, params, n_features=n_features)
-	
-	else:
-		columns = ALGOS_INFO[algo](data, y, n_features=n_features)
-	
+    # Algorithmes supervisés graph-based
+    elif algo in [13, 14]:
+        columns = ALGOS_INFO[algo](data, y, n_features=n_features)
 
-	#######################################################################
-	## In case of encoded features...
-	if DATASETS_INFO[dataset]['categorical']:
+    elif algo in [0, 1, 6, 7]:
+        columns = ALGOS_INFO[algo](data, y, params, n_features=n_features)
 
-		## Cleaning isolated features' derivatives : Strict selection strategy
-		display_cols_, temp = [], list(columns)
-		'''
-		for c in temp:
-			cooked = False
-			idx = c.find('_')
-			if idx >= 0:
-				
-				for _ in list(data.columns):
-				
-					if c[:idx] + '_' in _:
-						if _ not in temp:
-							cooked = True
-							break
-				if cooked:
-					columns.remove(c)
-				else:
-					display_cols_.append(c[:idx])
-			else:
-				display_cols_.append(c) 
+    else:
+        columns = ALGOS_INFO[algo](data, y, n_features=n_features)
 
-		'''
-	
-		## Selecting all of a feature's derivatives if at least one is selected : Soft selection strategy
-		full_columns, display_cols = [], []
-		for c in temp:
+    #######################################################################
+    ## In case of encoded features...
+    if DATASETS_INFO[dataset]['categorical']:
 
-			idx = c.find('_')
-			if idx >= 0:
-				display_cols.append(c[:idx])
-				for _ in list(data.columns):
-					
-					if c[:idx] + '_' in _:
-						if _ not in full_columns:
-							full_columns.append(_)
-				
-			else:
-				display_cols.append(c)
-				full_columns.append(c)
+        ## Cleaning isolated features' derivatives : Strict selection strategy
+        display_cols_, temp = [], list(columns)
 
+        '''
+        for c in temp:
+            cooked = False
+            idx = c.find('_')
+            if idx >= 0:
 
+                for _ in list(data.columns):
 
+                    if c[:idx] + '_' in _:
+                        if _ not in temp:
+                            cooked = True
+                            break
+                if cooked:
+                    columns.remove(c)
+                else:
+                    display_cols_.append(c[:idx])
+            else:
+                display_cols_.append(c)
+        '''
 
-else: # No feature selection to apply
+        ## Selecting all of a feature's derivatives if at least one is selected : Soft selection strategy
+        full_columns, display_cols = [], []
 
-	if algo in [8, 9]:
-		Data, Y = utils.load_data(DATASETS_INFO[dataset], False)
-		columns = list(Data.columns)
-	else:
-		columns = list(data.columns)
-		temp_cols = []
-		for col in columns:
-			idx = col.find("_")
-			if idx >= 0:
-				if col[:idx] not in temp_cols:
-					temp_cols.append(col[:idx])
-			else:
-				temp_cols.append(col)
-		columns = list(temp_cols)
+        for c in temp:
+
+            idx = c.find('_')
+
+            if idx >= 0:
+                display_cols.append(c[:idx])
+
+                for _ in list(data.columns):
+
+                    if c[:idx] + '_' in _:
+                        if _ not in full_columns:
+                            full_columns.append(_)
+
+            else:
+                display_cols.append(c)
+                full_columns.append(c)
+
+else:  # No feature selection to apply
+
+    if algo in [8, 9]:
+        Data, Y = utils.load_data(DATASETS_INFO[dataset], False)
+        columns = list(Data.columns)
+
+    else:
+        columns = list(data.columns)
+        temp_cols = []
+
+        for col in columns:
+
+            idx = col.find("_")
+
+            if idx >= 0:
+                if col[:idx] not in temp_cols:
+                    temp_cols.append(col[:idx])
+
+            else:
+                temp_cols.append(col)
+
+        columns = list(temp_cols)
 
 
 with open(f"reports/dataset_{dataset}.txt", "a+") as file:
 
-	file.write('\n')
-	# print(f"Feature selection algorithm: {ALGOS[algo]}\n
-	file.write(f"\nMeta parameter(s) value(s): {params}\n\n")
+    file.write('\n')
 
-	if DATASETS_INFO[dataset]['categorical']: # Two sets of selected features
+    # print(f"Feature selection algorithm: {ALGOS[algo]}\n
+    file.write(f"\nFeature selection algorithm: {ALGOS[algo]}\n")
+    file.write(f"\nMeta parameter(s) value(s): {params}\n\n")
+    
 
-		if n_features != total_nb_feat - 1: # Feature selection to apply
-			for message, process_cols, disp_cols in [("Soft selection of feature derivatives", full_columns, display_cols)]: #, ("Strict selection of feature derivatives", columns, display_cols_)]:
+    if DATASETS_INFO[dataset]['categorical']:  # Two sets of selected features
 
-				file.write(message + '\n')
-				if process_cols == []: # Case isolated derivatives where selected and ruled out (strict selection)
-					file.write(f"Selected features: None (Isolated derivatives {temp})\n")
-					file.write(f"Accuracy, f1-score: 0, 0\n")
+        if n_features != total_nb_feat - 1:  # Feature selection to apply
 
-				else:
-					file.write(f"Selected features: {disp_cols}\n")
-					if algo in [8, 9]:
+            for message, process_cols, disp_cols in [
+                ("Soft selection of feature derivatives", full_columns, display_cols)
+            ]:  # , ("Strict selection of feature derivatives", columns, display_cols_)]
 
-						encoded_data, columns = utils.encode_columns(Data, process_cols)
-						file.write(f"Accuracy, f1-score: {CLASSIFIERS_INFO[classifier](encoded_data, y)}\n")
-					
-					else:
-						file.write(f"Accuracy, f1-score: {CLASSIFIERS_INFO[classifier](data, y, process_cols)}\n")
-		else:
-			file.write(f"Selected features: {columns}\n")
-			if algo in [8, 9]:
+                file.write(message + '\n')
 
-				file.write(f"Accuracy, f1-score: {CLASSIFIERS_INFO[classifier](data, y)}\n")
-			
-			else:
-				file.write(f"Accuracy, f1-score: {CLASSIFIERS_INFO[classifier](data, y)}\n")
+                if process_cols == []:  # Case isolated derivatives where selected and ruled out (strict selection)
 
-	else:
+                    file.write(f"Selected features: None (Isolated derivatives {temp})\n")
+                    file.write(f"Accuracy, f1-score: 0, 0\n")
 
-		file.write(f"Selected features: {columns}\n")
-		if algo in [8, 9]:
+                else:
 
-			encoded_data, columns = utils.encode_columns(Data, columns)
-			file.write(f"Accuracy, f1-score: {CLASSIFIERS_INFO[classifier](encoded_data, y)}\n\n")
-		
-		else:
-			file.write(f"Accuracy, f1-score: {CLASSIFIERS_INFO[classifier](data, y, columns)}\n\n")
+                    file.write(f"Selected features: {disp_cols}\n")
 
+                    if algo in [8, 9]:
 
+                        encoded_data, columns = utils.encode_columns(Data, process_cols)
 
+                        file.write(
+                            f"Accuracy, f1-score: {CLASSIFIERS_INFO[classifier](encoded_data, y)}\n"
+                        )
 
+                    else:
 
+                        file.write(
+                            f"Accuracy, f1-score: {CLASSIFIERS_INFO[classifier](data, y, process_cols)}\n"
+                        )
 
+        else:
+
+            file.write(f"Selected features: {columns}\n")
+
+            if algo in [8, 9]:
+
+                file.write(
+                    f"Accuracy, f1-score: {CLASSIFIERS_INFO[classifier](data, y)}\n"
+                )
+
+            else:
+
+                file.write(
+                    f"Accuracy, f1-score: {CLASSIFIERS_INFO[classifier](data, y)}\n"
+                )
+
+    else:
+
+        file.write(f"Selected features: {columns}\n")
+
+        if algo in [8, 9]:
+
+            encoded_data, columns = utils.encode_columns(Data, columns)
+
+            file.write(
+                f"Accuracy, f1-score: {CLASSIFIERS_INFO[classifier](encoded_data, y)}\n\n"
+            )
+
+        else:
+
+            file.write(
+                f"Accuracy, f1-score: {CLASSIFIERS_INFO[classifier](data, y, columns)}\n\n"
+            )

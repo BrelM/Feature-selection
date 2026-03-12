@@ -5,244 +5,312 @@
 
 Number of features = 10%
 
+Feature selection algorithm: ReliefF
+
 Meta parameter(s) value(s): 5
 
-Selected features: ['A3']
-Accuracy, f1-score: 0.39, 0.25
+Selected features: ['A6']
+Accuracy, f1-score: 0.41, 0.19
 
 
+
+Feature selection algorithm: ReliefF
 
 Meta parameter(s) value(s): 20
 
 Selected features: ['A0']
-Accuracy, f1-score: 0.42, 0.31
+Accuracy, f1-score: 0.38, 0.31
 
 
+
+Feature selection algorithm: ReliefF
 
 Meta parameter(s) value(s): 50
 
-Selected features: ['A6']
-Accuracy, f1-score: 0.41, 0.19
+Selected features: ['A4']
+Accuracy, f1-score: 0.4, 0.26
 
 
+
+Feature selection algorithm: ReliefF
 
 Meta parameter(s) value(s): 90
 
-Selected features: ['A6']
-Accuracy, f1-score: 0.41, 0.19
+Selected features: ['A0']
+Accuracy, f1-score: 0.38, 0.31
 
 
 Number of features = 20%
 
+Feature selection algorithm: ReliefF
+
 Meta parameter(s) value(s): 5
+
+Selected features: ['A3', 'A6']
+Accuracy, f1-score: 0.44, 0.4
+
+
+
+Feature selection algorithm: ReliefF
+
+Meta parameter(s) value(s): 20
+
+Selected features: ['A0', 'A3']
+Accuracy, f1-score: 0.48, 0.45
+
+
+
+Feature selection algorithm: ReliefF
+
+Meta parameter(s) value(s): 50
+
+Selected features: ['A8', 'A2']
+Accuracy, f1-score: 0.41, 0.19
+
+
+
+Feature selection algorithm: ReliefF
+
+Meta parameter(s) value(s): 90
 
 Selected features: ['A6', 'A4']
 Accuracy, f1-score: 0.4, 0.27
 
 
-
-Meta parameter(s) value(s): 20
-
-Selected features: ['A3', 'A7']
-Accuracy, f1-score: 0.44, 0.34
-
-
-
-Meta parameter(s) value(s): 50
-
-Selected features: ['A8', 'A5']
-Accuracy, f1-score: 0.41, 0.19
-
-
-
-Meta parameter(s) value(s): 90
-
-Selected features: ['A8', 'A5']
-Accuracy, f1-score: 0.41, 0.19
-
-
 Number of features = 30%
+
+Feature selection algorithm: ReliefF
 
 Meta parameter(s) value(s): 5
 
-Selected features: ['A2', 'A6', 'A4']
-Accuracy, f1-score: 0.42, 0.36
+Selected features: ['A6', 'A3', 'A7']
+Accuracy, f1-score: 0.51, 0.49
 
 
+
+Feature selection algorithm: ReliefF
 
 Meta parameter(s) value(s): 20
 
-Selected features: ['A4', 'A5', 'A8']
-Accuracy, f1-score: 0.4, 0.27
+Selected features: ['A3', 'A0', 'A4']
+Accuracy, f1-score: 0.48, 0.44
 
 
+
+Feature selection algorithm: ReliefF
 
 Meta parameter(s) value(s): 50
 
-Selected features: ['A6', 'A4', 'A5']
-Accuracy, f1-score: 0.4, 0.27
+Selected features: ['A8', 'A5', 'A4']
+Accuracy, f1-score: 0.39, 0.25
 
 
+
+Feature selection algorithm: ReliefF
 
 Meta parameter(s) value(s): 90
 
 Selected features: ['A6', 'A4', 'A5']
-Accuracy, f1-score: 0.4, 0.27
+Accuracy, f1-score: 0.39, 0.25
 
 
 Number of features = 40%
 
+Feature selection algorithm: ReliefF
+
 Meta parameter(s) value(s): 5
 
-Selected features: ['A0', 'A6', 'A1', 'A4']
-Accuracy, f1-score: 0.46, 0.44
+Selected features: ['A0', 'A2', 'A4', 'A5']
+Accuracy, f1-score: 0.39, 0.37
 
 
+
+Feature selection algorithm: ReliefF
 
 Meta parameter(s) value(s): 20
 
-Selected features: ['A6', 'A4', 'A5', 'A8']
-Accuracy, f1-score: 0.43, 0.38
+Selected features: ['A1', 'A7', 'A4', 'A2']
+Accuracy, f1-score: 0.42, 0.38
 
 
+
+Feature selection algorithm: ReliefF
 
 Meta parameter(s) value(s): 50
 
-Selected features: ['A0', 'A1', 'A4', 'A5']
-Accuracy, f1-score: 0.46, 0.44
+Selected features: ['A4', 'A5', 'A8', 'A0']
+Accuracy, f1-score: 0.4, 0.35
 
 
+
+Feature selection algorithm: ReliefF
 
 Meta parameter(s) value(s): 90
 
-Selected features: ['A8', 'A4', 'A5', 'A0']
-Accuracy, f1-score: 0.44, 0.4
+Selected features: ['A4', 'A5', 'A8', 'A6']
+Accuracy, f1-score: 0.41, 0.35
 
 
 Number of features = 50%
 
+Feature selection algorithm: ReliefF
+
 Meta parameter(s) value(s): 5
 
-Selected features: ['A8', 'A3', 'A2', 'A6', 'A1']
-Accuracy, f1-score: 0.52, 0.49
+Selected features: ['A2', 'A4', 'A5', 'A8', 'A1']
+Accuracy, f1-score: 0.44, 0.4
 
 
+
+Feature selection algorithm: ReliefF
 
 Meta parameter(s) value(s): 20
 
-Selected features: ['A6', 'A8', 'A4', 'A5', 'A0']
-Accuracy, f1-score: 0.44, 0.39
+Selected features: ['A6', 'A2', 'A4', 'A5', 'A8']
+Accuracy, f1-score: 0.41, 0.37
 
 
+
+Feature selection algorithm: ReliefF
 
 Meta parameter(s) value(s): 50
 
-Selected features: ['A2', 'A4', 'A5', 'A8', 'A3']
-Accuracy, f1-score: 0.45, 0.4
+Selected features: ['A2', 'A4', 'A5', 'A1', 'A8']
+Accuracy, f1-score: 0.44, 0.4
 
 
+
+Feature selection algorithm: ReliefF
 
 Meta parameter(s) value(s): 90
 
-Selected features: ['A0', 'A8', 'A4', 'A5', 'A3']
-Accuracy, f1-score: 0.49, 0.44
+Selected features: ['A8', 'A4', 'A5', 'A7', 'A3']
+Accuracy, f1-score: 0.47, 0.41
 
 
 Number of features = 60%
 
+Feature selection algorithm: ReliefF
+
 Meta parameter(s) value(s): 5
 
-Selected features: ['A0', 'A3', 'A7', 'A1', 'A4', 'A5']
-Accuracy, f1-score: 0.52, 0.5
+Selected features: ['A0', 'A6', 'A4', 'A5', 'A8', 'A3']
+Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: ReliefF
 
 Meta parameter(s) value(s): 20
 
-Selected features: ['A7', 'A3', 'A4', 'A5', 'A8', 'A2']
-Accuracy, f1-score: 0.44, 0.39
+Selected features: ['A1', 'A4', 'A5', 'A8', 'A3', 'A7']
+Accuracy, f1-score: 0.49, 0.47
 
 
+
+Feature selection algorithm: ReliefF
 
 Meta parameter(s) value(s): 50
 
-Selected features: ['A4', 'A5', 'A6', 'A8', 'A2', 'A0']
-Accuracy, f1-score: 0.43, 0.39
+Selected features: ['A0', 'A4', 'A5', 'A8', 'A1', 'A6']
+Accuracy, f1-score: 0.42, 0.41
 
 
+
+Feature selection algorithm: ReliefF
 
 Meta parameter(s) value(s): 90
 
-Selected features: ['A0', 'A4', 'A5', 'A6', 'A8', 'A3']
-Accuracy, f1-score: 0.48, 0.44
+Selected features: ['A2', 'A7', 'A8', 'A4', 'A5', 'A1']
+Accuracy, f1-score: 0.46, 0.43
 
 
 Number of features = 70%
 
+Feature selection algorithm: ReliefF
+
 Meta parameter(s) value(s): 5
 
-Selected features: ['A2', 'A6', 'A4', 'A5', 'A8', 'A3', 'A7']
-Accuracy, f1-score: 0.47, 0.43
+Selected features: ['A1', 'A7', 'A0', 'A4', 'A5', 'A8', 'A2']
+Accuracy, f1-score: 0.45, 0.44
 
 
+
+Feature selection algorithm: ReliefF
 
 Meta parameter(s) value(s): 20
 
-Selected features: ['A1', 'A2', 'A7', 'A4', 'A5', 'A8', 'A6']
-Accuracy, f1-score: 0.46, 0.42
+Selected features: ['A0', 'A6', 'A4', 'A5', 'A3', 'A8', 'A7']
+Accuracy, f1-score: 0.49, 0.47
 
 
+
+Feature selection algorithm: ReliefF
 
 Meta parameter(s) value(s): 50
 
-Selected features: ['A0', 'A4', 'A8', 'A5', 'A7', 'A6', 'A1']
-Accuracy, f1-score: 0.47, 0.45
+Selected features: ['A4', 'A5', 'A8', 'A0', 'A3', 'A2', 'A7']
+Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: ReliefF
 
 Meta parameter(s) value(s): 90
 
-Selected features: ['A8', 'A4', 'A5', 'A0', 'A2', 'A6', 'A1']
+Selected features: ['A4', 'A5', 'A8', 'A2', 'A0', 'A6', 'A3']
 Accuracy, f1-score: 0.48, 0.46
 
 
 Number of features = 80%
 
+Feature selection algorithm: ReliefF
+
 Meta parameter(s) value(s): 5
 
-Selected features: ['A4', 'A5', 'A8', 'A0', 'A6', 'A2', 'A1', 'A7']
-Accuracy, f1-score: 0.47, 0.45
+Selected features: ['A6', 'A0', 'A4', 'A5', 'A8', 'A7', 'A3', 'A2']
+Accuracy, f1-score: 0.49, 0.47
 
 
+
+Feature selection algorithm: ReliefF
 
 Meta parameter(s) value(s): 20
 
-Selected features: ['A2', 'A7', 'A6', 'A0', 'A4', 'A5', 'A8', 'A3']
-Accuracy, f1-score: 0.49, 0.45
+Selected features: ['A1', 'A6', 'A4', 'A5', 'A8', 'A2', 'A0', 'A3']
+Accuracy, f1-score: 0.52, 0.5
 
 
+
+Feature selection algorithm: ReliefF
 
 Meta parameter(s) value(s): 50
 
-Selected features: ['A0', 'A8', 'A2', 'A4', 'A5', 'A7', 'A3', 'A6']
-Accuracy, f1-score: 0.49, 0.45
+Selected features: ['A0', 'A6', 'A4', 'A5', 'A8', 'A2', 'A1', 'A7']
+Accuracy, f1-score: 0.41, 0.4
 
 
+
+Feature selection algorithm: ReliefF
 
 Meta parameter(s) value(s): 90
 
-Selected features: ['A4', 'A5', 'A8', 'A2', 'A0', 'A6', 'A3', 'A7']
-Accuracy, f1-score: 0.49, 0.45
+Selected features: ['A6', 'A5', 'A8', 'A4', 'A7', 'A0', 'A1', 'A2']
+Accuracy, f1-score: 0.4, 0.39
 
 
 Number of features = 90%
 
+Feature selection algorithm: ReliefF
+
 Meta parameter(s) value(s): 5
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: ReliefF
 
 Meta parameter(s) value(s): 20
 
@@ -251,12 +319,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: ReliefF
+
 Meta parameter(s) value(s): 50
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: ReliefF
 
 Meta parameter(s) value(s): 90
 
@@ -266,12 +338,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 Number of features = 100%
 
+Feature selection algorithm: ReliefF
+
 Meta parameter(s) value(s): 5
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: ReliefF
 
 Meta parameter(s) value(s): 20
 
@@ -280,12 +356,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: ReliefF
+
 Meta parameter(s) value(s): 50
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: ReliefF
 
 Meta parameter(s) value(s): 90
 
@@ -297,69 +377,87 @@ Accuracy, f1-score: 0.5, 0.48
 
 Number of features = 10%
 
+Feature selection algorithm: Mutual information
+
 Meta parameter(s) value(s): None
 
-Selected features: ['A4']
-Accuracy, f1-score: 0.4, 0.26
+Selected features: ['A5']
+Accuracy, f1-score: 0.41, 0.19
 
 
 Number of features = 20%
 
+Feature selection algorithm: Mutual information
+
 Meta parameter(s) value(s): None
 
-Selected features: ['A5', 'A7']
-Accuracy, f1-score: 0.39, 0.28
+Selected features: ['A4', 'A8']
+Accuracy, f1-score: 0.4, 0.27
 
 
 Number of features = 30%
 
+Feature selection algorithm: Mutual information
+
 Meta parameter(s) value(s): None
 
-Selected features: ['A5', 'A8', 'A4']
-Accuracy, f1-score: 0.4, 0.27
+Selected features: ['A8', 'A5', 'A4']
+Accuracy, f1-score: 0.39, 0.25
 
 
 Number of features = 40%
 
+Feature selection algorithm: Mutual information
+
 Meta parameter(s) value(s): None
 
-Selected features: ['A4', 'A5', 'A6', 'A8']
-Accuracy, f1-score: 0.43, 0.38
+Selected features: ['A5', 'A7', 'A8', 'A6']
+Accuracy, f1-score: 0.41, 0.31
 
 
 Number of features = 50%
 
+Feature selection algorithm: Mutual information
+
 Meta parameter(s) value(s): None
 
-Selected features: ['A5', 'A4', 'A7', 'A8', 'A6']
-Accuracy, f1-score: 0.43, 0.37
+Selected features: ['A4', 'A5', 'A6', 'A7', 'A8']
+Accuracy, f1-score: 0.41, 0.35
 
 
 Number of features = 60%
 
+Feature selection algorithm: Mutual information
+
 Meta parameter(s) value(s): None
 
-Selected features: ['A2', 'A5', 'A4', 'A7', 'A6', 'A0']
-Accuracy, f1-score: 0.43, 0.38
+Selected features: ['A4', 'A5', 'A8', 'A7', 'A2', 'A6']
+Accuracy, f1-score: 0.45, 0.39
 
 
 Number of features = 70%
 
+Feature selection algorithm: Mutual information
+
 Meta parameter(s) value(s): None
 
-Selected features: ['A5', 'A6', 'A4', 'A0', 'A8', 'A2', 'A1']
-Accuracy, f1-score: 0.48, 0.46
+Selected features: ['A4', 'A7', 'A5', 'A6', 'A8', 'A2', 'A3']
+Accuracy, f1-score: 0.44, 0.41
 
 
 Number of features = 80%
 
+Feature selection algorithm: Mutual information
+
 Meta parameter(s) value(s): None
 
-Selected features: ['A5', 'A8', 'A2', 'A0', 'A4', 'A6', 'A7', 'A1']
-Accuracy, f1-score: 0.47, 0.45
+Selected features: ['A5', 'A4', 'A7', 'A8', 'A1', 'A6', 'A2', 'A0']
+Accuracy, f1-score: 0.4, 0.39
 
 
 Number of features = 90%
+
+Feature selection algorithm: Mutual information
 
 Meta parameter(s) value(s): None
 
@@ -368,6 +466,8 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 Number of features = 100%
+
+Feature selection algorithm: Mutual information
 
 Meta parameter(s) value(s): None
 
@@ -379,6 +479,8 @@ Accuracy, f1-score: 0.5, 0.48
 
 Number of features = 10%
 
+Feature selection algorithm: Sequential feature selection
+
 Meta parameter(s) value(s): None
 
 Selected features: ['A1']
@@ -387,61 +489,77 @@ Accuracy, f1-score: 0.43, 0.32
 
 Number of features = 20%
 
+Feature selection algorithm: Sequential feature selection
+
 Meta parameter(s) value(s): None
 
 Selected features: ['A1', 'A3']
-Accuracy, f1-score: 0.47, 0.42
+Accuracy, f1-score: 0.51, 0.49
 
 
 Number of features = 30%
 
+Feature selection algorithm: Sequential feature selection
+
 Meta parameter(s) value(s): None
 
 Selected features: ['A0', 'A1', 'A3']
-Accuracy, f1-score: 0.53, 0.5
+Accuracy, f1-score: 0.48, 0.46
 
 
 Number of features = 40%
 
+Feature selection algorithm: Sequential feature selection
+
 Meta parameter(s) value(s): None
 
 Selected features: ['A0', 'A1', 'A2', 'A3']
-Accuracy, f1-score: 0.54, 0.51
+Accuracy, f1-score: 0.5, 0.48
 
 
 Number of features = 50%
 
+Feature selection algorithm: Sequential feature selection
+
 Meta parameter(s) value(s): None
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A8']
-Accuracy, f1-score: 0.53, 0.51
+Accuracy, f1-score: 0.51, 0.49
 
 
 Number of features = 60%
 
+Feature selection algorithm: Sequential feature selection
+
 Meta parameter(s) value(s): None
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A8']
-Accuracy, f1-score: 0.51, 0.48
+Accuracy, f1-score: 0.49, 0.47
 
 
 Number of features = 70%
 
+Feature selection algorithm: Sequential feature selection
+
 Meta parameter(s) value(s): None
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A7', 'A8']
-Accuracy, f1-score: 0.53, 0.51
+Accuracy, f1-score: 0.52, 0.5
 
 
 Number of features = 80%
 
+Feature selection algorithm: Sequential feature selection
+
 Meta parameter(s) value(s): None
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A7', 'A8']
-Accuracy, f1-score: 0.52, 0.49
+Accuracy, f1-score: 0.5, 0.48
 
 
 Number of features = 90%
+
+Feature selection algorithm: Sequential feature selection
 
 Meta parameter(s) value(s): None
 
@@ -450,6 +568,8 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 Number of features = 100%
+
+Feature selection algorithm: Sequential feature selection
 
 Meta parameter(s) value(s): None
 
@@ -461,6 +581,8 @@ Accuracy, f1-score: 0.5, 0.48
 
 Number of features = 10%
 
+Feature selection algorithm: RFE-SVM-SFS
+
 Meta parameter(s) value(s): None
 
 Selected features: ['A1']
@@ -469,37 +591,47 @@ Accuracy, f1-score: 0.43, 0.32
 
 Number of features = 20%
 
+Feature selection algorithm: RFE-SVM-SFS
+
 Meta parameter(s) value(s): None
 
 Selected features: ['A1', 'A3']
-Accuracy, f1-score: 0.47, 0.42
+Accuracy, f1-score: 0.51, 0.49
 
 
 Number of features = 30%
 
+Feature selection algorithm: RFE-SVM-SFS
+
 Meta parameter(s) value(s): None
 
 Selected features: ['A0', 'A1', 'A3']
-Accuracy, f1-score: 0.53, 0.5
+Accuracy, f1-score: 0.48, 0.46
 
 
 Number of features = 40%
 
+Feature selection algorithm: RFE-SVM-SFS
+
 Meta parameter(s) value(s): None
 
 Selected features: ['A0', 'A1', 'A2', 'A3']
-Accuracy, f1-score: 0.54, 0.51
+Accuracy, f1-score: 0.5, 0.48
 
 
 Number of features = 50%
 
+Feature selection algorithm: RFE-SVM-SFS
+
 Meta parameter(s) value(s): None
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A8']
-Accuracy, f1-score: 0.53, 0.51
+Accuracy, f1-score: 0.51, 0.49
 
 
 Number of features = 60%
+
+Feature selection algorithm: RFE-SVM-SFS
 
 Meta parameter(s) value(s): None
 
@@ -509,21 +641,27 @@ Accuracy, f1-score: 0.52, 0.5
 
 Number of features = 70%
 
+Feature selection algorithm: RFE-SVM-SFS
+
 Meta parameter(s) value(s): None
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A7', 'A8']
-Accuracy, f1-score: 0.53, 0.51
+Accuracy, f1-score: 0.52, 0.5
 
 
 Number of features = 80%
 
+Feature selection algorithm: RFE-SVM-SFS
+
 Meta parameter(s) value(s): None
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A7', 'A8']
-Accuracy, f1-score: 0.52, 0.49
+Accuracy, f1-score: 0.5, 0.48
 
 
 Number of features = 90%
+
+Feature selection algorithm: RFE-SVM-SFS
 
 Meta parameter(s) value(s): None
 
@@ -532,6 +670,8 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 Number of features = 100%
+
+Feature selection algorithm: RFE-SVM-SFS
 
 Meta parameter(s) value(s): None
 
@@ -543,405 +683,519 @@ Accuracy, f1-score: 0.5, 0.48
 
 Number of features = 10%
 
+Feature selection algorithm: RIDGE
+
 Meta parameter(s) value(s): 1e-05
 
 Selected features: ['A0']
-Accuracy, f1-score: 0.42, 0.31
+Accuracy, f1-score: 0.38, 0.31
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 0.01
 
 Selected features: ['A0']
-Accuracy, f1-score: 0.42, 0.31
+Accuracy, f1-score: 0.38, 0.31
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A0']
-Accuracy, f1-score: 0.42, 0.31
+Accuracy, f1-score: 0.38, 0.31
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 1
 
 Selected features: ['A0']
-Accuracy, f1-score: 0.42, 0.31
+Accuracy, f1-score: 0.38, 0.31
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 5
 
 Selected features: ['A0']
-Accuracy, f1-score: 0.42, 0.31
+Accuracy, f1-score: 0.38, 0.31
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 20
 
 Selected features: ['A0']
-Accuracy, f1-score: 0.42, 0.31
+Accuracy, f1-score: 0.38, 0.31
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 50
 
 Selected features: ['A0']
-Accuracy, f1-score: 0.42, 0.31
+Accuracy, f1-score: 0.38, 0.31
 
 
 Number of features = 20%
 
+Feature selection algorithm: RIDGE
+
 Meta parameter(s) value(s): 1e-05
 
 Selected features: ['A0', 'A8']
-Accuracy, f1-score: 0.42, 0.32
+Accuracy, f1-score: 0.37, 0.31
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 0.01
 
 Selected features: ['A0', 'A8']
-Accuracy, f1-score: 0.42, 0.32
+Accuracy, f1-score: 0.37, 0.31
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A0', 'A8']
-Accuracy, f1-score: 0.42, 0.32
+Accuracy, f1-score: 0.37, 0.31
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 1
 
 Selected features: ['A0', 'A8']
-Accuracy, f1-score: 0.42, 0.32
+Accuracy, f1-score: 0.37, 0.31
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 5
 
 Selected features: ['A0', 'A8']
-Accuracy, f1-score: 0.42, 0.32
+Accuracy, f1-score: 0.37, 0.31
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 20
 
 Selected features: ['A0', 'A8']
-Accuracy, f1-score: 0.42, 0.32
+Accuracy, f1-score: 0.37, 0.31
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 50
 
 Selected features: ['A0', 'A8']
-Accuracy, f1-score: 0.42, 0.32
+Accuracy, f1-score: 0.37, 0.31
 
 
 Number of features = 30%
 
+Feature selection algorithm: RIDGE
+
 Meta parameter(s) value(s): 1e-05
 
 Selected features: ['A0', 'A8', 'A4']
-Accuracy, f1-score: 0.42, 0.38
+Accuracy, f1-score: 0.38, 0.32
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 0.01
 
 Selected features: ['A0', 'A8', 'A4']
-Accuracy, f1-score: 0.42, 0.38
+Accuracy, f1-score: 0.38, 0.32
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A0', 'A8', 'A4']
-Accuracy, f1-score: 0.42, 0.38
+Accuracy, f1-score: 0.38, 0.32
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 1
 
 Selected features: ['A0', 'A8', 'A4']
-Accuracy, f1-score: 0.42, 0.38
+Accuracy, f1-score: 0.38, 0.32
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 5
 
 Selected features: ['A0', 'A8', 'A4']
-Accuracy, f1-score: 0.42, 0.38
+Accuracy, f1-score: 0.38, 0.32
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 20
 
 Selected features: ['A0', 'A8', 'A4']
-Accuracy, f1-score: 0.42, 0.38
+Accuracy, f1-score: 0.38, 0.32
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 50
 
 Selected features: ['A0', 'A8', 'A4']
-Accuracy, f1-score: 0.42, 0.38
+Accuracy, f1-score: 0.38, 0.32
 
 
 Number of features = 40%
 
+Feature selection algorithm: RIDGE
+
 Meta parameter(s) value(s): 1e-05
 
 Selected features: ['A0', 'A8', 'A4', 'A2']
-Accuracy, f1-score: 0.42, 0.38
+Accuracy, f1-score: 0.38, 0.35
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 0.01
 
 Selected features: ['A0', 'A8', 'A4', 'A2']
-Accuracy, f1-score: 0.42, 0.38
+Accuracy, f1-score: 0.38, 0.35
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A0', 'A8', 'A4', 'A2']
-Accuracy, f1-score: 0.42, 0.38
+Accuracy, f1-score: 0.38, 0.35
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 1
 
 Selected features: ['A0', 'A8', 'A4', 'A2']
-Accuracy, f1-score: 0.42, 0.38
+Accuracy, f1-score: 0.38, 0.35
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 5
 
 Selected features: ['A0', 'A8', 'A4', 'A2']
-Accuracy, f1-score: 0.42, 0.38
+Accuracy, f1-score: 0.38, 0.35
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 20
 
 Selected features: ['A0', 'A8', 'A4', 'A2']
-Accuracy, f1-score: 0.42, 0.38
+Accuracy, f1-score: 0.38, 0.35
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 50
 
 Selected features: ['A0', 'A8', 'A4', 'A2']
-Accuracy, f1-score: 0.42, 0.38
+Accuracy, f1-score: 0.38, 0.35
 
 
 Number of features = 50%
 
+Feature selection algorithm: RIDGE
+
 Meta parameter(s) value(s): 1e-05
 
 Selected features: ['A0', 'A8', 'A4', 'A2', 'A5']
-Accuracy, f1-score: 0.43, 0.39
+Accuracy, f1-score: 0.41, 0.38
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 0.01
 
 Selected features: ['A0', 'A8', 'A4', 'A2', 'A5']
-Accuracy, f1-score: 0.43, 0.39
+Accuracy, f1-score: 0.41, 0.38
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A0', 'A8', 'A4', 'A2', 'A5']
-Accuracy, f1-score: 0.43, 0.39
+Accuracy, f1-score: 0.41, 0.38
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 1
 
 Selected features: ['A0', 'A8', 'A4', 'A2', 'A5']
-Accuracy, f1-score: 0.43, 0.39
+Accuracy, f1-score: 0.41, 0.38
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 5
 
 Selected features: ['A0', 'A8', 'A4', 'A2', 'A5']
-Accuracy, f1-score: 0.43, 0.39
+Accuracy, f1-score: 0.41, 0.38
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 20
 
 Selected features: ['A0', 'A8', 'A4', 'A2', 'A5']
-Accuracy, f1-score: 0.43, 0.39
+Accuracy, f1-score: 0.41, 0.38
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 50
 
 Selected features: ['A0', 'A8', 'A4', 'A2', 'A5']
-Accuracy, f1-score: 0.43, 0.39
+Accuracy, f1-score: 0.41, 0.38
 
 
 Number of features = 60%
 
+Feature selection algorithm: RIDGE
+
 Meta parameter(s) value(s): 1e-05
 
 Selected features: ['A0', 'A8', 'A4', 'A2', 'A5', 'A6']
-Accuracy, f1-score: 0.43, 0.39
+Accuracy, f1-score: 0.37, 0.35
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 0.01
 
 Selected features: ['A0', 'A8', 'A4', 'A2', 'A5', 'A6']
-Accuracy, f1-score: 0.43, 0.39
+Accuracy, f1-score: 0.37, 0.35
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A0', 'A8', 'A4', 'A2', 'A5', 'A6']
-Accuracy, f1-score: 0.43, 0.39
+Accuracy, f1-score: 0.37, 0.35
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 1
 
 Selected features: ['A0', 'A8', 'A4', 'A2', 'A5', 'A6']
-Accuracy, f1-score: 0.43, 0.39
+Accuracy, f1-score: 0.37, 0.35
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 5
 
 Selected features: ['A0', 'A8', 'A4', 'A2', 'A5', 'A6']
-Accuracy, f1-score: 0.43, 0.39
+Accuracy, f1-score: 0.37, 0.35
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 20
 
 Selected features: ['A0', 'A8', 'A4', 'A2', 'A5', 'A6']
-Accuracy, f1-score: 0.43, 0.39
+Accuracy, f1-score: 0.37, 0.35
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 50
 
 Selected features: ['A0', 'A8', 'A4', 'A2', 'A5', 'A6']
-Accuracy, f1-score: 0.43, 0.39
+Accuracy, f1-score: 0.37, 0.35
 
 
 Number of features = 70%
 
+Feature selection algorithm: RIDGE
+
 Meta parameter(s) value(s): 1e-05
 
 Selected features: ['A0', 'A8', 'A4', 'A2', 'A5', 'A6', 'A7']
-Accuracy, f1-score: 0.43, 0.38
+Accuracy, f1-score: 0.39, 0.36
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 0.01
 
 Selected features: ['A0', 'A8', 'A4', 'A2', 'A5', 'A6', 'A7']
-Accuracy, f1-score: 0.43, 0.38
+Accuracy, f1-score: 0.39, 0.36
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A0', 'A8', 'A4', 'A2', 'A5', 'A6', 'A7']
-Accuracy, f1-score: 0.43, 0.38
+Accuracy, f1-score: 0.39, 0.36
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 1
 
 Selected features: ['A0', 'A8', 'A4', 'A2', 'A5', 'A6', 'A7']
-Accuracy, f1-score: 0.43, 0.38
+Accuracy, f1-score: 0.39, 0.36
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 5
 
 Selected features: ['A0', 'A8', 'A4', 'A2', 'A5', 'A6', 'A7']
-Accuracy, f1-score: 0.43, 0.38
+Accuracy, f1-score: 0.39, 0.36
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 20
 
 Selected features: ['A0', 'A8', 'A4', 'A2', 'A5', 'A6', 'A7']
-Accuracy, f1-score: 0.43, 0.38
+Accuracy, f1-score: 0.39, 0.36
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 50
 
 Selected features: ['A0', 'A8', 'A4', 'A2', 'A5', 'A6', 'A7']
-Accuracy, f1-score: 0.43, 0.38
+Accuracy, f1-score: 0.39, 0.36
 
 
 Number of features = 80%
 
+Feature selection algorithm: RIDGE
+
 Meta parameter(s) value(s): 1e-05
 
 Selected features: ['A0', 'A8', 'A4', 'A2', 'A5', 'A6', 'A7', 'A1']
-Accuracy, f1-score: 0.47, 0.45
+Accuracy, f1-score: 0.41, 0.4
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 0.01
 
 Selected features: ['A0', 'A8', 'A4', 'A2', 'A5', 'A6', 'A7', 'A1']
-Accuracy, f1-score: 0.47, 0.45
+Accuracy, f1-score: 0.41, 0.4
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A0', 'A8', 'A4', 'A2', 'A5', 'A6', 'A7', 'A1']
-Accuracy, f1-score: 0.47, 0.45
+Accuracy, f1-score: 0.41, 0.4
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 1
 
 Selected features: ['A0', 'A8', 'A4', 'A2', 'A5', 'A6', 'A7', 'A1']
-Accuracy, f1-score: 0.47, 0.45
+Accuracy, f1-score: 0.41, 0.4
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 5
 
 Selected features: ['A0', 'A8', 'A4', 'A2', 'A5', 'A6', 'A7', 'A1']
-Accuracy, f1-score: 0.47, 0.45
+Accuracy, f1-score: 0.41, 0.4
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 20
 
 Selected features: ['A0', 'A8', 'A4', 'A2', 'A5', 'A6', 'A7', 'A1']
-Accuracy, f1-score: 0.47, 0.45
+Accuracy, f1-score: 0.41, 0.4
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 50
 
 Selected features: ['A0', 'A8', 'A4', 'A2', 'A5', 'A6', 'A7', 'A1']
-Accuracy, f1-score: 0.47, 0.45
+Accuracy, f1-score: 0.41, 0.4
 
 
 Number of features = 90%
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 1e-05
 
@@ -950,12 +1204,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: RIDGE
+
 Meta parameter(s) value(s): 0.01
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 0.1
 
@@ -964,12 +1222,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: RIDGE
+
 Meta parameter(s) value(s): 1
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 5
 
@@ -978,12 +1240,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: RIDGE
+
 Meta parameter(s) value(s): 20
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 50
 
@@ -993,12 +1259,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 Number of features = 100%
 
+Feature selection algorithm: RIDGE
+
 Meta parameter(s) value(s): 1e-05
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 0.01
 
@@ -1007,12 +1277,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: RIDGE
+
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 1
 
@@ -1021,6 +1295,8 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: RIDGE
+
 Meta parameter(s) value(s): 5
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
@@ -1028,12 +1304,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: RIDGE
+
 Meta parameter(s) value(s): 20
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: RIDGE
 
 Meta parameter(s) value(s): 50
 
@@ -1045,405 +1325,519 @@ Accuracy, f1-score: 0.5, 0.48
 
 Number of features = 10%
 
+Feature selection algorithm: LASSO
+
 Meta parameter(s) value(s): 1e-05
 
 Selected features: ['A0']
-Accuracy, f1-score: 0.42, 0.31
+Accuracy, f1-score: 0.38, 0.31
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 0.01
 
 Selected features: ['A0']
-Accuracy, f1-score: 0.42, 0.31
+Accuracy, f1-score: 0.38, 0.31
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A0']
-Accuracy, f1-score: 0.42, 0.31
+Accuracy, f1-score: 0.38, 0.31
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 1
 
 Selected features: ['A0']
-Accuracy, f1-score: 0.42, 0.31
+Accuracy, f1-score: 0.38, 0.31
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 5
 
 Selected features: ['A0']
-Accuracy, f1-score: 0.42, 0.31
+Accuracy, f1-score: 0.38, 0.31
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 20
 
 Selected features: ['A0']
-Accuracy, f1-score: 0.42, 0.31
+Accuracy, f1-score: 0.38, 0.31
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 50
 
 Selected features: ['A0']
-Accuracy, f1-score: 0.42, 0.31
+Accuracy, f1-score: 0.38, 0.31
 
 
 Number of features = 20%
 
+Feature selection algorithm: LASSO
+
 Meta parameter(s) value(s): 1e-05
 
 Selected features: ['A0', 'A8']
-Accuracy, f1-score: 0.42, 0.32
+Accuracy, f1-score: 0.37, 0.31
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 0.01
 
 Selected features: ['A0', 'A8']
-Accuracy, f1-score: 0.42, 0.32
+Accuracy, f1-score: 0.37, 0.31
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A0', 'A1']
-Accuracy, f1-score: 0.48, 0.47
+Accuracy, f1-score: 0.41, 0.4
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 1
 
 Selected features: ['A0', 'A1']
-Accuracy, f1-score: 0.48, 0.47
+Accuracy, f1-score: 0.41, 0.4
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 5
 
 Selected features: ['A0', 'A1']
-Accuracy, f1-score: 0.48, 0.47
+Accuracy, f1-score: 0.41, 0.4
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 20
 
 Selected features: ['A0', 'A1']
-Accuracy, f1-score: 0.48, 0.47
+Accuracy, f1-score: 0.41, 0.4
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 50
 
 Selected features: ['A0', 'A1']
-Accuracy, f1-score: 0.48, 0.47
+Accuracy, f1-score: 0.41, 0.4
 
 
 Number of features = 30%
 
+Feature selection algorithm: LASSO
+
 Meta parameter(s) value(s): 1e-05
 
 Selected features: ['A0', 'A8', 'A4']
-Accuracy, f1-score: 0.42, 0.38
+Accuracy, f1-score: 0.38, 0.32
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 0.01
 
 Selected features: ['A0', 'A8', 'A2']
-Accuracy, f1-score: 0.4, 0.3
+Accuracy, f1-score: 0.4, 0.38
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A0', 'A1', 'A2']
-Accuracy, f1-score: 0.47, 0.46
+Accuracy, f1-score: 0.43, 0.42
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 1
 
 Selected features: ['A0', 'A1', 'A2']
-Accuracy, f1-score: 0.47, 0.46
+Accuracy, f1-score: 0.43, 0.42
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 5
 
 Selected features: ['A0', 'A1', 'A2']
-Accuracy, f1-score: 0.47, 0.46
+Accuracy, f1-score: 0.43, 0.42
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 20
 
 Selected features: ['A0', 'A1', 'A2']
-Accuracy, f1-score: 0.47, 0.46
+Accuracy, f1-score: 0.43, 0.42
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 50
 
 Selected features: ['A0', 'A1', 'A2']
-Accuracy, f1-score: 0.47, 0.46
+Accuracy, f1-score: 0.43, 0.42
 
 
 Number of features = 40%
 
+Feature selection algorithm: LASSO
+
 Meta parameter(s) value(s): 1e-05
 
 Selected features: ['A0', 'A8', 'A4', 'A2']
-Accuracy, f1-score: 0.42, 0.38
+Accuracy, f1-score: 0.38, 0.35
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 0.01
 
 Selected features: ['A0', 'A8', 'A2', 'A4']
-Accuracy, f1-score: 0.42, 0.38
+Accuracy, f1-score: 0.38, 0.35
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A0', 'A1', 'A2', 'A3']
-Accuracy, f1-score: 0.54, 0.51
+Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 1
 
 Selected features: ['A0', 'A1', 'A2', 'A3']
-Accuracy, f1-score: 0.54, 0.51
+Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 5
 
 Selected features: ['A0', 'A1', 'A2', 'A3']
-Accuracy, f1-score: 0.54, 0.51
+Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 20
 
 Selected features: ['A0', 'A1', 'A2', 'A3']
-Accuracy, f1-score: 0.54, 0.51
+Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 50
 
 Selected features: ['A0', 'A1', 'A2', 'A3']
-Accuracy, f1-score: 0.54, 0.51
+Accuracy, f1-score: 0.5, 0.48
 
 
 Number of features = 50%
 
+Feature selection algorithm: LASSO
+
 Meta parameter(s) value(s): 1e-05
 
 Selected features: ['A0', 'A8', 'A4', 'A2', 'A5']
-Accuracy, f1-score: 0.43, 0.39
+Accuracy, f1-score: 0.41, 0.38
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 0.01
 
 Selected features: ['A0', 'A8', 'A2', 'A4', 'A6']
-Accuracy, f1-score: 0.43, 0.39
+Accuracy, f1-score: 0.39, 0.36
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4']
-Accuracy, f1-score: 0.51, 0.48
+Accuracy, f1-score: 0.49, 0.47
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 1
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4']
-Accuracy, f1-score: 0.51, 0.48
+Accuracy, f1-score: 0.49, 0.47
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 5
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4']
-Accuracy, f1-score: 0.51, 0.48
+Accuracy, f1-score: 0.49, 0.47
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 20
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4']
-Accuracy, f1-score: 0.51, 0.48
+Accuracy, f1-score: 0.49, 0.47
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 50
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4']
-Accuracy, f1-score: 0.51, 0.48
+Accuracy, f1-score: 0.49, 0.47
 
 
 Number of features = 60%
 
+Feature selection algorithm: LASSO
+
 Meta parameter(s) value(s): 1e-05
 
 Selected features: ['A0', 'A8', 'A4', 'A2', 'A5', 'A6']
-Accuracy, f1-score: 0.43, 0.39
+Accuracy, f1-score: 0.37, 0.35
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 0.01
 
 Selected features: ['A0', 'A8', 'A2', 'A4', 'A6', 'A5']
-Accuracy, f1-score: 0.43, 0.39
+Accuracy, f1-score: 0.37, 0.35
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5']
-Accuracy, f1-score: 0.51, 0.48
+Accuracy, f1-score: 0.49, 0.47
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 1
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5']
-Accuracy, f1-score: 0.51, 0.48
+Accuracy, f1-score: 0.49, 0.47
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 5
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5']
-Accuracy, f1-score: 0.51, 0.48
+Accuracy, f1-score: 0.49, 0.47
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 20
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5']
-Accuracy, f1-score: 0.51, 0.48
+Accuracy, f1-score: 0.49, 0.47
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 50
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5']
-Accuracy, f1-score: 0.51, 0.48
+Accuracy, f1-score: 0.49, 0.47
 
 
 Number of features = 70%
 
+Feature selection algorithm: LASSO
+
 Meta parameter(s) value(s): 1e-05
 
 Selected features: ['A0', 'A8', 'A4', 'A2', 'A5', 'A6', 'A7']
-Accuracy, f1-score: 0.43, 0.38
+Accuracy, f1-score: 0.39, 0.36
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 0.01
 
 Selected features: ['A0', 'A8', 'A2', 'A4', 'A6', 'A5', 'A7']
-Accuracy, f1-score: 0.43, 0.38
+Accuracy, f1-score: 0.39, 0.36
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6']
-Accuracy, f1-score: 0.51, 0.48
+Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 1
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6']
-Accuracy, f1-score: 0.51, 0.48
+Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 5
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6']
-Accuracy, f1-score: 0.51, 0.48
+Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 20
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6']
-Accuracy, f1-score: 0.51, 0.48
+Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 50
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6']
-Accuracy, f1-score: 0.51, 0.48
+Accuracy, f1-score: 0.5, 0.48
 
 
 Number of features = 80%
 
+Feature selection algorithm: LASSO
+
 Meta parameter(s) value(s): 1e-05
 
 Selected features: ['A0', 'A8', 'A4', 'A2', 'A5', 'A6', 'A7', 'A1']
-Accuracy, f1-score: 0.47, 0.45
+Accuracy, f1-score: 0.41, 0.4
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 0.01
 
 Selected features: ['A0', 'A8', 'A2', 'A4', 'A6', 'A5', 'A7', 'A1']
-Accuracy, f1-score: 0.47, 0.45
+Accuracy, f1-score: 0.41, 0.4
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7']
-Accuracy, f1-score: 0.52, 0.49
+Accuracy, f1-score: 0.52, 0.5
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 1
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7']
-Accuracy, f1-score: 0.52, 0.49
+Accuracy, f1-score: 0.52, 0.5
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 5
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7']
-Accuracy, f1-score: 0.52, 0.49
+Accuracy, f1-score: 0.52, 0.5
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 20
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7']
-Accuracy, f1-score: 0.52, 0.49
+Accuracy, f1-score: 0.52, 0.5
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 50
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7']
-Accuracy, f1-score: 0.52, 0.49
+Accuracy, f1-score: 0.52, 0.5
 
 
 Number of features = 90%
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 1e-05
 
@@ -1452,12 +1846,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: LASSO
+
 Meta parameter(s) value(s): 0.01
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 0.1
 
@@ -1466,12 +1864,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: LASSO
+
 Meta parameter(s) value(s): 1
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 5
 
@@ -1480,12 +1882,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: LASSO
+
 Meta parameter(s) value(s): 20
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 50
 
@@ -1495,12 +1901,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 Number of features = 100%
 
+Feature selection algorithm: LASSO
+
 Meta parameter(s) value(s): 1e-05
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 0.01
 
@@ -1509,12 +1919,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: LASSO
+
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 1
 
@@ -1523,6 +1937,8 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: LASSO
+
 Meta parameter(s) value(s): 5
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
@@ -1530,12 +1946,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: LASSO
+
 Meta parameter(s) value(s): 20
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: LASSO
 
 Meta parameter(s) value(s): 50
 
@@ -1550,12 +1970,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 Number of features = 10%
 
+Feature selection algorithm: PageRank
+
 Meta parameter(s) value(s): 0.05
 
 Selected features: ['A1']
 Accuracy, f1-score: 0.43, 0.32
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.1
 
@@ -1564,12 +1988,16 @@ Accuracy, f1-score: 0.43, 0.32
 
 
 
+Feature selection algorithm: PageRank
+
 Meta parameter(s) value(s): 0.2
 
 Selected features: ['A1']
 Accuracy, f1-score: 0.43, 0.32
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.3
 
@@ -1578,12 +2006,16 @@ Accuracy, f1-score: 0.43, 0.32
 
 
 
+Feature selection algorithm: PageRank
+
 Meta parameter(s) value(s): 0.4
 
 Selected features: ['A1']
 Accuracy, f1-score: 0.43, 0.32
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.5
 
@@ -1592,12 +2024,16 @@ Accuracy, f1-score: 0.43, 0.32
 
 
 
+Feature selection algorithm: PageRank
+
 Meta parameter(s) value(s): 0.6
 
 Selected features: ['A1']
 Accuracy, f1-score: 0.43, 0.32
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.7
 
@@ -1606,6 +2042,8 @@ Accuracy, f1-score: 0.43, 0.32
 
 
 
+Feature selection algorithm: PageRank
+
 Meta parameter(s) value(s): 0.8
 
 Selected features: ['A1']
@@ -1613,12 +2051,16 @@ Accuracy, f1-score: 0.43, 0.32
 
 
 
+Feature selection algorithm: PageRank
+
 Meta parameter(s) value(s): 0.9
 
 Selected features: ['A1']
 Accuracy, f1-score: 0.43, 0.32
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.95
 
@@ -1628,302 +2070,388 @@ Accuracy, f1-score: 0.43, 0.32
 
 Number of features = 20%
 
+Feature selection algorithm: PageRank
+
 Meta parameter(s) value(s): 0.05
 
 Selected features: ['A1', 'A0']
-Accuracy, f1-score: 0.48, 0.47
+Accuracy, f1-score: 0.41, 0.4
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A1', 'A0']
-Accuracy, f1-score: 0.48, 0.47
+Accuracy, f1-score: 0.41, 0.4
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.2
 
 Selected features: ['A1', 'A0']
-Accuracy, f1-score: 0.48, 0.47
+Accuracy, f1-score: 0.41, 0.4
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.3
 
 Selected features: ['A1', 'A0']
-Accuracy, f1-score: 0.48, 0.47
+Accuracy, f1-score: 0.41, 0.4
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.4
 
 Selected features: ['A1', 'A2']
-Accuracy, f1-score: 0.43, 0.32
+Accuracy, f1-score: 0.44, 0.34
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.5
 
 Selected features: ['A1', 'A2']
-Accuracy, f1-score: 0.43, 0.32
+Accuracy, f1-score: 0.44, 0.34
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.6
 
 Selected features: ['A1', 'A2']
-Accuracy, f1-score: 0.43, 0.32
+Accuracy, f1-score: 0.44, 0.34
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.7
 
 Selected features: ['A1', 'A2']
-Accuracy, f1-score: 0.43, 0.32
+Accuracy, f1-score: 0.44, 0.34
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.8
 
 Selected features: ['A1', 'A2']
-Accuracy, f1-score: 0.43, 0.32
+Accuracy, f1-score: 0.44, 0.34
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.9
 
 Selected features: ['A1', 'A2']
-Accuracy, f1-score: 0.43, 0.32
+Accuracy, f1-score: 0.44, 0.34
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.95
 
 Selected features: ['A1', 'A2']
-Accuracy, f1-score: 0.43, 0.32
+Accuracy, f1-score: 0.44, 0.34
 
 
 Number of features = 30%
 
+Feature selection algorithm: PageRank
+
 Meta parameter(s) value(s): 0.05
 
 Selected features: ['A1', 'A0', 'A2']
-Accuracy, f1-score: 0.47, 0.46
+Accuracy, f1-score: 0.43, 0.42
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A1', 'A0', 'A2']
-Accuracy, f1-score: 0.47, 0.46
+Accuracy, f1-score: 0.43, 0.42
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.2
 
 Selected features: ['A1', 'A0', 'A2']
-Accuracy, f1-score: 0.47, 0.46
+Accuracy, f1-score: 0.43, 0.42
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.3
 
 Selected features: ['A1', 'A0', 'A2']
-Accuracy, f1-score: 0.47, 0.46
+Accuracy, f1-score: 0.43, 0.42
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.4
 
 Selected features: ['A1', 'A2', 'A0']
-Accuracy, f1-score: 0.47, 0.46
+Accuracy, f1-score: 0.43, 0.42
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.5
 
 Selected features: ['A1', 'A2', 'A0']
-Accuracy, f1-score: 0.47, 0.46
+Accuracy, f1-score: 0.43, 0.42
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.6
 
 Selected features: ['A1', 'A2', 'A0']
-Accuracy, f1-score: 0.47, 0.46
+Accuracy, f1-score: 0.43, 0.42
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.7
 
 Selected features: ['A1', 'A2', 'A0']
-Accuracy, f1-score: 0.47, 0.46
+Accuracy, f1-score: 0.43, 0.42
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.8
 
 Selected features: ['A1', 'A2', 'A7']
-Accuracy, f1-score: 0.43, 0.33
+Accuracy, f1-score: 0.4, 0.31
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.9
 
 Selected features: ['A1', 'A2', 'A7']
-Accuracy, f1-score: 0.43, 0.33
+Accuracy, f1-score: 0.4, 0.31
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.95
 
 Selected features: ['A1', 'A2', 'A7']
-Accuracy, f1-score: 0.43, 0.33
+Accuracy, f1-score: 0.4, 0.31
 
 
 Number of features = 40%
 
+Feature selection algorithm: PageRank
+
 Meta parameter(s) value(s): 0.05
 
 Selected features: ['A1', 'A0', 'A2', 'A5']
-Accuracy, f1-score: 0.48, 0.47
+Accuracy, f1-score: 0.4, 0.39
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A1', 'A0', 'A2', 'A5']
-Accuracy, f1-score: 0.48, 0.47
+Accuracy, f1-score: 0.4, 0.39
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.2
 
 Selected features: ['A1', 'A0', 'A2', 'A5']
-Accuracy, f1-score: 0.48, 0.47
+Accuracy, f1-score: 0.4, 0.39
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.3
 
 Selected features: ['A1', 'A0', 'A2', 'A5']
-Accuracy, f1-score: 0.48, 0.47
+Accuracy, f1-score: 0.4, 0.39
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.4
 
 Selected features: ['A1', 'A2', 'A0', 'A5']
-Accuracy, f1-score: 0.48, 0.47
+Accuracy, f1-score: 0.4, 0.39
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.5
 
 Selected features: ['A1', 'A2', 'A0', 'A5']
-Accuracy, f1-score: 0.48, 0.47
+Accuracy, f1-score: 0.4, 0.39
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.6
 
 Selected features: ['A1', 'A2', 'A0', 'A7']
-Accuracy, f1-score: 0.48, 0.47
+Accuracy, f1-score: 0.44, 0.43
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.7
 
 Selected features: ['A1', 'A2', 'A0', 'A7']
-Accuracy, f1-score: 0.48, 0.47
+Accuracy, f1-score: 0.44, 0.43
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.8
 
 Selected features: ['A1', 'A2', 'A7', 'A0']
-Accuracy, f1-score: 0.48, 0.47
+Accuracy, f1-score: 0.44, 0.43
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.9
 
 Selected features: ['A1', 'A2', 'A7', 'A0']
-Accuracy, f1-score: 0.48, 0.47
+Accuracy, f1-score: 0.44, 0.43
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.95
 
 Selected features: ['A1', 'A2', 'A7', 'A0']
-Accuracy, f1-score: 0.48, 0.47
+Accuracy, f1-score: 0.44, 0.43
 
 
 Number of features = 50%
 
+Feature selection algorithm: PageRank
+
 Meta parameter(s) value(s): 0.05
 
 Selected features: ['A1', 'A0', 'A2', 'A5', 'A7']
-Accuracy, f1-score: 0.48, 0.47
+Accuracy, f1-score: 0.46, 0.45
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A1', 'A0', 'A2', 'A5', 'A7']
-Accuracy, f1-score: 0.48, 0.47
+Accuracy, f1-score: 0.46, 0.45
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.2
 
 Selected features: ['A1', 'A0', 'A2', 'A5', 'A7']
-Accuracy, f1-score: 0.48, 0.47
+Accuracy, f1-score: 0.46, 0.45
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.3
 
 Selected features: ['A1', 'A0', 'A2', 'A5', 'A7']
-Accuracy, f1-score: 0.48, 0.47
+Accuracy, f1-score: 0.46, 0.45
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.4
 
 Selected features: ['A1', 'A2', 'A0', 'A5', 'A7']
-Accuracy, f1-score: 0.48, 0.47
+Accuracy, f1-score: 0.44, 0.43
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.5
 
 Selected features: ['A1', 'A2', 'A0', 'A5', 'A7']
-Accuracy, f1-score: 0.48, 0.47
+Accuracy, f1-score: 0.44, 0.43
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.6
 
 Selected features: ['A1', 'A2', 'A0', 'A7', 'A5']
-Accuracy, f1-score: 0.48, 0.47
+Accuracy, f1-score: 0.44, 0.43
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.7
 
 Selected features: ['A1', 'A2', 'A0', 'A7', 'A5']
-Accuracy, f1-score: 0.48, 0.47
+Accuracy, f1-score: 0.44, 0.43
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.8
 
 Selected features: ['A1', 'A2', 'A7', 'A0', 'A5']
-Accuracy, f1-score: 0.48, 0.47
+Accuracy, f1-score: 0.44, 0.43
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.9
 
@@ -1932,161 +2460,207 @@ Accuracy, f1-score: 0.51, 0.49
 
 
 
+Feature selection algorithm: PageRank
+
 Meta parameter(s) value(s): 0.95
 
 Selected features: ['A1', 'A2', 'A7', 'A0', 'A6']
-Accuracy, f1-score: 0.48, 0.46
+Accuracy, f1-score: 0.41, 0.41
 
 
 Number of features = 60%
 
+Feature selection algorithm: PageRank
+
 Meta parameter(s) value(s): 0.05
 
 Selected features: ['A1', 'A0', 'A2', 'A5', 'A7', 'A4']
-Accuracy, f1-score: 0.46, 0.45
+Accuracy, f1-score: 0.45, 0.43
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A1', 'A0', 'A2', 'A5', 'A7', 'A4']
-Accuracy, f1-score: 0.46, 0.45
+Accuracy, f1-score: 0.45, 0.43
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.2
 
 Selected features: ['A1', 'A0', 'A2', 'A5', 'A7', 'A4']
-Accuracy, f1-score: 0.46, 0.45
+Accuracy, f1-score: 0.45, 0.43
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.3
 
 Selected features: ['A1', 'A0', 'A2', 'A5', 'A7', 'A4']
-Accuracy, f1-score: 0.46, 0.45
+Accuracy, f1-score: 0.45, 0.43
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.4
 
 Selected features: ['A1', 'A2', 'A0', 'A5', 'A7', 'A8']
-Accuracy, f1-score: 0.48, 0.47
+Accuracy, f1-score: 0.46, 0.45
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.5
 
 Selected features: ['A1', 'A2', 'A0', 'A5', 'A7', 'A8']
-Accuracy, f1-score: 0.48, 0.47
+Accuracy, f1-score: 0.46, 0.45
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.6
 
 Selected features: ['A1', 'A2', 'A0', 'A7', 'A5', 'A8']
-Accuracy, f1-score: 0.48, 0.47
+Accuracy, f1-score: 0.46, 0.45
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.7
 
 Selected features: ['A1', 'A2', 'A0', 'A7', 'A5', 'A8']
-Accuracy, f1-score: 0.48, 0.47
+Accuracy, f1-score: 0.46, 0.45
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.8
 
 Selected features: ['A1', 'A2', 'A7', 'A0', 'A5', 'A8']
-Accuracy, f1-score: 0.48, 0.47
+Accuracy, f1-score: 0.46, 0.45
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.9
 
 Selected features: ['A1', 'A2', 'A7', 'A0', 'A3', 'A6']
-Accuracy, f1-score: 0.51, 0.48
+Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.95
 
 Selected features: ['A1', 'A2', 'A7', 'A0', 'A6', 'A3']
-Accuracy, f1-score: 0.51, 0.48
+Accuracy, f1-score: 0.5, 0.48
 
 
 Number of features = 70%
 
+Feature selection algorithm: PageRank
+
 Meta parameter(s) value(s): 0.05
 
 Selected features: ['A1', 'A0', 'A2', 'A5', 'A7', 'A4', 'A8']
-Accuracy, f1-score: 0.46, 0.45
+Accuracy, f1-score: 0.45, 0.44
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A1', 'A0', 'A2', 'A5', 'A7', 'A4', 'A8']
-Accuracy, f1-score: 0.46, 0.45
+Accuracy, f1-score: 0.45, 0.44
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.2
 
 Selected features: ['A1', 'A0', 'A2', 'A5', 'A7', 'A4', 'A8']
-Accuracy, f1-score: 0.46, 0.45
+Accuracy, f1-score: 0.45, 0.44
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.3
 
 Selected features: ['A1', 'A0', 'A2', 'A5', 'A7', 'A4', 'A8']
-Accuracy, f1-score: 0.46, 0.45
+Accuracy, f1-score: 0.45, 0.44
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.4
 
 Selected features: ['A1', 'A2', 'A0', 'A5', 'A7', 'A8', 'A4']
-Accuracy, f1-score: 0.46, 0.45
+Accuracy, f1-score: 0.45, 0.44
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.5
 
 Selected features: ['A1', 'A2', 'A0', 'A5', 'A7', 'A8', 'A4']
-Accuracy, f1-score: 0.46, 0.45
+Accuracy, f1-score: 0.45, 0.44
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.6
 
 Selected features: ['A1', 'A2', 'A0', 'A7', 'A5', 'A8', 'A4']
-Accuracy, f1-score: 0.46, 0.45
+Accuracy, f1-score: 0.45, 0.44
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.7
 
 Selected features: ['A1', 'A2', 'A0', 'A7', 'A5', 'A8', 'A4']
-Accuracy, f1-score: 0.46, 0.45
+Accuracy, f1-score: 0.45, 0.44
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.8
 
 Selected features: ['A1', 'A2', 'A7', 'A0', 'A5', 'A8', 'A3']
-Accuracy, f1-score: 0.52, 0.51
+Accuracy, f1-score: 0.53, 0.51
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.9
 
 Selected features: ['A1', 'A2', 'A7', 'A0', 'A3', 'A6', 'A5']
-Accuracy, f1-score: 0.51, 0.48
+Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.95
 
@@ -2096,83 +2670,107 @@ Accuracy, f1-score: 0.51, 0.49
 
 Number of features = 80%
 
+Feature selection algorithm: PageRank
+
 Meta parameter(s) value(s): 0.05
 
 Selected features: ['A1', 'A0', 'A2', 'A5', 'A7', 'A4', 'A8', 'A3']
-Accuracy, f1-score: 0.52, 0.49
+Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A1', 'A0', 'A2', 'A5', 'A7', 'A4', 'A8', 'A3']
-Accuracy, f1-score: 0.52, 0.49
+Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.2
 
 Selected features: ['A1', 'A0', 'A2', 'A5', 'A7', 'A4', 'A8', 'A3']
-Accuracy, f1-score: 0.52, 0.49
+Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.3
 
 Selected features: ['A1', 'A0', 'A2', 'A5', 'A7', 'A4', 'A8', 'A3']
-Accuracy, f1-score: 0.52, 0.49
+Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.4
 
 Selected features: ['A1', 'A2', 'A0', 'A5', 'A7', 'A8', 'A4', 'A3']
-Accuracy, f1-score: 0.52, 0.49
+Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.5
 
 Selected features: ['A1', 'A2', 'A0', 'A5', 'A7', 'A8', 'A4', 'A3']
-Accuracy, f1-score: 0.52, 0.49
+Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.6
 
 Selected features: ['A1', 'A2', 'A0', 'A7', 'A5', 'A8', 'A4', 'A3']
-Accuracy, f1-score: 0.52, 0.49
+Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.7
 
 Selected features: ['A1', 'A2', 'A0', 'A7', 'A5', 'A8', 'A4', 'A3']
-Accuracy, f1-score: 0.52, 0.49
+Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.8
 
 Selected features: ['A1', 'A2', 'A7', 'A0', 'A5', 'A8', 'A3', 'A4']
-Accuracy, f1-score: 0.52, 0.49
+Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.9
 
 Selected features: ['A1', 'A2', 'A7', 'A0', 'A3', 'A6', 'A5', 'A8']
-Accuracy, f1-score: 0.51, 0.48
+Accuracy, f1-score: 0.52, 0.5
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.95
 
 Selected features: ['A1', 'A2', 'A7', 'A0', 'A6', 'A3', 'A8', 'A5']
-Accuracy, f1-score: 0.51, 0.48
+Accuracy, f1-score: 0.52, 0.5
 
 
 Number of features = 90%
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.05
 
@@ -2181,12 +2779,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: PageRank
+
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.2
 
@@ -2195,12 +2797,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: PageRank
+
 Meta parameter(s) value(s): 0.3
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.4
 
@@ -2209,12 +2815,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: PageRank
+
 Meta parameter(s) value(s): 0.5
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.6
 
@@ -2223,12 +2833,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: PageRank
+
 Meta parameter(s) value(s): 0.7
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.8
 
@@ -2237,12 +2851,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: PageRank
+
 Meta parameter(s) value(s): 0.9
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.95
 
@@ -2252,12 +2870,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 Number of features = 100%
 
+Feature selection algorithm: PageRank
+
 Meta parameter(s) value(s): 0.05
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.1
 
@@ -2266,12 +2888,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: PageRank
+
 Meta parameter(s) value(s): 0.2
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.3
 
@@ -2280,12 +2906,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: PageRank
+
 Meta parameter(s) value(s): 0.4
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.5
 
@@ -2294,12 +2924,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: PageRank
+
 Meta parameter(s) value(s): 0.6
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.7
 
@@ -2308,6 +2942,8 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: PageRank
+
 Meta parameter(s) value(s): 0.8
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
@@ -2315,12 +2951,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: PageRank
+
 Meta parameter(s) value(s): 0.9
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.95
 
@@ -2333,6 +2973,8 @@ Accuracy, f1-score: 0.5, 0.48
 
 Number of features = 10%
 
+Feature selection algorithm: PageRank
+
 Meta parameter(s) value(s): 0.05
 
 Selected features: ['A1']
@@ -2340,26 +2982,34 @@ Accuracy, f1-score: 0.43, 0.32
 
 
 
+Feature selection algorithm: PageRank
+
 Meta parameter(s) value(s): 0.1
 
-Selected features: ['A1']
-Accuracy, f1-score: 0.43, 0.32
+Selected features: ['A2']
+Accuracy, f1-score: 0.41, 0.19
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.2
 
-Selected features: ['A1']
-Accuracy, f1-score: 0.43, 0.32
+Selected features: ['A2']
+Accuracy, f1-score: 0.41, 0.19
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.3
 
-Selected features: ['A0']
-Accuracy, f1-score: 0.42, 0.31
+Selected features: ['A2']
+Accuracy, f1-score: 0.41, 0.19
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.4
 
@@ -2368,19 +3018,25 @@ Accuracy, f1-score: 0.43, 0.32
 
 
 
+Feature selection algorithm: PageRank
+
 Meta parameter(s) value(s): 0.5
-
-Selected features: ['A0']
-Accuracy, f1-score: 0.42, 0.31
-
-
-
-Meta parameter(s) value(s): 0.6
 
 Selected features: ['A1']
 Accuracy, f1-score: 0.43, 0.32
 
 
+
+Feature selection algorithm: PageRank
+
+Meta parameter(s) value(s): 0.6
+
+Selected features: ['A2']
+Accuracy, f1-score: 0.41, 0.19
+
+
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.7
 
@@ -2389,339 +3045,435 @@ Accuracy, f1-score: 0.43, 0.32
 
 
 
+Feature selection algorithm: PageRank
+
 Meta parameter(s) value(s): 0.8
 
-Selected features: ['A0']
-Accuracy, f1-score: 0.42, 0.31
+Selected features: ['A1']
+Accuracy, f1-score: 0.43, 0.32
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.9
 
-Selected features: ['A0']
-Accuracy, f1-score: 0.42, 0.31
+Selected features: ['A1']
+Accuracy, f1-score: 0.43, 0.32
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.95
 
-Selected features: ['A0']
-Accuracy, f1-score: 0.42, 0.31
+Selected features: ['A1']
+Accuracy, f1-score: 0.43, 0.32
 
 
 Number of features = 20%
 
+Feature selection algorithm: PageRank
+
 Meta parameter(s) value(s): 0.05
 
-Selected features: ['A1', 'A7']
-Accuracy, f1-score: 0.43, 0.32
+Selected features: ['A2', 'A0']
+Accuracy, f1-score: 0.41, 0.39
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.1
 
-Selected features: ['A0', 'A1']
-Accuracy, f1-score: 0.48, 0.47
+Selected features: ['A1', 'A0']
+Accuracy, f1-score: 0.41, 0.4
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.2
 
-Selected features: ['A1', 'A0']
-Accuracy, f1-score: 0.48, 0.47
+Selected features: ['A2', 'A3']
+Accuracy, f1-score: 0.46, 0.38
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.3
 
-Selected features: ['A0', 'A1']
-Accuracy, f1-score: 0.48, 0.47
+Selected features: ['A1', 'A4']
+Accuracy, f1-score: 0.44, 0.38
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.4
 
-Selected features: ['A0', 'A1']
-Accuracy, f1-score: 0.48, 0.47
+Selected features: ['A1', 'A0']
+Accuracy, f1-score: 0.41, 0.4
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.5
 
-Selected features: ['A1', 'A0']
-Accuracy, f1-score: 0.48, 0.47
+Selected features: ['A2', 'A0']
+Accuracy, f1-score: 0.41, 0.39
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.6
 
-Selected features: ['A1', 'A0']
-Accuracy, f1-score: 0.48, 0.47
+Selected features: ['A2', 'A3']
+Accuracy, f1-score: 0.46, 0.38
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.7
 
-Selected features: ['A0', 'A1']
-Accuracy, f1-score: 0.48, 0.47
+Selected features: ['A1', 'A5']
+Accuracy, f1-score: 0.42, 0.39
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.8
 
-Selected features: ['A0', 'A1']
-Accuracy, f1-score: 0.48, 0.47
+Selected features: ['A1', 'A0']
+Accuracy, f1-score: 0.41, 0.4
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.9
 
-Selected features: ['A0', 'A1']
-Accuracy, f1-score: 0.48, 0.47
+Selected features: ['A1', 'A7']
+Accuracy, f1-score: 0.39, 0.28
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.95
 
-Selected features: ['A0', 'A1']
-Accuracy, f1-score: 0.48, 0.47
+Selected features: ['A1', 'A2']
+Accuracy, f1-score: 0.44, 0.34
 
 
 Number of features = 30%
 
+Feature selection algorithm: PageRank
+
 Meta parameter(s) value(s): 0.05
 
-Selected features: ['A1', 'A0', 'A7']
+Selected features: ['A1', 'A3', 'A5']
 Accuracy, f1-score: 0.48, 0.46
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.1
 
-Selected features: ['A1', 'A0', 'A7']
-Accuracy, f1-score: 0.48, 0.46
+Selected features: ['A1', 'A5', 'A0']
+Accuracy, f1-score: 0.43, 0.41
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.2
 
-Selected features: ['A0', 'A1', 'A7']
-Accuracy, f1-score: 0.48, 0.46
+Selected features: ['A1', 'A0', 'A5']
+Accuracy, f1-score: 0.43, 0.41
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.3
 
-Selected features: ['A1', 'A0', 'A3']
-Accuracy, f1-score: 0.53, 0.5
+Selected features: ['A1', 'A3', 'A6']
+Accuracy, f1-score: 0.51, 0.49
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.4
 
-Selected features: ['A1', 'A0', 'A6']
-Accuracy, f1-score: 0.48, 0.47
+Selected features: ['A1', 'A0', 'A5']
+Accuracy, f1-score: 0.43, 0.41
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.5
 
-Selected features: ['A1', 'A0', 'A7']
-Accuracy, f1-score: 0.48, 0.46
+Selected features: ['A1', 'A0', 'A5']
+Accuracy, f1-score: 0.43, 0.41
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.6
 
-Selected features: ['A0', 'A1', 'A3']
-Accuracy, f1-score: 0.53, 0.5
-
-
-
-Meta parameter(s) value(s): 0.7
-
-Selected features: ['A0', 'A1', 'A3']
-Accuracy, f1-score: 0.53, 0.5
-
-
-
-Meta parameter(s) value(s): 0.8
-
-Selected features: ['A1', 'A0', 'A7']
+Selected features: ['A1', 'A3', 'A5']
 Accuracy, f1-score: 0.48, 0.46
 
 
 
+Feature selection algorithm: PageRank
+
+Meta parameter(s) value(s): 0.7
+
+Selected features: ['A1', 'A3', 'A8']
+Accuracy, f1-score: 0.52, 0.5
+
+
+
+Feature selection algorithm: PageRank
+
+Meta parameter(s) value(s): 0.8
+
+Selected features: ['A2', 'A4', 'A5']
+Accuracy, f1-score: 0.41, 0.28
+
+
+
+Feature selection algorithm: PageRank
+
 Meta parameter(s) value(s): 0.9
 
-Selected features: ['A0', 'A1', 'A3']
-Accuracy, f1-score: 0.53, 0.5
+Selected features: ['A1', 'A2', 'A0']
+Accuracy, f1-score: 0.43, 0.42
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.95
 
-Selected features: ['A0', 'A3', 'A1']
-Accuracy, f1-score: 0.53, 0.5
+Selected features: ['A1', 'A2', 'A4']
+Accuracy, f1-score: 0.44, 0.4
 
 
 Number of features = 40%
 
+Feature selection algorithm: PageRank
+
 Meta parameter(s) value(s): 0.05
 
-Selected features: ['A1', 'A0', 'A3', 'A7']
-Accuracy, f1-score: 0.52, 0.5
+Selected features: ['A1', 'A3', 'A7', 'A5']
+Accuracy, f1-score: 0.5, 0.49
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.1
 
-Selected features: ['A0', 'A1', 'A3', 'A7']
-Accuracy, f1-score: 0.52, 0.5
+Selected features: ['A2', 'A0', 'A5', 'A7']
+Accuracy, f1-score: 0.44, 0.42
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.2
 
-Selected features: ['A1', 'A0', 'A3', 'A7']
-Accuracy, f1-score: 0.52, 0.5
+Selected features: ['A2', 'A0', 'A5', 'A7']
+Accuracy, f1-score: 0.44, 0.42
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.3
 
-Selected features: ['A1', 'A0', 'A3', 'A7']
-Accuracy, f1-score: 0.52, 0.5
+Selected features: ['A1', 'A5', 'A0', 'A7']
+Accuracy, f1-score: 0.42, 0.41
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.4
 
-Selected features: ['A1', 'A0', 'A7', 'A3']
-Accuracy, f1-score: 0.52, 0.5
+Selected features: ['A2', 'A0', 'A7', 'A5']
+Accuracy, f1-score: 0.44, 0.42
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.5
 
-Selected features: ['A0', 'A1', 'A3', 'A7']
-Accuracy, f1-score: 0.52, 0.5
+Selected features: ['A1', 'A3', 'A7', 'A0']
+Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.6
 
-Selected features: ['A1', 'A0', 'A3', 'A7']
-Accuracy, f1-score: 0.52, 0.5
+Selected features: ['A2', 'A0', 'A5', 'A7']
+Accuracy, f1-score: 0.44, 0.42
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.7
 
-Selected features: ['A0', 'A1', 'A7', 'A3']
-Accuracy, f1-score: 0.52, 0.5
+Selected features: ['A1', 'A3', 'A7', 'A4']
+Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.8
 
-Selected features: ['A0', 'A1', 'A6', 'A3']
-Accuracy, f1-score: 0.53, 0.51
+Selected features: ['A1', 'A8', 'A0', 'A6']
+Accuracy, f1-score: 0.42, 0.41
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.9
 
-Selected features: ['A0', 'A3', 'A1', 'A7']
-Accuracy, f1-score: 0.52, 0.5
+Selected features: ['A1', 'A4', 'A5', 'A0']
+Accuracy, f1-score: 0.42, 0.41
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.95
 
-Selected features: ['A0', 'A3', 'A1', 'A6']
-Accuracy, f1-score: 0.53, 0.51
+Selected features: ['A1', 'A2', 'A8', 'A0']
+Accuracy, f1-score: 0.43, 0.42
 
 
 Number of features = 50%
 
+Feature selection algorithm: PageRank
+
 Meta parameter(s) value(s): 0.05
 
-Selected features: ['A0', 'A1', 'A7', 'A3', 'A5']
-Accuracy, f1-score: 0.52, 0.49
+Selected features: ['A1', 'A5', 'A0', 'A4', 'A3']
+Accuracy, f1-score: 0.48, 0.46
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.1
 
-Selected features: ['A1', 'A0', 'A3', 'A7', 'A2']
-Accuracy, f1-score: 0.51, 0.49
+Selected features: ['A2', 'A0', 'A7', 'A5', 'A3']
+Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.2
 
-Selected features: ['A1', 'A0', 'A7', 'A3', 'A6']
+Selected features: ['A1', 'A3', 'A5', 'A7', 'A0']
 Accuracy, f1-score: 0.51, 0.49
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.3
 
-Selected features: ['A1', 'A0', 'A7', 'A3', 'A5']
-Accuracy, f1-score: 0.52, 0.49
+Selected features: ['A2', 'A3', 'A5', 'A4', 'A0']
+Accuracy, f1-score: 0.45, 0.43
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.4
 
-Selected features: ['A1', 'A0', 'A3', 'A7', 'A6']
+Selected features: ['A1', 'A0', 'A5', 'A7', 'A3']
 Accuracy, f1-score: 0.51, 0.49
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.5
 
-Selected features: ['A1', 'A0', 'A2', 'A7', 'A3']
-Accuracy, f1-score: 0.51, 0.49
+Selected features: ['A1', 'A0', 'A5', 'A4', 'A6']
+Accuracy, f1-score: 0.39, 0.38
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.6
 
-Selected features: ['A0', 'A1', 'A3', 'A7', 'A6']
-Accuracy, f1-score: 0.51, 0.49
+Selected features: ['A1', 'A5', 'A3', 'A4', 'A6']
+Accuracy, f1-score: 0.47, 0.44
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.7
 
-Selected features: ['A0', 'A7', 'A1', 'A3', 'A5']
-Accuracy, f1-score: 0.52, 0.49
+Selected features: ['A1', 'A0', 'A6', 'A5', 'A3']
+Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.8
 
-Selected features: ['A0', 'A1', 'A7', 'A3', 'A2']
-Accuracy, f1-score: 0.51, 0.49
+Selected features: ['A1', 'A0', 'A2', 'A5', 'A7']
+Accuracy, f1-score: 0.46, 0.45
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.9
 
-Selected features: ['A0', 'A1', 'A3', 'A7', 'A6']
-Accuracy, f1-score: 0.51, 0.49
+Selected features: ['A1', 'A2', 'A3', 'A5', 'A8']
+Accuracy, f1-score: 0.53, 0.51
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.95
 
-Selected features: ['A0', 'A1', 'A3', 'A7', 'A2']
-Accuracy, f1-score: 0.51, 0.49
+Selected features: ['A1', 'A2', 'A0', 'A6', 'A5']
+Accuracy, f1-score: 0.42, 0.42
 
 
 Number of features = 60%
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.05
 
@@ -2730,239 +3482,307 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: PageRank
+
 Meta parameter(s) value(s): 0.1
 
-Selected features: ['A1', 'A0', 'A7', 'A3', 'A6', 'A5']
-Accuracy, f1-score: 0.5, 0.48
+Selected features: ['A8', 'A0', 'A5', 'A2', 'A4', 'A3']
+Accuracy, f1-score: 0.48, 0.46
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.2
 
-Selected features: ['A1', 'A0', 'A7', 'A6', 'A5', 'A3']
-Accuracy, f1-score: 0.5, 0.48
+Selected features: ['A1', 'A0', 'A5', 'A7', 'A8', 'A6']
+Accuracy, f1-score: 0.38, 0.37
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.3
 
-Selected features: ['A1', 'A0', 'A7', 'A3', 'A6', 'A4']
-Accuracy, f1-score: 0.51, 0.49
+Selected features: ['A1', 'A0', 'A5', 'A7', 'A3', 'A8']
+Accuracy, f1-score: 0.5, 0.49
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.4
 
-Selected features: ['A1', 'A0', 'A7', 'A6', 'A3', 'A2']
-Accuracy, f1-score: 0.51, 0.48
+Selected features: ['A2', 'A3', 'A5', 'A7', 'A0', 'A4']
+Accuracy, f1-score: 0.5, 0.47
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.5
 
-Selected features: ['A1', 'A0', 'A3', 'A6', 'A5', 'A7']
+Selected features: ['A1', 'A0', 'A5', 'A7', 'A3', 'A4']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.6
 
-Selected features: ['A1', 'A0', 'A6', 'A3', 'A5', 'A7']
-Accuracy, f1-score: 0.5, 0.48
+Selected features: ['A2', 'A0', 'A5', 'A7', 'A3', 'A4']
+Accuracy, f1-score: 0.5, 0.47
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.7
 
-Selected features: ['A1', 'A0', 'A7', 'A3', 'A2', 'A5']
-Accuracy, f1-score: 0.51, 0.49
-
-
-
-Meta parameter(s) value(s): 0.8
-
-Selected features: ['A1', 'A0', 'A7', 'A3', 'A2', 'A5']
-Accuracy, f1-score: 0.51, 0.49
-
-
-
-Meta parameter(s) value(s): 0.9
-
-Selected features: ['A0', 'A1', 'A3', 'A7', 'A6', 'A5']
+Selected features: ['A1', 'A3', 'A4', 'A5', 'A7', 'A0']
 Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: PageRank
+
+Meta parameter(s) value(s): 0.8
+
+Selected features: ['A1', 'A8', 'A3', 'A6', 'A5', 'A7']
+Accuracy, f1-score: 0.51, 0.49
+
+
+
+Feature selection algorithm: PageRank
+
+Meta parameter(s) value(s): 0.9
+
+Selected features: ['A1', 'A0', 'A7', 'A2', 'A4', 'A3']
+Accuracy, f1-score: 0.52, 0.51
+
+
+
+Feature selection algorithm: PageRank
+
 Meta parameter(s) value(s): 0.95
 
-Selected features: ['A0', 'A1', 'A3', 'A7', 'A2', 'A6']
-Accuracy, f1-score: 0.51, 0.48
+Selected features: ['A2', 'A1', 'A0', 'A4', 'A8', 'A3']
+Accuracy, f1-score: 0.49, 0.47
 
 
 Number of features = 70%
 
+Feature selection algorithm: PageRank
+
 Meta parameter(s) value(s): 0.05
 
-Selected features: ['A1', 'A0', 'A7', 'A3', 'A6', 'A5', 'A4']
-Accuracy, f1-score: 0.51, 0.48
+Selected features: ['A2', 'A0', 'A4', 'A7', 'A3', 'A5', 'A6']
+Accuracy, f1-score: 0.48, 0.45
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.1
 
-Selected features: ['A0', 'A1', 'A3', 'A7', 'A6', 'A5', 'A4']
-Accuracy, f1-score: 0.51, 0.48
+Selected features: ['A1', 'A3', 'A7', 'A0', 'A5', 'A6', 'A4']
+Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.2
 
-Selected features: ['A1', 'A0', 'A3', 'A7', 'A6', 'A5', 'A4']
-Accuracy, f1-score: 0.51, 0.48
+Selected features: ['A2', 'A0', 'A5', 'A8', 'A3', 'A6', 'A4']
+Accuracy, f1-score: 0.48, 0.46
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.3
 
-Selected features: ['A1', 'A0', 'A3', 'A7', 'A2', 'A5', 'A6']
-Accuracy, f1-score: 0.51, 0.48
+Selected features: ['A2', 'A0', 'A5', 'A4', 'A8', 'A6', 'A3']
+Accuracy, f1-score: 0.48, 0.46
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.4
 
-Selected features: ['A1', 'A0', 'A7', 'A3', 'A5', 'A6', 'A2']
-Accuracy, f1-score: 0.51, 0.48
+Selected features: ['A1', 'A5', 'A4', 'A3', 'A7', 'A0', 'A6']
+Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.5
 
-Selected features: ['A0', 'A1', 'A7', 'A3', 'A6', 'A5', 'A4']
-Accuracy, f1-score: 0.51, 0.48
+Selected features: ['A1', 'A0', 'A5', 'A4', 'A3', 'A7', 'A6']
+Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.6
 
-Selected features: ['A0', 'A1', 'A7', 'A3', 'A6', 'A5', 'A2']
-Accuracy, f1-score: 0.51, 0.48
+Selected features: ['A1', 'A0', 'A4', 'A5', 'A7', 'A3', 'A6']
+Accuracy, f1-score: 0.49, 0.47
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.7
 
-Selected features: ['A0', 'A1', 'A7', 'A3', 'A6', 'A5', 'A2']
-Accuracy, f1-score: 0.51, 0.48
+Selected features: ['A1', 'A0', 'A6', 'A4', 'A5', 'A8', 'A3']
+Accuracy, f1-score: 0.5, 0.49
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.8
 
-Selected features: ['A0', 'A1', 'A2', 'A3', 'A7', 'A6', 'A5']
-Accuracy, f1-score: 0.51, 0.48
+Selected features: ['A1', 'A0', 'A5', 'A4', 'A2', 'A3', 'A7']
+Accuracy, f1-score: 0.51, 0.49
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.9
 
-Selected features: ['A0', 'A3', 'A1', 'A7', 'A6', 'A2', 'A5']
-Accuracy, f1-score: 0.51, 0.48
+Selected features: ['A1', 'A8', 'A3', 'A7', 'A5', 'A4', 'A0']
+Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.95
 
-Selected features: ['A0', 'A3', 'A1', 'A7', 'A6', 'A2', 'A5']
-Accuracy, f1-score: 0.51, 0.48
+Selected features: ['A1', 'A2', 'A0', 'A5', 'A3', 'A6', 'A8']
+Accuracy, f1-score: 0.53, 0.52
 
 
 Number of features = 80%
 
+Feature selection algorithm: PageRank
+
 Meta parameter(s) value(s): 0.05
 
-Selected features: ['A1', 'A3', 'A7', 'A0', 'A6', 'A5', 'A2', 'A4']
-Accuracy, f1-score: 0.52, 0.49
+Selected features: ['A1', 'A0', 'A5', 'A4', 'A6', 'A3', 'A7', 'A8']
+Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.1
 
-Selected features: ['A1', 'A0', 'A5', 'A7', 'A3', 'A6', 'A4', 'A2']
-Accuracy, f1-score: 0.52, 0.49
+Selected features: ['A1', 'A3', 'A5', 'A7', 'A0', 'A4', 'A6', 'A8']
+Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.2
 
-Selected features: ['A1', 'A0', 'A3', 'A6', 'A7', 'A5', 'A2', 'A4']
-Accuracy, f1-score: 0.52, 0.49
+Selected features: ['A1', 'A5', 'A0', 'A6', 'A3', 'A7', 'A8', 'A4']
+Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.3
 
-Selected features: ['A1', 'A3', 'A7', 'A0', 'A5', 'A6', 'A2', 'A4']
-Accuracy, f1-score: 0.52, 0.49
+Selected features: ['A1', 'A0', 'A8', 'A4', 'A6', 'A3', 'A5', 'A7']
+Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.4
 
-Selected features: ['A0', 'A1', 'A3', 'A7', 'A5', 'A6', 'A2', 'A4']
-Accuracy, f1-score: 0.52, 0.49
+Selected features: ['A2', 'A8', 'A0', 'A5', 'A4', 'A3', 'A7', 'A6']
+Accuracy, f1-score: 0.49, 0.47
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.5
 
-Selected features: ['A1', 'A0', 'A7', 'A6', 'A3', 'A5', 'A2', 'A4']
-Accuracy, f1-score: 0.52, 0.49
+Selected features: ['A2', 'A3', 'A5', 'A4', 'A7', 'A0', 'A8', 'A6']
+Accuracy, f1-score: 0.49, 0.47
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.6
 
-Selected features: ['A0', 'A1', 'A7', 'A3', 'A5', 'A6', 'A2', 'A4']
-Accuracy, f1-score: 0.52, 0.49
+Selected features: ['A1', 'A3', 'A5', 'A2', 'A0', 'A4', 'A7', 'A6']
+Accuracy, f1-score: 0.52, 0.5
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.7
 
-Selected features: ['A0', 'A1', 'A7', 'A6', 'A3', 'A5', 'A2', 'A4']
-Accuracy, f1-score: 0.52, 0.49
+Selected features: ['A1', 'A8', 'A3', 'A6', 'A0', 'A7', 'A5', 'A2']
+Accuracy, f1-score: 0.52, 0.5
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.8
 
-Selected features: ['A0', 'A1', 'A3', 'A7', 'A6', 'A2', 'A5', 'A4']
-Accuracy, f1-score: 0.52, 0.49
+Selected features: ['A1', 'A0', 'A5', 'A4', 'A6', 'A3', 'A7', 'A8']
+Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.9
 
-Selected features: ['A0', 'A1', 'A3', 'A7', 'A6', 'A2', 'A5', 'A4']
-Accuracy, f1-score: 0.52, 0.49
+Selected features: ['A1', 'A3', 'A2', 'A5', 'A0', 'A7', 'A4', 'A6']
+Accuracy, f1-score: 0.52, 0.5
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.95
 
-Selected features: ['A0', 'A3', 'A1', 'A7', 'A6', 'A2', 'A5', 'A4']
-Accuracy, f1-score: 0.52, 0.49
+Selected features: ['A1', 'A2', 'A0', 'A5', 'A8', 'A3', 'A6', 'A7']
+Accuracy, f1-score: 0.52, 0.5
 
 
 Number of features = 90%
 
+Feature selection algorithm: PageRank
+
 Meta parameter(s) value(s): 0.05
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.1
 
@@ -2971,12 +3791,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: PageRank
+
 Meta parameter(s) value(s): 0.2
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.3
 
@@ -2985,12 +3809,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: PageRank
+
 Meta parameter(s) value(s): 0.4
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.5
 
@@ -2999,12 +3827,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: PageRank
+
 Meta parameter(s) value(s): 0.6
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.7
 
@@ -3013,6 +3845,8 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: PageRank
+
 Meta parameter(s) value(s): 0.8
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
@@ -3020,12 +3854,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: PageRank
+
 Meta parameter(s) value(s): 0.9
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.95
 
@@ -3035,12 +3873,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 Number of features = 100%
 
+Feature selection algorithm: PageRank
+
 Meta parameter(s) value(s): 0.05
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.1
 
@@ -3049,12 +3891,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: PageRank
+
 Meta parameter(s) value(s): 0.2
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.3
 
@@ -3063,12 +3909,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: PageRank
+
 Meta parameter(s) value(s): 0.4
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.5
 
@@ -3077,12 +3927,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: PageRank
+
 Meta parameter(s) value(s): 0.6
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.7
 
@@ -3091,6 +3945,8 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: PageRank
+
 Meta parameter(s) value(s): 0.8
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
@@ -3098,12 +3954,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: PageRank
+
 Meta parameter(s) value(s): 0.9
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank
 
 Meta parameter(s) value(s): 0.95
 
@@ -3118,12 +3978,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 Number of features = 10%
 
+Feature selection algorithm: PageRank del
+
 Meta parameter(s) value(s): 0.05
 
 Selected features: ['A1']
 Accuracy, f1-score: 0.43, 0.32
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.1
 
@@ -3132,12 +3996,16 @@ Accuracy, f1-score: 0.43, 0.32
 
 
 
+Feature selection algorithm: PageRank del
+
 Meta parameter(s) value(s): 0.2
 
 Selected features: ['A1']
 Accuracy, f1-score: 0.43, 0.32
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.3
 
@@ -3146,12 +4014,16 @@ Accuracy, f1-score: 0.43, 0.32
 
 
 
+Feature selection algorithm: PageRank del
+
 Meta parameter(s) value(s): 0.4
 
 Selected features: ['A1']
 Accuracy, f1-score: 0.43, 0.32
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.5
 
@@ -3160,12 +4032,16 @@ Accuracy, f1-score: 0.43, 0.32
 
 
 
+Feature selection algorithm: PageRank del
+
 Meta parameter(s) value(s): 0.6
 
 Selected features: ['A1']
 Accuracy, f1-score: 0.43, 0.32
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.7
 
@@ -3174,6 +4050,8 @@ Accuracy, f1-score: 0.43, 0.32
 
 
 
+Feature selection algorithm: PageRank del
+
 Meta parameter(s) value(s): 0.8
 
 Selected features: ['A1']
@@ -3181,12 +4059,16 @@ Accuracy, f1-score: 0.43, 0.32
 
 
 
+Feature selection algorithm: PageRank del
+
 Meta parameter(s) value(s): 0.9
 
 Selected features: ['A1']
 Accuracy, f1-score: 0.43, 0.32
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.95
 
@@ -3196,239 +4078,307 @@ Accuracy, f1-score: 0.43, 0.32
 
 Number of features = 20%
 
+Feature selection algorithm: PageRank del
+
 Meta parameter(s) value(s): 0.05
 
 Selected features: ['A1', 'A7']
-Accuracy, f1-score: 0.43, 0.32
+Accuracy, f1-score: 0.39, 0.28
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A1', 'A7']
-Accuracy, f1-score: 0.43, 0.32
+Accuracy, f1-score: 0.39, 0.28
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.2
 
 Selected features: ['A1', 'A7']
-Accuracy, f1-score: 0.43, 0.32
+Accuracy, f1-score: 0.39, 0.28
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.3
 
 Selected features: ['A1', 'A7']
-Accuracy, f1-score: 0.43, 0.32
+Accuracy, f1-score: 0.39, 0.28
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.4
 
 Selected features: ['A1', 'A7']
-Accuracy, f1-score: 0.43, 0.32
+Accuracy, f1-score: 0.39, 0.28
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.5
 
 Selected features: ['A1', 'A7']
-Accuracy, f1-score: 0.43, 0.32
+Accuracy, f1-score: 0.39, 0.28
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.6
 
 Selected features: ['A1', 'A7']
-Accuracy, f1-score: 0.43, 0.32
+Accuracy, f1-score: 0.39, 0.28
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.7
 
 Selected features: ['A1', 'A2']
-Accuracy, f1-score: 0.43, 0.32
+Accuracy, f1-score: 0.44, 0.34
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.8
 
 Selected features: ['A1', 'A2']
-Accuracy, f1-score: 0.43, 0.32
+Accuracy, f1-score: 0.44, 0.34
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.9
 
 Selected features: ['A1', 'A2']
-Accuracy, f1-score: 0.43, 0.32
+Accuracy, f1-score: 0.44, 0.34
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.95
 
 Selected features: ['A1', 'A2']
-Accuracy, f1-score: 0.43, 0.32
+Accuracy, f1-score: 0.44, 0.34
 
 
 Number of features = 30%
 
+Feature selection algorithm: PageRank del
+
 Meta parameter(s) value(s): 0.05
 
 Selected features: ['A1', 'A7', 'A2']
-Accuracy, f1-score: 0.43, 0.33
+Accuracy, f1-score: 0.4, 0.31
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A1', 'A7', 'A2']
-Accuracy, f1-score: 0.43, 0.33
+Accuracy, f1-score: 0.4, 0.31
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.2
 
 Selected features: ['A1', 'A7', 'A2']
-Accuracy, f1-score: 0.43, 0.33
+Accuracy, f1-score: 0.4, 0.31
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.3
 
 Selected features: ['A1', 'A7', 'A2']
-Accuracy, f1-score: 0.43, 0.33
+Accuracy, f1-score: 0.4, 0.31
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.4
 
 Selected features: ['A1', 'A7', 'A2']
-Accuracy, f1-score: 0.43, 0.33
+Accuracy, f1-score: 0.4, 0.31
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.5
 
 Selected features: ['A1', 'A7', 'A0']
-Accuracy, f1-score: 0.48, 0.46
+Accuracy, f1-score: 0.41, 0.4
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.6
 
 Selected features: ['A1', 'A7', 'A0']
-Accuracy, f1-score: 0.48, 0.46
+Accuracy, f1-score: 0.41, 0.4
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.7
 
 Selected features: ['A1', 'A2', 'A0']
-Accuracy, f1-score: 0.47, 0.46
+Accuracy, f1-score: 0.43, 0.42
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.8
 
 Selected features: ['A1', 'A2', 'A0']
-Accuracy, f1-score: 0.47, 0.46
+Accuracy, f1-score: 0.43, 0.42
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.9
 
 Selected features: ['A1', 'A2', 'A0']
-Accuracy, f1-score: 0.47, 0.46
+Accuracy, f1-score: 0.43, 0.42
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.95
 
 Selected features: ['A1', 'A2', 'A0']
-Accuracy, f1-score: 0.47, 0.46
+Accuracy, f1-score: 0.43, 0.42
 
 
 Number of features = 40%
 
+Feature selection algorithm: PageRank del
+
 Meta parameter(s) value(s): 0.05
 
 Selected features: ['A1', 'A7', 'A2', 'A0']
-Accuracy, f1-score: 0.48, 0.47
+Accuracy, f1-score: 0.44, 0.43
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A1', 'A7', 'A2', 'A0']
-Accuracy, f1-score: 0.48, 0.47
+Accuracy, f1-score: 0.44, 0.43
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.2
 
 Selected features: ['A1', 'A7', 'A2', 'A0']
-Accuracy, f1-score: 0.48, 0.47
+Accuracy, f1-score: 0.44, 0.43
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.3
 
 Selected features: ['A1', 'A7', 'A2', 'A0']
-Accuracy, f1-score: 0.48, 0.47
+Accuracy, f1-score: 0.44, 0.43
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.4
 
 Selected features: ['A1', 'A7', 'A2', 'A0']
-Accuracy, f1-score: 0.48, 0.47
+Accuracy, f1-score: 0.44, 0.43
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.5
 
 Selected features: ['A1', 'A7', 'A0', 'A2']
-Accuracy, f1-score: 0.48, 0.47
+Accuracy, f1-score: 0.44, 0.43
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.6
 
 Selected features: ['A1', 'A7', 'A0', 'A2']
-Accuracy, f1-score: 0.48, 0.47
+Accuracy, f1-score: 0.44, 0.43
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.7
 
 Selected features: ['A1', 'A2', 'A0', 'A7']
-Accuracy, f1-score: 0.48, 0.47
+Accuracy, f1-score: 0.44, 0.43
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.8
 
 Selected features: ['A1', 'A2', 'A0', 'A7']
-Accuracy, f1-score: 0.48, 0.47
+Accuracy, f1-score: 0.44, 0.43
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.9
 
 Selected features: ['A1', 'A2', 'A0', 'A7']
-Accuracy, f1-score: 0.48, 0.47
+Accuracy, f1-score: 0.44, 0.43
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.95
 
 Selected features: ['A1', 'A2', 'A0', 'A7']
-Accuracy, f1-score: 0.48, 0.47
+Accuracy, f1-score: 0.44, 0.43
 
 
 Number of features = 50%
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.05
 
@@ -3437,12 +4387,16 @@ Accuracy, f1-score: 0.51, 0.49
 
 
 
+Feature selection algorithm: PageRank del
+
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A1', 'A7', 'A2', 'A0', 'A3']
 Accuracy, f1-score: 0.51, 0.49
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.2
 
@@ -3451,12 +4405,16 @@ Accuracy, f1-score: 0.51, 0.49
 
 
 
+Feature selection algorithm: PageRank del
+
 Meta parameter(s) value(s): 0.3
 
 Selected features: ['A1', 'A7', 'A2', 'A0', 'A3']
 Accuracy, f1-score: 0.51, 0.49
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.4
 
@@ -3465,12 +4423,16 @@ Accuracy, f1-score: 0.51, 0.49
 
 
 
+Feature selection algorithm: PageRank del
+
 Meta parameter(s) value(s): 0.5
 
 Selected features: ['A1', 'A7', 'A0', 'A2', 'A3']
 Accuracy, f1-score: 0.51, 0.49
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.6
 
@@ -3479,12 +4441,16 @@ Accuracy, f1-score: 0.51, 0.49
 
 
 
+Feature selection algorithm: PageRank del
+
 Meta parameter(s) value(s): 0.7
 
 Selected features: ['A1', 'A2', 'A0', 'A7', 'A3']
 Accuracy, f1-score: 0.51, 0.49
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.8
 
@@ -3493,12 +4459,16 @@ Accuracy, f1-score: 0.51, 0.49
 
 
 
+Feature selection algorithm: PageRank del
+
 Meta parameter(s) value(s): 0.9
 
 Selected features: ['A1', 'A2', 'A0', 'A7', 'A3']
 Accuracy, f1-score: 0.51, 0.49
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.95
 
@@ -3508,239 +4478,307 @@ Accuracy, f1-score: 0.51, 0.49
 
 Number of features = 60%
 
+Feature selection algorithm: PageRank del
+
 Meta parameter(s) value(s): 0.05
 
 Selected features: ['A1', 'A7', 'A2', 'A0', 'A3', 'A4']
-Accuracy, f1-score: 0.52, 0.49
+Accuracy, f1-score: 0.52, 0.51
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A1', 'A7', 'A2', 'A0', 'A3', 'A4']
-Accuracy, f1-score: 0.52, 0.49
+Accuracy, f1-score: 0.52, 0.51
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.2
 
 Selected features: ['A1', 'A7', 'A2', 'A0', 'A3', 'A4']
-Accuracy, f1-score: 0.52, 0.49
+Accuracy, f1-score: 0.52, 0.51
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.3
 
 Selected features: ['A1', 'A7', 'A2', 'A0', 'A3', 'A4']
-Accuracy, f1-score: 0.52, 0.49
+Accuracy, f1-score: 0.52, 0.51
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.4
 
 Selected features: ['A1', 'A7', 'A2', 'A0', 'A3', 'A4']
-Accuracy, f1-score: 0.52, 0.49
+Accuracy, f1-score: 0.52, 0.51
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.5
 
 Selected features: ['A1', 'A7', 'A0', 'A2', 'A3', 'A4']
-Accuracy, f1-score: 0.52, 0.49
+Accuracy, f1-score: 0.52, 0.51
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.6
 
 Selected features: ['A1', 'A7', 'A0', 'A2', 'A3', 'A4']
-Accuracy, f1-score: 0.52, 0.49
+Accuracy, f1-score: 0.52, 0.51
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.7
 
 Selected features: ['A1', 'A2', 'A0', 'A7', 'A3', 'A4']
-Accuracy, f1-score: 0.52, 0.49
+Accuracy, f1-score: 0.52, 0.51
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.8
 
 Selected features: ['A1', 'A2', 'A0', 'A7', 'A3', 'A4']
-Accuracy, f1-score: 0.52, 0.49
+Accuracy, f1-score: 0.52, 0.51
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.9
 
 Selected features: ['A1', 'A2', 'A0', 'A7', 'A3', 'A4']
-Accuracy, f1-score: 0.52, 0.49
+Accuracy, f1-score: 0.52, 0.51
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.95
 
 Selected features: ['A1', 'A2', 'A0', 'A7', 'A3', 'A4']
-Accuracy, f1-score: 0.52, 0.49
+Accuracy, f1-score: 0.52, 0.51
 
 
 Number of features = 70%
 
+Feature selection algorithm: PageRank del
+
 Meta parameter(s) value(s): 0.05
 
 Selected features: ['A1', 'A7', 'A2', 'A0', 'A3', 'A4', 'A6']
-Accuracy, f1-score: 0.52, 0.49
+Accuracy, f1-score: 0.49, 0.47
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A1', 'A7', 'A2', 'A0', 'A3', 'A4', 'A6']
-Accuracy, f1-score: 0.52, 0.49
+Accuracy, f1-score: 0.49, 0.47
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.2
 
 Selected features: ['A1', 'A7', 'A2', 'A0', 'A3', 'A4', 'A6']
-Accuracy, f1-score: 0.52, 0.49
+Accuracy, f1-score: 0.49, 0.47
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.3
 
 Selected features: ['A1', 'A7', 'A2', 'A0', 'A3', 'A4', 'A6']
-Accuracy, f1-score: 0.52, 0.49
+Accuracy, f1-score: 0.49, 0.47
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.4
 
 Selected features: ['A1', 'A7', 'A2', 'A0', 'A3', 'A4', 'A6']
-Accuracy, f1-score: 0.52, 0.49
+Accuracy, f1-score: 0.49, 0.47
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.5
 
 Selected features: ['A1', 'A7', 'A0', 'A2', 'A3', 'A4', 'A6']
-Accuracy, f1-score: 0.52, 0.49
+Accuracy, f1-score: 0.49, 0.47
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.6
 
 Selected features: ['A1', 'A7', 'A0', 'A2', 'A3', 'A4', 'A6']
-Accuracy, f1-score: 0.52, 0.49
+Accuracy, f1-score: 0.49, 0.47
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.7
 
 Selected features: ['A1', 'A2', 'A0', 'A7', 'A3', 'A4', 'A6']
-Accuracy, f1-score: 0.52, 0.49
+Accuracy, f1-score: 0.49, 0.47
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.8
 
 Selected features: ['A1', 'A2', 'A0', 'A7', 'A3', 'A4', 'A6']
-Accuracy, f1-score: 0.52, 0.49
+Accuracy, f1-score: 0.49, 0.47
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.9
 
 Selected features: ['A1', 'A2', 'A0', 'A7', 'A3', 'A4', 'A6']
-Accuracy, f1-score: 0.52, 0.49
+Accuracy, f1-score: 0.49, 0.47
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.95
 
 Selected features: ['A1', 'A2', 'A0', 'A7', 'A3', 'A4', 'A6']
-Accuracy, f1-score: 0.52, 0.49
+Accuracy, f1-score: 0.49, 0.47
 
 
 Number of features = 80%
 
+Feature selection algorithm: PageRank del
+
 Meta parameter(s) value(s): 0.05
 
 Selected features: ['A1', 'A7', 'A2', 'A0', 'A3', 'A4', 'A6', 'A8']
-Accuracy, f1-score: 0.52, 0.5
+Accuracy, f1-score: 0.48, 0.47
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A1', 'A7', 'A2', 'A0', 'A3', 'A4', 'A6', 'A8']
-Accuracy, f1-score: 0.52, 0.5
+Accuracy, f1-score: 0.48, 0.47
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.2
 
 Selected features: ['A1', 'A7', 'A2', 'A0', 'A3', 'A4', 'A6', 'A8']
-Accuracy, f1-score: 0.52, 0.5
+Accuracy, f1-score: 0.48, 0.47
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.3
 
 Selected features: ['A1', 'A7', 'A2', 'A0', 'A3', 'A4', 'A6', 'A8']
-Accuracy, f1-score: 0.52, 0.5
+Accuracy, f1-score: 0.48, 0.47
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.4
 
 Selected features: ['A1', 'A7', 'A2', 'A0', 'A3', 'A4', 'A6', 'A8']
-Accuracy, f1-score: 0.52, 0.5
+Accuracy, f1-score: 0.48, 0.47
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.5
 
 Selected features: ['A1', 'A7', 'A0', 'A2', 'A3', 'A4', 'A6', 'A8']
-Accuracy, f1-score: 0.52, 0.5
+Accuracy, f1-score: 0.48, 0.47
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.6
 
 Selected features: ['A1', 'A7', 'A0', 'A2', 'A3', 'A4', 'A6', 'A8']
-Accuracy, f1-score: 0.52, 0.5
+Accuracy, f1-score: 0.48, 0.47
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.7
 
 Selected features: ['A1', 'A2', 'A0', 'A7', 'A3', 'A4', 'A6', 'A8']
-Accuracy, f1-score: 0.52, 0.5
+Accuracy, f1-score: 0.48, 0.47
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.8
 
 Selected features: ['A1', 'A2', 'A0', 'A7', 'A3', 'A4', 'A6', 'A8']
-Accuracy, f1-score: 0.52, 0.5
+Accuracy, f1-score: 0.48, 0.47
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.9
 
 Selected features: ['A1', 'A2', 'A0', 'A7', 'A3', 'A4', 'A6', 'A8']
-Accuracy, f1-score: 0.52, 0.5
+Accuracy, f1-score: 0.48, 0.47
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.95
 
 Selected features: ['A1', 'A2', 'A0', 'A7', 'A3', 'A4', 'A6', 'A8']
-Accuracy, f1-score: 0.52, 0.5
+Accuracy, f1-score: 0.48, 0.47
 
 
 Number of features = 90%
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.05
 
@@ -3749,12 +4787,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: PageRank del
+
 Meta parameter(s) value(s): 0.1
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.2
 
@@ -3763,12 +4805,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: PageRank del
+
 Meta parameter(s) value(s): 0.3
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.4
 
@@ -3777,12 +4823,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: PageRank del
+
 Meta parameter(s) value(s): 0.5
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.6
 
@@ -3791,12 +4841,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: PageRank del
+
 Meta parameter(s) value(s): 0.7
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.8
 
@@ -3805,12 +4859,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: PageRank del
+
 Meta parameter(s) value(s): 0.9
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.95
 
@@ -3820,12 +4878,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 Number of features = 100%
 
+Feature selection algorithm: PageRank del
+
 Meta parameter(s) value(s): 0.05
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.1
 
@@ -3834,12 +4896,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: PageRank del
+
 Meta parameter(s) value(s): 0.2
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.3
 
@@ -3848,12 +4914,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: PageRank del
+
 Meta parameter(s) value(s): 0.4
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.5
 
@@ -3862,12 +4932,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: PageRank del
+
 Meta parameter(s) value(s): 0.6
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.7
 
@@ -3876,6 +4950,8 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: PageRank del
+
 Meta parameter(s) value(s): 0.8
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
@@ -3883,12 +4959,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: PageRank del
+
 Meta parameter(s) value(s): 0.9
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.95
 
@@ -3901,33 +4981,43 @@ Accuracy, f1-score: 0.5, 0.48
 
 Number of features = 10%
 
+Feature selection algorithm: PageRank del
+
 Meta parameter(s) value(s): 0.05
 
-Selected features: ['A0']
-Accuracy, f1-score: 0.42, 0.31
+Selected features: ['A1']
+Accuracy, f1-score: 0.43, 0.32
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.1
 
-Selected features: ['A1']
-Accuracy, f1-score: 0.43, 0.32
+Selected features: ['A2']
+Accuracy, f1-score: 0.41, 0.19
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.2
 
-Selected features: ['A1']
-Accuracy, f1-score: 0.43, 0.32
+Selected features: ['A2']
+Accuracy, f1-score: 0.41, 0.19
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.3
 
-Selected features: ['A1']
-Accuracy, f1-score: 0.43, 0.32
+Selected features: ['A8']
+Accuracy, f1-score: 0.41, 0.19
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.4
 
@@ -3936,601 +5026,771 @@ Accuracy, f1-score: 0.43, 0.32
 
 
 
+Feature selection algorithm: PageRank del
+
 Meta parameter(s) value(s): 0.5
 
-Selected features: ['A0']
-Accuracy, f1-score: 0.42, 0.31
+Selected features: ['A1']
+Accuracy, f1-score: 0.43, 0.32
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.6
 
-Selected features: ['A0']
-Accuracy, f1-score: 0.42, 0.31
+Selected features: ['A1']
+Accuracy, f1-score: 0.43, 0.32
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.7
 
-Selected features: ['A0']
-Accuracy, f1-score: 0.42, 0.31
+Selected features: ['A1']
+Accuracy, f1-score: 0.43, 0.32
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.8
 
-Selected features: ['A0']
-Accuracy, f1-score: 0.42, 0.31
+Selected features: ['A2']
+Accuracy, f1-score: 0.41, 0.19
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.9
 
-Selected features: ['A0']
-Accuracy, f1-score: 0.42, 0.31
+Selected features: ['A2']
+Accuracy, f1-score: 0.41, 0.19
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.95
 
-Selected features: ['A0']
-Accuracy, f1-score: 0.42, 0.31
+Selected features: ['A2']
+Accuracy, f1-score: 0.41, 0.19
 
 
 Number of features = 20%
 
+Feature selection algorithm: PageRank del
+
 Meta parameter(s) value(s): 0.05
 
-Selected features: ['A1', 'A0']
-Accuracy, f1-score: 0.48, 0.47
+Selected features: ['A2', 'A1']
+Accuracy, f1-score: 0.44, 0.34
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.1
 
-Selected features: ['A1', 'A0']
-Accuracy, f1-score: 0.48, 0.47
+Selected features: ['A1', 'A8']
+Accuracy, f1-score: 0.43, 0.31
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.2
 
-Selected features: ['A1', 'A0']
-Accuracy, f1-score: 0.48, 0.47
+Selected features: ['A1', 'A2']
+Accuracy, f1-score: 0.44, 0.34
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.3
 
-Selected features: ['A1', 'A0']
-Accuracy, f1-score: 0.48, 0.47
+Selected features: ['A1', 'A2']
+Accuracy, f1-score: 0.44, 0.34
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.4
 
-Selected features: ['A1', 'A3']
-Accuracy, f1-score: 0.47, 0.42
+Selected features: ['A1', 'A2']
+Accuracy, f1-score: 0.44, 0.34
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.5
 
-Selected features: ['A0', 'A1']
-Accuracy, f1-score: 0.48, 0.47
+Selected features: ['A1', 'A2']
+Accuracy, f1-score: 0.44, 0.34
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.6
 
-Selected features: ['A0', 'A1']
-Accuracy, f1-score: 0.48, 0.47
+Selected features: ['A1', 'A8']
+Accuracy, f1-score: 0.43, 0.31
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.7
 
-Selected features: ['A1', 'A0']
-Accuracy, f1-score: 0.48, 0.47
+Selected features: ['A2', 'A1']
+Accuracy, f1-score: 0.44, 0.34
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.8
 
-Selected features: ['A0', 'A1']
-Accuracy, f1-score: 0.48, 0.47
+Selected features: ['A1', 'A3']
+Accuracy, f1-score: 0.51, 0.49
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.9
 
-Selected features: ['A0', 'A1']
-Accuracy, f1-score: 0.48, 0.47
+Selected features: ['A1', 'A8']
+Accuracy, f1-score: 0.43, 0.31
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.95
 
-Selected features: ['A0', 'A3']
-Accuracy, f1-score: 0.46, 0.35
+Selected features: ['A1', 'A6']
+Accuracy, f1-score: 0.45, 0.33
 
 
 Number of features = 30%
 
+Feature selection algorithm: PageRank del
+
 Meta parameter(s) value(s): 0.05
 
-Selected features: ['A1', 'A0', 'A3']
-Accuracy, f1-score: 0.53, 0.5
-
-
-
-Meta parameter(s) value(s): 0.1
-
-Selected features: ['A1', 'A6', 'A7']
-Accuracy, f1-score: 0.5, 0.48
-
-
-
-Meta parameter(s) value(s): 0.2
-
-Selected features: ['A1', 'A0', 'A7']
-Accuracy, f1-score: 0.48, 0.46
-
-
-
-Meta parameter(s) value(s): 0.3
-
-Selected features: ['A1', 'A0', 'A3']
-Accuracy, f1-score: 0.53, 0.5
-
-
-
-Meta parameter(s) value(s): 0.4
-
-Selected features: ['A1', 'A0', 'A3']
-Accuracy, f1-score: 0.53, 0.5
-
-
-
-Meta parameter(s) value(s): 0.5
-
-Selected features: ['A1', 'A7', 'A2']
+Selected features: ['A2', 'A8', 'A1']
 Accuracy, f1-score: 0.43, 0.33
 
 
 
+Feature selection algorithm: PageRank del
+
+Meta parameter(s) value(s): 0.1
+
+Selected features: ['A1', 'A2', 'A7']
+Accuracy, f1-score: 0.4, 0.31
+
+
+
+Feature selection algorithm: PageRank del
+
+Meta parameter(s) value(s): 0.2
+
+Selected features: ['A8', 'A1', 'A2']
+Accuracy, f1-score: 0.43, 0.33
+
+
+
+Feature selection algorithm: PageRank del
+
+Meta parameter(s) value(s): 0.3
+
+Selected features: ['A2', 'A1', 'A6']
+Accuracy, f1-score: 0.45, 0.39
+
+
+
+Feature selection algorithm: PageRank del
+
+Meta parameter(s) value(s): 0.4
+
+Selected features: ['A8', 'A1', 'A2']
+Accuracy, f1-score: 0.43, 0.33
+
+
+
+Feature selection algorithm: PageRank del
+
+Meta parameter(s) value(s): 0.5
+
+Selected features: ['A1', 'A8', 'A2']
+Accuracy, f1-score: 0.43, 0.33
+
+
+
+Feature selection algorithm: PageRank del
+
 Meta parameter(s) value(s): 0.6
 
-Selected features: ['A1', 'A0', 'A7']
-Accuracy, f1-score: 0.48, 0.46
+Selected features: ['A1', 'A8', 'A6']
+Accuracy, f1-score: 0.44, 0.33
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.7
 
-Selected features: ['A1', 'A0', 'A7']
-Accuracy, f1-score: 0.48, 0.46
+Selected features: ['A1', 'A8', 'A4']
+Accuracy, f1-score: 0.44, 0.39
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.8
 
-Selected features: ['A0', 'A1', 'A3']
-Accuracy, f1-score: 0.53, 0.5
+Selected features: ['A2', 'A1', 'A7']
+Accuracy, f1-score: 0.4, 0.31
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.9
 
-Selected features: ['A0', 'A1', 'A3']
-Accuracy, f1-score: 0.53, 0.5
+Selected features: ['A1', 'A4', 'A6']
+Accuracy, f1-score: 0.43, 0.37
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.95
 
-Selected features: ['A0', 'A1', 'A3']
-Accuracy, f1-score: 0.53, 0.5
+Selected features: ['A2', 'A1', 'A4']
+Accuracy, f1-score: 0.44, 0.4
 
 
 Number of features = 40%
 
+Feature selection algorithm: PageRank del
+
 Meta parameter(s) value(s): 0.05
 
-Selected features: ['A1', 'A3', 'A2', 'A0']
-Accuracy, f1-score: 0.54, 0.51
+Selected features: ['A2', 'A1', 'A3', 'A4']
+Accuracy, f1-score: 0.48, 0.45
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.1
 
-Selected features: ['A1', 'A0', 'A3', 'A7']
-Accuracy, f1-score: 0.52, 0.5
+Selected features: ['A1', 'A2', 'A0', 'A7']
+Accuracy, f1-score: 0.44, 0.43
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.2
 
-Selected features: ['A1', 'A7', 'A0', 'A3']
-Accuracy, f1-score: 0.52, 0.5
+Selected features: ['A1', 'A2', 'A3', 'A7']
+Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.3
 
-Selected features: ['A0', 'A1', 'A7', 'A2']
-Accuracy, f1-score: 0.48, 0.47
+Selected features: ['A1', 'A6', 'A7', 'A0']
+Accuracy, f1-score: 0.37, 0.36
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.4
 
-Selected features: ['A1', 'A7', 'A0', 'A3']
-Accuracy, f1-score: 0.52, 0.5
+Selected features: ['A1', 'A2', 'A8', 'A0']
+Accuracy, f1-score: 0.43, 0.42
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.5
 
-Selected features: ['A0', 'A2', 'A1', 'A3']
-Accuracy, f1-score: 0.54, 0.51
+Selected features: ['A2', 'A1', 'A6', 'A0']
+Accuracy, f1-score: 0.42, 0.41
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.6
 
-Selected features: ['A0', 'A3', 'A1', 'A6']
-Accuracy, f1-score: 0.53, 0.51
+Selected features: ['A1', 'A7', 'A6', 'A4']
+Accuracy, f1-score: 0.37, 0.35
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.7
 
-Selected features: ['A0', 'A1', 'A2', 'A3']
-Accuracy, f1-score: 0.54, 0.51
+Selected features: ['A1', 'A7', 'A3', 'A2']
+Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.8
 
-Selected features: ['A0', 'A1', 'A3', 'A6']
-Accuracy, f1-score: 0.53, 0.51
+Selected features: ['A2', 'A1', 'A7', 'A3']
+Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.9
 
-Selected features: ['A0', 'A1', 'A7', 'A3']
-Accuracy, f1-score: 0.52, 0.5
+Selected features: ['A1', 'A7', 'A6', 'A3']
+Accuracy, f1-score: 0.5, 0.49
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.95
 
-Selected features: ['A0', 'A3', 'A1', 'A7']
-Accuracy, f1-score: 0.52, 0.5
+Selected features: ['A1', 'A6', 'A0', 'A2']
+Accuracy, f1-score: 0.42, 0.41
 
 
 Number of features = 50%
 
+Feature selection algorithm: PageRank del
+
 Meta parameter(s) value(s): 0.05
 
-Selected features: ['A1', 'A0', 'A7', 'A2', 'A3']
-Accuracy, f1-score: 0.51, 0.49
+Selected features: ['A2', 'A4', 'A1', 'A7', 'A3']
+Accuracy, f1-score: 0.48, 0.47
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.1
 
-Selected features: ['A1', 'A7', 'A0', 'A3', 'A2']
-Accuracy, f1-score: 0.51, 0.49
+Selected features: ['A2', 'A1', 'A3', 'A5', 'A6']
+Accuracy, f1-score: 0.5, 0.47
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.2
 
-Selected features: ['A0', 'A1', 'A7', 'A2', 'A3']
-Accuracy, f1-score: 0.51, 0.49
+Selected features: ['A1', 'A2', 'A8', 'A0', 'A6']
+Accuracy, f1-score: 0.44, 0.42
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.3
 
-Selected features: ['A0', 'A1', 'A7', 'A6', 'A3']
-Accuracy, f1-score: 0.51, 0.49
+Selected features: ['A2', 'A1', 'A7', 'A3', 'A8']
+Accuracy, f1-score: 0.51, 0.5
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.4
 
-Selected features: ['A1', 'A7', 'A0', 'A2', 'A3']
-Accuracy, f1-score: 0.51, 0.49
+Selected features: ['A2', 'A7', 'A1', 'A3', 'A4']
+Accuracy, f1-score: 0.48, 0.47
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.5
 
-Selected features: ['A0', 'A1', 'A7', 'A2', 'A3']
-Accuracy, f1-score: 0.51, 0.49
+Selected features: ['A2', 'A1', 'A7', 'A6', 'A0']
+Accuracy, f1-score: 0.41, 0.41
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.6
 
-Selected features: ['A0', 'A3', 'A1', 'A2', 'A7']
-Accuracy, f1-score: 0.51, 0.49
+Selected features: ['A1', 'A4', 'A0', 'A6', 'A7']
+Accuracy, f1-score: 0.38, 0.37
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.7
 
-Selected features: ['A0', 'A1', 'A6', 'A7', 'A3']
-Accuracy, f1-score: 0.51, 0.49
+Selected features: ['A2', 'A1', 'A7', 'A0', 'A5']
+Accuracy, f1-score: 0.44, 0.43
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.8
 
-Selected features: ['A0', 'A3', 'A1', 'A7', 'A2']
-Accuracy, f1-score: 0.51, 0.49
+Selected features: ['A2', 'A8', 'A6', 'A0', 'A1']
+Accuracy, f1-score: 0.44, 0.42
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.9
 
-Selected features: ['A0', 'A1', 'A3', 'A6', 'A7']
-Accuracy, f1-score: 0.51, 0.49
+Selected features: ['A1', 'A2', 'A0', 'A7', 'A4']
+Accuracy, f1-score: 0.43, 0.42
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.95
 
-Selected features: ['A0', 'A1', 'A3', 'A7', 'A6']
-Accuracy, f1-score: 0.51, 0.49
+Selected features: ['A2', 'A8', 'A1', 'A0', 'A7']
+Accuracy, f1-score: 0.44, 0.44
 
 
 Number of features = 60%
 
+Feature selection algorithm: PageRank del
+
 Meta parameter(s) value(s): 0.05
 
-Selected features: ['A1', 'A0', 'A3', 'A2', 'A7', 'A5']
-Accuracy, f1-score: 0.51, 0.49
+Selected features: ['A1', 'A2', 'A3', 'A7', 'A6', 'A0']
+Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.1
 
-Selected features: ['A1', 'A0', 'A2', 'A3', 'A5', 'A7']
-Accuracy, f1-score: 0.51, 0.49
+Selected features: ['A1', 'A2', 'A7', 'A0', 'A8', 'A3']
+Accuracy, f1-score: 0.52, 0.5
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.2
 
-Selected features: ['A0', 'A1', 'A3', 'A7', 'A2', 'A6']
-Accuracy, f1-score: 0.51, 0.48
+Selected features: ['A1', 'A2', 'A8', 'A3', 'A7', 'A0']
+Accuracy, f1-score: 0.52, 0.5
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.3
 
-Selected features: ['A1', 'A0', 'A3', 'A7', 'A2', 'A6']
-Accuracy, f1-score: 0.51, 0.48
+Selected features: ['A2', 'A6', 'A0', 'A8', 'A7', 'A1']
+Accuracy, f1-score: 0.4, 0.39
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.4
 
-Selected features: ['A1', 'A2', 'A7', 'A6', 'A0', 'A3']
-Accuracy, f1-score: 0.51, 0.48
+Selected features: ['A1', 'A8', 'A2', 'A0', 'A7', 'A3']
+Accuracy, f1-score: 0.52, 0.5
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.5
 
-Selected features: ['A0', 'A1', 'A7', 'A2', 'A3', 'A6']
-Accuracy, f1-score: 0.51, 0.48
+Selected features: ['A1', 'A2', 'A7', 'A0', 'A8', 'A6']
+Accuracy, f1-score: 0.4, 0.39
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.6
 
-Selected features: ['A0', 'A1', 'A7', 'A3', 'A2', 'A6']
-Accuracy, f1-score: 0.51, 0.48
+Selected features: ['A1', 'A2', 'A7', 'A0', 'A8', 'A4']
+Accuracy, f1-score: 0.45, 0.44
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.7
 
-Selected features: ['A0', 'A1', 'A3', 'A2', 'A7', 'A6']
-Accuracy, f1-score: 0.51, 0.48
+Selected features: ['A2', 'A1', 'A0', 'A7', 'A5', 'A8']
+Accuracy, f1-score: 0.46, 0.45
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.8
 
-Selected features: ['A0', 'A1', 'A7', 'A2', 'A3', 'A6']
-Accuracy, f1-score: 0.51, 0.48
+Selected features: ['A1', 'A2', 'A4', 'A3', 'A7', 'A0']
+Accuracy, f1-score: 0.52, 0.51
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.9
 
-Selected features: ['A0', 'A1', 'A3', 'A7', 'A6', 'A2']
-Accuracy, f1-score: 0.51, 0.48
+Selected features: ['A2', 'A1', 'A4', 'A0', 'A6', 'A5']
+Accuracy, f1-score: 0.4, 0.39
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.95
 
-Selected features: ['A0', 'A3', 'A1', 'A7', 'A6', 'A2']
-Accuracy, f1-score: 0.51, 0.48
+Selected features: ['A2', 'A8', 'A6', 'A1', 'A4', 'A0']
+Accuracy, f1-score: 0.41, 0.4
 
 
 Number of features = 70%
 
+Feature selection algorithm: PageRank del
+
 Meta parameter(s) value(s): 0.05
 
-Selected features: ['A1', 'A0', 'A7', 'A3', 'A2', 'A5', 'A4']
+Selected features: ['A1', 'A6', 'A5', 'A0', 'A2', 'A7', 'A3']
+Accuracy, f1-score: 0.5, 0.48
+
+
+
+Feature selection algorithm: PageRank del
+
+Meta parameter(s) value(s): 0.1
+
+Selected features: ['A1', 'A2', 'A7', 'A4', 'A0', 'A5', 'A3']
 Accuracy, f1-score: 0.51, 0.49
 
 
 
-Meta parameter(s) value(s): 0.1
-
-Selected features: ['A1', 'A0', 'A3', 'A2', 'A7', 'A6', 'A4']
-Accuracy, f1-score: 0.52, 0.49
-
-
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.2
 
-Selected features: ['A1', 'A7', 'A0', 'A3', 'A2', 'A6', 'A5']
-Accuracy, f1-score: 0.51, 0.48
+Selected features: ['A1', 'A2', 'A0', 'A7', 'A4', 'A8', 'A3']
+Accuracy, f1-score: 0.52, 0.5
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.3
 
-Selected features: ['A0', 'A3', 'A1', 'A7', 'A6', 'A2', 'A5']
-Accuracy, f1-score: 0.51, 0.48
+Selected features: ['A1', 'A2', 'A8', 'A0', 'A5', 'A6', 'A3']
+Accuracy, f1-score: 0.53, 0.52
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.4
 
-Selected features: ['A0', 'A1', 'A2', 'A7', 'A3', 'A6', 'A5']
-Accuracy, f1-score: 0.51, 0.48
+Selected features: ['A2', 'A8', 'A6', 'A3', 'A1', 'A0', 'A7']
+Accuracy, f1-score: 0.5, 0.49
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.5
 
-Selected features: ['A1', 'A0', 'A7', 'A2', 'A3', 'A6', 'A5']
-Accuracy, f1-score: 0.51, 0.48
+Selected features: ['A1', 'A2', 'A3', 'A7', 'A0', 'A5', 'A4']
+Accuracy, f1-score: 0.51, 0.49
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.6
 
-Selected features: ['A0', 'A1', 'A7', 'A3', 'A6', 'A2', 'A5']
-Accuracy, f1-score: 0.51, 0.48
+Selected features: ['A2', 'A1', 'A8', 'A0', 'A7', 'A6', 'A5']
+Accuracy, f1-score: 0.42, 0.41
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.7
 
-Selected features: ['A0', 'A1', 'A7', 'A2', 'A6', 'A3', 'A4']
-Accuracy, f1-score: 0.52, 0.49
+Selected features: ['A1', 'A7', 'A4', 'A6', 'A3', 'A2', 'A0']
+Accuracy, f1-score: 0.49, 0.47
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.8
 
-Selected features: ['A1', 'A0', 'A7', 'A2', 'A3', 'A6', 'A4']
-Accuracy, f1-score: 0.52, 0.49
+Selected features: ['A2', 'A1', 'A8', 'A0', 'A6', 'A4', 'A5']
+Accuracy, f1-score: 0.4, 0.39
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.9
 
-Selected features: ['A0', 'A1', 'A3', 'A7', 'A2', 'A6', 'A5']
-Accuracy, f1-score: 0.51, 0.48
+Selected features: ['A1', 'A2', 'A3', 'A7', 'A4', 'A0', 'A6']
+Accuracy, f1-score: 0.5, 0.49
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.95
 
-Selected features: ['A0', 'A3', 'A1', 'A7', 'A2', 'A6', 'A5']
-Accuracy, f1-score: 0.51, 0.48
+Selected features: ['A2', 'A8', 'A6', 'A4', 'A0', 'A1', 'A7']
+Accuracy, f1-score: 0.41, 0.4
 
 
 Number of features = 80%
 
+Feature selection algorithm: PageRank del
+
 Meta parameter(s) value(s): 0.05
 
-Selected features: ['A1', 'A0', 'A2', 'A7', 'A5', 'A6', 'A3', 'A4']
-Accuracy, f1-score: 0.52, 0.49
+Selected features: ['A2', 'A8', 'A7', 'A6', 'A3', 'A1', 'A0', 'A5']
+Accuracy, f1-score: 0.52, 0.5
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.1
 
-Selected features: ['A1', 'A0', 'A3', 'A6', 'A7', 'A2', 'A4', 'A5']
-Accuracy, f1-score: 0.52, 0.49
+Selected features: ['A1', 'A8', 'A7', 'A4', 'A2', 'A0', 'A3', 'A5']
+Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.2
 
-Selected features: ['A1', 'A0', 'A7', 'A6', 'A2', 'A3', 'A5', 'A4']
-Accuracy, f1-score: 0.52, 0.49
+Selected features: ['A2', 'A8', 'A1', 'A0', 'A7', 'A6', 'A4', 'A3']
+Accuracy, f1-score: 0.48, 0.47
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.3
 
-Selected features: ['A1', 'A0', 'A6', 'A7', 'A3', 'A2', 'A5', 'A4']
-Accuracy, f1-score: 0.52, 0.49
+Selected features: ['A2', 'A1', 'A0', 'A4', 'A7', 'A6', 'A3', 'A8']
+Accuracy, f1-score: 0.48, 0.47
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.4
 
-Selected features: ['A1', 'A0', 'A3', 'A7', 'A6', 'A2', 'A5', 'A4']
-Accuracy, f1-score: 0.52, 0.49
+Selected features: ['A1', 'A7', 'A3', 'A6', 'A2', 'A5', 'A0', 'A4']
+Accuracy, f1-score: 0.52, 0.5
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.5
 
-Selected features: ['A1', 'A0', 'A7', 'A3', 'A6', 'A4', 'A2', 'A8']
-Accuracy, f1-score: 0.52, 0.5
+Selected features: ['A1', 'A7', 'A2', 'A3', 'A4', 'A6', 'A0', 'A8']
+Accuracy, f1-score: 0.48, 0.47
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.6
 
-Selected features: ['A1', 'A0', 'A6', 'A7', 'A2', 'A3', 'A4', 'A5']
-Accuracy, f1-score: 0.52, 0.49
-
-
-
-Meta parameter(s) value(s): 0.7
-
-Selected features: ['A0', 'A1', 'A7', 'A3', 'A2', 'A4', 'A6', 'A8']
+Selected features: ['A1', 'A6', 'A0', 'A2', 'A4', 'A7', 'A3', 'A5']
 Accuracy, f1-score: 0.52, 0.5
 
 
 
+Feature selection algorithm: PageRank del
+
+Meta parameter(s) value(s): 0.7
+
+Selected features: ['A1', 'A4', 'A6', 'A8', 'A3', 'A7', 'A2', 'A5']
+Accuracy, f1-score: 0.48, 0.47
+
+
+
+Feature selection algorithm: PageRank del
+
 Meta parameter(s) value(s): 0.8
 
-Selected features: ['A0', 'A1', 'A3', 'A7', 'A6', 'A2', 'A5', 'A4']
-Accuracy, f1-score: 0.52, 0.49
+Selected features: ['A1', 'A2', 'A7', 'A3', 'A4', 'A0', 'A6', 'A8']
+Accuracy, f1-score: 0.48, 0.47
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.9
 
-Selected features: ['A0', 'A1', 'A3', 'A2', 'A7', 'A6', 'A5', 'A4']
-Accuracy, f1-score: 0.52, 0.49
+Selected features: ['A1', 'A2', 'A4', 'A6', 'A0', 'A7', 'A3', 'A8']
+Accuracy, f1-score: 0.48, 0.47
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.95
 
-Selected features: ['A0', 'A3', 'A1', 'A7', 'A2', 'A6', 'A5', 'A4']
-Accuracy, f1-score: 0.52, 0.49
+Selected features: ['A1', 'A8', 'A2', 'A3', 'A7', 'A5', 'A0', 'A6']
+Accuracy, f1-score: 0.52, 0.5
 
 
 Number of features = 90%
 
+Feature selection algorithm: PageRank del
+
 Meta parameter(s) value(s): 0.05
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.1
 
@@ -4539,12 +5799,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: PageRank del
+
 Meta parameter(s) value(s): 0.2
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.3
 
@@ -4553,12 +5817,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: PageRank del
+
 Meta parameter(s) value(s): 0.4
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.5
 
@@ -4567,12 +5835,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: PageRank del
+
 Meta parameter(s) value(s): 0.6
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.7
 
@@ -4581,6 +5853,8 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: PageRank del
+
 Meta parameter(s) value(s): 0.8
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
@@ -4588,12 +5862,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: PageRank del
+
 Meta parameter(s) value(s): 0.9
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.95
 
@@ -4603,12 +5881,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 Number of features = 100%
 
+Feature selection algorithm: PageRank del
+
 Meta parameter(s) value(s): 0.05
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.1
 
@@ -4617,12 +5899,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: PageRank del
+
 Meta parameter(s) value(s): 0.2
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.3
 
@@ -4631,12 +5917,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: PageRank del
+
 Meta parameter(s) value(s): 0.4
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.5
 
@@ -4645,12 +5935,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: PageRank del
+
 Meta parameter(s) value(s): 0.6
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.7
 
@@ -4659,12 +5953,16 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: PageRank del
+
 Meta parameter(s) value(s): 0.8
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48
 
 
+
+Feature selection algorithm: PageRank del
 
 Meta parameter(s) value(s): 0.9
 
@@ -4673,7 +5971,519 @@ Accuracy, f1-score: 0.5, 0.48
 
 
 
+Feature selection algorithm: PageRank del
+
 Meta parameter(s) value(s): 0.95
+
+Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
+Accuracy, f1-score: 0.5, 0.48
+
+###########################################################################
+#################### Feature selection algo : UGFS ####################
+
+Number of features = 10%
+
+Feature selection algorithm: UGFS
+
+Meta parameter(s) value(s): None
+
+Selected features: ['A2']
+Accuracy, f1-score: 0.41, 0.19
+
+
+Number of features = 20%
+
+Feature selection algorithm: UGFS
+
+Meta parameter(s) value(s): None
+
+Selected features: ['A2', 'A0']
+Accuracy, f1-score: 0.41, 0.39
+
+
+Number of features = 30%
+
+Feature selection algorithm: UGFS
+
+Meta parameter(s) value(s): None
+
+Selected features: ['A2', 'A0', 'A4']
+Accuracy, f1-score: 0.38, 0.35
+
+
+Number of features = 40%
+
+Feature selection algorithm: UGFS
+
+Meta parameter(s) value(s): None
+
+Selected features: ['A2', 'A0', 'A4', 'A7']
+Accuracy, f1-score: 0.38, 0.35
+
+
+Number of features = 50%
+
+Feature selection algorithm: UGFS
+
+Meta parameter(s) value(s): None
+
+Selected features: ['A2', 'A0', 'A4', 'A7', 'A5']
+Accuracy, f1-score: 0.41, 0.39
+
+
+Number of features = 60%
+
+Feature selection algorithm: UGFS
+
+Meta parameter(s) value(s): None
+
+Selected features: ['A2', 'A0', 'A4', 'A7', 'A5', 'A3']
+Accuracy, f1-score: 0.5, 0.47
+
+
+Number of features = 70%
+
+Feature selection algorithm: UGFS
+
+Meta parameter(s) value(s): None
+
+Selected features: ['A2', 'A0', 'A4', 'A7', 'A5', 'A3', 'A1']
+Accuracy, f1-score: 0.51, 0.49
+
+
+Number of features = 80%
+
+Feature selection algorithm: UGFS
+
+Meta parameter(s) value(s): None
+
+Selected features: ['A2', 'A0', 'A4', 'A7', 'A5', 'A3', 'A1', 'A6']
+Accuracy, f1-score: 0.52, 0.5
+
+
+Number of features = 90%
+
+Feature selection algorithm: UGFS
+
+Meta parameter(s) value(s): None
+
+Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
+Accuracy, f1-score: 0.5, 0.48
+
+
+Number of features = 100%
+
+Feature selection algorithm: UGFS
+
+Meta parameter(s) value(s): None
+
+Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
+Accuracy, f1-score: 0.5, 0.48
+
+###########################################################################
+#################### Feature selection algo : PPRFS ####################
+
+Number of features = 10%
+
+Feature selection algorithm: PPRFS
+
+Meta parameter(s) value(s): None
+
+Selected features: ['A3']
+Accuracy, f1-score: 0.46, 0.34
+
+
+Number of features = 20%
+
+Feature selection algorithm: PPRFS
+
+Meta parameter(s) value(s): None
+
+Selected features: ['A3', 'A7']
+Accuracy, f1-score: 0.45, 0.37
+
+
+Number of features = 30%
+
+Feature selection algorithm: PPRFS
+
+Meta parameter(s) value(s): None
+
+Selected features: ['A0', 'A6', 'A5']
+Accuracy, f1-score: 0.41, 0.39
+
+
+Number of features = 40%
+
+Feature selection algorithm: PPRFS
+
+Meta parameter(s) value(s): None
+
+Selected features: ['A3', 'A5', 'A6', 'A0']
+Accuracy, f1-score: 0.46, 0.44
+
+
+Number of features = 50%
+
+Feature selection algorithm: PPRFS
+
+Meta parameter(s) value(s): None
+
+Selected features: ['A3', 'A7', 'A0', 'A5', 'A4']
+Accuracy, f1-score: 0.46, 0.44
+
+
+Number of features = 60%
+
+Feature selection algorithm: PPRFS
+
+Meta parameter(s) value(s): None
+
+Selected features: ['A3', 'A7', 'A0', 'A6', 'A4', 'A5']
+Accuracy, f1-score: 0.48, 0.45
+
+
+Number of features = 70%
+
+Feature selection algorithm: PPRFS
+
+Meta parameter(s) value(s): None
+
+Selected features: ['A3', 'A5', 'A0', 'A4', 'A1', 'A6', 'A7']
+Accuracy, f1-score: 0.5, 0.48
+
+
+Number of features = 80%
+
+Feature selection algorithm: PPRFS
+
+Meta parameter(s) value(s): None
+
+Selected features: ['A3', 'A7', 'A0', 'A5', 'A4', 'A1', 'A6', 'A8']
+Accuracy, f1-score: 0.5, 0.48
+
+
+Number of features = 90%
+
+Feature selection algorithm: PPRFS
+
+Meta parameter(s) value(s): None
+
+Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
+Accuracy, f1-score: 0.5, 0.48
+
+
+Number of features = 100%
+
+Feature selection algorithm: PPRFS
+
+Meta parameter(s) value(s): None
+
+Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
+Accuracy, f1-score: 0.5, 0.48
+
+###########################################################################
+#################### Feature selection algo : MGFS ####################
+
+Number of features = 10%
+
+Feature selection algorithm: MGFS
+
+Meta parameter(s) value(s): None
+
+Selected features: ['A2']
+Accuracy, f1-score: 0.41, 0.19
+
+
+Number of features = 20%
+
+Feature selection algorithm: MGFS
+
+Meta parameter(s) value(s): None
+
+Selected features: ['A1', 'A2']
+Accuracy, f1-score: 0.44, 0.34
+
+
+Number of features = 30%
+
+Feature selection algorithm: MGFS
+
+Meta parameter(s) value(s): None
+
+Selected features: ['A1', 'A2', 'A0']
+Accuracy, f1-score: 0.43, 0.42
+
+
+Number of features = 40%
+
+Feature selection algorithm: MGFS
+
+Meta parameter(s) value(s): None
+
+Selected features: ['A1', 'A2', 'A0', 'A3']
+Accuracy, f1-score: 0.5, 0.48
+
+
+Number of features = 50%
+
+Feature selection algorithm: MGFS
+
+Meta parameter(s) value(s): None
+
+Selected features: ['A1', 'A2', 'A7', 'A0', 'A6']
+Accuracy, f1-score: 0.41, 0.41
+
+
+Number of features = 60%
+
+Feature selection algorithm: MGFS
+
+Meta parameter(s) value(s): None
+
+Selected features: ['A1', 'A2', 'A7', 'A6', 'A0', 'A3']
+Accuracy, f1-score: 0.5, 0.48
+
+
+Number of features = 70%
+
+Feature selection algorithm: MGFS
+
+Meta parameter(s) value(s): None
+
+Selected features: ['A1', 'A2', 'A6', 'A7', 'A0', 'A3', 'A4']
+Accuracy, f1-score: 0.49, 0.47
+
+
+Number of features = 80%
+
+Feature selection algorithm: MGFS
+
+Meta parameter(s) value(s): None
+
+Selected features: ['A1', 'A2', 'A7', 'A0', 'A3', 'A6', 'A4', 'A8']
+Accuracy, f1-score: 0.48, 0.47
+
+
+Number of features = 90%
+
+Feature selection algorithm: MGFS
+
+Meta parameter(s) value(s): None
+
+Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
+Accuracy, f1-score: 0.5, 0.48
+
+
+Number of features = 100%
+
+Feature selection algorithm: MGFS
+
+Meta parameter(s) value(s): None
+
+Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
+Accuracy, f1-score: 0.5, 0.48
+
+###########################################################################
+#################### Feature selection algo : SGFS ####################
+
+Number of features = 10%
+
+Feature selection algorithm: SGFS
+
+Meta parameter(s) value(s): None
+
+Selected features: ['A0']
+Accuracy, f1-score: 0.38, 0.31
+
+
+Number of features = 20%
+
+Feature selection algorithm: SGFS
+
+Meta parameter(s) value(s): None
+
+Selected features: ['A0', 'A2']
+Accuracy, f1-score: 0.41, 0.39
+
+
+Number of features = 30%
+
+Feature selection algorithm: SGFS
+
+Meta parameter(s) value(s): None
+
+Selected features: ['A0', 'A2', 'A1']
+Accuracy, f1-score: 0.43, 0.42
+
+
+Number of features = 40%
+
+Feature selection algorithm: SGFS
+
+Meta parameter(s) value(s): None
+
+Selected features: ['A0', 'A2', 'A1', 'A7']
+Accuracy, f1-score: 0.44, 0.43
+
+
+Number of features = 50%
+
+Feature selection algorithm: SGFS
+
+Meta parameter(s) value(s): None
+
+Selected features: ['A0', 'A2', 'A1', 'A7', 'A3']
+Accuracy, f1-score: 0.51, 0.49
+
+
+Number of features = 60%
+
+Feature selection algorithm: SGFS
+
+Meta parameter(s) value(s): None
+
+Selected features: ['A0', 'A2', 'A1', 'A7', 'A3', 'A4']
+Accuracy, f1-score: 0.52, 0.51
+
+
+Number of features = 70%
+
+Feature selection algorithm: SGFS
+
+Meta parameter(s) value(s): None
+
+Selected features: ['A0', 'A2', 'A1', 'A7', 'A3', 'A4', 'A5']
+Accuracy, f1-score: 0.51, 0.49
+
+
+Number of features = 80%
+
+Feature selection algorithm: SGFS
+
+Meta parameter(s) value(s): None
+
+Selected features: ['A0', 'A2', 'A1', 'A7', 'A3', 'A4', 'A5', 'A6']
+Accuracy, f1-score: 0.52, 0.5
+
+
+Number of features = 90%
+
+Feature selection algorithm: SGFS
+
+Meta parameter(s) value(s): None
+
+Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
+Accuracy, f1-score: 0.5, 0.48
+
+
+Number of features = 100%
+
+Feature selection algorithm: SGFS
+
+Meta parameter(s) value(s): None
+
+Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
+Accuracy, f1-score: 0.5, 0.48
+
+###########################################################################
+#################### Feature selection algo : FSS-CPR ####################
+
+Number of features = 10%
+
+Feature selection algorithm: FSS-CPR
+
+Meta parameter(s) value(s): None
+
+Selected features: ['A0']
+Accuracy, f1-score: 0.38, 0.31
+
+
+Number of features = 20%
+
+Feature selection algorithm: FSS-CPR
+
+Meta parameter(s) value(s): None
+
+Selected features: ['A0', 'A1']
+Accuracy, f1-score: 0.41, 0.4
+
+
+Number of features = 30%
+
+Feature selection algorithm: FSS-CPR
+
+Meta parameter(s) value(s): None
+
+Selected features: ['A0', 'A1', 'A2']
+Accuracy, f1-score: 0.43, 0.42
+
+
+Number of features = 40%
+
+Feature selection algorithm: FSS-CPR
+
+Meta parameter(s) value(s): None
+
+Selected features: ['A0', 'A1', 'A2', 'A7']
+Accuracy, f1-score: 0.44, 0.43
+
+
+Number of features = 50%
+
+Feature selection algorithm: FSS-CPR
+
+Meta parameter(s) value(s): None
+
+Selected features: ['A0', 'A1', 'A2', 'A7', 'A3']
+Accuracy, f1-score: 0.51, 0.49
+
+
+Number of features = 60%
+
+Feature selection algorithm: FSS-CPR
+
+Meta parameter(s) value(s): None
+
+Selected features: ['A0', 'A1', 'A2', 'A7', 'A3', 'A5']
+Accuracy, f1-score: 0.51, 0.49
+
+
+Number of features = 70%
+
+Feature selection algorithm: FSS-CPR
+
+Meta parameter(s) value(s): None
+
+Selected features: ['A0', 'A1', 'A2', 'A7', 'A3', 'A5', 'A8']
+Accuracy, f1-score: 0.53, 0.51
+
+
+Number of features = 80%
+
+Feature selection algorithm: FSS-CPR
+
+Meta parameter(s) value(s): None
+
+Selected features: ['A0', 'A1', 'A2', 'A7', 'A3', 'A5', 'A8', 'A4']
+Accuracy, f1-score: 0.5, 0.48
+
+
+Number of features = 90%
+
+Feature selection algorithm: FSS-CPR
+
+Meta parameter(s) value(s): None
+
+Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
+Accuracy, f1-score: 0.5, 0.48
+
+
+Number of features = 100%
+
+Feature selection algorithm: FSS-CPR
+
+Meta parameter(s) value(s): None
 
 Selected features: ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8']
 Accuracy, f1-score: 0.5, 0.48

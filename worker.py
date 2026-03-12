@@ -3,7 +3,7 @@ worker.py
 
 This script manages datasets and their associated metadata.
 
-By Alph@B, AKA Brel MBE
+By Alph@B, AKA Brel MBE & Arielle Kana
 '''
 
 import sys
@@ -36,6 +36,13 @@ ALGOS = {
 	7: "LASSO",
 	8: "PageRank",
 	9: "PageRank with deletion strategy",
+
+	10: "UGFS",
+	11: "PPRFS",
+	12: "MGFS",
+	13: "SGFS",
+	14: "FSS-CPR"
+	
 }
 
 
@@ -73,7 +80,7 @@ with open(f"reports/dataset_{dataset}.txt", "w+") as file:
 
 
 
-for algo in [0, 1, 2, 3, 5, 6, 7, 8, 9]:
+for algo in [0, 1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]:
 
 	if dataset in [1, 3, 4] and algo == 0: # Multiclass dataset with relief
 		pass
@@ -84,7 +91,11 @@ for algo in [0, 1, 2, 3, 5, 6, 7, 8, 9]:
 	else:
 
 		print(f"Feature selection algo : {ALGOS[algo]}")
-		if algo in [0, 1]: # relief or reliefF
+
+		# ------------------------------------------------------------------
+		# RELIEF / RELIEFF
+		# ------------------------------------------------------------------
+		if algo in [0, 1]:
 
 			with open(f"reports/dataset_{dataset}.txt", "a+") as file:
 				file.write(f"####################################################################################\n#################### Feature selection algo : {ALGOS[algo]} ####################\n")
@@ -92,14 +103,20 @@ for algo in [0, 1, 2, 3, 5, 6, 7, 8, 9]:
 			for n_features in [(i + 1)/10 for i in range(N_FEATURES_RANGE)]:
 				
 				print(f"Number of features = {int(n_features * 100)}%")
+
 				with open(f"reports/dataset_{dataset}.txt", "a+") as file:
 					file.write(f"\nNumber of features = {int(n_features * 100)}%")
 				
 				for m in [5, 20, 50, 90]:
-					os.system(f"python main.py -d {dataset} -a {algo} -c {str(classifier)} -p {m} -n {n_features}")
-		
-		
-		elif algo in [6, 7]: # ridge or lasso
+
+					os.system(
+						f"python main.py -d {dataset} -a {algo} -c {str(classifier)} -p {m} -n {n_features}"
+					)
+
+		# ------------------------------------------------------------------
+		# RIDGE / LASSO
+		# ------------------------------------------------------------------
+		elif algo in [6, 7]:
 
 			with open(f"reports/dataset_{dataset}.txt", "a+") as file:
 				file.write(f"###########################################################################\n#################### Feature selection algo : {ALGOS[algo]} ####################\n")
@@ -107,13 +124,20 @@ for algo in [0, 1, 2, 3, 5, 6, 7, 8, 9]:
 			for n_features in [(i + 1)/10 for i in range(N_FEATURES_RANGE)]:
 				
 				print(f"Number of features = {int(n_features * 100)}%")
+
 				with open(f"reports/dataset_{dataset}.txt", "a+") as file:
 					file.write(f"\nNumber of features = {int(n_features * 100)}%")
 				
 				for m in [0.00001, 0.01, 0.1, 1, 5, 20, 50]:
-					os.system(f"python main.py -d {dataset} -a {algo} -c {str(classifier)} -p {m} -n {n_features}")
 
-		elif algo in [8, 9]: # PageRank
+					os.system(
+						f"python main.py -d {dataset} -a {algo} -c {str(classifier)} -p {m} -n {n_features}"
+					)
+
+		# ------------------------------------------------------------------
+		# PAGERANK ORIGINAL (algos 8 et 9)
+		# ------------------------------------------------------------------
+		elif algo in [8, 9]:
 
 			with open(f"reports/dataset_{dataset}.txt", "a+") as file:
 				file.write(f"###########################################################################\n#################### Feature selection algo : {ALGOS[algo]} ####################\n")
@@ -122,34 +146,60 @@ for algo in [0, 1, 2, 3, 5, 6, 7, 8, 9]:
 				
 				with open(f"reports/dataset_{dataset}.txt", "a+") as file:
 					file.write(f"\n#################### Graph weighting strategy: {weighing_strat} ####################\n\n")
+
 				print(f"Graph weighting strategy: {weighing_strat}")
 
 				for n_features in [(i + 1)/10 for i in range(N_FEATURES_RANGE)]:
 					
 					print(f"Number of features = {int(n_features * 100)}%")
+
 					with open(f"reports/dataset_{dataset}.txt", "a+") as file:
 						file.write(f"\nNumber of features = {int(n_features * 100)}%")
 					
 					for m in [0.05, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 0.95]:
-						os.system(f"python main.py -d {dataset} -a {algo} -c {str(classifier)} -p {m} -n {n_features} -s {weighing_strat}")
 
+						os.system(
+							f"python main.py -d {dataset} -a {algo} -c {str(classifier)} -p {m} -n {n_features} -s {weighing_strat}"
+						)
 
+		# ------------------------------------------------------------------
+		# NOUVEAUX ALGORITHMES DES ARTICLES (10–14)
+		# ------------------------------------------------------------------
+		elif algo in [10, 11, 12, 13, 14]:
+
+			# Ici on ne passe PAS de stratégie de graphe externe
+			# car chaque algorithme construit son propre graphe
+			# conformément aux articles scientifiques.
+
+			with open(f"reports/dataset_{dataset}.txt", "a+") as file:
+				file.write(f"###########################################################################\n#################### Feature selection algo : {ALGOS[algo]} ####################\n")
+
+			for n_features in [(i + 1)/10 for i in range(N_FEATURES_RANGE)]:
+
+				print(f"Number of features = {int(n_features * 100)}%")
+
+				with open(f"reports/dataset_{dataset}.txt", "a+") as file:
+					file.write(f"\nNumber of features = {int(n_features * 100)}%")
+
+				os.system(
+					f"python main.py -d {dataset} -a {algo} -c {str(classifier)} -n {n_features}"
+				)
+
+		# ------------------------------------------------------------------
+		# AUTRES ALGORITHMES
+		# ------------------------------------------------------------------
 		else:
 
 			with open(f"reports/dataset_{dataset}.txt", "a+") as file:
 				file.write(f"###########################################################################\n#################### Feature selection algo : {ALGOS[algo]} ####################\n")
 			
 			for n_features in [(i + 1)/10 for i in range(N_FEATURES_RANGE)]:
-				
+
 				print(f"Number of features = {int(n_features * 100)}%")
+
 				with open(f"reports/dataset_{dataset}.txt", "a+") as file:
 					file.write(f"\nNumber of features = {int(n_features * 100)}%")
-				os.system(f"python main.py -d {dataset} -a {algo} -c {str(classifier)} -n {n_features}")
 
-
-
-
-
-
-
-
+				os.system(
+					f"python main.py -d {dataset} -a {algo} -c {str(classifier)} -n {n_features}"
+				)
