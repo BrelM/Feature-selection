@@ -80,7 +80,7 @@ with open(f"reports/dataset_{dataset}.txt", "w+") as file:
 
 
 
-for algo in [0, 1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]:
+for algo in [0, 1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]:
 
 	if dataset in [1, 3, 4] and algo == 0: # Multiclass dataset with relief
 		pass
@@ -165,9 +165,9 @@ for algo in [0, 1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]:
 						)
 
 		# ------------------------------------------------------------------
-		# NOUVEAUX ALGORITHMES DES ARTICLES (10–14)
+		# NOUVEAUX ALGORITHMES DES ARTICLES (11–15)
 		# ------------------------------------------------------------------
-		elif algo in [10, 11, 12, 13, 14]:
+		elif algo in [11, 12, 13, 14, 15]:
 
 			# Ici on ne passe PAS de stratégie de graphe externe
 			# car chaque algorithme construit son propre graphe
