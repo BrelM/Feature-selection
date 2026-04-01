@@ -34,8 +34,9 @@ ALGOS = {
 	5: "RFE-SVM-SFS",
 	6: "RIDGE",
 	7: "LASSO",
-	8: "PageRank",
-	9: "PageRank with deletion strategy",
+	8: "PageRank with weightdrop1 strategy",
+	9: "PageRank with weightdrop2 strategy",
+	10: "PageRank with deletion strategy",
 }
 
 
@@ -52,7 +53,7 @@ except getopt.GetoptError as err:
 
 # algo = -1
 classifier = 4
-dataset = -1
+dataset = 0
 
 for o, a in cpts:
 	
@@ -73,7 +74,7 @@ with open(f"reports/dataset_{dataset}.txt", "w+") as file:
 
 
 
-for algo in [0, 1, 2, 3, 5, 6, 7, 8, 9]:
+for algo in [10]: #[0, 1, 2, 3, 5, 6, 7, 8, 9, 10]: # All algos except RFE-SVM
 
 	if dataset in [1, 3, 4] and algo == 0: # Multiclass dataset with relief
 		pass
@@ -113,12 +114,12 @@ for algo in [0, 1, 2, 3, 5, 6, 7, 8, 9]:
 				for m in [0.00001, 0.01, 0.1, 1, 5, 20, 50]:
 					os.system(f"python main.py -d {dataset} -a {algo} -c {str(classifier)} -p {m} -n {n_features}")
 
-		elif algo in [8, 9]: # PageRank
+		elif algo in [8, 9, 10]: # PageRank
 
 			with open(f"reports/dataset_{dataset}.txt", "a+") as file:
 				file.write(f"###########################################################################\n#################### Feature selection algo : {ALGOS[algo]} ####################\n")
 			
-			for weighing_strat in ['corcoef', 'mi']:
+			for weighing_strat in ['corcoef', 'mi', 'theils_u']:
 				
 				with open(f"reports/dataset_{dataset}.txt", "a+") as file:
 					file.write(f"\n#################### Graph weighting strategy: {weighing_strat} ####################\n\n")
@@ -130,7 +131,8 @@ for algo in [0, 1, 2, 3, 5, 6, 7, 8, 9]:
 					with open(f"reports/dataset_{dataset}.txt", "a+") as file:
 						file.write(f"\nNumber of features = {int(n_features * 100)}%")
 					
-					for m in [0.05, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 0.95]:
+					# for m in [0.05, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 0.95]:
+					for m in [0.05, 0.3, 0.6, 0.95]:
 						os.system(f"python main.py -d {dataset} -a {algo} -c {str(classifier)} -p {m} -n {n_features} -s {weighing_strat}")
 
 

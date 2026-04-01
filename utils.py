@@ -14,8 +14,12 @@ import pandas as pd
 import numpy as np
 from scipy.stats import f_oneway, chi2_contingency
 import networkx as nx
+from sklearn.cluster import KMeans
 from sklearn.feature_selection import mutual_info_regression
+from sklearn.metrics import silhouette_score
+from sklearn.metrics import silhouette_score
 from sklearn.preprocessing import MinMaxScaler, OneHotEncoder
+from feature_engine.discretisation import DecisionTreeDiscretiser
 
 
 
@@ -284,85 +288,244 @@ def diff(data:pd.DataFrame, A:int, I1:int, I2:int) -> float:
 
 
 
-def build_graph(data:pd.DataFrame, weights_strategy:str= 'corcoef') -> np.array:# | ['corcoef', 'mi', 'chi2']):
+def kmeans_discretization_engine(data:pd.Series) -> dict:
 	'''
-		Build a complete weighted graph rom the data. The nodes represent the features and the weights
+		Discretizes a numerical attribute using K-means clustering and silhouette score to determine the optimal number of bins.
+		## Parameters
+		- data:  Series-like object. The numerical attribute to discretize.
+		## Returns
+		- optimal_discretization: dict. A dictionary containing the optimal number of bins,
+		  the corresponding KMeans model, and the silhouette score.
+	'''
+	
+	# Convert to 2D
+	X = data.reshape(-1, 1)
+
+	optimal_discretization = {
+			'score' : -1,
+			'engine' : None,
+			'n_bins' : 0
+	}
+	
+	for i in  range(2, 10):
+		kmeans = KMeans(n_clusters=i, n_init='auto', random_state=42)
+		kmeans.fit(X)
+		cluster_labels = kmeans.predict(X)
+		
+		silhouette_avg = silhouette_score(X, cluster_labels)
+		
+		if silhouette_avg > optimal_discretization['score']:
+			optimal_discretization['score'] = silhouette_avg
+			optimal_discretization['engine'] = kmeans
+			optimal_discretization['n_bins'] = i
+	
+	
+	return optimal_discretization
+
+
+
+def entropy(x: pd.Series) -> float:
+	"""
+	Shannon entropy H(X).
+	
+	## Parameters
+	x: vector-like object. The variable for which to calculate the entropy.
+	## Returns
+	float. The calculated entropy.
+
+	"""
+	p = pd.Series(x).value_counts(normalize=True)
+	return -(p * np.log2(p)).sum()
+
+
+def conditional_entropy(x: pd.Series, y: pd.Series) -> float:
+	"""
+	H(X|Y)
+	
+	## Parameters
+	x: vector-like object. The variable for which to calculate the conditional entropy.
+	y: vector-like object. The variable to condition on.
+	## Returns
+	float. The calculated conditional entropy.
+
+	"""
+	df = pd.DataFrame({'x': x, 'y': y})
+	
+	h = 0
+	for val, subset in df.groupby('y', observed=True):
+		p = len(subset) / len(df)
+		h += p * entropy(subset['x'])
+		
+	return h
+
+
+def conditional_mutual_information(a: pd.Series, b: pd.Series, c: pd.Series) -> float:
+	"""
+	I(A;B|C)
+	
+	## Parameters
+	a: vector-like object. The first variable.
+	b: vector-like object. The second variable.
+	c: vector-like object. The conditioning variable.
+	## Returns
+	float. The calculated conditional mutual information.
+	"""
+	h_b_c = conditional_entropy(b, c)
+	h_b_ac = conditional_entropy(b, pd.Series(list(zip(a, c))))
+	return h_b_c - h_b_ac
+
+
+def mutual_information(a: pd.Series, b: pd.Series) -> float:
+	"""
+	Compute mutual information I(A;B) between two discrete variables.
+	
+	Parameters:
+		a (pd.Series): First variable
+		b (pd.Series): Second variable
+		
+	Returns:
+		float: Mutual information in bits
+	"""
+	
+	# Drop missing values jointly
+	df = pd.DataFrame({'a': a, 'b': b}).dropna()
+	
+	# Joint distribution
+	joint = pd.crosstab(df['a'], df['b'])
+	joint = joint / joint.values.sum()
+	
+	# Marginals
+	p_a = joint.sum(axis=1).values.reshape(-1, 1)
+	p_b = joint.sum(axis=0).values.reshape(1, -1)
+	
+	expected = p_a @ p_b
+	
+	joint_vals = joint.values
+	mask = joint_vals > 0
+	
+	return np.sum(joint_vals[mask] * np.log2(joint_vals[mask] / expected[mask]))
+
+
+def theils_u(a: pd.Series, b: pd.Series) -> float:
+	"""
+	U(A , B)
+	
+	## Parameters
+	a: vector-like object. The first variable.
+	b: vector-like object. The second variable.
+	## Returns
+	float. The calculated conditional Theil's U.
+	"""
+	h_b = entropy(b)
+	
+	if h_b == 0:
+		return 0
+	
+	mi = mutual_information(a, b)
+	
+	return mi / h_b
+
+
+
+
+def build_graph(data:pd.DataFrame, class_labels:pd.Series, weights_strategy:str= 'corcoef', gamma:float=1) -> nx.DiGraph:
+	'''
+		Build a complete directed weighted graph from the data. The nodes represent the features and the weights
 		a similtude between the nodes.
 		## Parameters:
-		- Data	: matrix-like object. The data from which the graph is built.
-		- weights_strategy:	string. The weighting stategy (corcoef, mi, chi2). Defaults to corcoef.
+		- data	: matrix-like object. The data from which the graph is built.
+		- class_labels: vector-like object. The class labels of the data.
+		- weights_strategy:	string. The weighting stategy (corcoef, mi, theilsU). Defaults to corcoef.
+		- gamma: float. The calibration factor for the asymmetrical weight calculation. Defaults to 0.85.
+
+		## Returns:
+		- graph: NetworkX graph object. The built graph.
 	
 	'''
 
 	# print(f"Building features' graph using {weights_strategy} strategy.")
 	n = data.shape[1]
 	graph_matrix = np.zeros((n, n), 'float64')
-	categorical_columns = data.select_dtypes(include=['object', 'category']).columns
-
-	'''
-	if weights_strategy == 'corcoef': # Correlation coefficient
-		return nx.from_numpy_array(data.corr('pearson').to_numpy(), parallel_edges=False)
-		
-	elif weights_strategy == 'mi': # Mutual information
-		for i in range(n):
-			for j in range(n):
-				graph_matrix[i, j] = mutual_info_regression(data[[data.columns[i]]], data[data.columns[j]])
+	numeric_data = data.select_dtypes(exclude=['object', 'category'])
+	categorical_data = data.select_dtypes(include=['object', 'category'])
 
 
-	else: # Anova test (for now)
-	'''
+	# Discretising the numerical features using a decision tree discretiser
+	disc = DecisionTreeDiscretiser(
+		cv=3,
+		scoring='neg_mean_squared_error',
+		variables=numeric_data.columns.tolist(),
+		param_grid={'max_depth': [1, 2, 3]},
+		bin_output='bin_number',
+		regression=False
+	)
+
+	# Fitting the discretiser to the data and transforming it
+	disc.fit(numeric_data, class_labels)
+
+	# Transforming the numerical data into binned data
+	numeric_binned = disc.transform(numeric_data)
+
+	# Combining the binned numerical data with the categorical data
+	data_cat = pd.concat([numeric_binned, categorical_data], axis=1)
+
+
 	for i in range(n):
 		for j in range(n):
 
-			if data.columns[i] in categorical_columns and data.columns[j] in categorical_columns:
-				
-				# Contingency table
-				contingency_table = pd.crosstab(data[data.columns[i]], data[data.columns[j]])
+			if i != j:
 
-				# Ci-square test
-				chi2_stat, p_value, dof, expected = chi2_contingency(contingency_table)
+				if weights_strategy == 'corcoef': # Correlation coefficient (absolute value is used to represent the dependence without orientation)
+					
+					# Symetrical weight calculation
+					if i < j:
+						graph_matrix[i, j] = graph_matrix[j, i] = np.abs(data[[data.columns[i], data.columns[j]]].corr('pearson').to_numpy()[0, 1])
+					
+					# Asymetrical weight calculation
+					else:
+						graph_matrix[i, j] = (1 - gamma) * graph_matrix[i, j] + gamma * conditional_mutual_information(data_cat[data_cat.columns[j]], data_cat[data_cat.columns[i]], class_labels)
 
-				graph_matrix[i, j] = p_value
 
-			else:
-				if data.columns[i] in categorical_columns:
-					groups = data.groupby(data.columns[i])[data.columns[j]]
 
-					# Extract the numerical data for each group
-					group_values = [group.values for _, group in groups]
-
-					# Perform ANOVA
-					f_stat, p_value = f_oneway(*group_values)
-
-					graph_matrix[i, j] = p_value
-
-				elif data.columns[j] in categorical_columns:
-					groups = data.groupby(data.columns[j])[data.columns[i]]
-
-					# Extract the numerical data for each group
-					group_values = [group.values for _, group in groups]
-
-					# Perform ANOVA
-					f_stat, p_value = f_oneway(*group_values)
-
-					graph_matrix[i, j] = p_value
-
-				else:
-
-					if weights_strategy == 'corcoef': # Correlation coefficient (absolute value is used to represent the dependence without orientation)
-						graph_matrix[i, j] = np.abs(data[[data.columns[i], data.columns[j]]].corr('pearson').to_numpy()[0, 1])
-						
-					else: # mutual information
-						graph_matrix[i, j] = mutual_info_regression(data[[data.columns[i]]], data[data.columns[j]])
+				elif weights_strategy == 'mi': # Mutual information
+					
+					# Symetrical weight calculation
+					if i < j:
+						tmp = mutual_info_regression(data_cat[[data_cat.columns[i]]], data_cat[data_cat.columns[j]])
 
 						# Normalising the values
-						graph_matrix[i, j] /= (mutual_info_regression(data[[data.columns[i]]], data[data.columns[i]]) * mutual_info_regression(data[[data.columns[j]]], data[data.columns[j]])) ** 0.5
-						
+						div = (mutual_info_regression(data_cat[[data_cat.columns[i]]], data_cat[data_cat.columns[i]]) * mutual_info_regression(data_cat[[data_cat.columns[j]]], data_cat[data_cat.columns[j]]))
+						if div == 0:
+							graph_matrix[i, j] = graph_matrix[j, i] = tmp
+						else:
+							graph_matrix[i, j] = graph_matrix[j, i] = tmp / div ** 0.5
+
+					# Asymetrical weight calculation
+					else:
+						graph_matrix[i, j] = (1 - gamma) * graph_matrix[i, j] + gamma * conditional_mutual_information(data_cat[data_cat.columns[j]], data_cat[data_cat.columns[i]], class_labels)
+
+						# Normalising the values
+						graph_matrix[i, j] /= 2
+
+
+				else: # Theil's U
+					
+					# Asymetrical weight calculation independant of the class labels
+					if i < j:
+						tmp = theils_u(data_cat[data_cat.columns[i]], data_cat[data_cat.columns[j]])
+
+						# Normalising the values
+						# graph_matrix[i, j] = graph_matrix[j, i] = tmp / (theils_u(data_cat[data_cat.columns[i]], data_cat[data_cat.columns[i]]) * theils_u(data_cat[data_cat.columns[j]], data_cat[data_cat.columns[j]])) ** 0.5
+
+					# Asymetrical weight calculation
+					else:
+						graph_matrix[i, j] = (1 - gamma) * graph_matrix[i, j] + gamma * conditional_mutual_information(data_cat[data_cat.columns[j]], data_cat[data_cat.columns[i]], class_labels)
+
+						# Normalising the values
+						graph_matrix[i, j] /= 2
+
 
 
 	graph_matrix = np.clip(graph_matrix, 0.0, 1.0)
-	return nx.from_numpy_array(graph_matrix, parallel_edges=False)
-
-
-
+	return nx.from_numpy_array(graph_matrix, parallel_edges=True, create_using=nx.DiGraph)
 

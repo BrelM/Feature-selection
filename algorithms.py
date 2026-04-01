@@ -201,7 +201,7 @@ def ridge_fs(data:pd.DataFrame, y:pd.Series, alpha:int=5, n_features:int=5) -> l
 
 
 
-def lasso_fs(data:pd.DataFrame, y:pd.Series, alpha:int=1e-10, n_features:int=5) -> list:
+def lasso_fs(data:pd.DataFrame, y:pd.Series, alpha:float=1e-10, n_features:int=5) -> list:
 	'''
 		Implementation of a Lasso regression-based features selection algorithm.
 		## Parameters:

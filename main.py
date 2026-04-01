@@ -43,8 +43,9 @@ ALGOS = {
 	5: "RFE-SVM-SFS",
 	6: "RIDGE",
 	7: "LASSO",
-	8: "PageRank",
-	9: "PageRank del",
+	8: "PageRank weightdrop1",
+	9: "PageRank weightdrop2",
+	10: "PageRank deletion",
 }
 
 ALGOS_INFO = {
@@ -58,6 +59,7 @@ ALGOS_INFO = {
 	7: algorithms.lasso_fs,
 	8: pagerank.pagerankloop,
 	9: pagerank.pagerankloop,
+	10: pagerank.pagerankloop,
 }
 
 
@@ -288,7 +290,7 @@ total_nb_feat = DATASETS_INFO[dataset]['nb_features']
 if params == None and algo in [6, 7]: # Ridge or Lasso
 	params = 1e-5
 
-if params == None and algo in [8, 9]: # PageRank
+if params == None and algo in [8, 9, 10]: # PageRank
 	params = 0.85
 
 if params != None:
@@ -317,14 +319,16 @@ Data, Y = None, None
 if n_features != total_nb_feat - 1: # Feature selection to apply
 
 	# Execute the choosen algorithm
-	if algo in [8, 9]:
-		Data, Y = utils.load_data(DATASETS_INFO[dataset], False)
-		graph = utils.build_graph(Data, strategy)
+	if algo in [8, 9, 10]: # PageRank-based algorithms
+		# Data, Y = utils.load_data(DATASETS_INFO[dataset], False)
+		graph = utils.build_graph(data, y, strategy)
 
 		if algo == 8:
-			columns = ALGOS_INFO[algo](graph, list(Data.columns), alpha=params, max_iter=n_features, pen_method="penalize")
+			columns = ALGOS_INFO[algo](graph, list(data.columns), alpha=params, max_iter=n_features, pen_method="weightdrop1")
+		elif algo == 9:
+			columns = ALGOS_INFO[algo](graph, list(data.columns), alpha=params, max_iter=n_features, pen_method="weightdrop2")
 		else:
-			columns = ALGOS_INFO[algo](graph, list(Data.columns), alpha=params, max_iter=n_features, pen_method="delete")
+			columns = ALGOS_INFO[algo](graph, list(data.columns), alpha=params, max_iter=n_features, pen_method="delete")
 
 
 
@@ -384,9 +388,9 @@ if n_features != total_nb_feat - 1: # Feature selection to apply
 
 else: # No feature selection to apply
 
-	if algo in [8, 9]:
-		Data, Y = utils.load_data(DATASETS_INFO[dataset], False)
-		columns = list(Data.columns)
+	if algo in [8, 9, 10]:
+		# Data, Y = utils.load_data(DATASETS_INFO[dataset], False)
+		columns = list(data.columns)
 	else:
 		columns = list(data.columns)
 		temp_cols = []
@@ -418,9 +422,9 @@ with open(f"reports/dataset_{dataset}.txt", "a+") as file:
 
 				else:
 					file.write(f"Selected features: {disp_cols}\n")
-					if algo in [8, 9]:
+					if algo in [8, 9, 10]:
 
-						encoded_data, columns = utils.encode_columns(Data, process_cols)
+						encoded_data, columns = utils.encode_columns(data, process_cols)
 						file.write(f"Accuracy, f1-score: {CLASSIFIERS_INFO[classifier](encoded_data, y)}\n")
 					
 					else:
@@ -437,9 +441,9 @@ with open(f"reports/dataset_{dataset}.txt", "a+") as file:
 	else:
 
 		file.write(f"Selected features: {columns}\n")
-		if algo in [8, 9]:
+		if algo in [8, 9, 10]:
 
-			encoded_data, columns = utils.encode_columns(Data, columns)
+			encoded_data, columns = utils.encode_columns(data, columns)
 			file.write(f"Accuracy, f1-score: {CLASSIFIERS_INFO[classifier](encoded_data, y)}\n\n")
 		
 		else:

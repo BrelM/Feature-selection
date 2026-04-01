@@ -17,7 +17,7 @@ import networkx as nx
 
 
 
-def pagerankloop(G:nx.Graph, columns:list, alpha:float=0.85, max_iter=None, pen_method="delete") -> np.array:
+def pagerankloop(G:nx.Graph, columns:list, alpha:float=0.85, max_iter=None, pen_method="delete") -> list:
 	'''
 		Looping execution of the PageRank algorithm in other to select feautures based on the importance of their corresponding
 		node in the provided graph.
@@ -37,8 +37,8 @@ def pagerankloop(G:nx.Graph, columns:list, alpha:float=0.85, max_iter=None, pen_
 			Penalization method: delete, reduce.
 
 		## Returns
-		matrix-like object
-			A vector of ranks such that v_i is the i-th rank from [0, 1].
+		list
+			A list of selected features based on their PageRank scores.
 	'''
 
 	if max_iter is None:
@@ -58,6 +58,8 @@ def pagerankloop(G:nx.Graph, columns:list, alpha:float=0.85, max_iter=None, pen_
 		n = pageranks[-1][1]
 
 		i = -1
+		# If the node with the highest pagerank value has already been selected,
+		# we select the next one until we find a node that has not been selected yet.
 		while columns[n] in features and len(pageranks) + i > 0:
 			i -= 1
 			n = pageranks[i][1]
@@ -85,9 +87,9 @@ def pagerankloop(G:nx.Graph, columns:list, alpha:float=0.85, max_iter=None, pen_
 			perso_vector.pop(n)
 
 		
-		elif pen_method == 'weightdrop':
-			# Strategy 2: update the weights of the edges connected to the selected node
-			# along with the connected nodes and thus, the personalization vector
+		elif pen_method == 'weightdrop1':
+			# Strategy 2 (weightdrop1): update the weights of the edges connected to the selected node
+			# along with the connected nodes, without updating the personalization vector
 			edges_to_update = G.edges(columns[n], data=True)
 			
 			s = 0
@@ -106,7 +108,7 @@ def pagerankloop(G:nx.Graph, columns:list, alpha:float=0.85, max_iter=None, pen_
 
 
 		else:
-			# Strategy 3: Reduce the weights of the edges connected to the selected node and update the personalization vector accordingly
+			# Strategy 3 (weightdrop2): Reduce the weights of the edges connected to the selected node and update the personalization vector accordingly
 			edges_to_update = G.edges(columns[n], data=True)
 			
 			s = 0

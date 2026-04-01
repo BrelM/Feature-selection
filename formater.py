@@ -145,25 +145,25 @@ def main():
     txt_files = [f for f in os.listdir('../') if f.endswith('.txt')]
 
     for txt_file in txt_files:
-        if txt_file not in ("dataset_4.txt", "dataset_7.txt"):
+        # if txt_file not in ("dataset_4.txt", "dataset_7.txt"):
 
-            try:
-                os.mkdir("./" + txt_file[8])
-            except:
+        try:
+            os.mkdir("./" + txt_file[8])
+        except:
+            pass
+
+        for i in range(1, 11):
+            accu_file = f"{txt_file[8]}/{txt_file[8]}_{str(10 * i)}_accuracy.csv"
+            f1_file = f"{txt_file[8]}/{txt_file[8]}_{str(10 * i)}_f1score.csv"
+
+            with open(accu_file, "w+") as f1:
                 pass
 
-            for i in range(1, 11):
-                accu_file = f"{txt_file[8]}/{txt_file[8]}_{str(10 * i)}_accuracy.csv"
-                f1_file = f"{txt_file[8]}/{txt_file[8]}_{str(10 * i)}_f1score.csv"
+            with open(f1_file, "w+") as f2:
+                pass
 
-                with open(accu_file, "w+") as f1:
-                    pass
-
-                with open(f1_file, "w+") as f2:
-                    pass
-
-            extract_data('../' + txt_file, txt_file[8])
-            print(f"Done extracting from {txt_file}")
+        extract_data('../' + txt_file, txt_file[8])
+        print(f"Done extracting from {txt_file}")
 
     print("Document created successfully.")
 
