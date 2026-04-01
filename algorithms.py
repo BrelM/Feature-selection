@@ -4,7 +4,7 @@
 	Implementation of some feature selection algorithms.
 
 
-	By Alph@B, AKA Brel MBE
+	By Alph@B, AKA Brel MBE & Arielle Kana
 
 '''
 
@@ -16,6 +16,22 @@ from sklearn.feature_selection import SelectKBest, SequentialFeatureSelector
 from sklearn.feature_selection import mutual_info_classif
 from sklearn.linear_model import LogisticRegression, Ridge, Lasso
 from sklearn import svm
+
+
+
+from similarity import( 
+ 	cosine_similarity_matrix,
+ 	pearson_similarity_matrix)
+
+from graph_utils import (
+    pagerank,
+    build_weighted_graph)
+
+from information_theory import (
+    mutual_information_with_target,
+	mutual_information_matrix,
+	entropy_vector)
+
 
 
 import utils
@@ -309,4 +325,258 @@ def svm_rfe_sfs(data:pd.DataFrame, y:pd.Series, n_features:int=5) -> list:
 	return F
 
 
+def select_top_features(scores, columns, n_features):
+    """
+    Select the top features according to their scores.
 
+    Parameters
+    ----------
+    scores : array-like
+        Score of each feature.
+    columns : array-like
+        Feature names.
+    n_features : int or float
+        Number of features or ratio.
+
+    Returns
+    -------
+    list
+        Selected feature names.
+    """
+
+    n = len(columns)
+
+    # Si n_features est un ratio
+    if isinstance(n_features, float):
+        k = max(1, int(n_features * n))
+    else:
+        k = min(n_features, n)
+
+    # indices triés par score décroissant
+    indices = np.argsort(scores)[::-1][:k]
+
+    return list(columns[indices])
+
+
+
+def ugfs(data: pd.DataFrame, y: pd.Series=None, n_features=5, damping=0.85):
+    """
+    UGFS - Unsupervised Graph-based Feature Selection
+
+    Steps:
+    1. Build feature similarity graph
+    2. Compute PageRank centrality
+    3. Select top-k features
+    """
+
+    X = data.to_numpy()
+    columns = data.columns.to_numpy()
+
+    # ---- STEP 1: construire graphe de similarité entre features ----
+    # Similarité cosine entre features
+    S = cosine_similarity_matrix(X)
+
+    S = np.nan_to_num(S)
+
+    # Matrice d'adjacence pondérée
+    W = build_weighted_graph(S)
+
+    # ---- STEP 2: calcul PageRank ----
+    scores = pagerank(W, damping=damping)
+
+    scores = np.array(scores)
+
+    # ---- STEP 3: sélectionner top features ----
+    return select_top_features(scores, columns, n_features)
+
+
+def pprfs(data: pd.DataFrame, y: pd.Series, n_features=5, damping=0.85, beta=0.7):
+    """
+    PPRFS - Personalized PageRank Feature Selection
+
+    Implementation fidèle à l'article :
+
+    1. Construire réseau de redondance des features
+    2. Sélection gloutonne
+    3. Personalized PageRank recalculé à chaque itération
+    """
+
+    X = data.to_numpy()
+    columns = data.columns.to_numpy()
+
+    m = X.shape[1]
+
+    # ---- STEP 1: construire matrice de redondance ----
+    MI = mutual_information_matrix(X)
+
+    H = entropy_vector(X)
+
+    R = np.zeros((m, m))
+
+    for i in range(m):
+        for j in range(m):
+            if H[j] > 0:
+                R[i, j] = MI[i, j] / H[j]
+
+    W = build_weighted_graph(R)
+
+    # ---- STEP 2: calcul pertinence I(fi ; C) ----
+    relevance = mutual_information_with_target(X, y)
+
+    selected = []
+
+    candidate_indices = list(range(m))
+
+    while len(selected) < n_features:
+
+        # ---- construire vecteur personnalisation ----
+        v = np.zeros(m)
+
+        if len(selected) == 0:
+            v[:] = 1 / m
+        else:
+            for idx in selected:
+                v[idx] = 1 / len(selected)
+
+        # ---- PageRank personnalisé ----
+        pr = pagerank(W, v=v, damping=damping)
+
+        pr = np.array(pr)
+
+        # ---- score final ----
+        scores = relevance - beta * pr
+
+        # ignorer features déjà sélectionnées
+        scores[selected] = -np.inf
+
+        best = np.argmax(scores)
+
+        selected.append(best)
+
+    return list(columns[selected])
+
+
+def mgfs(data: pd.DataFrame, y: pd.Series=None, n_features=5, damping=0.85):
+    """
+    MGFS - Multi Graph Feature Selection
+
+    Combine plusieurs graphes de similarité.
+    """
+
+    X = data.to_numpy()
+    columns = data.columns.to_numpy()
+
+    # ---- construire plusieurs graphes ----
+    S1 = cosine_similarity_matrix(X)
+    S2 = pearson_similarity_matrix(X)
+    S3 = mutual_information_matrix(X)
+
+    S1 = np.nan_to_num(S1)
+    S2 = np.nan_to_num(S2)
+    S3 = np.nan_to_num(S3)
+
+    W1 = build_weighted_graph(S1)
+    W2 = build_weighted_graph(S2)
+    W3 = build_weighted_graph(S3)
+
+    # ---- PageRank pour chaque graphe ----
+    pr1 = np.array(pagerank(W1, damping=damping))
+    pr2 = np.array(pagerank(W2, damping=damping))
+    pr3 = np.array(pagerank(W3, damping=damping))
+
+    # ---- fusion des scores ----
+    scores = (pr1 + pr2 + pr3) / 3
+
+    return select_top_features(scores, columns, n_features)
+
+
+
+def sgfs(data: pd.DataFrame, y: pd.Series, n_features=5, damping=0.85):
+    """
+    SGFS - Semi-supervised Graph Feature Selection
+	Principe :
+
+	utiliser information du label
+
+	pour guider PageRank
+    """
+
+    X = data.to_numpy()
+    y_array = y.to_numpy()
+    columns = data.columns.to_numpy()
+
+    # ---- graphe entre features ----
+    S = cosine_similarity_matrix(X)
+    S = np.nan_to_num(S)
+
+    W = build_weighted_graph(S)
+
+    # ---- corrélation avec label ----
+    correlations = []
+
+    for i in range(X.shape[1]):
+
+        corr = np.corrcoef(X[:, i], y_array)[0, 1]
+
+        if np.isnan(corr):
+            corr = 0
+
+        correlations.append(abs(corr))
+
+    correlations = np.array(correlations)
+
+    # vecteur personnalisation
+    v = correlations / (np.sum(correlations) + 1e-12)
+
+    # PageRank supervisé
+    scores = pagerank(W, v=v, damping=damping)
+
+    scores = np.array(scores)
+
+    return select_top_features(scores, columns, n_features)
+
+
+def fss_cpr(data: pd.DataFrame, y: pd.Series, n_features=5, damping=0.85, alpha=0.5):
+    """
+    FSS-CPR - Feature Selection via Collaborative PageRank
+
+	Principe :
+
+	combiner
+
+	centralité du graphe
+
+	pertinence supervisée
+    """
+
+    X = data.to_numpy()
+    y_array = y.to_numpy()
+    columns = data.columns.to_numpy()
+
+    # ---- graphe entre features ----
+    S = cosine_similarity_matrix(X)
+    S = np.nan_to_num(S)
+
+    W = build_weighted_graph(S)
+
+    # ---- PageRank ----
+    pr_scores = np.array(pagerank(W, damping=damping))
+
+    # ---- pertinence supervisée ----
+    sup_scores = []
+
+    for i in range(X.shape[1]):
+
+        corr = np.corrcoef(X[:, i], y_array)[0, 1]
+
+        if np.isnan(corr):
+            corr = 0
+
+        sup_scores.append(abs(corr))
+
+    sup_scores = np.array(sup_scores)
+
+    # ---- fusion ----
+    scores = alpha * pr_scores + (1 - alpha) * sup_scores
+
+    return select_top_features(scores, columns, n_features)

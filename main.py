@@ -4,7 +4,7 @@
 	Lead the parameted execution of all FS techniques.
 
 
-	By Alph@B, AKA Brel MBE
+	By Alph@B, AKA Brel MBE & Arielle Kana
 
 '''
 
@@ -43,9 +43,15 @@ ALGOS = {
 	5: "RFE-SVM-SFS",
 	6: "RIDGE",
 	7: "LASSO",
+	8: "PageRank",
 	8: "PageRank weightdrop1",
 	9: "PageRank weightdrop2",
 	10: "PageRank deletion",
+	11: "UGFS",
+	12: "PPRFS",
+	13: "MGFS",
+	14: "SGFS",
+	15: "FSS-CPR"
 }
 
 ALGOS_INFO = {
@@ -60,6 +66,11 @@ ALGOS_INFO = {
 	8: pagerank.pagerankloop,
 	9: pagerank.pagerankloop,
 	10: pagerank.pagerankloop,
+	11: algorithms.ugfs,
+	12: algorithms.pprfs,
+	13: algorithms.mgfs,
+	14: algorithms.sgfs,
+	15: algorithms.fss_cpr
 }
 
 
@@ -316,7 +327,7 @@ else:
 
 Data, Y = None, None
 
-if n_features != total_nb_feat - 1: # Feature selection to apply
+if n_features != total_nb_feat - 1:  # Feature selection to apply
 
 	# Execute the choosen algorithm
 	if algo in [8, 9, 10]: # PageRank-based algorithms
@@ -331,13 +342,19 @@ if n_features != total_nb_feat - 1: # Feature selection to apply
 			columns = ALGOS_INFO[algo](graph, list(data.columns), alpha=params, max_iter=n_features, pen_method="delete")
 
 
+	# Nouveaux algorithmes graph-based
+	elif algo in [10, 11, 12]:
+		columns = ALGOS_INFO[algo](data, y, n_features=n_features)
+
+	# Algorithmes supervisés graph-based
+	elif algo in [13, 14]:
+		columns = ALGOS_INFO[algo](data, y, n_features=n_features)
 
 	elif algo in [0, 1, 6, 7]:
 		columns = ALGOS_INFO[algo](data, y, params, n_features=n_features)
-	
+
 	else:
 		columns = ALGOS_INFO[algo](data, y, n_features=n_features)
-	
 
 	#######################################################################
 	## In case of encoded features...
@@ -345,14 +362,15 @@ if n_features != total_nb_feat - 1: # Feature selection to apply
 
 		## Cleaning isolated features' derivatives : Strict selection strategy
 		display_cols_, temp = [], list(columns)
+
 		'''
 		for c in temp:
 			cooked = False
 			idx = c.find('_')
 			if idx >= 0:
-				
+
 				for _ in list(data.columns):
-				
+
 					if c[:idx] + '_' in _:
 						if _ not in temp:
 							cooked = True
@@ -362,31 +380,30 @@ if n_features != total_nb_feat - 1: # Feature selection to apply
 				else:
 					display_cols_.append(c[:idx])
 			else:
-				display_cols_.append(c) 
-
+				display_cols_.append(c)
 		'''
-	
+
 		## Selecting all of a feature's derivatives if at least one is selected : Soft selection strategy
 		full_columns, display_cols = [], []
+
 		for c in temp:
 
 			idx = c.find('_')
+
 			if idx >= 0:
 				display_cols.append(c[:idx])
+
 				for _ in list(data.columns):
-					
+
 					if c[:idx] + '_' in _:
 						if _ not in full_columns:
 							full_columns.append(_)
-				
+
 			else:
 				display_cols.append(c)
 				full_columns.append(c)
 
-
-
-
-else: # No feature selection to apply
+else:  # No feature selection to apply
 
 	if algo in [8, 9, 10]:
 		# Data, Y = utils.load_data(DATASETS_INFO[dataset], False)
