@@ -53,7 +53,6 @@ def extract_data(file_path, classifier, nb_dataset, gamma):
 
     eof = False
     while a < len(lines):
-        # print(f"{lines[a].casefold()} {a}")
 
         if "selection algo" in lines[a]:
             current_algo = lines[a].split(':')[1].replace('#', '').strip().casefold()
@@ -63,7 +62,6 @@ def extract_data(file_path, classifier, nb_dataset, gamma):
             
 
         if '%' in lines[a]:
-            print(lines[a])
 
             current_percentage = lines[a].split('=')[1].replace('%', '').strip().casefold()
             a += 1 # Go to next line (there's a percentage on the current line)
@@ -73,8 +71,8 @@ def extract_data(file_path, classifier, nb_dataset, gamma):
                     a += 1
             
                 if 'accuracy' in lines[a].casefold():
-                    current_accuracy = lines[a].split(':')[1].split(', ')[0]
-                    current_f1_score = lines[a].split(':')[1].split(', ')[1][:-1]
+                    current_accuracy = lines[a].split(': ')[1].split(', ')[0]
+                    current_f1_score = lines[a].split(': ')[1].split(', ')[1][:-1]
 
                     # Making sure the script doesn't crash if the accuracy or f1 score is not found in the text file (in case of an error during the execution of the algorithm for example).
                     current_accuracy = current_accuracy if current_accuracy is not None else "0"
@@ -111,7 +109,7 @@ def extract_data(file_path, classifier, nb_dataset, gamma):
 
 
                     if not eof and 'accuracy' in lines[a].casefold():
-                        metrics = [lines[a].split(':')[1].split(', ')[0], lines[a].split(':')[1].split(', ')[1][:-1]]
+                        metrics = [lines[a].split(': ')[1].split(', ')[0], lines[a].split(': ')[1].split(', ')[1][:-1]]
 
                         temp = float(metrics[0]) + float(metrics[1])
                         if temp > metrics_sum:
@@ -143,10 +141,8 @@ def extract_data(file_path, classifier, nb_dataset, gamma):
                 a -= 1 # Back to line just before percentage for continuous reading
 
 
-            # print(lines[a])
             
             if 'pagerank' in current_algo: # 3 x 3 variants
-                print(lines[a])
 
                 accu_list, f1score_list = [], []
 
@@ -163,8 +159,8 @@ def extract_data(file_path, classifier, nb_dataset, gamma):
                     
 
                     if 'accuracy' in lines[a].casefold():
-                        accu_list.append(lines[a].split(':')[1].split(', ')[0])
-                        f1score_list.append(lines[a].split(':')[1].split(', ')[1][:-1])
+                        accu_list.append(lines[a].split(': ')[1].split(', ')[0])
+                        f1score_list.append(lines[a].split(': ')[1].split(', ')[1][:-1])
 
                     else:
                         break
