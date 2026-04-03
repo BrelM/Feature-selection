@@ -41,12 +41,13 @@ def extract_data(file_path, classifier, nb_dataset, gamma):
 
     dataset_name = lines[0].strip().split(': ')[1]
     results = []
-    current_algo = None
+    current_algo = ''
     current_percentage = None
     current_meta_param = None
     current_features = []
     current_accuracy = None
     current_f1_score = None
+    weig_strat = ''
 
     a = 0
 
@@ -57,7 +58,13 @@ def extract_data(file_path, classifier, nb_dataset, gamma):
         if "selection algo" in lines[a]:
             current_algo = lines[a].split(':')[1].replace('#', '').strip().casefold()
 
+        if 'weighting strategy' in lines[a].casefold():
+            weig_strat = lines[a].split(':')[1].replace('#', '').strip().casefold()
+            
+
         if '%' in lines[a]:
+            print(lines[a])
+
             current_percentage = lines[a].split('=')[1].replace('%', '').strip().casefold()
             a += 1 # Go to next line (there's a percentage on the current line)
 
@@ -136,14 +143,16 @@ def extract_data(file_path, classifier, nb_dataset, gamma):
                 a -= 1 # Back to line just before percentage for continuous reading
 
 
+            # print(lines[a])
             
             if 'pagerank' in current_algo: # 3 x 3 variants
+                print(lines[a])
 
                 accu_list, f1score_list = [], []
 
-                while '%' not in lines[a]:
-                    
-                    while 'accuracy' not in lines[a].casefold() and '%' not in lines[a].casefold() and "feature selection" not in lines[a].casefold():
+                while '%' not in lines[a] and 'weighting strategy' not in lines[a].casefold():       
+
+                    while 'accuracy' not in lines[a].casefold() and '%' not in lines[a].casefold() and "feature selection" not in lines[a].casefold() and 'weighting strategy' not in lines[a].casefold():
                         
                         a += 1
                         if a >= len(lines):
@@ -162,7 +171,11 @@ def extract_data(file_path, classifier, nb_dataset, gamma):
                     
                     a += 1
                     if a >= len(lines):
-                        break 
+                        break
+
+
+                if 'weighting strategy' in lines[a].casefold():
+                    weig_strat = lines[a].split(':')[1].replace('#', '').strip().casefold()
                 
                 # Making sure the script doesn't crash if the accuracy or f1 score is not found in the text file (in case of an error during the execution of the algorithm for example).
                 accu_list = accu_list if accu_list is not None else ["0"] * NUMBER_OF_PGRK_ALPHA_VALUES
@@ -171,8 +184,8 @@ def extract_data(file_path, classifier, nb_dataset, gamma):
                 m1 = ",".join(accu_list) + "\n"
                 m2 = ",".join(f1score_list) + "\n"
 
-                m1 = f"{current_algo}," + m1
-                m2 = f"{current_algo}," + m2
+                m1 = f"{current_algo} - {weig_strat}," + m1
+                m2 = f"{current_algo} - {weig_strat}," + m2
 
                 with open(f"{folder_path}/{nb_dataset}_{current_percentage}_accuracy.csv", "a+") as f1:
                     f1.write(m1)
@@ -233,12 +246,12 @@ def main():
                 pass
 
 
-            # for i in range(1, 11):
-            #     accu_file = f"{BASE_FOLDER}/{classifier}/dataset={dataset_nb}/gamma={gamma}/{dataset_nb}_{str(10 * i)}_accuracy.csv"
-            #     f1_file = f"{BASE_FOLDER}/{classifier}/dataset={dataset_nb}/gamma={gamma}/{dataset_nb}_{str(10 * i)}_f1score.csv"
+            for i in range(1, 11):
+                accu_file = f"{BASE_FOLDER}/{classifier}/dataset={dataset_nb}/gamma={gamma}/{dataset_nb}_{str(10 * i)}_accuracy.csv"
+                f1_file = f"{BASE_FOLDER}/{classifier}/dataset={dataset_nb}/gamma={gamma}/{dataset_nb}_{str(10 * i)}_f1score.csv"
 
-                # open(accu_file, "w+")
-                # open(f1_file, "w+")
+                open(accu_file, "w+")
+                open(f1_file, "w+")
 
             extract_data(f"{TXT_FOLDER}/{classifier}/{txt_file}", classifier, dataset_nb, gamma)
             print(f"\tDone extracting from {txt_file}")
