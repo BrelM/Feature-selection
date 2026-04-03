@@ -428,7 +428,7 @@ def theils_u(a: pd.Series, b: pd.Series) -> float:
 
 
 
-def build_graph(data:pd.DataFrame, class_labels:pd.Series, weights_strategy:str= 'corcoef', gamma:float=1) -> nx.DiGraph:
+def build_graph(data:pd.DataFrame, class_labels:pd.Series, weights_strategy:str= 'corcoef', gamma:float=1.0) -> nx.DiGraph:
 	'''
 		Build a complete directed weighted graph from the data. The nodes represent the features and the weights
 		a similtude between the nodes.

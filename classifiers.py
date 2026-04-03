@@ -23,9 +23,6 @@ from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 
 
 
-
-
-
 def svm_classifier(data:pd.DataFrame, y:pd.Series, columns:pd.Series | list=None)->pd.DataFrame:
 	'''
 		SVM one-vs-one and one-vs-rest classifier.

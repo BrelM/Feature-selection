@@ -43,7 +43,6 @@ ALGOS = {
 	5: "RFE-SVM-SFS",
 	6: "RIDGE",
 	7: "LASSO",
-	8: "PageRank",
 	8: "PageRank weightdrop1",
 	9: "PageRank weightdrop2",
 	10: "PageRank deletion",
@@ -97,6 +96,14 @@ CLASSIFIERS_INFO = {
 
 }
 
+CLASSIFIERS_ALIAS = {
+	0: 'SVM',
+	1: 'LogReg',
+	2: 'DecTree',
+	3: 'RanForests',
+	4: 'HistGradBoost',
+	5: 'LinDiscrimAnalysis',
+}
 
 
 
@@ -224,7 +231,7 @@ Classifiers include:\n\
 
 
 try:
-	cpts, args = getopt.getopt(sys.argv[1:], "ha:d:p:c:n:s:", ["help", "algo=", "dataset=", "params=", "classif=", "n_features="])
+	cpts, args = getopt.getopt(sys.argv[1:], "ha:d:p:c:n:s:g:", ["help", "algo=", "dataset=", "params=", "classif=", "n_features=", "gamma="])
 
 except getopt.GetoptError as err:
 	print(err)
@@ -239,6 +246,7 @@ classifier = -1
 params = None
 strategy = 'corcoef'
 n_features = 0.5
+gamma = 1
 
 for o, a in cpts:
 	
@@ -271,6 +279,9 @@ for o, a in cpts:
 	
 	elif o == '-s':
 		strategy = a
+	
+	elif o in ('-g', '--gamma'):
+		gamma = float(a)
 	
 	elif o in ('-n', '--n_features'):
 		n_features = float(a)
@@ -332,7 +343,7 @@ if n_features != total_nb_feat - 1:  # Feature selection to apply
 	# Execute the choosen algorithm
 	if algo in [8, 9, 10]: # PageRank-based algorithms
 		# Data, Y = utils.load_data(DATASETS_INFO[dataset], False)
-		graph = utils.build_graph(data, y, strategy)
+		graph = utils.build_graph(data, y, strategy, gamma=gamma)
 
 		if algo == 8:
 			columns = ALGOS_INFO[algo](graph, list(data.columns), alpha=params, max_iter=n_features, pen_method="weightdrop1")
@@ -421,7 +432,7 @@ else:  # No feature selection to apply
 		columns = list(temp_cols)
 
 
-with open(f"reports/dataset_{dataset}.txt", "a+") as file:
+with open(f"reports/RAW_TXT/{CLASSIFIERS_ALIAS[classifier]}/dataset_{dataset}_classifier_{classifier}_gamma={gamma}.txt", "a+") as file:
 
 	file.write('\n')
 	# print(f"Feature selection algorithm: {ALGOS[algo]}\n

@@ -1,5 +1,14 @@
-.reports/
+reports/
 .vscode/
 __pycache__/
+__pycache__/*
 *.pyc
+*.pyo
+*.pyd
 *.pkl
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
