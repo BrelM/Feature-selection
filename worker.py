@@ -54,8 +54,13 @@ CLASSIFIERS = {
 	5: 'LinDiscrimAnalysis',
 }
 
+
 GAMMA_VALUES = [0.0, 0.2, 0.5, 0.85, 1.0]
-N_FEATURES_RANGE = 10
+RELIEF_M_VALUES = [5, 25, 90]
+RIDGE_LASSO_M_VALUES = [0.0001, 1, 20, 50]
+PAGERANK_P_VALUES = [0.1, 0.5, 0.9]
+
+N_FEATURES_RANGE = 10 # 100%
 
 try:
 	cpts, args = getopt.getopt(sys.argv[1:], "d:", ["dataset="])
@@ -134,7 +139,7 @@ for classifier in CLASSIFIERS.keys():
 						with open(file_path, "a+") as file:
 							file.write(f"\nNumber of features = {int(n_features * 100)}%")
 						
-						for m in [5, 20, 50, 90]:
+						for m in RELIEF_M_VALUES:
 							os.system(f"python main.py -d {dataset} -a {algo} -c {str(classifier)} -p {m} -n {n_features} -g {gamma}")
 
 				# ------------------------------------------------------------------
@@ -152,7 +157,7 @@ for classifier in CLASSIFIERS.keys():
 						with open(file_path, "a+") as file:
 							file.write(f"\nNumber of features = {int(n_features * 100)}%")
 						
-						for m in [0.00001, 0.01, 0.1, 1, 5, 20, 50]:
+						for m in RIDGE_LASSO_M_VALUES:
 							os.system(f"python main.py -d {dataset} -a {algo} -c {str(classifier)} -p {m} -n {n_features} -g {gamma}")
 
 				# ------------------------------------------------------------------
@@ -177,8 +182,7 @@ for classifier in CLASSIFIERS.keys():
 							with open(file_path, "a+") as file:
 								file.write(f"\nNumber of features = {int(n_features * 100)}%")
 							
-							# for m in [0.05, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 0.95]:
-							for m in [0.05, 0.3, 0.6, 0.95]:
+							for m in PAGERANK_P_VALUES:
 								os.system(f"python main.py -d {dataset} -a {algo} -c {str(classifier)} -p {m} -n {n_features} -s {weighing_strat} -g {gamma}")
 				
 				# ------------------------------------------------------------------
