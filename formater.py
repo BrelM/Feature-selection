@@ -9,7 +9,7 @@ By Alph@B, AKA Brel MBE
 import os
 import regex
 
-NUMBER_OF_PGRK_ALPHA_VALUES = 4
+NUMBER_OF_PGRK_ALPHA_VALUES = 3
 NO_PARAMS_ALGOS = [
     "mutual information",
     "sequential feature selection",
@@ -137,7 +137,7 @@ def extract_data(file_path, classifier, nb_dataset, gamma):
 
 
             
-            if 'pagerank' in current_algo: # 04 variants
+            if 'pagerank' in current_algo: # 3 x 3 variants
 
                 accu_list, f1score_list = [], []
 
