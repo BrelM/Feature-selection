@@ -54,7 +54,7 @@ CLASSIFIERS = {
 	5: 'LinDiscrimAnalysis',
 }
 
-GAMMA_VALUES = [0, 0.2, 0.5, 0.85, 1]
+GAMMA_VALUES = [0.0, 0.2, 0.5, 0.85, 1.0]
 N_FEATURES_RANGE = 10
 
 try:
@@ -93,7 +93,7 @@ for classifier in CLASSIFIERS.keys():
 
 	for gamma in GAMMA_VALUES:
 
-		file_path = f"reports/RAW_TXT/{CLASSIFIERS[classifier]}/dataset_{dataset}_classifier_{classifier}_gamma={gamma}.txt"
+		file_path = f"reports/RAW_TXT/{CLASSIFIERS[classifier]}/dataset_{dataset}_classifier_{classifier}_gamma={str(gamma)}.txt"
 		
 		try:
 			os.mkdir(f"reports/RAW_TXT/{CLASSIFIERS[classifier]}")

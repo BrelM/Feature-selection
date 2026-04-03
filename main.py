@@ -193,7 +193,7 @@ DATASETS_INFO = {
 		
 	8: {
 			'name': "Mini Credit Risk",
-			'path': DATA_PATH + '/' + "mini_credit_risk.csv",
+			'path': DATA_PATH + '/' + "mini_credit_risk/mini_credit_risk.csv",
 			'nb_features': 6,
 			'class_idx': 5,
 			'sep': ',',
@@ -432,7 +432,7 @@ else:  # No feature selection to apply
 		columns = list(temp_cols)
 
 
-with open(f"reports/RAW_TXT/{CLASSIFIERS_ALIAS[classifier]}/dataset_{dataset}_classifier_{classifier}_gamma={gamma}.txt", "a+") as file:
+with open(f"reports/RAW_TXT/{CLASSIFIERS_ALIAS[classifier]}/dataset_{dataset}_classifier_{classifier}_gamma={str(gamma)}.txt", "a+") as file:
 
 	file.write('\n')
 	# print(f"Feature selection algorithm: {ALGOS[algo]}\n

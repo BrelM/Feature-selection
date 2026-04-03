@@ -33,7 +33,6 @@ CLASSIFIERS_FOLDERS = [
 TXT_FOLDER = "reports/RAW_TXT"
 BASE_FOLDER = "reports/CSV"
 
-
 def extract_data(file_path, classifier, nb_dataset, gamma):
     with open(file_path, 'r') as file:
         lines = file.readlines()
@@ -51,6 +50,7 @@ def extract_data(file_path, classifier, nb_dataset, gamma):
 
     a = 0
 
+    eof = False
     while a < len(lines):
         # print(f"{lines[a].casefold()} {a}")
 
@@ -91,11 +91,19 @@ def extract_data(file_path, classifier, nb_dataset, gamma):
                 metrics_sum, metrics = 0, []
                 
                 while '%' not in lines[a]:
+                    if a >= len(lines):
+                        eof = True
+                        break
                     
                     while 'accuracy' not in lines[a].casefold() and '%' not in lines[a].casefold() and "feature selection" not in lines[a].casefold():
                         a += 1
-            
-                    if 'accuracy' in lines[a].casefold():
+
+                        if a >= len(lines):
+                            eof = True
+                            break
+
+
+                    if not eof and 'accuracy' in lines[a].casefold():
                         metrics = [lines[a].split(':')[1].split(', ')[0], lines[a].split(':')[1].split(', ')[1][:-1]]
 
                         temp = float(metrics[0]) + float(metrics[1])
@@ -225,12 +233,12 @@ def main():
                 pass
 
 
-            for i in range(1, 11):
-                accu_file = f"{BASE_FOLDER}/{classifier}/dataset={dataset_nb}/gamma={gamma}/{dataset_nb}_{str(10 * i)}_accuracy.csv"
-                f1_file = f"{BASE_FOLDER}/{classifier}/dataset={dataset_nb}/gamma={gamma}/{dataset_nb}_{str(10 * i)}_f1score.csv"
+            # for i in range(1, 11):
+            #     accu_file = f"{BASE_FOLDER}/{classifier}/dataset={dataset_nb}/gamma={gamma}/{dataset_nb}_{str(10 * i)}_accuracy.csv"
+            #     f1_file = f"{BASE_FOLDER}/{classifier}/dataset={dataset_nb}/gamma={gamma}/{dataset_nb}_{str(10 * i)}_f1score.csv"
 
-                open(accu_file, "w+")
-                open(f1_file, "w+")
+                # open(accu_file, "w+")
+                # open(f1_file, "w+")
 
             extract_data(f"{TXT_FOLDER}/{classifier}/{txt_file}", classifier, dataset_nb, gamma)
             print(f"\tDone extracting from {txt_file}")
