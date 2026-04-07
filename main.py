@@ -354,16 +354,18 @@ if n_features != total_nb_feat - 1:  # Feature selection to apply
 
 
 	# Nouveaux algorithmes graph-based
-	elif algo in [10, 11, 12]:
-		columns = ALGOS_INFO[algo](data, y, n_features=n_features)
+	elif algo in [11, 12, 13]:
+		columns = ALGOS_INFO[algo](data, y, n_features=n_features, damping=params)
 
 	# Algorithmes supervisés graph-based
-	elif algo in [13, 14]:
-		columns = ALGOS_INFO[algo](data, y, n_features=n_features)
+	elif algo in [14, 15]:
+		columns = ALGOS_INFO[algo](data, y, n_features=n_features, damping=params)
 
+	# Algorithmes classiques de FS (Relief, ReliefF, RIDGE, LASSO)
 	elif algo in [0, 1, 6, 7]:
 		columns = ALGOS_INFO[algo](data, y, params, n_features=n_features)
 
+	# Autres algorithmes classiques de FS (mutual info, sequential FS, RFE-SVM, RFE-SVM-SFS)
 	else:
 		columns = ALGOS_INFO[algo](data, y, n_features=n_features)
 
@@ -457,6 +459,7 @@ with open(f"reports/RAW_TXT/{CLASSIFIERS_ALIAS[classifier]}/dataset_{dataset}_cl
 					
 					else:
 						file.write(f"Accuracy, f1-score: {CLASSIFIERS_INFO[classifier](data, y, process_cols)}\n")
+						# file.write(f"Accuracy, f1-score: 0, 0\n")
 		else:
 			file.write(f"Selected features: {columns}\n")
 			if algo in [8, 9]:
@@ -476,6 +479,7 @@ with open(f"reports/RAW_TXT/{CLASSIFIERS_ALIAS[classifier]}/dataset_{dataset}_cl
 		
 		else:
 			file.write(f"Accuracy, f1-score: {CLASSIFIERS_INFO[classifier](data, y, columns)}\n\n")
+			# file.write(f"Accuracy, f1-score: {CLASSIFIERS_INFO[classifier](data, y, columns)}\n\n")
 
 
 

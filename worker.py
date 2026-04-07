@@ -182,29 +182,30 @@ for classifier in CLASSIFIERS.keys():
 							with open(file_path, "a+") as file:
 								file.write(f"\nNumber of features = {int(n_features * 100)}%")
 							
-							for m in PAGERANK_P_VALUES:
+							for m in PAGERANK_ALPHA_VALUES:
 								os.system(f"python main.py -d {dataset} -a {algo} -c {str(classifier)} -p {m} -n {n_features} -s {weighing_strat} -g {gamma}")
 				
 				# ------------------------------------------------------------------
 				# NOUVEAUX ALGORITHMES DES ARTICLES (11–15)
 				# ------------------------------------------------------------------
-				# elif algo in [11, 12, 13, 14, 15]:
+				elif algo in [11, 12, 13, 14, 15]:
 
-				# 	# Ici on ne passe PAS de stratégie de graphe externe
-				# 	# car chaque algorithme construit son propre graphe
-				# 	# conformément aux articles scientifiques.
+					# Ici on ne passe PAS de stratégie de graphe externe
+					# car chaque algorithme construit son propre graphe
+					# conformément aux articles scientifiques.
 
-				# 	with open(file_path, "a+") as file:
-				# 		file.write(f"###########################################################################\n#################### Feature selection algo : {ALGOS[algo]} ####################\n")
+					with open(file_path, "a+") as file:
+						file.write(f"###########################################################################\n#################### Feature selection algo : {ALGOS[algo]} ####################\n")
 
-				# 	for n_features in [(i + 1)/10 for i in range(N_FEATURES_RANGE)]:
+					for n_features in [(i + 1)/10 for i in range(N_FEATURES_RANGE)]:
 
-				# 		print(f"Number of features = {int(n_features * 100)}%")
+						print(f"Number of features = {int(n_features * 100)}%")
 
-				# 		with open(file_path, "a+") as file:
-				# 			file.write(f"\nNumber of features = {int(n_features * 100)}%")
+						with open(file_path, "a+") as file:
+							file.write(f"\nNumber of features = {int(n_features * 100)}%")
 
-				# 		os.system(f"python main.py -d {dataset} -a {algo} -c {str(classifier)} -n {n_features} -g {gamma}")
+							for m in PAGERANK_ALPHA_VALUES:
+								os.system(f"python main.py -d {dataset} -a {algo} -p {m} -c {str(classifier)} -n {n_features} -g {gamma}")
 				
 				# ------------------------------------------------------------------
 				# AUTRES ALGORITHMES (NOUVEAUX OU ANCIENS)
