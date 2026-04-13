@@ -67,9 +67,12 @@ def extract_data(file_path, classifier, nb_dataset, gamma):
             a += 1 # Go to next line (there's a percentage on the current line)
 
             if current_algo in NO_PARAMS_ALGOS:
+                # try:
                 while 'accuracy' not in lines[a].casefold() and '%' not in lines[a].casefold() and "feature selection" not in lines[a].casefold():
-                    a += 1
-            
+                        a += 1
+                # except:
+                #     print(f"{lines[a-1]} - {current_algo} - {file_path}")
+
                 if 'accuracy' in lines[a].casefold():
                     current_accuracy = lines[a].split(': ')[1].split(', ')[0]
                     current_f1_score = lines[a].split(': ')[1].split(', ')[1][:-1]

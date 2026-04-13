@@ -9,6 +9,8 @@ By Alph@B, AKA Brel MBE & Arielle Kana
 import sys
 import getopt
 import os
+import subprocess
+from multiprocessing import Pool
 
 
 
@@ -62,166 +64,185 @@ PAGERANK_ALPHA_VALUES = [0.1, 0.5, 0.9]
 
 N_FEATURES_RANGE = 10 # 100%
 
-try:
-	cpts, args = getopt.getopt(sys.argv[1:], "d:", ["dataset="])
 
-except getopt.GetoptError as err:
-	print(err)
-	sys.exit(2)
+def run_job(cmd):
+    """Function executed by the worker pool"""
+    try:
+        subprocess.run(cmd, shell=True, check=True)
+    except Exception as e:
+        print(f"Error running {cmd}: {e}")
+
+
+def main():
+
+	# try:
+	# 	cpts, args = getopt.getopt(sys.argv[1:], "c:", ["cores="])
+
+	# except getopt.GetoptError as err:
+	# 	print(err)
+	# 	sys.exit(2)
 
 
 
-# algo = -1
-classifier = 0
-dataset = 0
-
-for o, a in cpts:
+	# algo = -1
+	classifier = 0
+	dataset = 0
+	cores = 4 # Default to 4 cores if not specified
 	
-	if o in ('-d', '--dataset'):
-		try:
-			dataset = int(a)
-		except ValueError:
-			print('dataset parameter must be an integer.')
-			sys.exit(2)
-	else:
-		print(f"Option {o} inconnue.")
-		sys.exit(2)
+	# for o, a in cpts:
+	# 	if o in ('-c', '--cores'):
+	# 		cores = int(a)
+
+	# 	else:
+	# 		print(f"Option {o} inconnue.")
+	# 		sys.exit(2)
+
+	# Setup directories for reports
+	try:
+		os.mkdir(f"reports/RAW_TXT")
+	except:
+		pass
+
+	# This list will hold all the commands we want to run
+	tasks = []
+	for dataset in DATASETS.keys():
+		for classifier in CLASSIFIERS.keys():
+
+			for gamma in GAMMA_VALUES:
+
+				file_path = f"reports/RAW_TXT/{CLASSIFIERS[classifier]}/dataset_{dataset}_classifier_{classifier}_gamma={str(gamma)}.txt"
+				
+				try:
+					os.mkdir(f"reports/RAW_TXT/{CLASSIFIERS[classifier]}")
+				except:
+					pass
+
+				open(file_path, "w+")
+				
+
+				with open(file_path, "w+") as file:
+					file.write(f"#################### Dataset : {DATASETS[dataset]} - Classifier : {CLASSIFIERS[classifier]} ####################\n\n")
+
+				for algo in [0, 1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]:
 
 
-try:
-	os.mkdir(f"reports/RAW_TXT")
-except:
-	pass
+					if dataset in [1, 3, 4] and algo == 0: # Multiclass dataset with relief
+						pass
 
+					elif dataset not in [1, 3, 4] and algo == 1: # Biclass dataset with reliefF
+						pass
 
-for classifier in CLASSIFIERS.keys():
+					else:
 
-	for gamma in GAMMA_VALUES:
+						print(f"Feature selection algo : {ALGOS[algo]}")
 
-		file_path = f"reports/RAW_TXT/{CLASSIFIERS[classifier]}/dataset_{dataset}_classifier_{classifier}_gamma={str(gamma)}.txt"
-		
-		try:
-			os.mkdir(f"reports/RAW_TXT/{CLASSIFIERS[classifier]}")
-		except:
-			pass
-
-		open(file_path, "w+")
-		
-
-		with open(file_path, "w+") as file:
-			file.write(f"#################### Dataset : {DATASETS[dataset]} - Classifier : {CLASSIFIERS[classifier]} ####################\n\n")
-
-		for algo in [0, 1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]:
-
-
-			if dataset in [1, 3, 4] and algo == 0: # Multiclass dataset with relief
-				pass
-
-			elif dataset not in [1, 3, 4] and algo == 1: # Biclass dataset with reliefF
-				pass
-
-			else:
-
-				print(f"Feature selection algo : {ALGOS[algo]}")
-
-				# ------------------------------------------------------------------
-				# RELIEF / RELIEFF
-				# ------------------------------------------------------------------
-				if algo in [0, 1]:
-
-					with open(file_path, "a+") as file:
-						file.write(f"####################################################################################\n#################### Feature selection algo : {ALGOS[algo]} ####################\n")
-					
-					for n_features in [(i + 1)/10 for i in range(N_FEATURES_RANGE)]:
-						
-						print(f"Number of features = {int(n_features * 100)}%")
-
-						with open(file_path, "a+") as file:
-							file.write(f"\nNumber of features = {int(n_features * 100)}%")
-						
-						for m in RELIEF_M_VALUES:
-							os.system(f"python main.py -d {dataset} -a {algo} -c {str(classifier)} -p {m} -n {n_features} -g {gamma}")
-
-				# ------------------------------------------------------------------
-				# RIDGE / LASSO
-				# ------------------------------------------------------------------
-				elif algo in [6, 7]:
-
-					with open(file_path, "a+") as file:
-						file.write(f"###########################################################################\n#################### Feature selection algo : {ALGOS[algo]} ####################\n")
-					
-					for n_features in [(i + 1)/10 for i in range(N_FEATURES_RANGE)]:
-						
-						print(f"Number of features = {int(n_features * 100)}%")
-
-						with open(file_path, "a+") as file:
-							file.write(f"\nNumber of features = {int(n_features * 100)}%")
-						
-						for m in RIDGE_LASSO_M_VALUES:
-							os.system(f"python main.py -d {dataset} -a {algo} -c {str(classifier)} -p {m} -n {n_features} -g {gamma}")
-
-				# ------------------------------------------------------------------
-				# PAGERANK ORIGINAL (algos 8, 9 and 10 are variants of pagerank)
-				# ------------------------------------------------------------------
-				elif algo in [8, 9, 10]: # PageRank with weightdrop1, weightdrop2 and deletion strategies
-
-					with open(file_path, "a+") as file:
-						file.write(f"###########################################################################\n#################### Feature selection algo : {ALGOS[algo]} ####################\n")
-					
-					for weighing_strat in ['corcoef', 'mi', 'theils_u']:
-						
-						with open(file_path, "a+") as file:
-							file.write(f"\n#################### Graph weighting strategy: {weighing_strat} ####################\n\n")
-
-						print(f"Graph weighting strategy: {weighing_strat}")
-
-						for n_features in [(i + 1)/10 for i in range(N_FEATURES_RANGE)]:
-							
-							print(f"Number of features = {int(n_features * 100)}%")
+						# ------------------------------------------------------------------
+						# RELIEF / RELIEFF
+						# ------------------------------------------------------------------
+						if algo in [0, 1]:
 
 							with open(file_path, "a+") as file:
-								file.write(f"\nNumber of features = {int(n_features * 100)}%")
+								file.write(f"####################################################################################\n#################### Feature selection algo : {ALGOS[algo]} ####################\n")
 							
-							for m in PAGERANK_ALPHA_VALUES:
-								os.system(f"python main.py -d {dataset} -a {algo} -c {str(classifier)} -p {m} -n {n_features} -s {weighing_strat} -g {gamma}")
-				
-				# ------------------------------------------------------------------
-				# NOUVEAUX ALGORITHMES DES ARTICLES (11–15)
-				# ------------------------------------------------------------------
-				elif algo in [11, 12, 13, 14, 15]:
+							for n_features in [(i + 1)/10 for i in range(N_FEATURES_RANGE)]:
+								
+								print(f"Number of features = {int(n_features * 100)}%")
 
-					# Ici on ne passe PAS de stratégie de graphe externe
-					# car chaque algorithme construit son propre graphe
-					# conformément aux articles scientifiques.
+								with open(file_path, "a+") as file:
+									file.write(f"\nNumber of features = {int(n_features * 100)}%")
+								
+								for m in RELIEF_M_VALUES:
+									os.system(f"python main.py -d {dataset} -a {algo} -c {str(classifier)} -p {m} -n {n_features} -g {gamma}")
 
-					with open(file_path, "a+") as file:
-						file.write(f"###########################################################################\n#################### Feature selection algo : {ALGOS[algo]} ####################\n")
+						# ------------------------------------------------------------------
+						# RIDGE / LASSO
+						# ------------------------------------------------------------------
+						elif algo in [6, 7]:
 
-					for n_features in [(i + 1)/10 for i in range(N_FEATURES_RANGE)]:
+							with open(file_path, "a+") as file:
+								file.write(f"###########################################################################\n#################### Feature selection algo : {ALGOS[algo]} ####################\n")
+							
+							for n_features in [(i + 1)/10 for i in range(N_FEATURES_RANGE)]:
+								
+								print(f"Number of features = {int(n_features * 100)}%")
 
-						print(f"Number of features = {int(n_features * 100)}%")
+								with open(file_path, "a+") as file:
+									file.write(f"\nNumber of features = {int(n_features * 100)}%")
+								
+								for m in RIDGE_LASSO_M_VALUES:
+									os.system(f"python main.py -d {dataset} -a {algo} -c {str(classifier)} -p {m} -n {n_features} -g {gamma}")
 
-						with open(file_path, "a+") as file:
-							file.write(f"\nNumber of features = {int(n_features * 100)}%")
+						# ------------------------------------------------------------------
+						# PAGERANK ORIGINAL (algos 8, 9 and 10 are variants of pagerank)
+						# ------------------------------------------------------------------
+						elif algo in [8, 9, 10]: # PageRank with weightdrop1, weightdrop2 and deletion strategies
 
-							for m in PAGERANK_ALPHA_VALUES:
-								os.system(f"python main.py -d {dataset} -a {algo} -p {m} -c {str(classifier)} -n {n_features} -g {gamma}")
-				
-				# ------------------------------------------------------------------
-				# AUTRES ALGORITHMES (NOUVEAUX OU ANCIENS)
-				# ------------------------------------------------------------------
-				else:
+							with open(file_path, "a+") as file:
+								file.write(f"###########################################################################\n#################### Feature selection algo : {ALGOS[algo]} ####################\n")
+							
+							for weighing_strat in ['corcoef', 'mi', 'theils_u']:
+								
+								with open(file_path, "a+") as file:
+									file.write(f"\n#################### Graph weighting strategy: {weighing_strat} ####################\n\n")
 
-					with open(file_path, "a+") as file:
-						file.write(f"###########################################################################\n#################### Feature selection algo : {ALGOS[algo]} ####################\n")
-					
-					for n_features in [(i + 1)/10 for i in range(N_FEATURES_RANGE)]:
+								print(f"Graph weighting strategy: {weighing_strat}")
 
-						print(f"Number of features = {int(n_features * 100)}%")
+								for n_features in [(i + 1)/10 for i in range(N_FEATURES_RANGE)]:
+									
+									print(f"Number of features = {int(n_features * 100)}%")
 
-						with open(file_path, "a+") as file:
-							file.write(f"\nNumber of features = {int(n_features * 100)}%")
-
-						os.system(f"python main.py -d {dataset} -a {algo} -c {str(classifier)} -n {n_features} -g {gamma}")
-
+									with open(file_path, "a+") as file:
+										file.write(f"\nNumber of features = {int(n_features * 100)}%")
+									
+									for m in PAGERANK_ALPHA_VALUES:
+										os.system(f"python main.py -d {dataset} -a {algo} -c {str(classifier)} -p {m} -n {n_features} -s {weighing_strat} -g {gamma}")
 						
+						# ------------------------------------------------------------------
+						# NOUVEAUX ALGORITHMES DES ARTICLES (11–15)
+						# ------------------------------------------------------------------
+						elif algo in [11, 12, 13, 14, 15]:
+
+							# Ici on ne passe PAS de stratégie de graphe externe
+							# car chaque algorithme construit son propre graphe
+							# conformément aux articles scientifiques.
+
+							with open(file_path, "a+") as file:
+								file.write(f"###########################################################################\n#################### Feature selection algo : {ALGOS[algo]} ####################\n")
+
+							for n_features in [(i + 1)/10 for i in range(N_FEATURES_RANGE)]:
+
+								print(f"Number of features = {int(n_features * 100)}%")
+
+								with open(file_path, "a+") as file:
+									file.write(f"\nNumber of features = {int(n_features * 100)}%")
+
+								for m in PAGERANK_ALPHA_VALUES:
+									os.system(f"python main.py -d {dataset} -a {algo} -p {m} -c {str(classifier)} -n {n_features} -g {gamma}")
+						
+						# ------------------------------------------------------------------
+						# AUTRES ALGORITHMES (NOUVEAUX OU ANCIENS)
+						# ------------------------------------------------------------------
+						else:
+
+							with open(file_path, "a+") as file:
+								file.write(f"###########################################################################\n#################### Feature selection algo : {ALGOS[algo]} ####################\n")
+							
+							for n_features in [(i + 1)/10 for i in range(N_FEATURES_RANGE)]:
+
+								print(f"Number of features = {int(n_features * 100)}%")
+
+								with open(file_path, "a+") as file:
+									file.write(f"\nNumber of features = {int(n_features * 100)}%")
+
+								os.system(f"python main.py -d {dataset} -a {algo} -c {str(classifier)} -n {n_features} -g {gamma}")
+
+							
+	# --- EXECUTION ---
+	# print(f"Queueing {len(tasks)} tasks on {cores} cores...")
+    
+	# with Pool(processes=cores) as pool:
+	# 	pool.map(run_job, tasks)
+
+
+if __name__ == "__main__":
+    main()
