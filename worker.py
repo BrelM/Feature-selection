@@ -84,7 +84,7 @@ for o, a in cpts:
 			print('Dataset parameter must be an integer.')
 			sys.exit(2)
 
-	if o in ('-c', '--classifier'):
+	elif o in ('-c', '--classifier'):
 		try:
 			classifier = int(a)
 		except ValueError:
@@ -116,6 +116,7 @@ for gamma in GAMMA_VALUES:
 	
 
 	with open(file_path, "w+") as file:
+		print(f"#################### Dataset : {DATASETS[dataset]} - Classifier : {CLASSIFIERS[classifier]} ####################\n\n")
 		file.write(f"#################### Dataset : {DATASETS[dataset]} - Classifier : {CLASSIFIERS[classifier]} ####################\n\n")
 
 	for algo in [0, 1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]:
