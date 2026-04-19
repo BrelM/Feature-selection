@@ -84,7 +84,7 @@ for o, a in cpts:
 			print('Dataset parameter must be an integer.')
 			sys.exit(2)
 
-	if o in ('-c', '--classifier'):
+	elif o in ('-c', '--classifier'):
 		try:
 			classifier = int(a)
 		except ValueError:
