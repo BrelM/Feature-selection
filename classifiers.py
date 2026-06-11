@@ -23,9 +23,6 @@ from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 
 
 
-
-
-
 def svm_classifier(data:pd.DataFrame, y:pd.Series, columns:pd.Series | list=None)->pd.DataFrame:
 	'''
 		SVM one-vs-one and one-vs-rest classifier.
@@ -53,7 +50,7 @@ def svm_classifier(data:pd.DataFrame, y:pd.Series, columns:pd.Series | list=None
 	model.fit(X_train, y_train)
 	y_pred = model.predict(X_test)
 
-	return "{:.2}, {:.2}".format(accuracy_score(y_test, y_pred), f1_score(y_test, y_pred, average='macro'))
+	return "{}, {}".format(accuracy_score(y_test, y_pred) * 100, f1_score(y_test, y_pred, average='macro') * 100)
 
 	# scores = cross_validate(model, data.to_numpy(), y.to_numpy(), cv=5, scoring=["accuracy"])
 
@@ -84,8 +81,8 @@ def logreg_classifier(data:pd.DataFrame, y:pd.Series, columns:pd.Series | list=N
 	model.fit(X_train, y_train)
 	y_pred = model.predict(X_test)
 
-	return "{:.2}, {:.2}".format(accuracy_score(y_test, y_pred), f1_score(y_test, y_pred, average='macro'))
-
+	return "{}, {}".format(accuracy_score(y_test, y_pred) * 100, f1_score(y_test, y_pred, average='macro') * 100)
+	
 
 	# scores = cross_validate(model, data.to_numpy(), y.to_numpy(), cv=5, scoring=["accuracy", "recall"])
 
@@ -114,7 +111,7 @@ def dectree_classifier(data:pd.DataFrame, y:pd.Series, columns:pd.Series | list=
 	model.fit(X_train, y_train)
 	y_pred = model.predict(X_test)
 
-	return "{:.2}, {:.2}".format(accuracy_score(y_test, y_pred), f1_score(y_test, y_pred, average='macro'))
+	return "{}, {}".format(accuracy_score(y_test, y_pred) * 100, f1_score(y_test, y_pred, average='macro') * 100)
 
 	# scores = cross_validate(model, data.to_numpy(), y.to_numpy(), cv=5, scoring=["accuracy", "recall"])
 
@@ -143,7 +140,7 @@ def randforest_classifier(data:pd.DataFrame, y:pd.Series, columns:pd.Series | li
 	model.fit(X_train, y_train)
 	y_pred = model.predict(X_test)
 
-	return "{:.2}, {:.2}".format(accuracy_score(y_test, y_pred), f1_score(y_test, y_pred, average='macro'))
+	return "{}, {}".format(accuracy_score(y_test, y_pred) * 100, f1_score(y_test, y_pred, average='macro') * 100)
 
 	# scores = cross_validate(model, data.to_numpy(), y.to_numpy(), cv=5, scoring=["accuracy", "recall"])
 
@@ -172,7 +169,7 @@ def higradboost_classifier(data:pd.DataFrame, y:pd.Series, columns:pd.Series | l
 	model.fit(X_train, y_train)
 	y_pred = model.predict(X_test)
 
-	return "{:.2}, {:.2}".format(accuracy_score(y_test, y_pred), f1_score(y_test, y_pred, average='macro'))
+	return "{}, {}".format(accuracy_score(y_test, y_pred) * 100, f1_score(y_test, y_pred, average='macro') * 100)
 
 	# scores = cross_validate(model, data.to_numpy(), y.to_numpy(), cv=5, scoring=["accuracy", "recall"])
 
@@ -201,7 +198,7 @@ def lda_classifier(data:pd.DataFrame, y:pd.Series, columns:pd.Series | list=None
 	model.fit(X_train, y_train)
 	y_pred = model.predict(X_test)
 
-	return "{:.2}, {:.2}".format(accuracy_score(y_test, y_pred), f1_score(y_test, y_pred, average='macro'))
+	return "{}, {}".format(accuracy_score(y_test, y_pred) * 100, f1_score(y_test, y_pred, average='macro') * 100)
 
 	# scores = cross_validate(model, data.to_numpy(), y.to_numpy(), cv=5, scoring=["accuracy", "recall"])
 
