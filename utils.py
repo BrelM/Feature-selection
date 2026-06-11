@@ -182,8 +182,6 @@ def hit_and_miss(data:pd.DataFrame, y:pd.Series, a:int) -> tuple[int, int]:
 
 		scores[t] = 1e9
 	
-	# print('Done searching nearest Hit and Miss')
-
 	return H, M
 
 
@@ -225,8 +223,6 @@ def k_hits_or_misses(data:pd.DataFrame, y:pd.Series, a:int, k:int, m=None) -> tu
 		
 		scores[t] = 1e9
 	
-	# print('Done searching k-nearest Hits/Misses')
-
 	return H if m == None else M
 
 
@@ -265,8 +261,6 @@ def k_hit_and_miss(data:pd.DataFrame, y:pd.Series, a:int, k:int) -> tuple[int, i
 
 		scores[t] = 1e9
 	
-	# print('Done searching nearest Hit and Miss')
-
 	return H, M
 
 
@@ -284,33 +278,20 @@ def diff(data:pd.DataFrame, A:int, I1:int, I2:int) -> float:
 
 
 
-def build_graph(data:pd.DataFrame, weights_strategy:str= 'corcoef') -> np.array:# | ['corcoef', 'mi', 'chi2']):
+def build_graph(data:pd.DataFrame, weights_strategy:str= 'corcoef') -> np.array:
 	'''
-		Build a complete weighted graph rom the data. The nodes represent the features and the weights
-		a similtude between the nodes.
+		Build a complete weighted graph from the data. The nodes represent the features and the weights
+		a similitude between the nodes.
 		## Parameters:
 		- Data	: matrix-like object. The data from which the graph is built.
-		- weights_strategy:	string. The weighting stategy (corcoef, mi, chi2). Defaults to corcoef.
+		- weights_strategy:	string. The weighting strategy (corcoef, mi, chi2). Defaults to corcoef.
 	
 	'''
 
-	# print(f"Building features' graph using {weights_strategy} strategy.")
 	n = data.shape[1]
 	graph_matrix = np.zeros((n, n), 'float64')
 	categorical_columns = data.select_dtypes(include=['object', 'category']).columns
 
-	'''
-	if weights_strategy == 'corcoef': # Correlation coefficient
-		return nx.from_numpy_array(data.corr('pearson').to_numpy(), parallel_edges=False)
-		
-	elif weights_strategy == 'mi': # Mutual information
-		for i in range(n):
-			for j in range(n):
-				graph_matrix[i, j] = mutual_info_regression(data[[data.columns[i]]], data[data.columns[j]])
-
-
-	else: # Anova test (for now)
-	'''
 	for i in range(n):
 		for j in range(n):
 
@@ -319,7 +300,7 @@ def build_graph(data:pd.DataFrame, weights_strategy:str= 'corcoef') -> np.array:
 				# Contingency table
 				contingency_table = pd.crosstab(data[data.columns[i]], data[data.columns[j]])
 
-				# Ci-square test
+				# Chi-square test
 				chi2_stat, p_value, dof, expected = chi2_contingency(contingency_table)
 
 				graph_matrix[i, j] = p_value
@@ -349,20 +330,32 @@ def build_graph(data:pd.DataFrame, weights_strategy:str= 'corcoef') -> np.array:
 
 				else:
 
-					if weights_strategy == 'corcoef': # Correlation coefficient (absolute value is used to represent the dependence without orientation)
-						graph_matrix[i, j] = np.abs(data[[data.columns[i], data.columns[j]]].corr('pearson').to_numpy()[0, 1])
+					if weights_strategy == 'corcoef':
+						# Correlation coefficient (absolute value represents dependence without orientation)
+						graph_matrix[i, j] = np.abs(
+							data[[data.columns[i], data.columns[j]]].corr('pearson').to_numpy()[0, 1]
+						)
 						
-					else: # mutual information
-						graph_matrix[i, j] = mutual_info_regression(data[[data.columns[i]]], data[data.columns[j]])
+					else:
+						# Mutual information — mutual_info_regression returns an array of shape (1,)
+						# so we extract the scalar with [0]
+						mi_ij = mutual_info_regression(
+							data[[data.columns[i]]], data[data.columns[j]]
+						)[0]
 
-						# Normalising the values
-						graph_matrix[i, j] /= (mutual_info_regression(data[[data.columns[i]]], data[data.columns[i]]) * mutual_info_regression(data[[data.columns[j]]], data[data.columns[j]])) ** 0.5
-						
+						mi_ii = mutual_info_regression(
+							data[[data.columns[i]]], data[data.columns[i]]
+						)[0]
+
+						mi_jj = mutual_info_regression(
+							data[[data.columns[j]]], data[data.columns[j]]
+						)[0]
+
+						# Normalised mutual information (avoid division by zero)
+						denom = (mi_ii * mi_jj) ** 0.5
+						graph_matrix[i, j] = mi_ij / denom if denom > 1e-12 else 0.0
 
 
+	graph_matrix = np.nan_to_num(graph_matrix, nan=0.0, posinf=1.0, neginf=0.0)
 	graph_matrix = np.clip(graph_matrix, 0.0, 1.0)
 	return nx.from_numpy_array(graph_matrix, parallel_edges=False)
-
-
-
-

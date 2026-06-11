@@ -1,9 +1,9 @@
 '''
-formater.py
+	formater.py
 
-This script contains functions to extract and format data from text files.
+	This script contains functions to extract and format data from text files.
 
-By Alph@B, AKA Brel MBE
+	By Alph@B, AKA Brel MBE
 '''
 
 import os
@@ -24,120 +24,118 @@ def extract_data(file_path, nb_dataset):
     a = 0
 
     while a < len(lines):
-        # print(f"{lines[a].casefold()} {a}")
 
         if "selection algo" in lines[a]:
             current_algo = lines[a].split(':')[1].replace('#', '').strip().casefold()
 
         if '%' in lines[a]:
             current_percentage = lines[a].split('=')[1].replace('%', '').strip().casefold()
-            a += 1 # Go to next line (there's a percentage on the current line)
+            a += 1  # Go to next line
 
+            # Single result algos (MI, SFS, RFE-SVM, RFE-SVM-SFS)
             if current_algo in ['mutual information', 'sequential feature selection', 'rfe-svm', 'rfe-svm-sfs']:
-                
-                while 'accuracy' not in lines[a].casefold() and '%' not in lines[a].casefold() and "feature selection" not in lines[a].casefold():
-                    a += 1
-            
-                if 'accuracy' in lines[a].casefold():
-                    current_accuracy = lines[a].split(':')[1].split(', ')[0]
-                    current_f1_score = lines[a].split(':')[1].split(', ')[1][:-1]
 
-                    m1 = ((current_accuracy + ",") * 11)[:-1] + "\n"
-                    m2 = ((current_f1_score + ",") * 11)[:-1] + "\n"
+                while a < len(lines) and 'accuracy' not in lines[a].casefold() and '%' not in lines[a].casefold() and "selection algo :" not in lines[a].casefold():
+                    a += 1
+
+                if a < len(lines) and 'accuracy' in lines[a].casefold():
+                    current_accuracy = lines[a].split(':')[1].split(', ')[0].strip()
+                    current_f1_score = lines[a].split(':')[1].split(', ')[1].strip().rstrip('\n')
+
+                    if current_accuracy is not None and current_f1_score is not None:
+                        m1 = ((current_accuracy + ",") * 11)[:-1] + "\n"
+                        m2 = ((current_f1_score + ",") * 11)[:-1] + "\n"
+
+                        with open(nb_dataset + "/" + nb_dataset + "_" + current_percentage + "_accuracy.csv", "a+") as f1:
+                            f1.write(m1)
+                        with open(nb_dataset + "/" + nb_dataset + "_" + current_percentage + "_f1score.csv", "a+") as f1:
+                            f1.write(m2)
+
+            # Best result algos (Relief, ReliefF, Ridge, Lasso)
+            elif current_algo in ['relief', 'relieff', 'ridge', 'lasso']:
+
+                best_sum = 0.0
+                best_accuracy = None
+                best_f1_score = None
+
+                while a < len(lines) and '%' not in lines[a]:
+
+                    while a < len(lines) and 'accuracy' not in lines[a].casefold() and '%' not in lines[a].casefold() and "selection algo :" not in lines[a].casefold():
+                        a += 1
+
+                    if a < len(lines) and 'accuracy' in lines[a].casefold():
+                        acc  = lines[a].split(':')[1].split(', ')[0].strip()
+                        f1sc = lines[a].split(':')[1].split(', ')[1].strip().rstrip('\n')
+                        try:
+                            s = float(acc) + float(f1sc)
+                        except ValueError:
+                            s = 0.0
+                        if s > best_sum:
+                            best_sum      = s
+                            best_accuracy = acc
+                            best_f1_score = f1sc
+                    else:
+                        break
+
+                    a += 1
+
+                if best_accuracy is not None and best_f1_score is not None:
+                    m1 = ((best_accuracy + ",") * 11)[:-1] + "\n"
+                    m2 = ((best_f1_score + ",") * 11)[:-1] + "\n"
 
                     with open(nb_dataset + "/" + nb_dataset + "_" + current_percentage + "_accuracy.csv", "a+") as f1:
                         f1.write(m1)
                     with open(nb_dataset + "/" + nb_dataset + "_" + current_percentage + "_f1score.csv", "a+") as f1:
                         f1.write(m2)
 
+                a -= 1
 
-
-            if current_algo in ['relief', 'relieff', 'ridge', 'lasso']:
-
-                metrics_sum, metrics = 0, []
-                
-                while '%' not in lines[a]:
-                    
-                    while 'accuracy' not in lines[a].casefold() and '%' not in lines[a].casefold() and "feature selection" not in lines[a].casefold():
-                        a += 1
-            
-                    if 'accuracy' in lines[a].casefold():
-                        metrics = [lines[a].split(':')[1].split(', ')[0], lines[a].split(':')[1].split(', ')[1][:-1]]
-
-                        temp = float(metrics[0]) + float(metrics[1])
-                        if temp > metrics_sum:
-                            metrics_sum = temp
-                            current_accuracy = metrics[0]
-                            current_f1_score = metrics[1]
-
-                    else:
-                        break
-
-                    a += 1
-
-
-                m1 = ((current_accuracy + ",") * 11)[:-1] + "\n"
-                m2 = ((current_f1_score + ",") * 11)[:-1] + "\n"
-
-                with open(nb_dataset + "/" + nb_dataset + "_" + current_percentage + "_accuracy.csv", "a+") as f1:
-                    f1.write(m1)
-                with open(nb_dataset + "/" + nb_dataset + "_" + current_percentage + "_f1score.csv", "a+") as f1:
-                    f1.write(m2)
-
-                a -= 1 # Back to line just before percentage for continuous reading
-
-
-            
-            if 'pagerank' in current_algo: # 04 variants
+            # PageRank original (algos 8-9) + new graph-based algos (10-14)
+            elif 'pagerank' in current_algo or current_algo in ['ugfs', 'pprfs', 'mgfs', 'sgfs', 'fss-cpr', 'prfs-imcc']:
 
                 accu_list, f1score_list = [], []
 
-                while '%' not in lines[a]:
-                    
-                    while 'accuracy' not in lines[a].casefold() and '%' not in lines[a].casefold() and "feature selection" not in lines[a].casefold():
-                        
+                while a < len(lines) and '%' not in lines[a]:
+
+                    while a < len(lines) and 'accuracy' not in lines[a].casefold() and '%' not in lines[a].casefold() and "selection algo :" not in lines[a].casefold():
                         a += 1
-                        if a >= len(lines):
-                            break 
 
                     if a >= len(lines):
-                        break 
-                    
+                        break
 
                     if 'accuracy' in lines[a].casefold():
-                        accu_list.append(lines[a].split(':')[1].split(', ')[0])
-                        f1score_list.append(lines[a].split(':')[1].split(', ')[1][:-1])
-
+                        accu_list.append(lines[a].split(':')[1].split(', ')[0].strip())
+                        f1score_list.append(lines[a].split(':')[1].split(', ')[1].strip().rstrip('\n'))
                     else:
                         break
-                    
+
                     a += 1
-                    if a >= len(lines):
-                        break 
 
+                if accu_list:
+                    # Padder à 11 colonnes si nécessaire pour homogénéité du CSV
+                    while len(accu_list)    < 11: accu_list.append(accu_list[-1])
+                    while len(f1score_list) < 11: f1score_list.append(f1score_list[-1])
+                    accu_list    = accu_list[:11]
+                    f1score_list = f1score_list[:11]
+                    m1 = ",".join(accu_list) + "\n"
+                    m2 = ",".join(f1score_list) + "\n"
 
-                m1 = ",".join(accu_list) + "\n"
-                m2 = ",".join(f1score_list) + "\n"
+                    with open(nb_dataset + "/" + nb_dataset + "_" + current_percentage + "_accuracy.csv", "a+") as f1:
+                        f1.write(m1)
+                    with open(nb_dataset + "/" + nb_dataset + "_" + current_percentage + "_f1score.csv", "a+") as f1:
+                        f1.write(m2)
 
-                with open(nb_dataset + "/" + nb_dataset + "_" + current_percentage + "_accuracy.csv", "a+") as f1:
-                    f1.write(m1)
-                with open(nb_dataset + "/" + nb_dataset + "_" + current_percentage + "_f1score.csv", "a+") as f1:
-                    f1.write(m2)
+                a -= 1
 
-                a -= 1 # Back to line just before percentage for continuous reading
-                
         a += 1
 
 
-
-
 def main():
-    
+
     try:
         os.mkdir("./reports/Reports")
     except:
         pass
-
 
     os.chdir("./reports/Reports")
 
@@ -154,11 +152,10 @@ def main():
 
             for i in range(1, 11):
                 accu_file = f"{txt_file[8]}/{txt_file[8]}_{str(10 * i)}_accuracy.csv"
-                f1_file = f"{txt_file[8]}/{txt_file[8]}_{str(10 * i)}_f1score.csv"
+                f1_file   = f"{txt_file[8]}/{txt_file[8]}_{str(10 * i)}_f1score.csv"
 
                 with open(accu_file, "w+") as f1:
                     pass
-
                 with open(f1_file, "w+") as f2:
                     pass
 
