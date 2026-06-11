@@ -1,122 +1,351 @@
 # Feature Selection and Graph-Based Analysis Project
-
-## Overview
-This project is designed to execute and evaluate various feature selection (FS) techniques on multiple datasets. It includes graph-based methods, classifiers, and utilities for data processing and visualization. The project is modular, making it easy to extend or modify.
+# Projet de Sélection d'Attributs par Graphes
 
 ---
 
-## Project Structure
+## 🇬🇧 English Version
 
-### Root Files
-- **`main.py`**: The entry point for executing feature selection algorithms. It handles parameterized execution, dataset loading, and algorithm selection.
-- **`utils.py`**: Contains utility functions for data loading, graph building, and encoding.
-- **`algorithms.py`**: Implements various feature selection algorithms.
-- **`classifiers.py`**: Contains classifiers for evaluating selected features.
-- **`pagerank.py`**: Implements PageRank-based feature selection algorithms.
-- **`plotting.py`**: Handles graph visualization and plotting.
-- **`generator.py`**: (If applicable) Generates synthetic datasets or graphs.
-- **`formater.py`**: (If applicable) Formats datasets or results for consistency.
-- **`worker.py`**: (If applicable) Manages parallel or batch processing tasks.
-
-### Data and Reports
-- **`reports/`**: Stores results of feature selection algorithms, including accuracy and F1-score metrics.
-  - **`dataset_X.txt`**: Contains results for dataset `X`.
-  - **`Reports/`**: Subdirectories for detailed CSV reports.
-- **`pseudo_code_pagerank.txt`**: Contains pseudocode or notes for the PageRank algorithm.
+### Overview
+This project implements and evaluates various feature selection techniques on multiple datasets. It includes classical methods (Relief, MI, RFE...), graph-based PageRank methods, and our novel **PRFS-IMCc** algorithm. Results are saved as CSV reports for analysis.
 
 ---
 
-## Key Components
+### Project Structure
 
-### Datasets
-The datasets are defined in `DATASETS_INFO` in `main.py` and `plotting.py`. Each dataset has metadata such as:
-- Name
-- Path
-- Number of features
-- Class index
-- Separator
-- Whether it contains categorical data
-
-### Algorithms
-Feature selection algorithms are defined in `ALGOS_INFO` in `main.py`. Examples include:
-- Relief
-- Mutual Information
-- PageRank-based methods
-
-### Classifiers
-Classifiers for evaluating feature selection results are defined in `CLASSIFIERS_INFO` in `main.py`. Examples include:
-- SVM
-- Logistic Regression
-- Decision Tree
-
-### Graph Visualization
-`plotting.py` is used to visualize graphs built from datasets. It supports:
-- Circular layouts
-- Edge weight labeling
-- Filtering self-loops
+| File | Role |
+|------|------|
+| `main.py` | CLI entry point — runs one algorithm on one dataset |
+| `worker.py` | Batch launcher — runs all algorithms on a dataset |
+| `algorithms.py` | Implementation of all feature selection algorithms |
+| `pagerank.py` | PageRank implementation (standard and personalized) |
+| `classifiers.py` | Classifiers for evaluating selected features |
+| `utils.py` | Data loading, encoding, utilities |
+| `formater.py` | Extracts and formats results into CSV files |
+| `plotting.py` | Graph visualization |
 
 ---
 
-## How to Use
+### Available Algorithms
 
-### Running the Project with the worker script
+| Index | Name | Description |
+|-------|------|-------------|
+| 0 | ReliefF | Relief based on distances between instances |
+| 1 | Mutual Information | Mutual information with the class |
+| 2 | RFE-SVM | Recursive Feature Elimination with SVM |
+| 3 | RFE-SVM-SFS | RFE-SVM + Sequential Forward Selection |
+| 5 | Ridge | Ridge regression |
+| 6 | Lasso | Lasso regression |
+| 7 | SFS | Sequential Feature Selection |
+| 8 | PageRank | PageRank on dependency graph (undirected) |
+| 9 | PageRank + Deletion | PageRank with deletion strategy |
+| 10 | UGFS | Unsupervised Graph-based Feature Selection (Henni et al. 2018) |
+| 11 | PPRFS | Personalized PageRank Feature Selection |
+| 12 | MGFS | Multi-Graph Feature Selection |
+| 13 | SGFS | Supervised Graph-based Feature Selection |
+| 14 | FSS-CPR | Feature Selection via Subspace and PageRank |
+| **15** | **PRFS-IMCc** | **Our method — PageRank + Conditional Mutual Information of Class** |
 
-It is recommended to use `worker.py` for executing tasks, as it simplifies batch processing and ensures efficient execution. Example:
-```bash
-python worker.py -d 2
+---
+
+### Our Method: PRFS-IMCc (algo 15)
+
+#### Principle
+PRFS-IMCc is a supervised feature selection method based on an **oriented weighted graph** and **Personalized PageRank**.
+
+#### Oriented graph construction
+For each pair (Aᵢ, Aⱼ), the weight of the oriented edge is:
+
 ```
-#### Arguments for `worker.py`
-- `-d` or `--dataset`: **Dataset index** (integer). Refers to the dataset to use, as defined in `DATASETS_INFO` in `main.py`.
-
-This will automatically go through every feature selection algorithm avalaible (selecting from 10% to 100% of all features) and evaluate the results using every available classifiers.
-
-
-### Running the Project with the main script
-
-For more control, you can use `main.py` that enables you to specify the selection algorithm, the dataset, the classifier, the number of features to select and the graph weighting strategy.
-
-```bash
-python main.py -a 8 -d 2 -c 0 -n 0.5 -s corcoef
-```
-#### Arguments for `main.py`
-- `-a` or `--algo`: **Algorithm index** (integer). Refers to the algorithm to use, as defined in `ALGOS_INFO` in `main.py`.
-- `-d` or `--dataset`: **Dataset index** (integer). Refers to the dataset to use, as defined in `DATASETS_INFO` in `main.py`.
-- `-c` or `--classif`: **Classifier index** (integer). Refers to the classifier to use for evaluation, as defined in `CLASSIFIERS_INFO` in `main.py`.
-- `-n` or `--n_features`: **Percentage of features to select** (float). A value between 0 and 1 representing the proportion of features to retain.
-- `-s`: **Graph weighting strategy** (string). Used for PageRank-based feature selection algorithms. Options include:
-  - `corcoef`: Correlation coefficient-based weighting.
-  - `mi`: Mutual information-based weighting.
-
-For example, to run the PageRank algorithm on the Credit Risk dataset with SVM as the classifier, selecting 50% of features and using the correlation coefficient strategy, you would execute:
-```bash
-python main.py -a 8 -d 2 -c 0 -n 0.5 -s corcoef
+dependence(Aᵢ → Aⱼ) = (1 - γ) × measure_var(Aᵢ, Aⱼ) + γ × IMCc(Aᵢ, Aⱼ)
 ```
 
-### Adding or Updating Features
+Where:
+- **measure_var** ∈ {`corr` (Pearson), `mi` (Mutual Information), `theil` (Theil U)}
+- **IMCc(Aᵢ, Aⱼ)** = I(Aⱼ ; Class | Aᵢ) — how much Aⱼ tells about the class given Aᵢ
+- **γ** ∈ {0.2, 0.5, 0.8} — balance between raw dependence and class information
 
-#### Adding a New Dataset
-1. Update `DATASETS_INFO` in `main.py` and `plotting.py` with the new dataset's metadata.
-2. Place the dataset file in the appropriate directory.
+#### Parameter `-p gamma:damping`
+The `-p` argument encodes **two parameters** separated by `:`:
 
-#### Adding a New Algorithm
-1. Implement the algorithm in `algorithms.py` or a new script.
-2. Add the algorithm to `ALGOS_INFO` in `main.py`.
+```
+-p  0.5 : 0.85
+     ↑      ↑
+   gamma  damping
+```
 
-#### Adding a New Classifier
-1. Implement the classifier in `classifiers.py` or a new script.
-2. Add the classifier to `CLASSIFIERS_INFO` in `main.py`.
+- **gamma (γ)**: weight of IMCc in the edge weight formula
+  - γ = 0.2 → graph dominated by raw dependence (Corr/MI/Theil)
+  - γ = 0.5 → balanced
+  - γ = 0.8 → graph dominated by class information (IMCc)
 
-#### Modifying Graph Visualization
-1. Update `plotting.py` to customize graph layouts, edge filtering, or weight formatting.
+- **damping (α)**: PageRank damping factor
+  ```
+  PR(t+1) = α × M^T × PR(t)  +  (1-α) × v
+              ↑                      ↑
+        follow graph edges     teleport toward d(Aᵢ) = IM(Aᵢ, Class)
+  ```
+  - α = 0.15 → strong pull toward initial relevance scores
+  - α = 0.85 → mostly follows the graph structure
+
+#### Greedy selection with Personalized PageRank
+1. Compute d(Aᵢ) = IM(Aᵢ, Class) / Σ IM(Aₖ, Class) — personalization vector
+2. Run Personalized PageRank → select the node with the highest score
+3. Remove that node from the graph, update scores via Theil U
+4. Repeat until the desired number of features is reached
+
+#### Parameters summary
+
+| Parameter | Values | Description |
+|-----------|--------|-------------|
+| `-s` | `corr`, `mi`, `theil` | Graph weighting measure |
+| `-p` | `γ:damping` e.g. `0.5:0.85` | Gamma and damping factor |
+| `-n` | `0.2`, `0.3` | Percentage of features to select |
 
 ---
 
-## Notes
-- Ensure all dependencies are installed (e.g., `matplotlib`, `networkx`).
-- Follow the modular structure to maintain code readability and reusability.
-- Use `reports/` to store and analyze results systematically.
+### How to Use
+
+#### Run a single test
+```bash
+# PRFS-IMCc: gamma=0.5, damping=0.85, 20% features, dataset 1, classifier 4, measure=theil
+python main.py -d 1 -a 15 -c 4 -n 0.2 -p 0.5:0.85 -s theil
+
+# Classic PageRank: dataset 2, classifier 0, 50% features, MI weighting
+python main.py -a 8 -d 2 -c 0 -n 0.5 -s mi
+
+# UGFS: dataset 1, classifier 4, 30% features
+python main.py -d 1 -a 10 -c 4 -n 0.3 -p 0.85
+```
+
+#### `main.py` arguments
+
+| Argument | Description |
+|----------|-------------|
+| `-a` | Algorithm index (see table above) |
+| `-d` | Dataset index |
+| `-c` | Classifier index |
+| `-n` | Proportion of features to select (e.g. `0.2` = 20%) |
+| `-s` | Graph weighting strategy: `corr`, `mi`, `theil` |
+| `-p` | Algorithm parameter(s). For algo 15: `gamma:damping` (e.g. `0.5:0.85`) |
+
+#### Run all algorithms on a dataset
+```bash
+python worker.py -d 1
+```
+Runs all algorithms (0–15) on dataset 1 with all parameter combinations.
+
+For **PRFS-IMCc (algo 15)**, `worker.py` automatically iterates over:
+- `n_features` ∈ {20%, 30%}
+- `measure` ∈ {corr, mi, theil}
+- `gamma` ∈ {0.2, 0.5, 0.8}
+- `damping` ∈ {0.15, 0.50, 0.85}
+
+Total: **54 combinations** per dataset.
+
+#### Extract results as CSV
+```bash
+python formater.py
+```
+Generates CSV files in `reports/Reports/X/` where X is the dataset index.
+
+Each `X_Y_accuracy.csv` file contains:
+- One **row per algorithm**
+- One **column per parameter combination**
 
 ---
 
-## Contact
-For questions or contributions, contact Alph@B (Brel MBE).
+### Installation
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+### References
+- **UGFS**: Henni et al., *Unsupervised graph-based feature selection via subspace and pagerank centrality*, Expert Systems With Applications 114 (2018) 46–53.
+- **PPRFS**: Zhu et al., IEEE 2019.
+- **PRFS-IMCc**: Our contribution — PageRank Feature Selection with Conditional Mutual Information of Class.
+
+---
+
+### Contact
+For questions or contributions: Alph@B (Brel MBE).
+
+---
+---
+
+## 🇫🇷 Version Française
+
+### Vue d'ensemble
+Ce projet implémente et évalue différentes techniques de sélection d'attributs sur plusieurs jeux de données. Il inclut des méthodes classiques (Relief, MI, RFE...), des méthodes basées sur les graphes et PageRank, ainsi que notre nouvel algorithme **PRFS-IMCc**. Les résultats sont sauvegardés sous forme de rapports CSV pour analyse.
+
+---
+
+### Structure du projet
+
+| Fichier | Rôle |
+|---------|------|
+| `main.py` | Point d'entrée CLI — exécute un algo sur un dataset |
+| `worker.py` | Lance tous les algos sur un dataset en batch |
+| `algorithms.py` | Implémentation de tous les algorithmes de sélection |
+| `pagerank.py` | Implémentation du PageRank (standard et personnalisé) |
+| `classifiers.py` | Classifieurs pour évaluer les features sélectionnées |
+| `utils.py` | Chargement des données, encodage, utilitaires |
+| `formater.py` | Extraction et mise en forme des résultats en CSV |
+| `plotting.py` | Visualisation des graphes |
+
+---
+
+### Algorithmes disponibles
+
+| Index | Nom | Description |
+|-------|-----|-------------|
+| 0 | ReliefF | Relief basé sur les distances entre instances |
+| 1 | Mutual Information | Information mutuelle avec la classe |
+| 2 | RFE-SVM | Recursive Feature Elimination avec SVM |
+| 3 | RFE-SVM-SFS | RFE-SVM + Sequential Forward Selection |
+| 5 | Ridge | Régression Ridge |
+| 6 | Lasso | Régression Lasso |
+| 7 | SFS | Sequential Feature Selection |
+| 8 | PageRank | PageRank sur graphe de dépendances (non orienté) |
+| 9 | PageRank + Deletion | PageRank avec stratégie de suppression |
+| 10 | UGFS | Unsupervised Graph-based Feature Selection (Henni et al. 2018) |
+| 11 | PPRFS | Personalized PageRank Feature Selection |
+| 12 | MGFS | Multi-Graph Feature Selection |
+| 13 | SGFS | Supervised Graph-based Feature Selection |
+| 14 | FSS-CPR | Feature Selection via Subspace and PageRank |
+| **15** | **PRFS-IMCc** | **Notre méthode — PageRank + Information Mutuelle Conditionnelle de Classe** |
+
+---
+
+### Notre méthode : PRFS-IMCc (algo 15)
+
+#### Principe
+PRFS-IMCc est une méthode supervisée de sélection d'attributs basée sur un **graphe orienté** pondéré et le **PageRank Personnalisé**.
+
+#### Construction du graphe orienté
+Pour chaque paire (Aᵢ, Aⱼ), le poids de l'arête orientée Aᵢ → Aⱼ est :
+
+```
+dépendance(Aᵢ → Aⱼ) = (1 - γ) × mesure_var(Aᵢ, Aⱼ) + γ × IMCc(Aᵢ, Aⱼ)
+```
+
+Où :
+- **mesure_var** ∈ {`corr` (Pearson), `mi` (Information Mutuelle), `theil` (Theil U)}
+- **IMCc(Aᵢ, Aⱼ)** = I(Aⱼ ; Classe | Aᵢ) — combien Aⱼ apporte sur la classe sachant Aᵢ
+- **γ** ∈ {0.2, 0.5, 0.8} — équilibre entre dépendance brute et information de classe
+
+#### Le paramètre `-p gamma:damping`
+L'argument `-p` encode **deux paramètres** séparés par `:` :
+
+```
+-p  0.5 : 0.85
+     ↑      ↑
+   gamma  damping
+```
+
+- **gamma (γ)** : poids de IMCc dans la formule de pondération des arêtes
+  - γ = 0.2 → graphe dominé par la mesure brute (Corr/MI/Theil)
+  - γ = 0.5 → équilibre parfait entre mesure brute et IMCc
+  - γ = 0.8 → graphe dominé par l'information de classe (IMCc)
+
+- **damping (α)** : facteur d'amortissement du PageRank
+  ```
+  PR(t+1) = α × M^T × PR(t)  +  (1-α) × v
+              ↑                      ↑
+        suivre les arêtes       se rappeler d(Aᵢ) = IM(Aᵢ, Classe)
+        du graphe               (importance initiale vis-à-vis de la classe)
+  ```
+  - α = 0.15 → forte attraction vers les scores de pertinence initiaux
+  - α = 0.85 → suit principalement la structure du graphe
+
+#### Sélection greedy avec PageRank Personnalisé
+1. Calculer d(Aᵢ) = IM(Aᵢ, Classe) / Σ IM(Aₖ, Classe) — vecteur de personnalisation
+2. Lancer le PageRank Personnalisé → sélectionner le nœud avec le plus grand score
+3. Retirer ce nœud du graphe, mettre à jour les scores via Theil U
+4. Répéter jusqu'à avoir le nombre voulu d'attributs
+
+#### Résumé des paramètres
+
+| Paramètre | Valeurs | Description |
+|-----------|---------|-------------|
+| `-s` | `corr`, `mi`, `theil` | Mesure de pondération du graphe |
+| `-p` | `γ:damping` ex: `0.5:0.85` | Gamma et facteur d'amortissement |
+| `-n` | `0.2`, `0.3` | Pourcentage de features à sélectionner |
+
+---
+
+### Comment utiliser
+
+#### Lancer un seul test
+```bash
+# PRFS-IMCc : gamma=0.5, damping=0.85, 20% features, dataset 1, classifieur 4, mesure=theil
+python main.py -d 1 -a 15 -c 4 -n 0.2 -p 0.5:0.85 -s theil
+
+# PageRank classique : dataset 2, classifieur 0, 50% features, pondération MI
+python main.py -a 8 -d 2 -c 0 -n 0.5 -s mi
+
+# UGFS : dataset 1, classifieur 4, 30% features
+python main.py -d 1 -a 10 -c 4 -n 0.3 -p 0.85
+```
+
+#### Arguments de `main.py`
+
+| Argument | Description |
+|----------|-------------|
+| `-a` | Index de l'algorithme (voir tableau ci-dessus) |
+| `-d` | Index du dataset |
+| `-c` | Index du classifieur |
+| `-n` | Proportion de features à sélectionner (ex: `0.2` = 20%) |
+| `-s` | Stratégie de pondération : `corr`, `mi`, `theil` |
+| `-p` | Paramètre(s). Pour algo 15 : `gamma:damping` (ex: `0.5:0.85`) |
+
+#### Lancer tous les algos sur un dataset
+```bash
+python worker.py -d 1
+```
+Lance tous les algorithmes (0–15) sur le dataset 1 avec toutes les combinaisons de paramètres.
+
+Pour **PRFS-IMCc (algo 15)**, `worker.py` itère automatiquement sur :
+- `n_features` ∈ {20%, 30%}
+- `measure` ∈ {corr, mi, theil}
+- `gamma` ∈ {0.2, 0.5, 0.8}
+- `damping` ∈ {0.15, 0.50, 0.85}
+
+Soit **54 combinaisons** par dataset.
+
+#### Extraire les résultats en CSV
+```bash
+python formater.py
+```
+Génère les fichiers CSV dans `reports/Reports/X/` (X = index du dataset).
+
+Chaque fichier `X_Y_accuracy.csv` contient :
+- Une **ligne par algorithme**
+- Une **colonne par combinaison de paramètres**
+
+---
+
+### Installation des dépendances
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+### Notes importantes
+- Le dossier `reports/` est ignoré par Git — les résultats sont générés localement.
+- Pour ajouter un nouveau dataset : mettre à jour `DATASETS_INFO` dans `main.py`.
+- Pour ajouter un nouvel algorithme : implémenter dans `algorithms.py`, ajouter dans `ALGOS` et `ALGOS_INFO` dans `main.py` et `worker.py`, et ajouter le nom dans `formater.py`.
+
+---
+
+### Références
+- **UGFS** : Henni et al., *Unsupervised graph-based feature selection via subspace and pagerank centrality*, Expert Systems With Applications 114 (2018) 46–53.
+- **PPRFS** : Zhu et al., IEEE 2019.
+- **PRFS-IMCc** : Notre contribution — PageRank Feature Selection avec Information Mutuelle Conditionnelle de Classe.
+
+---
+
+### Contact
+Pour questions ou contributions : Alph@B (Brel MBE).
